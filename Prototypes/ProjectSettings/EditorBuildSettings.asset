@@ -8,28 +8,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Switch Scene 1.unity
     guid: 63694ad0edf35a34a85bffe3a6c3253c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Video Scene.unity
     guid: 2a8d63e2f87295b44ac04fafac772a2d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Video Change Scene.unity
     guid: f844413d493d11646816cc2cfd97e584
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/timed response.unity
     guid: d2e748fd121a39c41a6698a3623db540
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Switch Scene 2.unity
     guid: 528ed5a7f40321146bafeab393dbd5da
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SocialMedia.unity
     guid: aab1eaf352dd07b44af5c060bc5e46ff
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ScrollScene.unity
     guid: 62c7630cbfdec9746bf83776e43e11fb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Relationship Meter.unity
     guid: f15b064646294f04b837c1e7ff39675e
   m_configObjects: {}
