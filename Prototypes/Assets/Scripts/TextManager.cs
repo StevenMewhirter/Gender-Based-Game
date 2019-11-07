@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class TextManager : MonoBehaviour
 {
     public Button BossSpeech;//Text box to hold text
+    
     public Button response1;
     public Button response2;
     public Button response3;
@@ -16,7 +17,7 @@ public class TextManager : MonoBehaviour
     public Button RobinSpeech1;
     public Button RobinSpeech2;
 
-
+    public RawImage MC;
     public RawImage Boss;
     public RawImage CoWorker;
    
@@ -35,6 +36,8 @@ public class TextManager : MonoBehaviour
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         Boss.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        // CoWorker.gameObject.SetActive(false);
         BossSpeech.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
@@ -80,22 +83,28 @@ public class TextManager : MonoBehaviour
     {
         KatieSpeech1.gameObject.SetActive(true);
         RobinSpeech1.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(false);
     }
     void Speech2()
     {
         RobinSpeech2.gameObject.SetActive(true);
         KatieSpeech1.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        CoWorker.gameObject.SetActive(true);
     }
     void Speech3()
     {
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(false);
     }
     void Speech4()
     {
         KatieSpeech2.gameObject.SetActive(false);
         BossSpeech.gameObject.SetActive(true);
-        CoWorker.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         Boss.gameObject.SetActive(true);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);

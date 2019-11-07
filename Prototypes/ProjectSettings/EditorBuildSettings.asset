@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Relationship Meter.unity
     guid: f15b064646294f04b837c1e7ff39675e
+  - enabled: 0
+    path: Assets/Scenes/Potrait Layout.unity
+    guid: f0c1b70b54379c24ab7656e561113d11
   m_configObjects: {}
