@@ -11,7 +11,7 @@ public class TextManager : MonoBehaviour
     public Button response1;
     public Button response2;
     public Button response3;
-    public Button response4;
+
     public Button KatieSpeech1;
     public Button KatieSpeech2;
     public Button RobinSpeech1;
@@ -61,8 +61,6 @@ public class TextManager : MonoBehaviour
         r2.onClick.AddListener(ResponseB);
         Button r3 = response3.GetComponent<Button>();
         r3.onClick.AddListener(ResponseS);
-        Button r4 = response4.GetComponent<Button>();
-        r4.onClick.AddListener(ResponseA);
         Button RS1 = RobinSpeech1.GetComponent<Button>();
         RS1.onClick.AddListener(Speech1);
         Button KS1 = KatieSpeech1.GetComponent<Button>();
@@ -117,7 +115,6 @@ public class TextManager : MonoBehaviour
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
-        response4.gameObject.SetActive(false);
     }
 
     void ResponseB()
@@ -127,7 +124,7 @@ public class TextManager : MonoBehaviour
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
-        response4.gameObject.SetActive(false);
+        
     }
     void ResponseS()
     {
@@ -136,16 +133,8 @@ public class TextManager : MonoBehaviour
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
-        response4.gameObject.SetActive(false);
+        
     }
-    void ResponseA()
-    {
-        theText.text = dialogue[currentLine]; //checks current line 
-        currentLine = 4; //goes to the next line
-        response1.gameObject.SetActive(false);
-        response2.gameObject.SetActive(false);
-        response3.gameObject.SetActive(false);
-        response4.gameObject.SetActive(false);
-    }
+
    
 }
