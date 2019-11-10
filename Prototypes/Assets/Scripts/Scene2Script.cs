@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+using System;
 
-public class TextManager : MonoBehaviour
+public class Scene2Script : MonoBehaviour
 {
     public Button BossSpeech;//Text box to hold text
     
@@ -20,14 +22,16 @@ public class TextManager : MonoBehaviour
     public RawImage MC;
     public RawImage Boss;
     public RawImage CoWorker;
-   
-    public Text theText;
+
+    public Text response;
 
     public TextAsset textFile; //stores the text file
     public string[] dialogue; //creates a list of each text line
 
     public int currentLine;
     public int endLine;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -70,12 +74,16 @@ public class TextManager : MonoBehaviour
         Button KS2 = KatieSpeech2.GetComponent<Button>();
         KS2.onClick.AddListener(Speech4);
 
+    }
 
+    private void SceneChange()
+    {
+        throw new NotImplementedException();
     }
 
     void Update()
     {
-        theText.text = dialogue[currentLine]; //checks current line  
+        response.text = dialogue[currentLine]; //checks current line  
     }
     void Speech1()
     {
@@ -110,7 +118,7 @@ public class TextManager : MonoBehaviour
     }
     void ResponseG()
     {
-        theText.text = dialogue[currentLine]; //checks current line 
+       response.text = dialogue[currentLine]; //checks current line 
         currentLine = 1; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
@@ -119,7 +127,7 @@ public class TextManager : MonoBehaviour
 
     void ResponseB()
     {
-        theText.text = dialogue[currentLine]; //checks current line 
+       response.text = dialogue[currentLine]; //checks current line 
         currentLine = 2; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
@@ -128,13 +136,12 @@ public class TextManager : MonoBehaviour
     }
     void ResponseS()
     {
-        theText.text = dialogue[currentLine]; //checks current line 
+        response.text = dialogue[currentLine]; //checks current line 
         currentLine = 1; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         
     }
-
-   
+  
 }
