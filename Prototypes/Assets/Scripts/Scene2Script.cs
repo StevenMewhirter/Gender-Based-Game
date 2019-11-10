@@ -8,8 +8,9 @@ using System;
 
 public class Scene2Script : MonoBehaviour
 {
-    public Button BossSpeech;//Text box to hold text
-    
+    public Button BossSpeech1;//Text box to hold text
+    public Button BossSpeech2;//Text box to hold text
+
     public Button response1;
     public Button response2;
     public Button response3;
@@ -42,7 +43,8 @@ public class Scene2Script : MonoBehaviour
         Boss.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         // CoWorker.gameObject.SetActive(false);
-        BossSpeech.gameObject.SetActive(false);
+        BossSpeech1.gameObject.SetActive(false);
+        BossSpeech2.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
         //RobinSpeech1.gameObject.SetActive(false);
@@ -73,6 +75,7 @@ public class Scene2Script : MonoBehaviour
         RS2.onClick.AddListener(Speech3);
         Button KS2 = KatieSpeech2.GetComponent<Button>();
         KS2.onClick.AddListener(Speech4);
+        
 
     }
 
@@ -109,7 +112,7 @@ public class Scene2Script : MonoBehaviour
     void Speech4()
     {
         KatieSpeech2.gameObject.SetActive(false);
-        BossSpeech.gameObject.SetActive(true);
+        BossSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         Boss.gameObject.SetActive(true);
         response1.gameObject.SetActive(true);
@@ -118,7 +121,8 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseG()
     {
-       response.text = dialogue[currentLine]; //checks current line 
+        BossSpeech2.gameObject.SetActive(true);
+        response.text = dialogue[currentLine]; //checks current line 
         currentLine = 1; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
@@ -127,7 +131,8 @@ public class Scene2Script : MonoBehaviour
 
     void ResponseB()
     {
-       response.text = dialogue[currentLine]; //checks current line 
+        BossSpeech2.gameObject.SetActive(true);
+        response.text = dialogue[currentLine]; //checks current line 
         currentLine = 2; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
@@ -136,6 +141,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
+        BossSpeech2.gameObject.SetActive(true);
         response.text = dialogue[currentLine]; //checks current line 
         currentLine = 1; //goes to the next line
         response1.gameObject.SetActive(false);
