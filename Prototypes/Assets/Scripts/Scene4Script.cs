@@ -16,14 +16,20 @@ public class Scene4Script : MonoBehaviour
     public Button KatieSpeech3;
     public Button KatieSpeech4;
     public Button KatieSpeech5;
+    public Button KatieSpeech6;
+    public Button KatieSpeech7;
 
     public Button AminaSpeech1;
     public Button AminaSpeech2;
     public Button AminaSpeech3;
     public Button AminaSpeech4;
+
     public Button JasonSpeech1;
     public Button JasonSpeech2;
     public Button JasonSpeech3;
+    public Button JasonSpeech4;
+    public Button JasonSpeech5;
+    public Button JasonSpeech6;
 
 
 
@@ -50,6 +56,8 @@ public class Scene4Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(false);
         KatieSpeech4.gameObject.SetActive(false);
         KatieSpeech5.gameObject.SetActive(false);
+        KatieSpeech6.gameObject.SetActive(false);
+        KatieSpeech7.gameObject.SetActive(false);
         AminaSpeech1.gameObject.SetActive(false);
         AminaSpeech2.gameObject.SetActive(false);
         AminaSpeech3.gameObject.SetActive(false);
@@ -57,6 +65,9 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech1.gameObject.SetActive(false);
         JasonSpeech2.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(false);
+        JasonSpeech4.gameObject.SetActive(false);
+        JasonSpeech5.gameObject.SetActive(false);
+        JasonSpeech6.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -83,6 +94,12 @@ public class Scene4Script : MonoBehaviour
         KS4.onClick.AddListener(KSpeech4);
         Button KS5 = KatieSpeech5.GetComponent<Button>();
         KS5.onClick.AddListener(KSpeech5);
+        Button KS6 = KatieSpeech6.GetComponent<Button>();
+        KS6.onClick.AddListener(KSpeech6);
+        Button KS7 = KatieSpeech7.GetComponent<Button>();
+        KS7.onClick.AddListener(KSpeech7);
+
+
         Button AS1 = AminaSpeech1.GetComponent<Button>();
         AS1.onClick.AddListener(ASpeech1);
         Button RS1 = response1.GetComponent<Button>();
@@ -95,10 +112,18 @@ public class Scene4Script : MonoBehaviour
         AS3.onClick.AddListener(ASpeech3);
         Button AS4 = AminaSpeech4.GetComponent<Button>();
         AS4.onClick.AddListener(ASpeech4);
+
         Button JS1 = JasonSpeech1.GetComponent<Button>();
         JS1.onClick.AddListener(JSpeech1);
         Button JS2 = JasonSpeech2.GetComponent<Button>();
         JS2.onClick.AddListener(JSpeech2);
+        Button JS3 = JasonSpeech3.GetComponent<Button>();
+        JS3.onClick.AddListener(JSpeech3);
+        Button JS4 = JasonSpeech4.GetComponent<Button>();
+        JS4.onClick.AddListener(JSpeech4);
+        Button JS5 = JasonSpeech5.GetComponent<Button>();
+        JS5.onClick.AddListener(JSpeech5);
+        
 
     }
 
@@ -204,6 +229,39 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech3.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+    }
+    void JSpeech3()
+    {
+        KatieSpeech6.gameObject.SetActive(true);
+        JasonSpeech3.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(false);
+    }
+    void KSpeech6()
+    {
+        KatieSpeech6.gameObject.SetActive(false);
+        JasonSpeech4.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+        CoWorker.gameObject.SetActive(true);
+    }
+    void JSpeech4()
+    {
+        KatieSpeech7.gameObject.SetActive(true);
+        JasonSpeech4.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(false);
+    }
+    void KSpeech7()
+    {
+        KatieSpeech7.gameObject.SetActive(false);
+        JasonSpeech5.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+        CoWorker.gameObject.SetActive(true);
+    }
+    void JSpeech5()
+    {
+        JasonSpeech5.gameObject.SetActive(false);
+        JasonSpeech6.gameObject.SetActive(true);
     }
 }
 
