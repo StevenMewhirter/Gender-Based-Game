@@ -2276,8 +2276,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Email: We are looking forward to making you part of the team. Kind Regards,
-    Amina Azzi'
+  m_Text: "Email: We are looking forward to making you part of the team. \nKind Regards,
+    Amina Azzi"
 --- !u!222 &508159674
 CanvasRenderer:
   m_ObjectHideFlags: 0
