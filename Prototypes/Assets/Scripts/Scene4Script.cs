@@ -20,6 +20,7 @@ public class Scene4Script : MonoBehaviour
     public Button AminaSpeech3;
     public Button AminaSpeech4;
     public Button JasonSpeech1;
+    public Button JasonSpeech2;
 
 
     public RawImage MC;
@@ -48,6 +49,7 @@ public class Scene4Script : MonoBehaviour
         AminaSpeech3.gameObject.SetActive(false);
         AminaSpeech4.gameObject.SetActive(false);
         JasonSpeech1.gameObject.SetActive(false);
+        JasonSpeech2.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -82,6 +84,8 @@ public class Scene4Script : MonoBehaviour
         RS3.onClick.AddListener(ResponseC);
         Button AS3 = AminaSpeech3.GetComponent<Button>();
         AS3.onClick.AddListener(ASpeech3);
+        Button AS4 = AminaSpeech4.GetComponent<Button>();
+        AS4.onClick.AddListener(ASpeech4);
         Button JS1 = JasonSpeech1.GetComponent<Button>();
         JS1.onClick.AddListener(JSpeech1);
 
@@ -168,5 +172,12 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech1.gameObject.SetActive(false);
         Boss.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
+    }
+    void ASpeech4()
+    {
+        AminaSpeech4.gameObject.SetActive(false);
+        JasonSpeech2.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(false);
+        CoWorker.gameObject.SetActive(true);
     }
 }
