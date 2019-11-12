@@ -243,6 +243,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void RobinReply5()
     {
+        RobinSpeech4.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
@@ -252,6 +253,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void RobinReply6()
     {
+        RobinSpeech5.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(true);
