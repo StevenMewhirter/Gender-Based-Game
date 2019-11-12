@@ -18,6 +18,8 @@ public class Scene4Script : MonoBehaviour
     public Button KatieSpeech5;
     public Button KatieSpeech6;
     public Button KatieSpeech7;
+    public Button KatieSpeech8;
+    public Button KatieSpeech9;
 
     public Button AminaSpeech1;
     public Button AminaSpeech2;
@@ -30,7 +32,7 @@ public class Scene4Script : MonoBehaviour
     public Button JasonSpeech4;
     public Button JasonSpeech5;
     public Button JasonSpeech6;
-
+    public Button JasonSpeech7;
 
 
 
@@ -58,6 +60,8 @@ public class Scene4Script : MonoBehaviour
         KatieSpeech5.gameObject.SetActive(false);
         KatieSpeech6.gameObject.SetActive(false);
         KatieSpeech7.gameObject.SetActive(false);
+        KatieSpeech8.gameObject.SetActive(false);
+        KatieSpeech9.gameObject.SetActive(false);
         AminaSpeech1.gameObject.SetActive(false);
         AminaSpeech2.gameObject.SetActive(false);
         AminaSpeech3.gameObject.SetActive(false);
@@ -68,6 +72,7 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech4.gameObject.SetActive(false);
         JasonSpeech5.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(false);
+        JasonSpeech7.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -98,6 +103,8 @@ public class Scene4Script : MonoBehaviour
         KS6.onClick.AddListener(KSpeech6);
         Button KS7 = KatieSpeech7.GetComponent<Button>();
         KS7.onClick.AddListener(KSpeech7);
+        Button KS8 = KatieSpeech8.GetComponent<Button>();
+        KS8.onClick.AddListener(KSpeech8);
 
 
         Button AS1 = AminaSpeech1.GetComponent<Button>();
@@ -123,7 +130,11 @@ public class Scene4Script : MonoBehaviour
         JS4.onClick.AddListener(JSpeech4);
         Button JS5 = JasonSpeech5.GetComponent<Button>();
         JS5.onClick.AddListener(JSpeech5);
-        
+        Button JS6 = JasonSpeech6.GetComponent<Button>();
+        JS6.onClick.AddListener(JSpeech6);
+        Button JS7 = JasonSpeech7.GetComponent<Button>();
+        JS7.onClick.AddListener(JSpeech7);
+
 
     }
 
@@ -262,6 +273,27 @@ public class Scene4Script : MonoBehaviour
     {
         JasonSpeech5.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(true);
+    }
+    void JSpeech6()
+    {
+        JasonSpeech6.gameObject.SetActive(false);
+        KatieSpeech8.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(false);
+    }
+    void KSpeech8()
+    {
+        JasonSpeech7.gameObject.SetActive(true);
+        KatieSpeech8.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        CoWorker.gameObject.SetActive(true);
+    }
+    void JSpeech7()
+    {
+        JasonSpeech7.gameObject.SetActive(false);
+        KatieSpeech9.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(false);
     }
 }
 
