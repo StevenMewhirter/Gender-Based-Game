@@ -18,7 +18,14 @@ public class Scene6TextManager : MonoBehaviour
     public Button response4;
     public Button response5;
     public Button response6;
- 
+    public Button response7;
+    public Button response8;
+    public Button response9;
+    public Button response10;
+    public Button response11;
+    public Button response12;
+    public Button response13;
+    public Button response14;
 
     public Button JasonSpeech1;
     public Button JasonSpeech2;
@@ -65,7 +72,14 @@ public class Scene6TextManager : MonoBehaviour
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-       
+        response7.gameObject.SetActive(false);
+        response8.gameObject.SetActive(false);
+        response9.gameObject.SetActive(false);
+        response10.gameObject.SetActive(false);
+        response11.gameObject.SetActive(false);
+        response12.gameObject.SetActive(false);
+        response13.gameObject.SetActive(false);
+        response14.gameObject.SetActive(false);
         JasonSpeech1.gameObject.SetActive(false);
         JasonSpeech2.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(false);
@@ -103,8 +117,16 @@ public class Scene6TextManager : MonoBehaviour
         K2.onClick.AddListener(JSpeech1);
         Button r1 = response1.GetComponent<Button>();
         r1.onClick.AddListener(Choice2);
+        Button r7 = response7.GetComponent<Button>();
+        r7.onClick.AddListener(Choice2);
+        Button r8 = response8.GetComponent<Button>();
+        r8.onClick.AddListener(Choice2);
         Button r2 = response2.GetComponent<Button>();
         r2.onClick.AddListener(BS1);
+        Button r9 = response9.GetComponent<Button>();
+        r9.onClick.AddListener(BS1);
+        Button r10 = response10.GetComponent<Button>();
+        r10.onClick.AddListener(BS1);
         Button A1 = BossSpeech2.GetComponent<Button>();
         A1.onClick.AddListener(Waiter);
         Button W = WaiterSpeech.GetComponent<Button>();
@@ -125,12 +147,22 @@ public class Scene6TextManager : MonoBehaviour
         JaK.onClick.AddListener(JSpeech3);
         Button r3 = response3.GetComponent<Button>();
         r3.onClick.AddListener(JSpeech4);
+        Button r11 = response11.GetComponent<Button>();
+        r11.onClick.AddListener(JSpeech7);
+        Button r12 = response12.GetComponent<Button>();
+        r12.onClick.AddListener(JSpeech7);
         Button JS5 = JasonSpeech5.GetComponent<Button>();
         JS5.onClick.AddListener(KSpeech4);
+        Button JS6 = JasonSpeech4.GetComponent<Button>();
+        JS6.onClick.AddListener(JSpeech6);
         Button K4 = KatieSpeech4.GetComponent<Button>();
         K4.onClick.AddListener(JSpeech5);
         Button r4 = response4.GetComponent<Button>();
         r4.onClick.AddListener(JSpeech6);
+        Button r13 = response13.GetComponent<Button>();
+        r13.onClick.AddListener(JSpeech6);
+        Button r14 = response14.GetComponent<Button>();
+        r14.onClick.AddListener(JSpeech6);
         Button r5 = response5.GetComponent<Button>();
         r5.onClick.AddListener(End);
         Button r6 = response6.GetComponent<Button>();
@@ -174,12 +206,18 @@ public class Scene6TextManager : MonoBehaviour
         Jason.gameObject.SetActive(true);
         JasonSpeech1.gameObject.SetActive(true);
         response1.gameObject.SetActive(true);
+        response7.gameObject.SetActive(true);
+        response8.gameObject.SetActive(true);
     }
     
     void Choice2()
     {
         response2.gameObject.SetActive(true);
+        response9.gameObject.SetActive(true);
+        response10.gameObject.SetActive(true);
         response1.gameObject.SetActive(false);
+        response7.gameObject.SetActive(false);
+        response8.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(true);
         Amina.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
@@ -189,6 +227,8 @@ public class Scene6TextManager : MonoBehaviour
     void BS1()
     {
         response2.gameObject.SetActive(false);
+        response9.gameObject.SetActive(false);
+        response10.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(true);
         Amina.gameObject.SetActive(true);
         BossSpeech1.gameObject.SetActive(false);
@@ -261,6 +301,8 @@ public class Scene6TextManager : MonoBehaviour
         Jason.gameObject.SetActive(true);
         JasonSpeech3.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
+        response11.gameObject.SetActive(true);
+        response12.gameObject.SetActive(true);
     }
 
     void JSpeech4()
@@ -268,7 +310,8 @@ public class Scene6TextManager : MonoBehaviour
         JasonSpeech3.gameObject.SetActive(false);
         JasonSpeech5.gameObject.SetActive(true);
         response3.gameObject.SetActive(false);
-   
+        response11.gameObject.SetActive(false);
+        response12.gameObject.SetActive(false);
     }
 
     void KSpeech4()
@@ -287,10 +330,13 @@ public class Scene6TextManager : MonoBehaviour
         JasonSpeech6.gameObject.SetActive(true);
         Jason.gameObject.SetActive(true);
         response4.gameObject.SetActive(true);
+        response13.gameObject.SetActive(true);
+        response14.gameObject.SetActive(true);
     }
 
     void JSpeech6()
     {
+        JasonSpeech4.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(false);
         JasonSpeech7.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
@@ -298,6 +344,8 @@ public class Scene6TextManager : MonoBehaviour
         BarExterior.gameObject.SetActive(true);
         BarInterior.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
+        response13.gameObject.SetActive(false);
+        response14.gameObject.SetActive(false);
     }
 
     void End()
@@ -309,5 +357,14 @@ public class Scene6TextManager : MonoBehaviour
         EndScreen.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         BackBackground.gameObject.SetActive(false);
+    }
+
+    void JSpeech7()
+    {
+        JasonSpeech4.gameObject.SetActive(true);
+        JasonSpeech3.gameObject.SetActive(false);
+        response3.gameObject.SetActive(false);
+        response11.gameObject.SetActive(false);
+        response12.gameObject.SetActive(false);
     }
 }
