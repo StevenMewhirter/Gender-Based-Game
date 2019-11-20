@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class BedroomTextManager : MonoBehaviour
 {
+    public GameObject introScreen;
+
     public Button response1;
     public Button response2;
     public Button response3;
@@ -44,13 +46,15 @@ public class BedroomTextManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(introPanel()); //start panel timer (to make it disappear)
+
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-        // Katie.gameObject.SetActive(false);
+        //Katie.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
@@ -271,5 +275,11 @@ public class BedroomTextManager : MonoBehaviour
     {
         KatieSpeech5.gameObject.SetActive(false);
         ThoughtBubble4.gameObject.SetActive(true);
+    }
+
+    IEnumerator introPanel() //panel timer
+    {
+        yield return new WaitForSeconds(2.30f);
+        introScreen.SetActive(false);
     }
 }
