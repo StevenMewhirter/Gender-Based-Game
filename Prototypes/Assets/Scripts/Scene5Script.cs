@@ -23,6 +23,10 @@ public class Scene5Script : MonoBehaviour
     public Button RobinSpeech6;
     public Button RobinSpeech7;
 
+    public Button Choice1;
+    public Button Choice2;
+    public Button Choice3;
+
     public RawImage MC;
     public RawImage CoWorker;
     // Start is called before the first frame update
@@ -42,25 +46,29 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
         RobinSpeech7.gameObject.SetActive(false);
+        Choice2.gameObject.SetActive(false);
+        Choice3.gameObject.SetActive(false);
 
+        Button C1 = Choice1.GetComponent<Button>();
+        C1.onClick.AddListener(KSpeech);
+        Button C2 = Choice2.GetComponent<Button>();
+        C2.onClick.AddListener(RSpeech4);
+        Button C3 = Choice3.GetComponent<Button>();
+        C3.onClick.AddListener(RSpeech5);
 
-        Button RS = RobinSpeech.GetComponent<Button>();
-        RS.onClick.AddListener(RSpeech);
         Button RS1 = RobinSpeech1.GetComponent<Button>();
         RS1.onClick.AddListener(RSpeech1);
         Button RS2 = RobinSpeech2.GetComponent<Button>();
         RS2.onClick.AddListener(RSpeech2);
         Button RS3 = RobinSpeech3.GetComponent<Button>();
         RS3.onClick.AddListener(RSpeech3);
-        Button RS4 = RobinSpeech4.GetComponent<Button>();
-        RS4.onClick.AddListener(RSpeech4);
-        Button RS5 = RobinSpeech5.GetComponent<Button>();
-        RS5.onClick.AddListener(RSpeech5);
+        
+     
         Button RS6 = RobinSpeech6.GetComponent<Button>();
         RS6.onClick.AddListener(RSpeech6);
 
         Button KS = KatieSpeech.GetComponent<Button>();
-        KS.onClick.AddListener(KSpeech);
+        KS.onClick.AddListener(RSpeech);
         Button KS1 = KatieSpeech1.GetComponent<Button>();
         KS1.onClick.AddListener(KSpeech1);
         Button KS2 = KatieSpeech2.GetComponent<Button>();
@@ -77,14 +85,15 @@ public class Scene5Script : MonoBehaviour
     {
 
     }
-    void RSpeech()
+    void KSpeech()
         {
+        Choice1.gameObject.SetActive(false);
         KatieSpeech.gameObject.SetActive(true);
         RobinSpeech.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
     }
-    void KSpeech()
+    void RSpeech()
     {
         KatieSpeech.gameObject.SetActive(false);
         RobinSpeech1.gameObject.SetActive(true);
@@ -121,6 +130,7 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech2.gameObject.SetActive(false);
         RobinSpeech4.gameObject.SetActive(true);
+        Choice2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
     }
@@ -128,6 +138,7 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech3.gameObject.SetActive(true);
         RobinSpeech4.gameObject.SetActive(false);
+        Choice2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
     }
@@ -135,6 +146,7 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech3.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
+        Choice3.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
     }
@@ -142,6 +154,7 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech4.gameObject.SetActive(true);
         RobinSpeech5.gameObject.SetActive(false);
+        Choice3.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
     }
