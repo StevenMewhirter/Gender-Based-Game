@@ -10,6 +10,9 @@ public class Scene4Script : MonoBehaviour
     public Button response1;
     public Button response2;
     public Button response3;
+    public Button response4;
+    public Button response5;
+
     //Buttons for speech
     public Button KatieSpeech1;
     public Button KatieSpeech2;
@@ -76,6 +79,8 @@ public class Scene4Script : MonoBehaviour
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
+        response4.gameObject.SetActive(false);
+        response5.gameObject.SetActive(false);
 
         if (textFile != null) // checks if there is text
         {
@@ -115,6 +120,10 @@ public class Scene4Script : MonoBehaviour
         RS2.onClick.AddListener(ResponseB);
         Button RS3 = response3.GetComponent<Button>();
         RS3.onClick.AddListener(ResponseC);
+        Button RS4 = response4.GetComponent<Button>();
+        RS4.onClick.AddListener(JSpeech3);
+        Button RS5 = response5.GetComponent<Button>();
+        RS5.onClick.AddListener(JSpeech4);
         Button AS3 = AminaSpeech3.GetComponent<Button>();
         AS3.onClick.AddListener(ASpeech3);
         Button AS4 = AminaSpeech4.GetComponent<Button>();
@@ -124,10 +133,7 @@ public class Scene4Script : MonoBehaviour
         JS1.onClick.AddListener(JSpeech1);
         Button JS2 = JasonSpeech2.GetComponent<Button>();
         JS2.onClick.AddListener(JSpeech2);
-        Button JS3 = JasonSpeech3.GetComponent<Button>();
-        JS3.onClick.AddListener(JSpeech3);
-        Button JS4 = JasonSpeech4.GetComponent<Button>();
-        JS4.onClick.AddListener(JSpeech4);
+        
         Button JS5 = JasonSpeech5.GetComponent<Button>();
         JS5.onClick.AddListener(JSpeech5);
         Button JS6 = JasonSpeech6.GetComponent<Button>();
@@ -238,11 +244,14 @@ public class Scene4Script : MonoBehaviour
     {
         KatieSpeech5.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(true);
+        response4.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
     }
     void JSpeech3()
     {
+        response4.gameObject.SetActive(false);
+
         KatieSpeech6.gameObject.SetActive(true);
         JasonSpeech3.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
@@ -252,6 +261,7 @@ public class Scene4Script : MonoBehaviour
     {
         KatieSpeech6.gameObject.SetActive(false);
         JasonSpeech4.gameObject.SetActive(true);
+        response5.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
     }
@@ -261,6 +271,7 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech4.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
+        response5.gameObject.SetActive(false);
     }
     void KSpeech7()
     {

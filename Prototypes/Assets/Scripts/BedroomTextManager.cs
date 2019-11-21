@@ -8,6 +8,7 @@ public class BedroomTextManager : MonoBehaviour
 {
     public GameObject introScreen;
 
+    //declares all the buttons for the player's choices -SD
     public Button response1;
     public Button response2;
     public Button response3;
@@ -15,12 +16,14 @@ public class BedroomTextManager : MonoBehaviour
     public Button response5;
     public Button response6;
 
+    //declares all the buttons for Katie's Speech -SD
     public Button KatieSpeech1;
     public Button KatieSpeech2;
     public Button KatieSpeech3;
     public Button KatieSpeech4;
     public Button KatieSpeech5;
 
+    //declares all the buttons for Robin's Speech -SD
     public Button RobinSpeech1;
     public Button RobinSpeech2;
     public Button RobinSpeech3;
@@ -28,17 +31,20 @@ public class BedroomTextManager : MonoBehaviour
     public Button RobinSpeech5;
     public Button RobinSpeech6;
 
+    //declares all the buttons for Katie's thought bubbles -SD
     public Button ThoughtBubble1;
     public Button ThoughtBubble2;
     public Button ThoughtBubble3;
     public Button ThoughtBubble4;
 
+    //declares all the buttons for the email text -SD
     public Button EmailText1;
     public Button EmailText2;
     public Button EmailText3;
     public Button EmailText4;
     public Button EmailText5;
 
+    //all the main raw images for the character and the phone -SD
     public RawImage Katie;
     public RawImage Phone;
     
@@ -48,6 +54,7 @@ public class BedroomTextManager : MonoBehaviour
     {
         StartCoroutine(introPanel()); //start panel timer (to make it disappear)
 
+        //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -77,6 +84,8 @@ public class BedroomTextManager : MonoBehaviour
         EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
 
+        //When each specified button is pressed, it will call the specified method from below and run the appropriate actions accordingly -SD
+        //After the introPanel disappears, the first image will be Katie in her room and the text coming in to the thought bubble in a typewriter fashion - SD
         Button t1 = ThoughtBubble1.GetComponent<Button>();
         t1.onClick.AddListener(TB2);
         Button t2 = ThoughtBubble2.GetComponent<Button>();
@@ -133,24 +142,28 @@ public class BedroomTextManager : MonoBehaviour
 
     void TB2()
     {
+        //the second thought bubble will be displayed saying "Will the 25th time refreshing make a difference?" -SD
        ThoughtBubble1.gameObject.SetActive(false);
        ThoughtBubble2.gameObject.SetActive(true);
     }
 
     void TB3()
     {
+        //the third thought bubble will be displayed saying "It’s been over a week. I don’t think I got it.." -SD
         ThoughtBubble2.gameObject.SetActive(false);
         ThoughtBubble3.gameObject.SetActive(true);
     }
 
     void KSpeech1()
     {
+        //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
         ThoughtBubble3.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(true);
     }
 
     void RobinReply1()
     {
+        //The phone and Robin's first speech bubble appears on screen saying "Don’t say that! I think it went better than you think" -SD
         Katie.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
@@ -159,6 +172,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void KSpeech2()
     {
+        //Katie's second speech bubble appears on screen saying "That boss of yours.. omg, she was so scary during the interview" -SD
         Phone.gameObject.SetActive(false);
         RobinSpeech1.gameObject.SetActive(false);
         Katie.gameObject.SetActive(true);
@@ -167,6 +181,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void RobinReply2()
     {
+        //The phone and Robin's second speech bubble appears on screen saying "Other people say that too (smiley face) but I think she’s cool. Breaking the glass ceiling and stuff (smiley face)" -SD
         Katie.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
@@ -175,6 +190,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void KSpeech3()
     {
+        //Katie's third speech bubble appears on screen saying "Oh well, I guess I’ll like her if she gives me the job… Talk to you later" -SD
         Phone.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
         Katie.gameObject.SetActive(true);
@@ -183,6 +199,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void RobinReply3()
     {
+        //The phone and Robin's third speech bubble appears on screen saying "Keep it together man. Ciao" -SD
         Katie.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
@@ -191,36 +208,42 @@ public class BedroomTextManager : MonoBehaviour
 
     void Email1()
     {
+        //The phone and the first email speech bubble appears on screen saying "Good afternoon Ms Anderson" -SD
         RobinSpeech3.gameObject.SetActive(false);
         EmailText1.gameObject.SetActive(true);
     }
 
     void Email2()
     {
+        //The phone and the second email speech bubble appears on screen saying "I am pleased to inform you that after interviewing a lot of candidates," - SD
         EmailText1.gameObject.SetActive(false);
         EmailText2.gameObject.SetActive(true);
     }
 
     void Email3()
     {
+        //The phone and the third email speech bubble appears on screen saying "the HR team and I decided to offer you the marketing intern/assistant position in our company" - SD
         EmailText2.gameObject.SetActive(false);
         EmailText3.gameObject.SetActive(true);
     }
 
     void Email4()
     {
+        //The phone and the fourth email speech bubble appears on screen saying "You are expected to be at the office this Monday 24th of March at 9:00 am." - SD
         EmailText3.gameObject.SetActive(false);
         EmailText4.gameObject.SetActive(true);
     }
 
     void Email5()
     {
+        //The phone and the final email speech bubble appears on screen saying "We are looking forward to making you part of the team. Kind Regards, Amina Azzi" - SD
         EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(true);
     }
 
     void KSpeech4()
     {
+        //Katie's fourth speech bubble appears on screen saying "I got the job! I am telling everyone" -SD
         Phone.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
         Katie.gameObject.SetActive(true);
@@ -229,6 +252,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void Choice1()
     {
+        //the choice buttons will appear on screen prompting the user to pick between them
         KatieSpeech4.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
@@ -236,6 +260,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void RobinReply4()
     {
+        //The phone and Robin's fourth speech bubble appears on screen saying "I told you were overreacting! Congrats!" and the choice buttons will appear on screen prompting the user to pick between them-SD
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
@@ -247,6 +272,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void RobinReply5()
     {
+        //The phone and Robin's fifth speech bubble appears on screen saying "Well, I have a list of requests……" and the choice buttons will appear on screen prompting the user to pick between them-SD
         RobinSpeech4.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
@@ -257,6 +283,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void RobinReply6()
     {
+        //The phone and Robin's sixth speech bubble appears on screen saying "Starting with a few drinks is not a bad idea (smiley face)"-SD
         RobinSpeech5.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
@@ -265,6 +292,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void KSpeech5()
     {
+        //Katie's fifth speech bubble appears on screen saying "Perfect I’ll call you in ten to tell you where to meet! Ciao!" -SD
         RobinSpeech6.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
         Katie.gameObject.SetActive(true);
@@ -273,6 +301,7 @@ public class BedroomTextManager : MonoBehaviour
 
     void TB4()
     {
+        // the fourth thought bubble will be displayed saying "I can’t believe it’s actually happening! I can take a break finally…”" - SD
         KatieSpeech5.gameObject.SetActive(false);
         ThoughtBubble4.gameObject.SetActive(true);
     }
