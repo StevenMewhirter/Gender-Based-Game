@@ -24,4 +24,9 @@ public class TypeWriting : MonoBehaviour
             yield return new WaitForSeconds(typeTime);
         }
     }
+
+     void Update()
+    {
+       
+    }
 }
