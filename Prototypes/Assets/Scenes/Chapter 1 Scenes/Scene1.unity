@@ -265,8 +265,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Email: You are expected to be at the office this Monday 24th of March at
-    09:00am. '
+  m_Text: 'You are expected to be at the office this Monday 24th of March at 09:00am. '
 --- !u!222 &132639062
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -312,8 +311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 46.3, y: -23.799995}
+  m_SizeDelta: {x: 243, y: 77.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143050127
 MonoBehaviour:
@@ -393,6 +392,76 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143050125}
+  m_CullTransparentMesh: 0
+--- !u!1 &165956591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165956592}
+  - component: {fileID: 165956594}
+  - component: {fileID: 165956593}
+  m_Layer: 5
+  m_Name: Robin NameBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &165956592
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165956591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1258199383}
+  m_Father: {fileID: 1625338568}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 85.6, y: 255.42}
+  m_SizeDelta: {x: 233.2, y: 52}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &165956593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165956591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 2fb12ac0fefdd044c8017792b87f5f3c, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    height: 1
+--- !u!222 &165956594
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165956591}
   m_CullTransparentMesh: 0
 --- !u!1 &173696924
 GameObject:
@@ -549,8 +618,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 99.70001, y: 195.44995}
+  m_SizeDelta: {x: 271, y: 60.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &196217768
 MonoBehaviour:
@@ -668,8 +737,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 63.50001, y: 164.39998}
+  m_SizeDelta: {x: 277.4, y: 122.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207922005
 MonoBehaviour:
@@ -973,7 +1042,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Perfect! I'll text you in ten about where to meet! Ciao!
+  m_Text: "Perfect! I'll text you in \nten about where to meet! Ciao!"
 --- !u!222 &245345818
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1807,7 +1876,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &407363705
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1826,8 +1895,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 78.975, y: 132}
+  m_SizeDelta: {x: 310.4, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &407363706
 MonoBehaviour:
@@ -2141,8 +2210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 45.370003, y: 185.08}
+  m_SizeDelta: {x: 231.69, y: 88.68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481743679
 MonoBehaviour:
@@ -2257,8 +2326,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.7899933, y: 0}
+  m_SizeDelta: {x: -64.67, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508159673
 MonoBehaviour:
@@ -2283,7 +2352,7 @@ MonoBehaviour:
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2291,7 +2360,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Email: We are looking forward to making you part of the team. \nKind Regards,
+  m_Text: "We are looking forward to making you part of the team. \nKind Regards,
     Amina Azzi"
 --- !u!222 &508159674
 CanvasRenderer:
@@ -2319,7 +2388,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &534373955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2338,8 +2407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 78.975, y: 80}
+  m_SizeDelta: {x: 310.4, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534373956
 MonoBehaviour:
@@ -2456,8 +2525,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0}
+  m_SizeDelta: {x: 10.558, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540777384
 MonoBehaviour:
@@ -2932,8 +3001,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Email: The HR team and I have decided to offer you the marketing intern/assistant
-    position in our company'
+  m_Text: The HR team and I have decided to offer you the marketing intern/assistant
+    position in our company
 --- !u!222 &699338008
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3053,8 +3122,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.81, y: 0}
+  m_SizeDelta: {x: -68.19, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865681467
 MonoBehaviour:
@@ -3087,7 +3156,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Robin: Don''t say that!! I think it went better than you think!'
+  m_Text: Don't say that!! I think it went better than you think!
 --- !u!222 &865681468
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3846,7 +3915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1067336659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3865,8 +3934,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 78.975, y: 35}
+  m_SizeDelta: {x: 310.4, y: 110.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1067336660
 MonoBehaviour:
@@ -4134,8 +4203,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Robin: A lot of people say that too :) But I think she''s cool, breaking
-    the glass cieling and stuff :)'
+  m_Text: A lot of people say that too :) But I think she's cool, breaking the glass
+    ceiling and stuff :)
 --- !u!222 &1125353724
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4143,6 +4212,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125353721}
+  m_CullTransparentMesh: 0
+--- !u!1 &1129586549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129586550}
+  - component: {fileID: 1129586552}
+  - component: {fileID: 1129586551}
+  m_Layer: 5
+  m_Name: EmailName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1129586550
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129586549}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2000269159}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -7, y: 0.000005722}
+  m_SizeDelta: {x: 233.2, y: 41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1129586551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129586549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Email
+--- !u!222 &1129586552
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129586549}
   m_CullTransparentMesh: 0
 --- !u!1 &1137060985
 GameObject:
@@ -4178,8 +4324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 0.00002670288}
+  m_SizeDelta: {x: -80.71, y: -42.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1137060987
 MonoBehaviour:
@@ -4212,7 +4358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Robin: I told you you were over reacting!! Congrats!!'
+  m_Text: "I told you you were over reacting!! \nCongrats!!"
 --- !u!222 &1137060988
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4335,8 +4481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 45.37002, y: 42.82501}
+  m_SizeDelta: {x: 231.69, y: 85.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174732646
 MonoBehaviour:
@@ -4601,8 +4747,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 109.02, y: 70.73}
+  m_SizeDelta: {x: 260.3, y: 84.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1245498032
 MonoBehaviour:
@@ -4683,6 +4829,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245498030}
   m_CullTransparentMesh: 0
+--- !u!1 &1258199382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1258199383}
+  - component: {fileID: 1258199385}
+  - component: {fileID: 1258199384}
+  m_Layer: 5
+  m_Name: RobinName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1258199383
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258199382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 165956592}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -7, y: 0.000005722}
+  m_SizeDelta: {x: 233.2, y: 41}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1258199384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258199382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Robin
+--- !u!222 &1258199385
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258199382}
+  m_CullTransparentMesh: 0
 --- !u!1 &1265100735
 GameObject:
   m_ObjectHideFlags: 0
@@ -4751,7 +4974,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Robin: I have a list of requests...'
+  m_Text: I have a list of requests...
 --- !u!222 &1265100738
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4778,7 +5001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1272897386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4797,8 +5020,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 79, y: 185}
+  m_SizeDelta: {x: 310.4, y: 106.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272897387
 MonoBehaviour:
@@ -5024,7 +5247,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Robin: Take it easy, man. Ciao'
+  m_Text: Take it easy, man. Ciao
 --- !u!222 &1307189906
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5296,7 +5519,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Robin: Starting with a few drinks isn''t a bad idea...'
+  m_Text: 'Starting with a few drinks
+
+    isn''t a bad idea...'
 --- !u!222 &1380993924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5416,7 +5641,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 140, y: -34}
+  m_AnchoredPosition: {x: 187.6, y: -40.4}
   m_SizeDelta: {x: -383.1, y: -106.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1490096741
@@ -5496,8 +5721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 106.52, y: 48}
+  m_SizeDelta: {x: 255.3, y: 75.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492966322
 MonoBehaviour:
@@ -5800,7 +6025,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: That boss of yours... omg, she was so scary during the interview
+  m_Text: "That boss of yours... \nomg, she was so scary \nduring the interview"
 --- !u!222 &1602502587
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5930,6 +6155,8 @@ RectTransform:
   - {fileID: 396188091}
   - {fileID: 1959405583}
   - {fileID: 540777383}
+  - {fileID: 165956592}
+  - {fileID: 2000269159}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6034,7 +6261,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.953499
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6082,7 +6309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1713587154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6101,8 +6328,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 78.97498, y: 202.29996}
+  m_SizeDelta: {x: 310.4, y: 47.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713587155
 MonoBehaviour:
@@ -6451,8 +6678,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 45.37, y: 110.15001}
+  m_SizeDelta: {x: 231.69, y: 62.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834336139
 MonoBehaviour:
@@ -6724,8 +6951,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 41.67501, y: 123.74996}
+  m_SizeDelta: {x: 224.3, y: 89.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901829159
 MonoBehaviour:
@@ -6843,8 +7070,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 500, y: 130}
+  m_AnchoredPosition: {x: 104.48, y: -36.177}
+  m_SizeDelta: {x: 259.36, y: 72.355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959405584
 MonoBehaviour:
@@ -7157,6 +7384,8 @@ MonoBehaviour:
   EmailText5: {fileID: 534373956}
   Katie: {fileID: 2087888879}
   Phone: {fileID: 1209733575}
+  RobinName: {fileID: 165956593}
+  EmailName: {fileID: 2000269160}
 --- !u!4 &1991610547
 Transform:
   m_ObjectHideFlags: 0
@@ -7171,6 +7400,77 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2000269158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000269159}
+  - component: {fileID: 2000269161}
+  - component: {fileID: 2000269160}
+  m_Layer: 5
+  m_Name: Email NameBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2000269159
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000269158}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1129586550}
+  m_Father: {fileID: 1625338568}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 85.59999, y: 255.41997}
+  m_SizeDelta: {x: 233.2, y: 52}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2000269160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000269158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: 2fb12ac0fefdd044c8017792b87f5f3c, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &2000269161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000269158}
+  m_CullTransparentMesh: 0
 --- !u!1 &2020784811
 GameObject:
   m_ObjectHideFlags: 0
@@ -7282,8 +7582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.799988, y: 9.799999}
-  m_SizeDelta: {x: -160.1, y: 19.4}
+  m_AnchoredPosition: {x: 0, y: 9.1}
+  m_SizeDelta: {x: -89.8, y: 18.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049995926
 MonoBehaviour:
@@ -7316,7 +7616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Email: I am pleased to inform you that, after interviewing a lot of candidates,'
+  m_Text: I am pleased to inform you that, after interviewing a lot of candidates,
 --- !u!222 &2049995927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7624,7 +7924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -112.3, y: 145.3}
+  m_AnchoredPosition: {x: -111.00001, y: 144.99998}
   m_SizeDelta: {x: 791.9, y: 794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116407536

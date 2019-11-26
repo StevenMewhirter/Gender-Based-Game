@@ -119,9 +119,11 @@ public class Scene3Script : MonoBehaviour
         Button RIS2 = RichardSpeech2.GetComponent<Button>();
         RIS2.onClick.AddListener(RISpeech2);
 
+        Handheld.Vibrate();
     }
 
-   
+
+    
 
     // Update is called once per frame
     void Update()
@@ -164,6 +166,8 @@ public class Scene3Script : MonoBehaviour
         MC.gameObject.SetActive(false);
         Robin.gameObject.SetActive(true);
         Choice2.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
     void RSpeech2()
     {
@@ -183,7 +187,7 @@ public class Scene3Script : MonoBehaviour
         Robin.gameObject.SetActive(true);
         Choice3.gameObject.SetActive(true);
 
-
+        Handheld.Vibrate();
     }
     void RSpeech3()
     {
@@ -225,6 +229,8 @@ public class Scene3Script : MonoBehaviour
         RobinSpeech5.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
         Robin.gameObject.SetActive(false);
+
+        Handheld.Vibrate();
     }
     void JSpeech2()
     {

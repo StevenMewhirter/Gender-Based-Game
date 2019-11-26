@@ -79,6 +79,8 @@ public class Scene5Script : MonoBehaviour
         KS4.onClick.AddListener(KSpeech4);
         Button KS5 = KatieSpeech5.GetComponent<Button>();
         KS5.onClick.AddListener(KSpeech5);
+
+        Handheld.Vibrate();
     }
 
     void Update()
@@ -133,6 +135,8 @@ public class Scene5Script : MonoBehaviour
         Choice2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
     void RSpeech4()
     {
@@ -149,6 +153,8 @@ public class Scene5Script : MonoBehaviour
         Choice3.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
     void RSpeech5()
     {

@@ -47,7 +47,10 @@ public class BedroomTextManager : MonoBehaviour
     //all the main raw images for the character and the phone -SD
     public RawImage Katie;
     public RawImage Phone;
-    
+
+    //phone headings
+    public RawImage RobinName;
+    public RawImage EmailName;
 
     // Start is called before the first frame update
     void Start()
@@ -83,6 +86,9 @@ public class BedroomTextManager : MonoBehaviour
         EmailText3.gameObject.SetActive(false);
         EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
+
+        RobinName.gameObject.SetActive(false);
+        EmailName.gameObject.SetActive(false);
 
         //When each specified button is pressed, it will call the specified method from below and run the appropriate actions accordingly -SD
         //After the introPanel disappears, the first image will be Katie in her room and the text coming in to the thought bubble in a typewriter fashion - SD
@@ -158,23 +164,26 @@ public class BedroomTextManager : MonoBehaviour
     {
         //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
         ThoughtBubble3.gameObject.SetActive(false);
+        Phone.gameObject.SetActive(true);
+        RobinName.gameObject.SetActive(true);
         KatieSpeech1.gameObject.SetActive(true);
     }
 
     void RobinReply1()
     {
         //The phone and Robin's first speech bubble appears on screen saying "Don’t say that! I think it went better than you think" -SD
+        
+
         Katie.gameObject.SetActive(false);
-        KatieSpeech1.gameObject.SetActive(false);
-        Phone.gameObject.SetActive(true);
+       // KatieSpeech1.gameObject.SetActive(false);
+        
         RobinSpeech1.gameObject.SetActive(true);
     }
 
     void KSpeech2()
     {
         //Katie's second speech bubble appears on screen saying "That boss of yours.. omg, she was so scary during the interview" -SD
-        Phone.gameObject.SetActive(false);
-        RobinSpeech1.gameObject.SetActive(false);
+     
         Katie.gameObject.SetActive(true);
         KatieSpeech2.gameObject.SetActive(true);
     }
@@ -185,14 +194,17 @@ public class BedroomTextManager : MonoBehaviour
         Katie.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
+        RobinName.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(true);
+
+        RobinSpeech1.gameObject.SetActive(false);
+        KatieSpeech1.gameObject.SetActive(false);
     }
 
     void KSpeech3()
     {
         //Katie's third speech bubble appears on screen saying "Oh well, I guess I’ll like her if she gives me the job… Talk to you later" -SD
-        Phone.gameObject.SetActive(false);
-        RobinSpeech2.gameObject.SetActive(false);
+        
         Katie.gameObject.SetActive(true);
         KatieSpeech3.gameObject.SetActive(true);
     }
@@ -201,35 +213,48 @@ public class BedroomTextManager : MonoBehaviour
     {
         //The phone and Robin's third speech bubble appears on screen saying "Keep it together man. Ciao" -SD
         Katie.gameObject.SetActive(false);
-        KatieSpeech3.gameObject.SetActive(false);
+        
         Phone.gameObject.SetActive(true);
+        RobinName.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(true);
+
+        
+        
     }
 
     void Email1()
     {
         //The phone and the first email speech bubble appears on screen saying "Good afternoon Ms Anderson" -SD
+        RobinName.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(false);
+        RobinSpeech2.gameObject.SetActive(false);
+        KatieSpeech3.gameObject.SetActive(false);
+        EmailName.gameObject.SetActive(true);
         EmailText1.gameObject.SetActive(true);
     }
 
     void Email2()
     {
         //The phone and the second email speech bubble appears on screen saying "I am pleased to inform you that after interviewing a lot of candidates," - SD
-        EmailText1.gameObject.SetActive(false);
+
+        //EmailText1.gameObject.SetActive(false);
         EmailText2.gameObject.SetActive(true);
     }
 
     void Email3()
     {
         //The phone and the third email speech bubble appears on screen saying "the HR team and I decided to offer you the marketing intern/assistant position in our company" - SD
-        EmailText2.gameObject.SetActive(false);
+
+        //EmailText2.gameObject.SetActive(false);
         EmailText3.gameObject.SetActive(true);
     }
 
     void Email4()
     {
         //The phone and the fourth email speech bubble appears on screen saying "You are expected to be at the office this Monday 24th of March at 9:00 am." - SD
+
+        EmailText1.gameObject.SetActive(false);
+        EmailText2.gameObject.SetActive(false);
         EmailText3.gameObject.SetActive(false);
         EmailText4.gameObject.SetActive(true);
     }
@@ -237,14 +262,16 @@ public class BedroomTextManager : MonoBehaviour
     void Email5()
     {
         //The phone and the final email speech bubble appears on screen saying "We are looking forward to making you part of the team. Kind Regards, Amina Azzi" - SD
-        EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(true);
     }
 
     void KSpeech4()
     {
+        
         //Katie's fourth speech bubble appears on screen saying "I got the job! I am telling everyone" -SD
         Phone.gameObject.SetActive(false);
+        EmailName.gameObject.SetActive(false);
+        EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
         Katie.gameObject.SetActive(true);
         KatieSpeech4.gameObject.SetActive(true);
@@ -256,6 +283,8 @@ public class BedroomTextManager : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
 
     void RobinReply4()
@@ -265,26 +294,31 @@ public class BedroomTextManager : MonoBehaviour
         response2.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
+        RobinName.gameObject.SetActive(true);
         RobinSpeech4.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
         response4.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
 
     void RobinReply5()
     {
         //The phone and Robin's fifth speech bubble appears on screen saying "Well, I have a list of requests……" and the choice buttons will appear on screen prompting the user to pick between them-SD
-        RobinSpeech4.gameObject.SetActive(false);
+        
         response3.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
 
     void RobinReply6()
     {
         //The phone and Robin's sixth speech bubble appears on screen saying "Starting with a few drinks is not a bad idea (smiley face)"-SD
-        RobinSpeech5.gameObject.SetActive(false);
+        
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(true);
@@ -293,8 +327,7 @@ public class BedroomTextManager : MonoBehaviour
     void KSpeech5()
     {
         //Katie's fifth speech bubble appears on screen saying "Perfect I’ll call you in ten to tell you where to meet! Ciao!" -SD
-        RobinSpeech6.gameObject.SetActive(false);
-        Phone.gameObject.SetActive(false);
+  
         Katie.gameObject.SetActive(true);
         KatieSpeech5.gameObject.SetActive(true);
     }
@@ -304,6 +337,11 @@ public class BedroomTextManager : MonoBehaviour
         // the fourth thought bubble will be displayed saying "I can’t believe it’s actually happening! I can take a break finally…”" - SD
         KatieSpeech5.gameObject.SetActive(false);
         ThoughtBubble4.gameObject.SetActive(true);
+        RobinSpeech4.gameObject.SetActive(false);
+        RobinSpeech5.gameObject.SetActive(false);
+        RobinSpeech6.gameObject.SetActive(false);
+        RobinName.gameObject.SetActive(false);
+        Phone.gameObject.SetActive(false);
     }
 
     IEnumerator introPanel() //panel timer

@@ -118,6 +118,9 @@ public class Scene2Script : MonoBehaviour
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
+
+
+        Handheld.Vibrate();
     }
     void ResponseG()
     {

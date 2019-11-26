@@ -59,6 +59,7 @@ public class Scene6TextManager : MonoBehaviour
     public RawImage BarInterior;
     public RawImage EndScreen;
     public RawImage BackBackground;
+    public RawImage RobinName;
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +107,8 @@ public class Scene6TextManager : MonoBehaviour
         //BarExterior.gameObject.SetActive(false);
         WaiterSpeech.gameObject.SetActive(false);
         EndScreen.gameObject.SetActive(false);
+
+        RobinName.gameObject.SetActive(true);
 
         Button robin1 = RobinSpeech1.GetComponent<Button>();
         robin1.onClick.AddListener(KSpeech1);
@@ -178,14 +181,15 @@ public class Scene6TextManager : MonoBehaviour
     void KSpeech1()
     {
         KatieSpeech1.gameObject.SetActive(true);
-        RobinSpeech1.gameObject.SetActive(false);
         Katie.gameObject.SetActive(true);
-        Phone.gameObject.SetActive(false);
     }
 
     void EnviroChange1()
     {
         KatieSpeech1.gameObject.SetActive(false);
+        RobinSpeech1.gameObject.SetActive(false);
+        RobinName.gameObject.SetActive(false);
+        Phone.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
         BarExterior.gameObject.SetActive(false);
         BarInterior.gameObject.SetActive(true);
@@ -208,6 +212,8 @@ public class Scene6TextManager : MonoBehaviour
         response1.gameObject.SetActive(true);
         response7.gameObject.SetActive(true);
         response8.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
     
     void Choice2()
@@ -222,6 +228,8 @@ public class Scene6TextManager : MonoBehaviour
         Amina.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         JasonSpeech1.gameObject.SetActive(false);
+
+        Handheld.Vibrate();
     }
 
     void BS1()
@@ -303,6 +311,8 @@ public class Scene6TextManager : MonoBehaviour
         response3.gameObject.SetActive(true);
         response11.gameObject.SetActive(true);
         response12.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
 
     void JSpeech4()
@@ -332,6 +342,8 @@ public class Scene6TextManager : MonoBehaviour
         response4.gameObject.SetActive(true);
         response13.gameObject.SetActive(true);
         response14.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
 
     void JSpeech6()
@@ -346,6 +358,8 @@ public class Scene6TextManager : MonoBehaviour
         response4.gameObject.SetActive(false);
         response13.gameObject.SetActive(false);
         response14.gameObject.SetActive(false);
+
+        Handheld.Vibrate();
     }
 
     void End()

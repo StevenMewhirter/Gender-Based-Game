@@ -180,6 +180,8 @@ public class Scene4Script : MonoBehaviour
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
     void ResponseA()
     {
@@ -247,6 +249,8 @@ public class Scene4Script : MonoBehaviour
         response4.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
     void JSpeech3()
     {
@@ -264,6 +268,8 @@ public class Scene4Script : MonoBehaviour
         response5.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+
+        Handheld.Vibrate();
     }
     void JSpeech4()
     {
