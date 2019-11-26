@@ -23,6 +23,7 @@ public class Scene2Script : MonoBehaviour
     public RawImage MC;
     public RawImage Boss;
     public RawImage CoWorker;
+   
 
     public Text response;
 
