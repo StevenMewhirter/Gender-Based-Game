@@ -17,20 +17,26 @@ public class Scene2Script : MonoBehaviour
 
     public Button KatieSpeech1;
     public Button KatieSpeech2;
+    public Button KatieSpeech3;
+
     public Button RobinSpeech1;
     public Button RobinSpeech2;
 
-    public RawImage MC;
-    public RawImage Boss;
-    public RawImage CoWorker;
-   
+    public GameObject MC;
+    public GameObject BossNeutral;
+    public GameObject BossAngry;
+    public GameObject CoWorkerHappy;
+    public GameObject CoWorkerNeutral;
 
-    public Text response;
+
+    public Text ResponseKatie1;
+    public Text ResponseBoss1;
 
     public TextAsset textFile; //stores the text file
     public string[] dialogue; //creates a list of each text line
 
     public int currentLine;
+    public int currentLine1;
     public int endLine;
 
     
@@ -41,13 +47,16 @@ public class Scene2Script : MonoBehaviour
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
-        Boss.gameObject.SetActive(false);
+        BossNeutral.gameObject.SetActive(false);
+        BossAngry.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
+        CoWorkerNeutral.gameObject.SetActive(false);
         // CoWorker.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
+        KatieSpeech3.gameObject.SetActive(false);
         //RobinSpeech1.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
 
@@ -76,7 +85,11 @@ public class Scene2Script : MonoBehaviour
         RS2.onClick.AddListener(Speech3);
         Button KS2 = KatieSpeech2.GetComponent<Button>();
         KS2.onClick.AddListener(Speech4);
-        
+        Button  BS1 = BossSpeech1.GetComponent<Button>();
+        BS1.onClick.AddListener(Speech5);
+        Button KS3 = KatieSpeech3.GetComponent<Button>();
+        KS3.onClick.AddListener(Speech6);
+
 
     }
 
@@ -87,35 +100,44 @@ public class Scene2Script : MonoBehaviour
 
     void Update()
     {
-        response.text = dialogue[currentLine]; //checks current line  
+        ResponseBoss1.text = dialogue[currentLine1]; //checks current line  
+        ResponseKatie1.text = dialogue[currentLine]; //checks current line  
     }
     void Speech1()
     {
         KatieSpeech1.gameObject.SetActive(true);
         RobinSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        CoWorker.gameObject.SetActive(false);
+        CoWorkerHappy.gameObject.SetActive(false);
     }
     void Speech2()
     {
         RobinSpeech2.gameObject.SetActive(true);
         KatieSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(true);
+        CoWorkerHappy.gameObject.SetActive(true);
     }
     void Speech3()
     {
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        CoWorker.gameObject.SetActive(false);
+        CoWorkerHappy.gameObject.SetActive(false);
     }
     void Speech4()
     {
         KatieSpeech2.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        Boss.gameObject.SetActive(true);
+        BossNeutral.gameObject.SetActive(true);
+       
+    }
+    void Speech5()
+    {
+        KatieSpeech3.gameObject.SetActive(true);
+        BossSpeech1.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        BossNeutral.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
@@ -123,11 +145,21 @@ public class Scene2Script : MonoBehaviour
 
         Handheld.Vibrate();
     }
+    void Speech6()
+    {
+        KatieSpeech3.gameObject.SetActive(false);
+        BossSpeech2.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+        BossAngry.gameObject.SetActive(true);
+
+    }
     void ResponseG()
     {
-        BossSpeech2.gameObject.SetActive(true);
-        response.text = dialogue[currentLine]; //checks current line 
-        currentLine = 1; //goes to the next line
+        KatieSpeech3.gameObject.SetActive(true);
+        ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
+        currentLine1 = 1; //goes to the next line
+        ResponseKatie1.text = dialogue[currentLine]; //checks current line 
+        currentLine = 4; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -135,9 +167,11 @@ public class Scene2Script : MonoBehaviour
 
     void ResponseB()
     {
-        BossSpeech2.gameObject.SetActive(true);
-        response.text = dialogue[currentLine]; //checks current line 
-        currentLine = 2; //goes to the next line
+        KatieSpeech3.gameObject.SetActive(true);
+        ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
+        currentLine1 = 2; //goes to the next line
+        ResponseKatie1.text = dialogue[currentLine]; //checks current line 
+        currentLine = 5; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -145,9 +179,11 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
-        BossSpeech2.gameObject.SetActive(true);
-        response.text = dialogue[currentLine]; //checks current line 
-        currentLine = 1; //goes to the next line
+        KatieSpeech3.gameObject.SetActive(true);
+        ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
+        currentLine1 = 1; //goes to the next line
+        ResponseKatie1.text = dialogue[currentLine]; //checks current line 
+        currentLine = 6; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
