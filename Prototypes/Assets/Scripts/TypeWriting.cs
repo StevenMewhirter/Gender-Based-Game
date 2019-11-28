@@ -8,25 +8,25 @@ public class TypeWriting : MonoBehaviour
     public float typeTime = 0.1f;
     public string fullText;
     private string currentText = "";
+    bool functionCalled = false;
 
-    // Start is called before the first frame update
-    void Start()
+
+    void Update()
     {
-        StartCoroutine(ShowText());
-    }
+        if (!functionCalled)
+        {
+            functionCalled = true;
+            StartCoroutine(ShowText());
 
+        }
+    }
     IEnumerator ShowText()
     {
-        for(int i = 0; i<=fullText.Length; i++)
+        for (int i = 0; i <= fullText.Length; i++)
         {
             currentText = fullText.Substring(0, i);
             this.GetComponent<Text>().text = currentText;
             yield return new WaitForSeconds(typeTime);
         }
-    }
-
-     void Update()
-    {
-       
     }
 }
