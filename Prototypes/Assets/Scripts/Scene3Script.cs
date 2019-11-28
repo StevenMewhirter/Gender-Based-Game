@@ -41,38 +41,65 @@ public class Scene3Script : MonoBehaviour
     public Button Choice4;
 
     //all the main images for the characters -SD
-    public RawImage MC;
-    public RawImage Richard;
-    public RawImage Robin;
-    public RawImage Jason;
+    public GameObject MC;
+    public GameObject MChappy;
+    public GameObject MCangry;
 
-   
+
+    public GameObject Richard;
+    public GameObject RichardAngry;
+
+    public GameObject Robin;
+    public GameObject RobinHappy;
+
+
+    public GameObject Jason;
+    public GameObject JasonAngry;
+
+
     // Start is called before the first frame update
     void Start()
     {
         //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
         MC.gameObject.SetActive(false);
+        MChappy.gameObject.SetActive(false);
+        MCangry.gameObject.SetActive(false);
+
+
         Richard.gameObject.SetActive(false);
+        RichardAngry.gameObject.SetActive(false);
+
+
         Jason.gameObject.SetActive(false);
+        JasonAngry.gameObject.SetActive(false);
+
+        
+        RobinHappy.gameObject.SetActive(false);
+
+
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
         KatieSpeech4.gameObject.SetActive(false);
         KatieSpeech5.gameObject.SetActive(false);
         //KatieSpeech6.gameObject.SetActive(false);
+
         Choice2.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
         Choice4.gameObject.SetActive(false);
+
         RobinSpeech1.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(false);
         RobinSpeech4.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
+
         JasonSpeech1.gameObject.SetActive(false);
         JasonSpeech2.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(false);
         JasonSpeech4.gameObject.SetActive(false);
         JasonSpeech5.gameObject.SetActive(false);
+
         RichardSpeech1.gameObject.SetActive(false);
         RichardSpeech2.gameObject.SetActive(false);
 
@@ -148,7 +175,7 @@ public class Scene3Script : MonoBehaviour
         KatieSpeech1.gameObject.SetActive(false);
         RobinSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        Robin.gameObject.SetActive(true);
+        RobinHappy.gameObject.SetActive(true);
     }
     void RSpeech1()
     {
@@ -156,7 +183,7 @@ public class Scene3Script : MonoBehaviour
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        Robin.gameObject.SetActive(false);
+        RobinHappy.gameObject.SetActive(false);
     }
     void KSpeech1()
     {
@@ -164,7 +191,7 @@ public class Scene3Script : MonoBehaviour
         KatieSpeech2.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        Robin.gameObject.SetActive(true);
+        RobinHappy.gameObject.SetActive(true);
         Choice2.gameObject.SetActive(true);
 
         Handheld.Vibrate();
@@ -175,15 +202,15 @@ public class Scene3Script : MonoBehaviour
         Choice2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
-        MC.gameObject.SetActive(true);
-        Robin.gameObject.SetActive(false);
+        MChappy.gameObject.SetActive(true);
+        RobinHappy.gameObject.SetActive(false);
     }
     void KSpeech2()
     {
         //Robin will appear on screen and say "You should be, girl! You’ll be with Jason the manager... Lucky you!” -SD
         KatieSpeech3.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(true);
-        MC.gameObject.SetActive(false);
+        MChappy.gameObject.SetActive(false);
         Robin.gameObject.SetActive(true);
         Choice3.gameObject.SetActive(true);
 
@@ -194,7 +221,7 @@ public class Scene3Script : MonoBehaviour
         //Katie will appear on screen and say "Can you not sexualize everything for once, Robin?" as the user has previously selected that option - SD
         KatieSpeech4.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(false);
-        MC.gameObject.SetActive(true);
+        MCangry.gameObject.SetActive(true);
         Robin.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
     }
@@ -203,7 +230,7 @@ public class Scene3Script : MonoBehaviour
         //Robin will appear on screen and say "Shhhh!!! He is coming!" -SD
         KatieSpeech4.gameObject.SetActive(false);
         RobinSpeech4.gameObject.SetActive(true);
-        MC.gameObject.SetActive(false);
+        MCangry.gameObject.SetActive(false);
         Robin.gameObject.SetActive(true);
     }
     void RSpeech4()
@@ -220,7 +247,7 @@ public class Scene3Script : MonoBehaviour
         JasonSpeech1.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
-        Robin.gameObject.SetActive(true);
+        RobinHappy.gameObject.SetActive(true);
     }
     void RSpeech5()
     {   //Jason will appear on screen and say "Nice to meet you Katie. My name is Jason. I am the manager on this floor." -SD
@@ -228,7 +255,7 @@ public class Scene3Script : MonoBehaviour
         Choice4.gameObject.SetActive(true);
         RobinSpeech5.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
-        Robin.gameObject.SetActive(false);
+        RobinHappy.gameObject.SetActive(false);
 
         Handheld.Vibrate();
     }
@@ -273,14 +300,14 @@ public class Scene3Script : MonoBehaviour
         JasonSpeech4.gameObject.SetActive(false);
         RichardSpeech2.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
-        Richard.gameObject.SetActive(true);
+        RichardAngry.gameObject.SetActive(true);
     }
     void RISpeech2()
     {
         //Jason will appear on screen and say "Miss Anderson is not a girl, she is WOMAN and she can trust whoever she wants!" -SD
         JasonSpeech5.gameObject.SetActive(true);
         RichardSpeech2.gameObject.SetActive(false);
-        Jason.gameObject.SetActive(true);
-        Richard.gameObject.SetActive(false);
+        JasonAngry.gameObject.SetActive(true);
+        RichardAngry.gameObject.SetActive(false);
     }
 }
