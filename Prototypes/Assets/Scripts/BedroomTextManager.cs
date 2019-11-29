@@ -44,8 +44,15 @@ public class BedroomTextManager : MonoBehaviour
     public Button EmailText4;
     public Button EmailText5;
 
+    public Button KatieResp1;
+    public Button KatieResp2;
+    public Button KatieResp3;
+    public Button KatieResp4;
+    public Button KatieResp5;
+    public Button KatieResp6;
+
     //all the main raw images for the character and the phone -SD
-    
+
     public GameObject KatieSad;
     public GameObject KatieHappy;
     public RawImage Phone;
@@ -66,7 +73,14 @@ public class BedroomTextManager : MonoBehaviour
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-     
+
+        KatieResp1.gameObject.SetActive(false);
+        KatieResp2.gameObject.SetActive(false);
+        KatieResp3.gameObject.SetActive(false);
+        KatieResp4.gameObject.SetActive(false);
+        KatieResp5.gameObject.SetActive(false);
+        KatieResp6.gameObject.SetActive(false);
+
         KatieHappy.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
@@ -113,6 +127,7 @@ public class BedroomTextManager : MonoBehaviour
         KS3.onClick.AddListener(RobinReply3);
         Button RS3 = RobinSpeech3.GetComponent<Button>();
         RS3.onClick.AddListener(Email1);
+
         Button E1 = EmailText1.GetComponent<Button>();
         E1.onClick.AddListener(Email2);
         Button E2 = EmailText2.GetComponent<Button>();
@@ -126,17 +141,31 @@ public class BedroomTextManager : MonoBehaviour
         Button KS4 = KatieSpeech4.GetComponent<Button>();
         KS4.onClick.AddListener(Choice1);
         Button R1 = response1.GetComponent<Button>();
-        R1.onClick.AddListener(RobinReply4);
+        R1.onClick.AddListener(KatieResponse1);
         Button R2 = response2.GetComponent<Button>();
-        R2.onClick.AddListener(RobinReply4);
+        R2.onClick.AddListener(KatieResponse2);
         Button R3 = response3.GetComponent<Button>();
-        R3.onClick.AddListener(RobinReply5);
+        R3.onClick.AddListener(KatieResponse3);
         Button R4 = response4.GetComponent<Button>();
-        R4.onClick.AddListener(RobinReply5);
+        R4.onClick.AddListener(KatieResponse4);
         Button R5 = response5.GetComponent<Button>();
-        R5.onClick.AddListener(RobinReply6);
+        R5.onClick.AddListener(KatieResponse5);
         Button R6 = response6.GetComponent<Button>();
-        R6.onClick.AddListener(RobinReply6);
+        R6.onClick.AddListener(KatieResponse6);
+
+        Button KR1 = KatieResp1.GetComponent<Button>();
+        KR1.onClick.AddListener(RobinReply4);
+        Button KR2 = KatieResp2.GetComponent<Button>();
+        KR2.onClick.AddListener(RobinReply4);
+        Button KR3 = KatieResp3.GetComponent<Button>();
+        KR2.onClick.AddListener(RobinReply5);
+        Button KR4 = KatieResp4.GetComponent<Button>();
+        KR2.onClick.AddListener(RobinReply5);
+        Button KR5 = KatieResp5.GetComponent<Button>();
+        KR2.onClick.AddListener(RobinReply6);
+        Button KR6 = KatieResp6.GetComponent<Button>();
+        KR2.onClick.AddListener(RobinReply6);
+
         Button RS6 = RobinSpeech6.GetComponent<Button>();
         RS6.onClick.AddListener(KSpeech5);
         Button KS5 = KatieSpeech5.GetComponent<Button>();
@@ -195,13 +224,11 @@ public class BedroomTextManager : MonoBehaviour
     {
         //The phone and Robin's second speech bubble appears on screen saying "Other people say that too (smiley face) but I think she’s cool. Breaking the glass ceiling and stuff (smiley face)" -SD
         KatieSad.gameObject.SetActive(false);
-        KatieSpeech2.gameObject.SetActive(false);
-        Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+
+        
         RobinSpeech2.gameObject.SetActive(true);
 
-        RobinSpeech1.gameObject.SetActive(false);
-        KatieSpeech1.gameObject.SetActive(false);
+        
     }
 
     void KSpeech3()
@@ -210,6 +237,11 @@ public class BedroomTextManager : MonoBehaviour
         
         KatieSad.gameObject.SetActive(true);
         KatieSpeech3.gameObject.SetActive(true);
+
+        KatieSpeech2.gameObject.SetActive(false);
+        RobinSpeech2.gameObject.SetActive(false);
+        RobinSpeech1.gameObject.SetActive(false);
+        KatieSpeech1.gameObject.SetActive(false);
     }
 
     void RobinReply3()
@@ -290,11 +322,28 @@ public class BedroomTextManager : MonoBehaviour
         Handheld.Vibrate();
     }
 
+    void KatieResponse1()
+    {
+        response1.gameObject.SetActive(false);
+        response2.gameObject.SetActive(false);
+
+        Phone.gameObject.SetActive(true);
+        RobinName.gameObject.SetActive(true);
+        KatieResp1.gameObject.SetActive(true);
+    }
+
+    void KatieResponse2()
+    {
+        response1.gameObject.SetActive(false);
+        response2.gameObject.SetActive(false);
+
+        KatieResp2.gameObject.SetActive(true);
+    }
+
     void RobinReply4()
     {
         //The phone and Robin's fourth speech bubble appears on screen saying "I told you were overreacting! Congrats!" and the choice buttons will appear on screen prompting the user to pick between them-SD
-        response1.gameObject.SetActive(false);
-        response2.gameObject.SetActive(false);
+        
         KatieHappy.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
@@ -305,12 +354,26 @@ public class BedroomTextManager : MonoBehaviour
         Handheld.Vibrate();
     }
 
+    void KatieResponse3()
+    {
+        response3.gameObject.SetActive(false);
+        response4.gameObject.SetActive(false);
+
+        KatieResp3.gameObject.SetActive(true);
+    }
+
+    void KatieResponse4()
+    {
+        response3.gameObject.SetActive(false);
+        response4.gameObject.SetActive(false);
+
+        KatieResp4.gameObject.SetActive(true);
+    }
+
     void RobinReply5()
     {
         //The phone and Robin's fifth speech bubble appears on screen saying "Well, I have a list of requests……" and the choice buttons will appear on screen prompting the user to pick between them-SD
         
-        response3.gameObject.SetActive(false);
-        response4.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
@@ -318,12 +381,26 @@ public class BedroomTextManager : MonoBehaviour
         Handheld.Vibrate();
     }
 
+    void KatieResponse5()
+    {
+        response5.gameObject.SetActive(false);
+        response6.gameObject.SetActive(false);
+
+        KatieResp5.gameObject.SetActive(true);
+    }
+
+    void KatieResponse6()
+    {
+        response5.gameObject.SetActive(false);
+        response6.gameObject.SetActive(false);
+
+        KatieResp6.gameObject.SetActive(true);
+    }
+
     void RobinReply6()
     {
         //The phone and Robin's sixth speech bubble appears on screen saying "Starting with a few drinks is not a bad idea (smiley face)"-SD
         
-        response5.gameObject.SetActive(false);
-        response6.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(true);
     }
 
