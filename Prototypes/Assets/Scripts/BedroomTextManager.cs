@@ -45,7 +45,9 @@ public class BedroomTextManager : MonoBehaviour
     public Button EmailText5;
 
     //all the main raw images for the character and the phone -SD
-    public RawImage Katie;
+    
+    public GameObject KatieSad;
+    public GameObject KatieHappy;
     public RawImage Phone;
 
     //phone headings
@@ -64,7 +66,8 @@ public class BedroomTextManager : MonoBehaviour
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-        //Katie.gameObject.SetActive(false);
+     
+        KatieHappy.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
@@ -174,7 +177,7 @@ public class BedroomTextManager : MonoBehaviour
         //The phone and Robin's first speech bubble appears on screen saying "Don’t say that! I think it went better than you think" -SD
         
 
-        Katie.gameObject.SetActive(false);
+        KatieSad.gameObject.SetActive(false);
        // KatieSpeech1.gameObject.SetActive(false);
         
         RobinSpeech1.gameObject.SetActive(true);
@@ -183,15 +186,15 @@ public class BedroomTextManager : MonoBehaviour
     void KSpeech2()
     {
         //Katie's second speech bubble appears on screen saying "That boss of yours.. omg, she was so scary during the interview" -SD
-     
-        Katie.gameObject.SetActive(true);
+
+        KatieSad.gameObject.SetActive(true);
         KatieSpeech2.gameObject.SetActive(true);
     }
 
     void RobinReply2()
     {
         //The phone and Robin's second speech bubble appears on screen saying "Other people say that too (smiley face) but I think she’s cool. Breaking the glass ceiling and stuff (smiley face)" -SD
-        Katie.gameObject.SetActive(false);
+        KatieSad.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
@@ -205,14 +208,14 @@ public class BedroomTextManager : MonoBehaviour
     {
         //Katie's third speech bubble appears on screen saying "Oh well, I guess I’ll like her if she gives me the job… Talk to you later" -SD
         
-        Katie.gameObject.SetActive(true);
+        KatieSad.gameObject.SetActive(true);
         KatieSpeech3.gameObject.SetActive(true);
     }
 
     void RobinReply3()
     {
         //The phone and Robin's third speech bubble appears on screen saying "Keep it together man. Ciao" -SD
-        Katie.gameObject.SetActive(false);
+        KatieSad.gameObject.SetActive(false);
         
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
@@ -273,7 +276,7 @@ public class BedroomTextManager : MonoBehaviour
         EmailName.gameObject.SetActive(false);
         EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
-        Katie.gameObject.SetActive(true);
+        KatieHappy.gameObject.SetActive(true);
         KatieSpeech4.gameObject.SetActive(true);
     }
 
@@ -292,7 +295,7 @@ public class BedroomTextManager : MonoBehaviour
         //The phone and Robin's fourth speech bubble appears on screen saying "I told you were overreacting! Congrats!" and the choice buttons will appear on screen prompting the user to pick between them-SD
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
-        Katie.gameObject.SetActive(false);
+        KatieHappy.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
         RobinSpeech4.gameObject.SetActive(true);
@@ -328,7 +331,7 @@ public class BedroomTextManager : MonoBehaviour
     {
         //Katie's fifth speech bubble appears on screen saying "Perfect I’ll call you in ten to tell you where to meet! Ciao!" -SD
   
-        Katie.gameObject.SetActive(true);
+        KatieHappy.gameObject.SetActive(true);
         KatieSpeech5.gameObject.SetActive(true);
     }
 
