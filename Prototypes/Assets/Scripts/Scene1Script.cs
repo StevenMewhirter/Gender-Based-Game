@@ -44,6 +44,11 @@ public class Scene1Script : MonoBehaviour
     public Button EmailText4;
     public Button EmailText5;
 
+    public Button Email;
+    public Button SocialMedia;
+    public Button Messages;
+    public Button Options;
+
     public Button KatieResp1;
     public Button KatieResp2;
     public Button KatieResp3;
@@ -74,7 +79,7 @@ public class Scene1Script : MonoBehaviour
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-
+     
         KatieResp1.gameObject.SetActive(false);
         KatieResp2.gameObject.SetActive(false);
         KatieResp3.gameObject.SetActive(false);
@@ -470,7 +475,9 @@ public class Scene1Script : MonoBehaviour
 
     IEnumerator introPanel() //panel timer
     {
+        
         yield return new WaitForSeconds(2.30f);
         introScreen.SetActive(false);
+
     }
 }

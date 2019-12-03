@@ -79,7 +79,10 @@ public class Scene6TextManager : MonoBehaviour
     public RawImage BarExterior;
     public RawImage BarInterior;
     public RawImage EndScreen;
-
+    public Button Email;
+    public Button SocialMedia;
+    public Button Messages;
+    public Button Options;
     public RawImage RobinName;
     // Start is called before the first frame update
     void Start()
@@ -594,6 +597,10 @@ public class Scene6TextManager : MonoBehaviour
     }
     void End()
     {
+        Email.gameObject.SetActive(false);
+        SocialMedia.gameObject.SetActive(false);
+        Messages.gameObject.SetActive(false);
+        Options.gameObject.SetActive(false);
         ShowChoice6.gameObject.SetActive(false);
         KatieAngry.gameObject.SetActive(false);
         ShowChoice5.gameObject.SetActive(false);

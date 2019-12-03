@@ -3189,7 +3189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &540777383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9366,6 +9366,10 @@ MonoBehaviour:
   EmailText3: {fileID: 1067336660}
   EmailText4: {fileID: 1272897387}
   EmailText5: {fileID: 534373956}
+  Email: {fileID: 651271376}
+  SocialMedia: {fileID: 333920408}
+  Messages: {fileID: 132224999}
+  Options: {fileID: 2114910773}
   KatieResp1: {fileID: 348989348}
   KatieResp2: {fileID: 162594333}
   KatieResp3: {fileID: 1846136944}

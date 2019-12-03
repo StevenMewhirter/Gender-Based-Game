@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 4982515}
   - component: {fileID: 4982514}
   m_Layer: 5
+  m_Name: Options
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -887,6 +888,10 @@ MonoBehaviour:
   BarExterior: {fileID: 2075483387}
   BarInterior: {fileID: 335481203}
   EndScreen: {fileID: 1443010128}
+  Email: {fileID: 271438260}
+  SocialMedia: {fileID: 1796856784}
+  Messages: {fileID: 1254920201}
+  Options: {fileID: 4982514}
   RobinName: {fileID: 778393554}
 --- !u!4 &118811877
 Transform:
