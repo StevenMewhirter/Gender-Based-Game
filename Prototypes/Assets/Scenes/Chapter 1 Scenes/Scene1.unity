@@ -522,7 +522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 292df4c80494db24a821235c1316b809, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 334a4c85f9832f647859dbd4760d3317, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -766,7 +766,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -111, y: -302}
+  m_AnchoredPosition: {x: -135, y: -334.95}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173696926
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 292df4c80494db24a821235c1316b809, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 334a4c85f9832f647859dbd4760d3317, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1327,7 +1327,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &259966486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1614,7 +1614,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &287660380
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1659,7 +1659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 102.15, y: -302}
+  m_AnchoredPosition: {x: 139, y: -334.95}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &312246588
@@ -1854,7 +1854,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -111, y: -302}
+  m_AnchoredPosition: {x: -135, y: -334.95}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321436114
@@ -2240,7 +2240,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &364695597
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2645,7 +2645,7 @@ PrefabInstance:
     - target: {fileID: 30896601707153418, guid: d1520602a4e2c754c8d8a8a2fc8eaca1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 30896601707153418, guid: d1520602a4e2c754c8d8a8a2fc8eaca1,
         type: 3}
@@ -3333,7 +3333,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &544449531
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3410,7 +3410,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &556201718
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3864,7 +3864,7 @@ PrefabInstance:
     - target: {fileID: 1269410864359240099, guid: c07c065bcb16c7e4ab72a474b6302ba4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1269410864359240099, guid: c07c065bcb16c7e4ab72a474b6302ba4,
         type: 3}
@@ -4100,7 +4100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &703535698
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4177,7 +4177,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &781030263
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4312,8 +4312,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 932, y: -141.9}
-  m_SizeDelta: {x: 730, y: 243.2}
+  m_AnchoredPosition: {x: -10, y: -380.3}
+  m_SizeDelta: {x: 730, y: 244.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905961201
 MonoBehaviour:
@@ -5031,7 +5031,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &1064885832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5685,7 +5685,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &1160507927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5762,7 +5762,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &1162538070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5808,8 +5808,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 45.37002, y: 42.82501}
-  m_SizeDelta: {x: 231.69, y: 85.65}
+  m_AnchoredPosition: {x: -83.25, y: 3.12}
+  m_SizeDelta: {x: 254.6, y: 104.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1174732646
 MonoBehaviour:
@@ -6089,7 +6089,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1625338568}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7689,9 +7689,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2116407535}
-  - {fileID: 1209733574}
   - {fileID: 696570764}
   - {fileID: 462385145}
+  - {fileID: 1209733574}
   - {fileID: 905961200}
   - {fileID: 266000829}
   - {fileID: 1348387835}
@@ -8145,7 +8145,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &1728183155
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8222,7 +8222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &1739925471
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8907,7 +8907,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 292df4c80494db24a821235c1316b809, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 334a4c85f9832f647859dbd4760d3317, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8962,8 +8962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 104.48, y: -36.177}
-  m_SizeDelta: {x: 259.36, y: 72.355}
+  m_AnchoredPosition: {x: 79.02, y: -93.25}
+  m_SizeDelta: {x: 268.33, y: 84.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959405584
 MonoBehaviour:
@@ -9112,7 +9112,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &1966341348
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9375,6 +9375,7 @@ MonoBehaviour:
   KatieSad: {fileID: 247317201}
   KatieHappy: {fileID: 2127743627}
   Phone: {fileID: 1209733575}
+  BottomBackground: {fileID: 905961201}
   RobinName: {fileID: 165956593}
   EmailName: {fileID: 2000269160}
 --- !u!4 &1991610547
@@ -9530,7 +9531,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &2020784814
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9607,7 +9608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &2027634368
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9863,7 +9864,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 102.150024, y: -302}
+  m_AnchoredPosition: {x: 139.00002, y: -334.95}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2087140693
@@ -10013,7 +10014,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &2088573271
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10090,7 +10091,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tap To Contiue
+  m_Text: Tap To Continue
 --- !u!222 &2105174916
 CanvasRenderer:
   m_ObjectHideFlags: 0
