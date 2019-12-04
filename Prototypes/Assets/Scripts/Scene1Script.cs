@@ -6,7 +6,10 @@ using UnityEngine.EventSystems;
 
 public class Scene1Script : MonoBehaviour
 {
-    public GameObject introScreen;
+    public DiaryTexts introScreen;
+    public Button introImage;
+    bool canClick = false;
+
 
     //declares all the buttons for the player's choices -SD
     public Button response1;
@@ -100,7 +103,12 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech4.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
-        //ThoughtBubble1.gameObject.SetActive(false);
+
+        //if (introOn)
+         ThoughtBubble1.gameObject.SetActive(false);
+        //else if (!introOn)
+        //    ThoughtBubble1.gameObject.SetActive(true);
+
         ThoughtBubble2.gameObject.SetActive(false);
         ThoughtBubble3.gameObject.SetActive(false);
         ThoughtBubble4.gameObject.SetActive(false);
@@ -115,6 +123,8 @@ public class Scene1Script : MonoBehaviour
 
         //When each specified button is pressed, it will call the specified method from below and run the appropriate actions accordingly -SD
         //After the introPanel disappears, the first image will be Katie in her room and the text coming in to the thought bubble in a typewriter fashion - SD
+        Button Intro = introImage.GetComponent<Button>();
+        Intro.onClick.AddListener(TB1);
         Button t1 = ThoughtBubble1.GetComponent<Button>();
         t1.onClick.AddListener(TB2);
         Button t2 = ThoughtBubble2.GetComponent<Button>();
@@ -179,9 +189,19 @@ public class Scene1Script : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+    //    Debug.Log(timeToIntroEnd);
+    //}
+
+    void TB1()
     {
-      
+        //the first thought bubble will be displayed" -SD
+        if (canClick)
+        {
+            introScreen.gameObject.SetActive(false);
+            ThoughtBubble1.gameObject.SetActive(true);
+        }
     }
 
     void TB2()
@@ -475,9 +495,8 @@ public class Scene1Script : MonoBehaviour
 
     IEnumerator introPanel() //panel timer
     {
-        
-        yield return new WaitForSeconds(2.30f);
-        introScreen.SetActive(false);
-
+        //canClick = false;
+        yield return new WaitForSeconds(20f);
+        canClick = true;
     }
 }
