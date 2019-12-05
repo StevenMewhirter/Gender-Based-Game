@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TypeWriting : MonoBehaviour
 {
-    public float typeTime = 0.1f;
+    static public float typeTime = 0.005f;
     public string fullText;
     private string currentText = "";
     bool functionCalled = false;

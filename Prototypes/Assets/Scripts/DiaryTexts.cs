@@ -9,11 +9,7 @@ public class DiaryTexts : MonoBehaviour
     public TypeWriting main1;
     public TypeWriting main2;
     public TypeWriting sign;
-    //public TypeWriting katie;
-    //bool dearT = false;
-    //bool mainT = false;
-    //bool signT = false;
-    //bool start = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +18,15 @@ public class DiaryTexts : MonoBehaviour
         main1.gameObject.SetActive(false);
         main2.gameObject.SetActive(false);
         sign.gameObject.SetActive(false);
-        //katie.gameObject.SetActive(false);
         StartCoroutine(waitForZoom());
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       // StartCoroutine(waitForDear());
-        
+        // StartCoroutine(waitForDear());
+
     }
 
     IEnumerator waitForZoom()
@@ -40,25 +35,11 @@ public class DiaryTexts : MonoBehaviour
         dear.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         main.gameObject.SetActive(true);
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(3.5f);
         main1.gameObject.SetActive(true);
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(3.5f);
         main2.gameObject.SetActive(true);
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(3f);
         sign.gameObject.SetActive(true);
-        //yield return new WaitForSeconds(0.8f);
-        //katie.gameObject.SetActive(true);
-        //start = false;
     }
-    //IEnumerator waitForDear()
-    //{
-    //    yield return new WaitForSeconds(4.2f);
-    //    main.gameObject.SetActive(true);
-    //    //start = false;
-    //}
-    //IEnumerator waitForMain()
-    //{
-       
-    //    //start = false;
-    //}
 }

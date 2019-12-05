@@ -10,6 +10,7 @@ public class Scene1Script : MonoBehaviour
     public Button introImage;
     bool canClick = false;
 
+    bool notif = false;
 
     //declares all the buttons for the player's choices -SD
     public Button response1;
@@ -50,7 +51,10 @@ public class Scene1Script : MonoBehaviour
     public Button Email;
     public Button SocialMedia;
     public Button Messages;
+    public GameObject NotificationRed;
     public Button Options;
+
+   
 
     public Button KatieResp1;
     public Button KatieResp2;
@@ -104,14 +108,14 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
 
-        //if (introOn)
-         ThoughtBubble1.gameObject.SetActive(false);
-        //else if (!introOn)
-        //    ThoughtBubble1.gameObject.SetActive(true);
+       
+        ThoughtBubble1.gameObject.SetActive(false);
 
         ThoughtBubble2.gameObject.SetActive(false);
         ThoughtBubble3.gameObject.SetActive(false);
         ThoughtBubble4.gameObject.SetActive(false);
+
+
         EmailText1.gameObject.SetActive(false);
         EmailText2.gameObject.SetActive(false);
         EmailText3.gameObject.SetActive(false);
@@ -131,6 +135,10 @@ public class Scene1Script : MonoBehaviour
         t2.onClick.AddListener(TB3);
         Button t3 = ThoughtBubble3.GetComponent<Button>();
         t3.onClick.AddListener(KSpeech1);
+
+        Button mes = Messages.GetComponent<Button>();
+        mes.onClick.AddListener(MesNotif);
+
         Button KS1 = KatieSpeech1.GetComponent<Button>();
         KS1.onClick.AddListener(RobinReply1);
         Button RS1 = RobinSpeech1.GetComponent<Button>();
@@ -216,12 +224,21 @@ public class Scene1Script : MonoBehaviour
         //the third thought bubble will be displayed saying "It’s been over a week. I don’t think I got it.." -SD
         ThoughtBubble2.gameObject.SetActive(false);
         ThoughtBubble3.gameObject.SetActive(true);
+        //notif = true;
+        //Debug.Log("notification On");
+    }
+
+    void MesNotif()
+    {
+        //the third thought bubble will be displayed saying "It’s been over a week. I don’t think I got it.." -SD
+        ThoughtBubble3.gameObject.SetActive(false);
+        NotificationRed.SetActive(true);
     }
 
     void KSpeech1()
     {
         //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
-        ThoughtBubble3.gameObject.SetActive(false);
+        NotificationRed.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
         KatieSpeech1.gameObject.SetActive(true);
@@ -496,7 +513,7 @@ public class Scene1Script : MonoBehaviour
     IEnumerator introPanel() //panel timer
     {
         //canClick = false;
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(1f);
         canClick = true;
     }
 }
