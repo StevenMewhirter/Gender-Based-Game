@@ -933,6 +933,7 @@ GameObject:
   - component: {fileID: 91330019}
   - component: {fileID: 91330021}
   - component: {fileID: 91330020}
+  - component: {fileID: 91330022}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -990,7 +991,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Aw, thanks Jason! I believe you haven't met Katie
+  m_Text: 
 --- !u!222 &91330021
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -999,6 +1000,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91330018}
   m_CullTransparentMesh: 0
+--- !u!114 &91330022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91330018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Aw, thanks Jason! I believe you haven't met Katie
 --- !u!1001 &122464017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1346,6 +1361,7 @@ GameObject:
   - component: {fileID: 155188097}
   - component: {fileID: 155188099}
   - component: {fileID: 155188098}
+  - component: {fileID: 155188100}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -1403,7 +1419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: How are you finding it so far?
+  m_Text: 
 --- !u!222 &155188099
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1412,6 +1428,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155188096}
   m_CullTransparentMesh: 0
+--- !u!114 &155188100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155188096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: How are you finding it so far?
 --- !u!1 &157088421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,7 +1681,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 161641276}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1088921930}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Scene4
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &163914763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1740,6 +1781,7 @@ GameObject:
   - component: {fileID: 167077245}
   - component: {fileID: 167077247}
   - component: {fileID: 167077246}
+  - component: {fileID: 167077248}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -1797,7 +1839,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "The poor girl is innocent and doesn't know \nwho to trust!"
+  m_Text: 
 --- !u!222 &167077247
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1806,6 +1848,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167077244}
   m_CullTransparentMesh: 0
+--- !u!114 &167077248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 167077244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: The poor girl is innocent and doesn't know  who to trust!
 --- !u!1 &174176010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,6 +2747,7 @@ GameObject:
   - component: {fileID: 333885851}
   - component: {fileID: 333885853}
   - component: {fileID: 333885852}
+  - component: {fileID: 333885854}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -2748,7 +2805,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Me too! I wish I had something to do though...
+  m_Text: 
 --- !u!222 &333885853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2757,6 +2814,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333885850}
   m_CullTransparentMesh: 0
+--- !u!114 &333885854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333885850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Me too! I wish I had something to do though...
 --- !u!1 &336435091
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,6 +3270,7 @@ GameObject:
   - component: {fileID: 471588383}
   - component: {fileID: 471588385}
   - component: {fileID: 471588384}
+  - component: {fileID: 471588386}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -3256,7 +3328,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: It's great!
+  m_Text: 
 --- !u!222 &471588385
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3265,6 +3337,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 471588382}
   m_CullTransparentMesh: 0
+--- !u!114 &471588386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471588382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: It's great!
 --- !u!1 &472672089
 GameObject:
   m_ObjectHideFlags: 0
@@ -4728,6 +4814,7 @@ GameObject:
   - component: {fileID: 839391997}
   - component: {fileID: 839391999}
   - component: {fileID: 839391998}
+  - component: {fileID: 839392000}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -4785,7 +4872,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What are you two little lovebirds doing?
+  m_Text: 
 --- !u!222 &839391999
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4794,6 +4881,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 839391996}
   m_CullTransparentMesh: 0
+--- !u!114 &839392000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839391996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: What are you two little lovebirds doing?
 --- !u!1 &841213087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,6 +5026,7 @@ GameObject:
   - component: {fileID: 844356720}
   - component: {fileID: 844356722}
   - component: {fileID: 844356721}
+  - component: {fileID: 844356723}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -4982,7 +5084,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Nice to meet you, Katie, my name is Jason. \nI'm the manager on this floor"
+  m_Text: 
 --- !u!222 &844356722
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4991,6 +5093,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844356719}
   m_CullTransparentMesh: 0
+--- !u!114 &844356723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844356719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Nice to meet you, Katie, my name is Jason.  I'm the manager on this floor
 --- !u!1001 &870333310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5595,6 +5711,7 @@ GameObject:
   - component: {fileID: 995591628}
   - component: {fileID: 995591630}
   - component: {fileID: 995591629}
+  - component: {fileID: 995591631}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -5652,7 +5769,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Morning, ladies. Robin, you look great as always
+  m_Text: 
 --- !u!222 &995591630
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5661,6 +5778,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995591627}
   m_CullTransparentMesh: 0
+--- !u!114 &995591631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995591627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Morning, ladies. Robin, you look great as always
 --- !u!1 &1026603066
 GameObject:
   m_ObjectHideFlags: 0
@@ -7168,6 +7299,7 @@ GameObject:
   - component: {fileID: 1234271587}
   - component: {fileID: 1234271589}
   - component: {fileID: 1234271588}
+  - component: {fileID: 1234271590}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -7225,7 +7357,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nice to meet you, too. I've heard a lot about you
+  m_Text: 
 --- !u!222 &1234271589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7234,6 +7366,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234271586}
   m_CullTransparentMesh: 0
+--- !u!114 &1234271590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234271586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Nice to meet you, too. I've heard a lot about you
 --- !u!1 &1234950351
 GameObject:
   m_ObjectHideFlags: 0
@@ -8246,6 +8392,7 @@ GameObject:
   - component: {fileID: 1464517427}
   - component: {fileID: 1464517429}
   - component: {fileID: 1464517428}
+  - component: {fileID: 1464517430}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -8303,7 +8450,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Shhhh!!! He's coming!
+  m_Text: 
 --- !u!222 &1464517429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8312,6 +8459,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1464517426}
   m_CullTransparentMesh: 0
+--- !u!114 &1464517430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464517426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Shhhh!!! He's coming!
 --- !u!1 &1469239614
 GameObject:
   m_ObjectHideFlags: 0
@@ -8323,6 +8484,7 @@ GameObject:
   - component: {fileID: 1469239615}
   - component: {fileID: 1469239617}
   - component: {fileID: 1469239616}
+  - component: {fileID: 1469239618}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -8380,7 +8542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Really? I am so excited!!!
+  m_Text: 
 --- !u!222 &1469239617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8389,6 +8551,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469239614}
   m_CullTransparentMesh: 0
+--- !u!114 &1469239618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469239614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Really? I am so excited!!!
 --- !u!1001 &1473995387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9271,6 +9447,7 @@ GameObject:
   - component: {fileID: 1592046832}
   - component: {fileID: 1592046834}
   - component: {fileID: 1592046833}
+  - component: {fileID: 1592046835}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -9328,7 +9505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Oh, ok. I hope it's all good stuff
+  m_Text: 
 --- !u!222 &1592046834
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9337,6 +9514,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592046831}
   m_CullTransparentMesh: 0
+--- !u!114 &1592046835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592046831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Oh, ok. I hope it's all good stuff
 --- !u!1001 &1593202731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9893,6 +10084,7 @@ GameObject:
   - component: {fileID: 1692095412}
   - component: {fileID: 1692095414}
   - component: {fileID: 1692095413}
+  - component: {fileID: 1692095415}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -9950,7 +10142,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Can you not sexualise everything for once, Robin?
+  m_Text: 
 --- !u!222 &1692095414
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9959,6 +10151,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1692095411}
   m_CullTransparentMesh: 0
+--- !u!114 &1692095415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692095411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Can you not sexualise everything for once, Robin?
 --- !u!1 &1703441184
 GameObject:
   m_ObjectHideFlags: 0
@@ -10278,6 +10484,7 @@ GameObject:
   - component: {fileID: 1788364515}
   - component: {fileID: 1788364517}
   - component: {fileID: 1788364516}
+  - component: {fileID: 1788364518}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -10335,9 +10542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Well, you''re lucky babes! I have your
-
-    first assignment!'
+  m_Text: 
 --- !u!222 &1788364517
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10346,6 +10551,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788364514}
   m_CullTransparentMesh: 0
+--- !u!114 &1788364518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788364514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Well, you're lucky babes! I have your first assignment!
 --- !u!1 &1801676046
 GameObject:
   m_ObjectHideFlags: 0
@@ -10908,6 +11127,7 @@ GameObject:
   - component: {fileID: 1871762232}
   - component: {fileID: 1871762234}
   - component: {fileID: 1871762233}
+  - component: {fileID: 1871762235}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -10965,8 +11185,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Miss Anderson is not a girl, she is a WOMAN\n and she can trust whoever
-    she wants!"
+  m_Text: 
 --- !u!222 &1871762234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10975,6 +11194,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871762231}
   m_CullTransparentMesh: 0
+--- !u!114 &1871762235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871762231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Miss Anderson is not a girl, she is a WOMAN  and she can trust whoever
+    she wants!
 --- !u!1 &1902287190
 GameObject:
   m_ObjectHideFlags: 0
@@ -11217,6 +11451,7 @@ GameObject:
   - component: {fileID: 1940658904}
   - component: {fileID: 1940658906}
   - component: {fileID: 1940658905}
+  - component: {fileID: 1940658907}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -11274,7 +11509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "You should be, girl! \nYou'll be with Jason the manager... Lucky you!"
+  m_Text: 
 --- !u!222 &1940658906
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11283,6 +11518,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940658903}
   m_CullTransparentMesh: 0
+--- !u!114 &1940658907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940658903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: You should be, girl!  You'll be with Jason the manager... Lucky you!
 --- !u!1 &1959936531
 GameObject:
   m_ObjectHideFlags: 0
@@ -11294,6 +11543,7 @@ GameObject:
   - component: {fileID: 1959936532}
   - component: {fileID: 1959936534}
   - component: {fileID: 1959936533}
+  - component: {fileID: 1959936535}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -11351,7 +11601,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm so happy we're working together, bestie!
+  m_Text: 
 --- !u!222 &1959936534
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11360,6 +11610,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959936531}
   m_CullTransparentMesh: 0
+--- !u!114 &1959936535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959936531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: I'm so happy we're working together, bestie!
 --- !u!1 &1966910927
 GameObject:
   m_ObjectHideFlags: 0
@@ -11883,6 +12147,7 @@ GameObject:
   - component: {fileID: 2007377090}
   - component: {fileID: 2007377092}
   - component: {fileID: 2007377091}
+  - component: {fileID: 2007377093}
   m_Layer: 0
   m_Name: ChangeText
   m_TagString: Untagged
@@ -11940,7 +12205,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Richie is grumpy today. But when isn't he?
+  m_Text: 
 --- !u!222 &2007377092
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11949,6 +12214,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007377089}
   m_CullTransparentMesh: 0
+--- !u!114 &2007377093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007377089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeTime: 0.1
+  fullText: Richie is grumpy today. But when isn't he?
 --- !u!1001 &2048075957
 PrefabInstance:
   m_ObjectHideFlags: 0
