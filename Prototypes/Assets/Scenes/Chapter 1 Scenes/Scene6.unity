@@ -1089,6 +1089,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: JasonNeutral
       objectReference: {fileID: 0}
+    - target: {fileID: 7593973535284434275, guid: 4250ef044e6f2364a9b9610e413be308,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5741471721047330977, guid: 4250ef044e6f2364a9b9610e413be308,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2408,6 +2413,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: JasonHappy
       objectReference: {fileID: 0}
+    - target: {fileID: 6958094371848958892, guid: f02349a570d9cdd438eceebdcb7aac96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5070742402945332846, guid: f02349a570d9cdd438eceebdcb7aac96,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2615,6 +2625,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RichardHappy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2632450966885209901, guid: 4531b1ed7be18de44ae3843f1a7f53b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 163995025258124015, guid: 4531b1ed7be18de44ae3843f1a7f53b0,
         type: 3}
@@ -9692,6 +9707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AminaHappy
       objectReference: {fileID: 0}
+    - target: {fileID: 9174789671774075680, guid: ed53ced2d97ef5c498c32a3754e51d12,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6457491399303937762, guid: ed53ced2d97ef5c498c32a3754e51d12,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11075,6 +11095,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AminaNeutral
       objectReference: {fileID: 0}
+    - target: {fileID: 2524048904283621711, guid: 3da0199d30521c3498a9cf070d95ef08,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 417077422419643533, guid: 3da0199d30521c3498a9cf070d95ef08,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11707,7 +11732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.6, y: 50.282}
+  m_AnchoredPosition: {x: 18.6, y: 50.409}
   m_SizeDelta: {x: 264.4, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1457982488
@@ -11771,7 +11796,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47663444e85664f4abeac1bb22de2b2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e3b9905032b3daa4bbf0b5fae4e923e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12584,7 +12609,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47663444e85664f4abeac1bb22de2b2f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9e146ccca3f9ea4681a114d6c423324, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
