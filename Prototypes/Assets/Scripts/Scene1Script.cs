@@ -52,6 +52,7 @@ public class Scene1Script : MonoBehaviour
     public Button SocialMedia;
     public Button Messages;
     public GameObject NotificationRed;
+    public GameObject NotificationMessage;
     public Button Options;
 
    
@@ -115,6 +116,8 @@ public class Scene1Script : MonoBehaviour
         ThoughtBubble3.gameObject.SetActive(false);
         ThoughtBubble4.gameObject.SetActive(false);
 
+        NotificationRed.SetActive(false);
+        NotificationMessage.SetActive(false);
 
         EmailText1.gameObject.SetActive(false);
         EmailText2.gameObject.SetActive(false);
@@ -134,10 +137,10 @@ public class Scene1Script : MonoBehaviour
         Button t2 = ThoughtBubble2.GetComponent<Button>();
         t2.onClick.AddListener(TB3);
         Button t3 = ThoughtBubble3.GetComponent<Button>();
-        t3.onClick.AddListener(KSpeech1);
+        t3.onClick.AddListener(MesNotif);
 
         Button mes = Messages.GetComponent<Button>();
-        mes.onClick.AddListener(MesNotif);
+        mes.onClick.AddListener(KSpeech1);
 
         Button KS1 = KatieSpeech1.GetComponent<Button>();
         KS1.onClick.AddListener(RobinReply1);
@@ -232,6 +235,7 @@ public class Scene1Script : MonoBehaviour
     {
         //the third thought bubble will be displayed saying "It’s been over a week. I don’t think I got it.." -SD
         ThoughtBubble3.gameObject.SetActive(false);
+        NotificationMessage.SetActive(true);
         NotificationRed.SetActive(true);
     }
 
@@ -239,9 +243,11 @@ public class Scene1Script : MonoBehaviour
     {
         //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
         NotificationRed.gameObject.SetActive(false);
+        NotificationMessage.SetActive(false);
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
-        KatieSpeech1.gameObject.SetActive(true);
+        StartCoroutine(KatieMessage1());
+        
         BottomBackground.gameObject.SetActive(false);
     }
 
@@ -515,5 +521,11 @@ public class Scene1Script : MonoBehaviour
         //canClick = false;
         yield return new WaitForSeconds(1f);
         canClick = true;
+    }
+
+    IEnumerator KatieMessage1()
+    {
+        yield return new WaitForSeconds(0.7f);
+        KatieSpeech1.gameObject.SetActive(true);
     }
 }
