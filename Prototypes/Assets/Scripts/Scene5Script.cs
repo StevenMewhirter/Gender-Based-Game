@@ -27,6 +27,8 @@ public class Scene5Script : MonoBehaviour
     public Button Choice2;
     public Button Choice3;
 
+    public GameObject BackgroundBox;
+
     public GameObject MC;
     public GameObject MCsad;
     public GameObject MCangry;
@@ -47,6 +49,8 @@ public class Scene5Script : MonoBehaviour
         CoWorker.gameObject.SetActive(false);
         CoWorkerHappy.gameObject.SetActive(false);
 
+        BackgroundBox.gameObject.SetActive(false);
+
         KatieSpeech.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
@@ -62,6 +66,7 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech6.gameObject.SetActive(false);
 
         RobinSpeech7.gameObject.SetActive(false);
+        Choice1.gameObject.SetActive(false);
         Choice2.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
 
@@ -71,6 +76,13 @@ public class Scene5Script : MonoBehaviour
         C2.onClick.AddListener(RSpeech4);
         Button C3 = Choice3.GetComponent<Button>();
         C3.onClick.AddListener(RSpeech5);
+
+        Button ch1 = RobinSpeech.GetComponent<Button>();
+        ch1.onClick.AddListener(Choices1);
+        Button ch2 = RobinSpeech4.GetComponent<Button>();
+        ch2.onClick.AddListener(Choices2);
+        Button ch3 = RobinSpeech5.GetComponent<Button>();
+        ch3.onClick.AddListener(Choices3);
 
         Button RS1 = RobinSpeech1.GetComponent<Button>();
         RS1.onClick.AddListener(RSpeech1);
@@ -105,11 +117,23 @@ public class Scene5Script : MonoBehaviour
     }
 
     //Katie - "I hate to see you like this. You should ask for a couple days off"
+
+        void Choices1()
+    {
+        Choice1.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        BackgroundBox.gameObject.SetActive(true);
+        RobinSpeech.gameObject.SetActive(false);
+        CoWorkerSad.gameObject.SetActive(false);
+    }
+
     void KSpeech()
         {
         Choice1.gameObject.SetActive(false);
+        BackgroundBox.gameObject.SetActive(false);
         KatieSpeech.gameObject.SetActive(true);
         RobinSpeech.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         MCsad.gameObject.SetActive(true);
         CoWorkerSad.gameObject.SetActive(false);
     }
@@ -148,6 +172,7 @@ public class Scene5Script : MonoBehaviour
         CoWorker.gameObject.SetActive(true);
     }
 
+   
     //Katie - "Bit weird at the beginning, but only person that annoys him is Jason. I can totally understand why"
     void RSpeech3()
     {
@@ -162,21 +187,37 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech2.gameObject.SetActive(false);
         RobinSpeech4.gameObject.SetActive(true);
-        Choice2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
 
+        
+
         Handheld.Vibrate();
+    }
+
+    void Choices2()
+    {
+        CoWorker.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        RobinSpeech4.gameObject.SetActive(false);
+        BackgroundBox.gameObject.SetActive(true);
+
+        Choice2.gameObject.SetActive(true);
     }
 
     //Katie - "He makes fun of everyone and is so self centered"
     void RSpeech4()
     {
+        BackgroundBox.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(true);
         RobinSpeech4.gameObject.SetActive(false);
         Choice2.gameObject.SetActive(false);
         MCangry.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(false);
+
+        Choice3.gameObject.SetActive(false);
+
     }
 
     //Robin - "Boys will be boys. Are you sure thats all?"
@@ -184,20 +225,29 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech3.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
-        Choice3.gameObject.SetActive(true);
+       
         MCangry.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
 
         Handheld.Vibrate();
     }
 
+    void Choices3()
+    {
+       BackgroundBox.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(false);
+        RobinSpeech5.gameObject.SetActive(false);
+        Choice3.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+    }
+
     //Katie - "He's (Jason's) been a bit inappropriate at work"
     void RSpeech5()
     {
+        BackgroundBox.gameObject.SetActive(false);
         KatieSpeech4.gameObject.SetActive(true);
         RobinSpeech5.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
-        MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
     }
 
