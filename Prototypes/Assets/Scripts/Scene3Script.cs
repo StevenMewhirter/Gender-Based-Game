@@ -56,6 +56,7 @@ public class Scene3Script : MonoBehaviour
     public GameObject Jason;
     public GameObject JasonAngry;
 
+    public GameObject Background;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +85,9 @@ public class Scene3Script : MonoBehaviour
         KatieSpeech5.gameObject.SetActive(false);
         //KatieSpeech6.gameObject.SetActive(false);
 
+        Background.gameObject.SetActive(false);
+
+        Choice1.gameObject.SetActive(false);
         Choice2.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
         Choice4.gameObject.SetActive(false);
@@ -107,6 +111,7 @@ public class Scene3Script : MonoBehaviour
 
 
         //When each specified button is pressed, it will call the specified method from below and run the appropriate actions accordingly -SD
+
         Button c1 = Choice1.GetComponent<Button>();
         c1.onClick.AddListener(RSpeech);
         Button c2 = Choice2.GetComponent<Button>();
@@ -115,6 +120,15 @@ public class Scene3Script : MonoBehaviour
         c3.onClick.AddListener(RSpeech3);
         Button c4 = Choice4.GetComponent<Button>();
         c4.onClick.AddListener(JSpeech2);
+
+        Button R1 = RobinSpeech.GetComponent<Button>();
+        R1.onClick.AddListener(Choices1);
+        Button ch2 = RobinSpeech2.GetComponent<Button>();
+        ch2.onClick.AddListener(Choices2);
+        Button ch3 = RobinSpeech3.GetComponent<Button>();
+        ch3.onClick.AddListener(Choices3);
+        Button ch4 = JasonSpeech2.GetComponent<Button>();
+        ch4.onClick.AddListener(Choices4);
 
         Button RS1  = RobinSpeech1.GetComponent<Button>();
         RS1.onClick.AddListener(RSpeech1);
@@ -147,6 +161,9 @@ public class Scene3Script : MonoBehaviour
         RIS2.onClick.AddListener(RISpeech2);
 
         Handheld.Vibrate();
+
+        Starting();
+
     }
 
 
@@ -158,17 +175,35 @@ public class Scene3Script : MonoBehaviour
         
     }
 
+
+    void Starting()
+    {
+        RobinSpeech.gameObject.SetActive(true);
+        Robin.gameObject.SetActive(true);
+
+    }
     //when each method is called, it will run. The appropriate assets will be added to the screen or removed from the screen depending on the method that's called - SD
-     void RSpeech()
+     void Choices1()
+    {
+        Choice1.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        RobinSpeech.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+        Background.gameObject.SetActive(true);
+    }
+
+void RSpeech()
     {
         //Katie will appear on screen and say "It's great" as the user has previously selected that option - SD
         KatieSpeech1.gameObject.SetActive(true);
-        RobinSpeech.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        Robin.gameObject.SetActive(false);
+        
+        MC.gameObject.SetActive(true);
         Choice1.gameObject.SetActive(false);
+        Background.gameObject.SetActive(false);
     }
 
+    
     void KSpeech()
     {
         //Robin will appear on screen and say "I’m so happy we’re working together bestie!” - SD
@@ -192,14 +227,25 @@ public class Scene3Script : MonoBehaviour
         RobinSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         RobinHappy.gameObject.SetActive(true);
-        Choice2.gameObject.SetActive(true);
+        
 
         Handheld.Vibrate();
+    }
+
+    void Choices2()
+    {
+        RobinHappy.gameObject.SetActive(false);
+        RobinSpeech2.gameObject.SetActive(false);
+
+        MChappy.gameObject.SetActive(true);
+        Choice2.gameObject.SetActive(true);
+        Background.gameObject.SetActive(true);
     }
     void RSpeech2()
     {
         //Katie will appear on screen and say "Really? I am so excited!!!" as the user has previously selected that option - SD
         Choice2.gameObject.SetActive(false);
+        Background.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
         MChappy.gameObject.SetActive(true);
@@ -212,15 +258,25 @@ public class Scene3Script : MonoBehaviour
         RobinSpeech3.gameObject.SetActive(true);
         MChappy.gameObject.SetActive(false);
         Robin.gameObject.SetActive(true);
-        Choice3.gameObject.SetActive(true);
 
         Handheld.Vibrate();
+    }
+
+    void Choices3()
+    {
+        RobinSpeech3.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+
+        Choice3.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        Background.gameObject.SetActive(true);
     }
     void RSpeech3()
     {
         //Katie will appear on screen and say "Can you not sexualize everything for once, Robin?" as the user has previously selected that option - SD
         KatieSpeech4.gameObject.SetActive(true);
-        RobinSpeech3.gameObject.SetActive(false);
+        Background.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         MCangry.gameObject.SetActive(true);
         Robin.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
@@ -229,8 +285,9 @@ public class Scene3Script : MonoBehaviour
     {
         //Robin will appear on screen and say "Shhhh!!! He is coming!" -SD
         KatieSpeech4.gameObject.SetActive(false);
-        RobinSpeech4.gameObject.SetActive(true);
         MCangry.gameObject.SetActive(false);
+
+        RobinSpeech4.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
     }
     void RSpeech4()
@@ -252,22 +309,31 @@ public class Scene3Script : MonoBehaviour
     void RSpeech5()
     {   //Jason will appear on screen and say "Nice to meet you Katie. My name is Jason. I am the manager on this floor." -SD
         JasonSpeech2.gameObject.SetActive(true);
-        Choice4.gameObject.SetActive(true);
         RobinSpeech5.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
         RobinHappy.gameObject.SetActive(false);
 
         Handheld.Vibrate();
     }
+
+    void Choices4()
+    {
+        Background.gameObject.SetActive(true);
+        Choice4.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(false);
+        JasonSpeech2.gameObject.SetActive(false);
+
+    }
     void JSpeech2()
     {
         //Katie will appear on screen and say "Nice to meet you too. I’ve heard a lot about you" as the user has previously selected that option - SD
+        Background.gameObject.SetActive(false);
         Choice4.gameObject.SetActive(false);
-        JasonSpeech2.gameObject.SetActive(false);
         KatieSpeech5.gameObject.SetActive(true);
-        Jason.gameObject.SetActive(false);
-        MC.gameObject.SetActive(true);
+
     }
+
     void KSpeech4()
     {
         //Jason will appear on screen and say "Oh, ok. I hope it’s all good stuff." -SD
