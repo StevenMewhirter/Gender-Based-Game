@@ -26,7 +26,7 @@ public class Scene2Script : MonoBehaviour
     public GameObject BossNeutral;
     public GameObject BossAngry;
     public GameObject CoWorkerHappy;
-    public GameObject CoWorkerNeutral;
+  //  public GameObject CoWorkerNeutral;
 
 
     public Text ResponseKatie1;
@@ -50,7 +50,7 @@ public class Scene2Script : MonoBehaviour
         BossNeutral.gameObject.SetActive(false);
         BossAngry.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        CoWorkerNeutral.gameObject.SetActive(false);
+        //CoWorkerNeutral.gameObject.SetActive(false);
         // CoWorker.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(false);
