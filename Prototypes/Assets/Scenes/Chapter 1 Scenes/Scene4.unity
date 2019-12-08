@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 52313127}
   - component: {fileID: 52313128}
   - component: {fileID: 52313129}
+  - component: {fileID: 52313130}
   m_Layer: 5
   m_Name: Jason
   m_TagString: Untagged
@@ -155,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62.4, y: 0}
+  m_AnchoredPosition: {x: 500, y: 0}
   m_SizeDelta: {x: 364.6, y: 526.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &52313128
@@ -191,6 +192,25 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!95 &52313130
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52313126}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30e1df4b0c44eca42a2daee73281c9cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &71644563
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +730,7 @@ GameObject:
   - component: {fileID: 239992811}
   - component: {fileID: 239992813}
   - component: {fileID: 239992812}
+  - component: {fileID: 239992814}
   m_Layer: 5
   m_Name: Katie
   m_TagString: Untagged
@@ -734,7 +755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.700005, y: 0}
+  m_AnchoredPosition: {x: -500, y: 0.000046757}
   m_SizeDelta: {x: 364.6, y: 526.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239992812
@@ -770,6 +791,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239992810}
   m_CullTransparentMesh: 0
+--- !u!95 &239992814
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239992810}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8c6ca1a2fee2668498845f0b89394b86, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &257524181
 GameObject:
   m_ObjectHideFlags: 0
@@ -5191,6 +5231,9 @@ MonoBehaviour:
   dialogue: []
   currentLine: 0
   endLine: 3
+  KatieAnimator: {fileID: 239992814}
+  JasonAnimator: {fileID: 52313130}
+  AminaAnimator: {fileID: 1680234601}
 --- !u!4 &1536324360
 Transform:
   m_ObjectHideFlags: 0
@@ -5643,6 +5686,7 @@ GameObject:
   - component: {fileID: 1680234598}
   - component: {fileID: 1680234599}
   - component: {fileID: 1680234600}
+  - component: {fileID: 1680234601}
   m_Layer: 5
   m_Name: Amina
   m_TagString: Untagged
@@ -5703,6 +5747,25 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!95 &1680234601
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680234597}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1517c917349ea148914952b4fc66f51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1704891344
 GameObject:
   m_ObjectHideFlags: 0

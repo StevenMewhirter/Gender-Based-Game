@@ -58,6 +58,19 @@ public class Scene3Script : MonoBehaviour
 
     public GameObject Background;
 
+    //all the animators for the characters - AB
+
+    public Animator animatorKatieHappy;
+    public Animator animatorKatieAngry;
+    public Animator animatorKatieNeutral;
+    public Animator animatorJasonNeutral;
+    public Animator animatorJasonAngry;
+    public Animator animatorRobinNeutral;
+    public Animator animatorRobinHappy;
+    public Animator animatorRichardNeutral;
+    public Animator animatorRichardAngry;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -180,6 +193,7 @@ public class Scene3Script : MonoBehaviour
     {
         RobinSpeech.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
+        animatorRobinNeutral.SetBool("RobinNeutral", true);
 
     }
     //when each method is called, it will run. The appropriate assets will be added to the screen or removed from the screen depending on the method that's called - SD
@@ -190,14 +204,18 @@ public class Scene3Script : MonoBehaviour
         RobinSpeech.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         Background.gameObject.SetActive(true);
+        animatorKatieNeutral.SetBool("KatieNeutral", true);
+
+
     }
 
 void RSpeech()
     {
         //Katie will appear on screen and say "It's great" as the user has previously selected that option - SD
+        
         KatieSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        
+        animatorKatieNeutral.SetBool("KatieNeutral", true);
         MC.gameObject.SetActive(true);
         Choice1.gameObject.SetActive(false);
         Background.gameObject.SetActive(false);
@@ -211,6 +229,8 @@ void RSpeech()
         RobinSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         RobinHappy.gameObject.SetActive(true);
+        animatorRobinHappy.SetBool("RobinHappy", true);
+
     }
     void RSpeech1()
     {
@@ -219,6 +239,7 @@ void RSpeech()
         RobinSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         RobinHappy.gameObject.SetActive(false);
+        animatorKatieNeutral.SetBool("KatieNeutral", true);
     }
     void KSpeech1()
     {
@@ -227,7 +248,7 @@ void RSpeech()
         RobinSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         RobinHappy.gameObject.SetActive(true);
-        
+        animatorRobinHappy.SetBool("RobinHappy", true);
 
         Handheld.Vibrate();
     }
@@ -235,11 +256,11 @@ void RSpeech()
     void Choices2()
     {
         RobinHappy.gameObject.SetActive(false);
-        RobinSpeech2.gameObject.SetActive(false);
-
+        RobinSpeech2.gameObject.SetActive(false);       
         MChappy.gameObject.SetActive(true);
         Choice2.gameObject.SetActive(true);
         Background.gameObject.SetActive(true);
+        animatorKatieHappy.SetBool("KatieHappy", true);
     }
     void RSpeech2()
     {
@@ -250,6 +271,7 @@ void RSpeech()
         RobinSpeech2.gameObject.SetActive(false);
         MChappy.gameObject.SetActive(true);
         RobinHappy.gameObject.SetActive(false);
+        animatorKatieHappy.SetBool("KatieHappy", true);
     }
     void KSpeech2()
     {
@@ -258,7 +280,7 @@ void RSpeech()
         RobinSpeech3.gameObject.SetActive(true);
         MChappy.gameObject.SetActive(false);
         Robin.gameObject.SetActive(true);
-
+        animatorRobinNeutral.SetBool("RobinNeutral", true);
         Handheld.Vibrate();
     }
 
@@ -270,6 +292,7 @@ void RSpeech()
         Choice3.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
         Background.gameObject.SetActive(true);
+        animatorKatieNeutral.SetBool("KatieNeutral", true);
     }
     void RSpeech3()
     {
@@ -280,6 +303,7 @@ void RSpeech()
         MCangry.gameObject.SetActive(true);
         Robin.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
+        animatorKatieAngry.SetBool("KatieAngry", true);
     }
     void KSpeech3()
     {
@@ -289,6 +313,7 @@ void RSpeech()
 
         RobinSpeech4.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
+        animatorRobinNeutral.SetBool("RobinNeutral", true);
     }
     void RSpeech4()
     {
@@ -297,6 +322,7 @@ void RSpeech()
         RobinSpeech4.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
         Robin.gameObject.SetActive(false);
+        animatorJasonNeutral.SetBool("JasonNeutral", true);
     }
     void JSpeech1()
     {
@@ -305,6 +331,7 @@ void RSpeech()
         RobinSpeech5.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         RobinHappy.gameObject.SetActive(true);
+        animatorRobinHappy.SetBool("RobinHappy", true);
     }
     void RSpeech5()
     {   //Jason will appear on screen and say "Nice to meet you Katie. My name is Jason. I am the manager on this floor." -SD
@@ -312,7 +339,7 @@ void RSpeech()
         RobinSpeech5.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
         RobinHappy.gameObject.SetActive(false);
-
+        animatorJasonNeutral.SetBool("JasonNeutral", true);
         Handheld.Vibrate();
     }
 
@@ -323,6 +350,7 @@ void RSpeech()
         MC.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         JasonSpeech2.gameObject.SetActive(false);
+        animatorKatieNeutral.SetBool("KatieNeutral", true);
 
     }
     void JSpeech2()
@@ -341,6 +369,7 @@ void RSpeech()
         JasonSpeech3.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
+        animatorJasonNeutral.SetBool("JasonNeutral", true);
     }
     void JSpeech3()
     {
@@ -349,6 +378,7 @@ void RSpeech()
         RichardSpeech1.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        animatorRichardNeutral.SetBool("RichardNeutral", true);
     }
 
     void RISpeech1()
@@ -358,6 +388,7 @@ void RSpeech()
         RichardSpeech1.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
         Richard.gameObject.SetActive(false);
+        animatorJasonNeutral.SetBool("JasonNeutral", true);
     }
 
     void JSpeech4()
@@ -367,6 +398,7 @@ void RSpeech()
         RichardSpeech2.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         RichardAngry.gameObject.SetActive(true);
+        animatorRichardAngry.SetBool("RichardAngry", true);
     }
     void RISpeech2()
     {
@@ -375,5 +407,6 @@ void RSpeech()
         RichardSpeech2.gameObject.SetActive(false);
         JasonAngry.gameObject.SetActive(true);
         RichardAngry.gameObject.SetActive(false);
+        animatorJasonAngry.SetBool("JasonAngry", true);
     }
 }
