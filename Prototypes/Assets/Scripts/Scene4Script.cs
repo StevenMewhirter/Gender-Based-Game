@@ -221,6 +221,7 @@ public class Scene4Script : MonoBehaviour
     void ASpeech2()
     {
         KatieSpeechResponse1.gameObject.SetActive(true);
+        KatieSpeechResponse1.interactable = false; // makes button non iteractable
         AminaSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         Boss.gameObject.SetActive(false);
@@ -234,6 +235,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseA()
     {
+        KatieSpeechResponse1.interactable = true;
         response.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 8; //goes to the next line
         responseKatie.text = dialogue[currentLine]; //checks current line 
@@ -244,7 +246,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseB()
     {
-       
+        KatieSpeechResponse1.interactable = true;
         response.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 9; //goes to the next line
         responseKatie.text = dialogue[currentLine]; //checks current line 
@@ -255,7 +257,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseC()
     {
-       
+        KatieSpeechResponse1.interactable = true;
         response.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 10; //goes to the next line
         responseKatie.text = dialogue[currentLine]; //checks current line 
@@ -316,6 +318,7 @@ public class Scene4Script : MonoBehaviour
     }
     void JSpeech3()
     {
+        KatieSpeech6.interactable = false;
         KatieSpeech6.gameObject.SetActive(true);
         JasonSpeech3.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
@@ -328,7 +331,9 @@ public class Scene4Script : MonoBehaviour
         Handheld.Vibrate();
     }
     void ResponseD()
+
     {
+        KatieSpeech6.interactable = true;
         responseJason.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 24; //goes to the next line
         responseKatie1.text = dialogue[currentLine2]; //checks current line 
@@ -345,6 +350,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseE()
     {
+        KatieSpeech6.interactable = true;
         responseJason.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 25; //goes to the next line
         responseKatie1.text = dialogue[currentLine2]; //checks current line 
@@ -361,6 +367,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseF()
     {
+        KatieSpeech6.interactable = true;
         responseJason.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 26; //goes to the next line
         responseKatie1.text = dialogue[currentLine2]; //checks current line 
