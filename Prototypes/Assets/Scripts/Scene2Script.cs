@@ -130,6 +130,7 @@ public class Scene2Script : MonoBehaviour
         Button r5 = response5.GetComponent<Button>();
         r5.onClick.AddListener(RichResponse2);
         Button r6 = response6.GetComponent<Button>();
+        r6.onClick.AddListener(RichResponse3);
         Button r7 = response7.GetComponent<Button>();
         r7.onClick.AddListener(RichResponse4);
         Button r8 = response8.GetComponent<Button>();
