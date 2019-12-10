@@ -69,8 +69,8 @@ public class Scene1Script : MonoBehaviour
     public GameObject KatieSad;
     public GameObject KatieHappy;
     public RawImage Phone;
-    public RawImage BottomBackground;
-
+    public Button transparentResponse;
+    public RawImage EmailBackground;
     //phone headings
     public RawImage RobinName;
     public RawImage EmailName;
@@ -119,6 +119,7 @@ public class Scene1Script : MonoBehaviour
         NotificationRed.SetActive(false);
         NotificationMessage.SetActive(false);
 
+        EmailBackground.gameObject.SetActive(false);
         EmailText1.gameObject.SetActive(false);
         EmailText2.gameObject.SetActive(false);
         EmailText3.gameObject.SetActive(false);
@@ -247,8 +248,8 @@ public class Scene1Script : MonoBehaviour
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
         StartCoroutine(KatieMessage1());
-        
-        BottomBackground.gameObject.SetActive(false);
+        KatieSad.gameObject.SetActive(false);
+        transparentResponse.gameObject.SetActive(false);
     }
 
     void RobinReply1()
@@ -256,7 +257,7 @@ public class Scene1Script : MonoBehaviour
         //The phone and Robin's first speech bubble appears on screen saying "Don’t say that! I think it went better than you think" -SD
         
 
-        KatieSad.gameObject.SetActive(false);
+    
        // KatieSpeech1.gameObject.SetActive(false);
         
         RobinSpeech1.gameObject.SetActive(true);
@@ -266,14 +267,14 @@ public class Scene1Script : MonoBehaviour
     {
         //Katie's second speech bubble appears on screen saying "That boss of yours.. omg, she was so scary during the interview" -SD
 
-        KatieSad.gameObject.SetActive(true);
+
         KatieSpeech2.gameObject.SetActive(true);
     }
 
     void RobinReply2()
     {
         //The phone and Robin's second speech bubble appears on screen saying "Other people say that too (smiley face) but I think she’s cool. Breaking the glass ceiling and stuff (smiley face)" -SD
-        KatieSad.gameObject.SetActive(false);
+
 
         
         RobinSpeech2.gameObject.SetActive(true);
@@ -285,7 +286,7 @@ public class Scene1Script : MonoBehaviour
     {
         //Katie's third speech bubble appears on screen saying "Oh well, I guess I’ll like her if she gives me the job… Talk to you later" -SD
         
-        KatieSad.gameObject.SetActive(true);
+   
         KatieSpeech3.gameObject.SetActive(true);
 
         KatieSpeech2.gameObject.SetActive(false);
@@ -297,7 +298,7 @@ public class Scene1Script : MonoBehaviour
     void RobinReply3()
     {
         //The phone and Robin's third speech bubble appears on screen saying "Keep it together man. Ciao" -SD
-        KatieSad.gameObject.SetActive(false);
+
         
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
@@ -314,8 +315,10 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech3.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
-        EmailName.gameObject.SetActive(true);
+        //EmailName.gameObject.SetActive(true);
         EmailText1.gameObject.SetActive(true);
+        EmailBackground.gameObject.SetActive(true);
+        Phone.gameObject.SetActive(false);
     }
 
     void Email2()
@@ -360,6 +363,7 @@ public class Scene1Script : MonoBehaviour
         EmailText5.gameObject.SetActive(false);
         KatieHappy.gameObject.SetActive(true);
         KatieSpeech4.gameObject.SetActive(true);
+        EmailBackground.gameObject.SetActive(false);
     }
 
     void Choice1()
@@ -368,7 +372,7 @@ public class Scene1Script : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
-        BottomBackground.gameObject.SetActive(true);
+        transparentResponse.gameObject.SetActive(true);
         Handheld.Vibrate();
     }
 
@@ -376,8 +380,8 @@ public class Scene1Script : MonoBehaviour
     {
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
-        
-        BottomBackground.gameObject.SetActive(false);
+        KatieHappy.gameObject.SetActive(false);
+        transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
         KatieResp1.gameObject.SetActive(true);
@@ -391,11 +395,11 @@ public class Scene1Script : MonoBehaviour
     {
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
-        BottomBackground.gameObject.SetActive(false);
+        transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         RobinName.gameObject.SetActive(true);
         KatieResp2.gameObject.SetActive(true);
-
+        KatieHappy.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
     }
@@ -405,7 +409,7 @@ public class Scene1Script : MonoBehaviour
         //The phone and Robin's fourth speech bubble appears on screen saying "I told you were overreacting! Congrats!" and the choice buttons will appear on screen prompting the user to pick between them-SD
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
+      
 
         RobinSpeech4.gameObject.SetActive(true);
 
@@ -493,7 +497,6 @@ public class Scene1Script : MonoBehaviour
     {
         //Katie's fifth speech bubble appears on screen saying "Perfect I’ll call you in ten to tell you where to meet! Ciao!" -SD
   
-        KatieHappy.gameObject.SetActive(true);
         KatieSpeech5.gameObject.SetActive(true);
     }
 
@@ -513,7 +516,8 @@ public class Scene1Script : MonoBehaviour
         KatieResp4.gameObject.SetActive(false);
         KatieResp5.gameObject.SetActive(false);
         KatieResp6.gameObject.SetActive(false);
-        BottomBackground.gameObject.SetActive(true);
+        transparentResponse.gameObject.SetActive(true);
+        KatieHappy.gameObject.SetActive(true);
     }
 
     IEnumerator introPanel() //panel timer
