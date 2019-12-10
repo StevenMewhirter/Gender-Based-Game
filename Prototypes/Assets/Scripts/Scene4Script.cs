@@ -6,6 +6,11 @@ using UnityEngine.EventSystems;
 
 public class Scene4Script : MonoBehaviour
 {
+    public Texture KatieSad;
+    public Texture KatieAngry;
+    public Texture KatieNeutral;
+    public GameObject ImageOfKatie;
+
     //buttons for responses
     public Button response1;
     public Button response2;
@@ -179,6 +184,7 @@ public class Scene4Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         responseKatie.text = dialogue[currentLine]; //checks current line
         response.text = dialogue[currentLine1];
         responseKatie1.text = dialogue[currentLine2];
@@ -194,12 +200,16 @@ public class Scene4Script : MonoBehaviour
     }
     void KSpeech2()
     {
+       
         KatieSpeech3.gameObject.SetActive(true);
         KatieSpeech2.gameObject.SetActive(false);
        
     }
     void KSpeech3()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieSad;
         KatieSpeech4.gameObject.SetActive(true);
         KatieSpeech3.gameObject.SetActive(false);
         
@@ -220,6 +230,10 @@ public class Scene4Script : MonoBehaviour
     }
     void ASpeech2()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
+
         KatieSpeechResponse1.gameObject.SetActive(true);
         KatieSpeechResponse1.interactable = false; // makes button non iteractable
         AminaSpeech2.gameObject.SetActive(false);
@@ -246,6 +260,9 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseB()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieSad;
         KatieSpeechResponse1.interactable = true;
         response.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 9; //goes to the next line
@@ -269,6 +286,9 @@ public class Scene4Script : MonoBehaviour
 
     void KSpeechResponse1()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
         KatieSpeechResponse1.gameObject.SetActive(false);
         AminaSpeech3.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
@@ -333,6 +353,9 @@ public class Scene4Script : MonoBehaviour
     void ResponseD()
 
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieSad;
         KatieSpeech6.interactable = true;
         responseJason.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 24; //goes to the next line
@@ -367,6 +390,9 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseF()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieAngry;
         KatieSpeech6.interactable = true;
         responseJason.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 26; //goes to the next line
