@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class Scene4Script : MonoBehaviour
 {
+    //Changing of textures to convey emotions
     public Texture KatieSad;
     public Texture KatieAngry;
     public Texture KatieNeutral;
@@ -393,6 +394,7 @@ public class Scene4Script : MonoBehaviour
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieAngry;
+
         KatieSpeech6.interactable = true;
         responseJason.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 26; //goes to the next line
