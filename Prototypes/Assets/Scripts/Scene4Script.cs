@@ -12,10 +12,14 @@ public class Scene4Script : MonoBehaviour
     public Texture KatieNeutral;
     public GameObject ImageOfKatie;
 
+    
+
     //buttons for responses
+    public GameObject FirstBlock;
     public Button response1;
     public Button response2;
     public Button response3;
+    public GameObject SecondBlock;
     public Button response4;
     public Button response5;
     public Button response6;
@@ -75,6 +79,7 @@ public class Scene4Script : MonoBehaviour
     public Animator KatieAnimator;
     public Animator JasonAnimator;
     public Animator AminaAnimator;
+    public Animator Background;
 
     // Start is called before the first frame update
     void Start()
@@ -102,9 +107,11 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech5.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(false);
         JasonSpeech7.gameObject.SetActive(false);
+        FirstBlock.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
+        SecondBlock.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
@@ -192,6 +199,7 @@ public class Scene4Script : MonoBehaviour
         responseKatie2.text = dialogue[currentLine5];
         responseJason.text = dialogue[currentLine3];
         responseJason2.text = dialogue[currentLine4];
+        
         KatieAnimator.SetBool("KatieNeutral", true);
     }
     void KSpeech1()
@@ -221,6 +229,7 @@ public class Scene4Script : MonoBehaviour
         AminaSpeech1.gameObject.SetActive(true);
         Boss.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
+        Background.SetBool("SlideToOther", true);
         AminaAnimator.SetBool("AminaNeutral", true);
     }
     void ASpeech1()
@@ -240,7 +249,9 @@ public class Scene4Script : MonoBehaviour
         AminaSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         Boss.gameObject.SetActive(false);
+        Background.SetBool("SlideToOther", false);
         KatieAnimator.SetBool("KatieNeutral", true);
+        FirstBlock.gameObject.SetActive(true);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
@@ -255,6 +266,7 @@ public class Scene4Script : MonoBehaviour
         currentLine1 = 8; //goes to the next line
         responseKatie.text = dialogue[currentLine]; //checks current line 
         currentLine = 2; //goes to the next line
+        FirstBlock.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -269,6 +281,7 @@ public class Scene4Script : MonoBehaviour
         currentLine1 = 9; //goes to the next line
         responseKatie.text = dialogue[currentLine]; //checks current line 
         currentLine = 3; //goes to the next line
+        FirstBlock.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -280,6 +293,7 @@ public class Scene4Script : MonoBehaviour
         currentLine1 = 10; //goes to the next line
         responseKatie.text = dialogue[currentLine]; //checks current line 
         currentLine = 4; //goes to the next line
+        FirstBlock.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -294,6 +308,7 @@ public class Scene4Script : MonoBehaviour
         AminaSpeech3.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         Boss.gameObject.SetActive(true);
+        Background.SetBool("SlideToOther", true);
         AminaAnimator.SetBool("AminaNeutral", true);
     }
     void ASpeech3()
@@ -326,6 +341,7 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
+        Background.SetBool("SlideToOther", false);
         KatieAnimator.SetBool("KatieNeutral", true);
     }
     void KSpeech5()
@@ -334,6 +350,7 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech3.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        Background.SetBool("SlideToOther", true);
         JasonAnimator.SetBool("JasonNeutral", true);
 
     }
@@ -344,7 +361,9 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech3.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
+        Background.SetBool("SlideToOther", false);
         KatieAnimator.SetBool("KatieNeutral", true);
+        SecondBlock.gameObject.SetActive(true);
         response4.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
@@ -367,7 +386,7 @@ public class Scene4Script : MonoBehaviour
         currentLine5 = 26; //goes to the next line
         responseKatie2.text = dialogue[currentLine4]; //checks current line 
         currentLine4 = 16; //goes to the next line
-
+        SecondBlock.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
@@ -384,7 +403,7 @@ public class Scene4Script : MonoBehaviour
         currentLine4 = 29; //goes to the next line
         responseKatie2.text = dialogue[currentLine5]; //checks current line 
         currentLine5 = 19; //goes to the next line
-
+        SecondBlock.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
@@ -405,6 +424,7 @@ public class Scene4Script : MonoBehaviour
         currentLine4 = 30; //goes to the next line
         responseKatie2.text = dialogue[currentLine5]; //checks current line 
         currentLine5 = 20; //goes to the next line
+        SecondBlock.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
@@ -415,6 +435,7 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech4.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        Background.SetBool("SlideToOther", true);
         JasonAnimator.SetBool("JasonNeutral", true);
 
         Handheld.Vibrate();
@@ -428,7 +449,7 @@ public class Scene4Script : MonoBehaviour
         //response7.gameObject.SetActive(true);
         //response8.gameObject.SetActive(true);
         //response9.gameObject.SetActive(true);
-
+        Background.SetBool("SlideToOther", false);
         KatieAnimator.SetBool("KatieNeutral", true);
     }
    
@@ -438,6 +459,7 @@ public class Scene4Script : MonoBehaviour
         JasonSpeech5.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        Background.SetBool("SlideToOther", true);
         JasonAnimator.SetBool("JasonNeutral", true);
     }
     void JSpeech5()
@@ -451,6 +473,7 @@ public class Scene4Script : MonoBehaviour
         KatieSpeech8.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
+        Background.SetBool("SlideToOther", false);
         KatieAnimator.SetBool("KatieNeutral", true);
     }
     void KSpeech8()
@@ -459,6 +482,7 @@ public class Scene4Script : MonoBehaviour
         KatieSpeech8.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        Background.SetBool("SlideToOther", true);
         JasonAnimator.SetBool("JasonNeutral", true);
     }
     void JSpeech7()
@@ -467,6 +491,7 @@ public class Scene4Script : MonoBehaviour
         KatieSpeech9.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
         CoWorker.gameObject.SetActive(false);
+        Background.SetBool("SlideToOther", false);
         KatieAnimator.SetBool("KatieNeutral", true);
     }
 }
