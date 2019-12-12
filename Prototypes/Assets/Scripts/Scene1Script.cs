@@ -66,8 +66,10 @@ public class Scene1Script : MonoBehaviour
 
     //all the main raw images for the character and the phone -SD
 
-    public GameObject KatieSad;
-    public GameObject KatieHappy;
+    public Texture KatieSad;
+    public Texture KatieHappy;
+    public GameObject ImageOfKatie;
+    public RawImage MC;
     public RawImage Phone;
     public Button transparentResponse;
     public RawImage EmailBackground;
@@ -95,7 +97,7 @@ public class Scene1Script : MonoBehaviour
         KatieResp5.gameObject.SetActive(false);
         KatieResp6.gameObject.SetActive(false);
 
-        KatieHappy.gameObject.SetActive(false);
+        
         Phone.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
@@ -198,6 +200,10 @@ public class Scene1Script : MonoBehaviour
         RS6.onClick.AddListener(KSpeech5);
         Button KS5 = KatieSpeech5.GetComponent<Button>();
         KS5.onClick.AddListener(TB4);
+
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieSad;
     }
 
     // Update is called once per frame
@@ -248,7 +254,7 @@ public class Scene1Script : MonoBehaviour
         Phone.gameObject.SetActive(true);
         //RobinName.gameObject.SetActive(true);
         StartCoroutine(KatieMessage1());
-        KatieSad.gameObject.SetActive(false);
+    
         transparentResponse.gameObject.SetActive(false);
     }
 
@@ -362,7 +368,11 @@ public class Scene1Script : MonoBehaviour
         //EmailName.gameObject.SetActive(false);
         //EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         KatieSpeech4.gameObject.SetActive(true);
         EmailBackground.gameObject.SetActive(false);
     }
@@ -381,7 +391,8 @@ public class Scene1Script : MonoBehaviour
     {
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         //RobinName.gameObject.SetActive(true);
@@ -400,7 +411,8 @@ public class Scene1Script : MonoBehaviour
         Phone.gameObject.SetActive(true);
         //RobinName.gameObject.SetActive(true);
         KatieResp2.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
     }
@@ -518,7 +530,11 @@ public class Scene1Script : MonoBehaviour
         KatieResp5.gameObject.SetActive(false);
         KatieResp6.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
     }
 
     IEnumerator introPanel() //panel timer
