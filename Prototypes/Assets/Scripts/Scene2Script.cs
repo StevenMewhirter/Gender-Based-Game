@@ -84,7 +84,12 @@ public class Scene2Script : MonoBehaviour
     public int currentLine4;
     public int endLine;
 
-    
+    public Animator KatieNeutralAnimator;
+    public Animator AminaNeutralAnimator;
+    public Animator RobinNeutralAnimator;
+    public Animator RichardNeutralAnimator;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -124,7 +129,7 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech7.gameObject.SetActive(false);
         //RobinSpeech1.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
-        
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
 
         if (textFile != null) // checks if there is text
         {
@@ -214,6 +219,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech1.gameObject.SetActive(true);
         RobinSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         CoWorker.gameObject.SetActive(false);
     }
     void Speech2()
@@ -222,12 +228,14 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
     }
     void Speech3()
     {
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         CoWorker.gameObject.SetActive(false);
     }
     void Speech4()
@@ -236,7 +244,8 @@ public class Scene2Script : MonoBehaviour
         BossSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         Boss.gameObject.SetActive(true);
-       
+        AminaNeutralAnimator.SetBool("AminaNeutral", true);
+
     }
     void Speech5()
     {
@@ -244,6 +253,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(true);
         BossSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         Boss.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
@@ -258,6 +268,7 @@ public class Scene2Script : MonoBehaviour
         BossSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         Boss.gameObject.SetActive(true);
+        AminaNeutralAnimator.SetBool("AminaNeutral", true);
     }
     void Speech7()
     {
@@ -272,6 +283,7 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech1.gameObject.SetActive(true);
         Boss.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech9()
     {
@@ -279,6 +291,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(true);
         RichardSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         Richard.gameObject.SetActive(false);
         response4.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
@@ -294,6 +307,7 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech11()
     {
@@ -305,6 +319,7 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech3.gameObject.SetActive(false);
         KatieSpeech5.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         Richard.gameObject.SetActive(false);
     }
     void Speech13()
@@ -313,12 +328,14 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech5.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech14()
     {
         RichardSpeech4.gameObject.SetActive(false);
         KatieSpeech6.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         Richard.gameObject.SetActive(false);
     }
     void Speech15()
@@ -327,6 +344,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech6.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech16()
     {
@@ -334,6 +352,7 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech5.gameObject.SetActive(false);
         KatieSpeech7.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         Richard.gameObject.SetActive(false);
         response7.gameObject.SetActive(true);
         response8.gameObject.SetActive(true);
@@ -347,12 +366,14 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech7.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech18()
     {
         RichardSpeech6.gameObject.SetActive(false);
         KatieSpeech8.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         Richard.gameObject.SetActive(false);
     }
     void Speech19()
@@ -361,6 +382,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech8.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void ResponseG()
     {

@@ -10610,9 +10610,9 @@ MonoBehaviour:
   RobinSpeech1: {fileID: 1091601890}
   RobinSpeech2: {fileID: 1206176997}
   MC: {fileID: 1034407730}
-  BossNeutral: {fileID: 1871324650}
-  CoWorkerHappy: {fileID: 836370543}
-  RichardNeutral: {fileID: 1525001501}
+  Boss: {fileID: 1871324650}
+  CoWorker: {fileID: 836370543}
+  Richard: {fileID: 1525001501}
   ResponseKatie1: {fileID: 1043423211}
   ResponseKatie2: {fileID: 1641828472}
   ResponseKatie3: {fileID: 955380861}
