@@ -85,6 +85,15 @@ public class Scene6TextManager : MonoBehaviour
     public Button Messages;
     public Button Options;
     public RawImage RobinName;
+
+    public Animator KatieAngryAnimator;
+    public Animator KatieNeutralAnimator;
+    public Animator KatieHappyAnimator;
+    public Animator JasonHappyAnimator;
+    public Animator JasonNeutralAnimator;
+    public Animator AminaNeutralAnimator;
+    public Animator AminaHappyAnimator;
+    public Animator RichardHappyAnimator;
     // Start is called before the first frame update
     void Start()
     {

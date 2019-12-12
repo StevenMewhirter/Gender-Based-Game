@@ -3,10 +3,7 @@ guid: 2ea693ccdf99e964098df619d277fd39
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - txtBox: {instanceID: 0}
-  - theText: {instanceID: 0}
-  - textFile: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

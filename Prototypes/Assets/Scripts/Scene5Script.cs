@@ -38,6 +38,15 @@ public class Scene5Script : MonoBehaviour
     public GameObject CoWorkerSad;
     public GameObject CoWorkerHappy;
 
+    //animators for the characters
+    public Animator RobinNeutralAnimator;
+    public Animator RobinSadAnimator;
+    public Animator RobinHappyAnimator;
+    public Animator KatieNeutralAnimator;
+    public Animator KatieSadAnimator;
+    public Animator KatieHappyAnimator;
+    public Animator KatieAngryAnimator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +54,7 @@ public class Scene5Script : MonoBehaviour
         MCsad.gameObject.SetActive(false);
         MCangry.gameObject.SetActive(false);
         MChappy.gameObject.SetActive(false);
-
+        RobinSadAnimator.SetBool("RobinSad", true);
         CoWorker.gameObject.SetActive(false);
         CoWorkerHappy.gameObject.SetActive(false);
 
@@ -122,6 +131,7 @@ public class Scene5Script : MonoBehaviour
     {
         Choice1.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         BackgroundBox.gameObject.SetActive(true);
         RobinSpeech.gameObject.SetActive(false);
         CoWorkerSad.gameObject.SetActive(false);
@@ -135,6 +145,7 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         MCsad.gameObject.SetActive(true);
+        KatieSadAnimator.SetBool("KatieSad", true);
         CoWorkerSad.gameObject.SetActive(false);
     }
 
@@ -145,6 +156,7 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech1.gameObject.SetActive(true);
         MCsad.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
     }
 
     //Robin - "That's enough whining. What do you think of your first month in the company"
@@ -160,6 +172,7 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech1.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
         MChappy.gameObject.SetActive(true);
+        KatieHappyAnimator.SetBool("KatieHappy", true);
         CoWorker.gameObject.SetActive(false);
     }
 
@@ -170,6 +183,7 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech3.gameObject.SetActive(true);
         MChappy.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
     }
 
    
@@ -179,6 +193,7 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         CoWorker.gameObject.SetActive(false);
     }
 
@@ -189,8 +204,9 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech4.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
 
-        
+
 
         Handheld.Vibrate();
     }
@@ -199,6 +215,7 @@ public class Scene5Script : MonoBehaviour
     {
         CoWorker.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         RobinSpeech4.gameObject.SetActive(false);
         BackgroundBox.gameObject.SetActive(true);
 
@@ -213,6 +230,7 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech4.gameObject.SetActive(false);
         Choice2.gameObject.SetActive(false);
         MCangry.gameObject.SetActive(true);
+        KatieAngryAnimator.SetBool("KatieAngry", true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(false);
 
@@ -228,6 +246,7 @@ public class Scene5Script : MonoBehaviour
        
         MCangry.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
 
         Handheld.Vibrate();
     }
@@ -239,6 +258,7 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech5.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
     }
 
     //Katie - "He's (Jason's) been a bit inappropriate at work"
@@ -258,6 +278,7 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech6.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
     }
 
     //Katie - "Lets change subject. How's david?"
@@ -266,6 +287,7 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech5.gameObject.SetActive(true);
         RobinSpeech6.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         CoWorker.gameObject.SetActive(false);
     }
 
@@ -276,5 +298,6 @@ public class Scene5Script : MonoBehaviour
         RobinSpeech7.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
         CoWorkerSad.gameObject.SetActive(true);
+        RobinSadAnimator.SetBool("RobinSad", true);
     }
 }
