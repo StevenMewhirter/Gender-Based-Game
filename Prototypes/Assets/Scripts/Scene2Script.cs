@@ -8,6 +8,24 @@ using System;
 
 public class Scene2Script : MonoBehaviour
 {
+    public Texture KatieSad;
+    public Texture KatieAngry;
+    public Texture KatieNeutral;
+    
+    public GameObject ImageOfKatie;
+
+    
+    public Texture RichardAngry;
+    public Texture RichardNeut;
+    public Texture RichardHappy;
+    public GameObject ImageOfRichard;
+
+    public Texture AminaNeutral;
+    public Texture AminaHappy;
+    public GameObject ImageOfAmina;
+
+
+
     public Button BossSpeech1;//Text box to hold text
     public Button BossSpeech2;//Text box to hold text
     public Button BossSpeech3;
@@ -43,10 +61,10 @@ public class Scene2Script : MonoBehaviour
 
 
     public GameObject MC;
-    public GameObject BossNeutral;
-    public GameObject BossAngry;
-    public GameObject CoWorkerHappy;
-    public GameObject RichardNeutral;
+    public GameObject Boss;
+
+    public GameObject CoWorker;
+    public GameObject Richard;
   //  public GameObject CoWorkerNeutral;
 
 
@@ -66,7 +84,12 @@ public class Scene2Script : MonoBehaviour
     public int currentLine4;
     public int endLine;
 
-    
+    public Animator KatieNeutralAnimator;
+    public Animator AminaNeutralAnimator;
+    public Animator RobinNeutralAnimator;
+    public Animator RichardNeutralAnimator;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,10 +103,10 @@ public class Scene2Script : MonoBehaviour
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
         response9.gameObject.SetActive(false);
-        BossNeutral.gameObject.SetActive(false);
-        BossAngry.gameObject.SetActive(false);
+        Boss.gameObject.SetActive(false);
+   
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
         //CoWorkerNeutral.gameObject.SetActive(false);
         // CoWorker.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(false);
@@ -106,7 +129,7 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech7.gameObject.SetActive(false);
         //RobinSpeech1.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
-        
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
 
         if (textFile != null) // checks if there is text
         {
@@ -196,36 +219,42 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech1.gameObject.SetActive(true);
         RobinSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        CoWorkerHappy.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        CoWorker.gameObject.SetActive(false);
     }
     void Speech2()
     {
         RobinSpeech2.gameObject.SetActive(true);
         KatieSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        CoWorkerHappy.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(true);
+        RobinNeutralAnimator.SetBool("RobinNeutral", true);
     }
     void Speech3()
     {
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        CoWorkerHappy.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        CoWorker.gameObject.SetActive(false);
     }
     void Speech4()
     {
         KatieSpeech2.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        BossNeutral.gameObject.SetActive(true);
-       
+        Boss.gameObject.SetActive(true);
+        AminaNeutralAnimator.SetBool("AminaNeutral", true);
+
     }
     void Speech5()
     {
+        KatieSpeech3.interactable = false; // makes button non iteractable
         KatieSpeech3.gameObject.SetActive(true);
         BossSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        BossNeutral.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        Boss.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
@@ -238,28 +267,32 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        BossAngry.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(true);
+        AminaNeutralAnimator.SetBool("AminaNeutral", true);
     }
     void Speech7()
     {
         BossSpeech3.gameObject.SetActive(true);
         BossSpeech2.gameObject.SetActive(false);
-        BossNeutral.gameObject.SetActive(true);
-        BossAngry.gameObject.SetActive(false);
+        Boss.gameObject.SetActive(true);
+        
     }
     void Speech8()
     {
         BossSpeech3.gameObject.SetActive(false);
         RichardSpeech1.gameObject.SetActive(true);
-        BossNeutral.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech9()
     {
+        KatieSpeech4.interactable = false; // makes button non iteractable
         KatieSpeech4.gameObject.SetActive(true);
         RichardSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        Richard.gameObject.SetActive(false);
         response4.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
@@ -273,7 +306,8 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(false);
         RichardSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech11()
     {
@@ -285,35 +319,41 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech3.gameObject.SetActive(false);
         KatieSpeech5.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        Richard.gameObject.SetActive(false);
     }
     void Speech13()
     {
         RichardSpeech4.gameObject.SetActive(true);
         KatieSpeech5.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech14()
     {
         RichardSpeech4.gameObject.SetActive(false);
         KatieSpeech6.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        Richard.gameObject.SetActive(false);
     }
     void Speech15()
     {
         RichardSpeech5.gameObject.SetActive(true);
         KatieSpeech6.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech16()
     {
+        KatieSpeech7.interactable = false; // makes button non iteractable
         RichardSpeech5.gameObject.SetActive(false);
         KatieSpeech7.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        Richard.gameObject.SetActive(false);
         response7.gameObject.SetActive(true);
         response8.gameObject.SetActive(true);
         response9.gameObject.SetActive(true);
@@ -325,24 +365,28 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech6.gameObject.SetActive(true);
         KatieSpeech7.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void Speech18()
     {
         RichardSpeech6.gameObject.SetActive(false);
         KatieSpeech8.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        Richard.gameObject.SetActive(false);
     }
     void Speech19()
     {
         RichardSpeech7.gameObject.SetActive(true);
         KatieSpeech8.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
+        RichardNeutralAnimator.SetBool("RichardNeutral", true);
     }
     void ResponseG()
     {
+        KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 1; //goes to the next line
@@ -355,6 +399,7 @@ public class Scene2Script : MonoBehaviour
 
     void ResponseB()
     {
+        KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 2; //goes to the next line
@@ -367,6 +412,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
+        KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 1; //goes to the next line
@@ -380,6 +426,7 @@ public class Scene2Script : MonoBehaviour
 
     void RichResponse1()
     {
+        KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 10; //goes to the next line
@@ -391,6 +438,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse2()
     {
+        KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 10; //goes to the next line
@@ -402,6 +450,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse3()
     {
+        KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 11; //goes to the next line
@@ -413,6 +462,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse4()
     {
+        KatieSpeech7.interactable = true; // makes button iteractable
         KatieSpeech7.gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         currentLine4 = 17; //goes to the next line
@@ -422,6 +472,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse5()
     {
+        KatieSpeech7.interactable = true; // makes button iteractable
         KatieSpeech7.gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         currentLine4 = 18; //goes to the next line
@@ -431,6 +482,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse6()
     {
+        KatieSpeech7.interactable = true; // makes button iteractable
         KatieSpeech7.gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         currentLine4 = 19; //goes to the next line

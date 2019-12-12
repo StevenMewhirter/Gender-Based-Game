@@ -42,10 +42,10 @@ public class Scene1Script : MonoBehaviour
     public Button ThoughtBubble4;
 
     //declares all the buttons for the email text -SD
-    public Button EmailText1;
-    public Button EmailText2;
-    public Button EmailText3;
-    public Button EmailText4;
+    //public Button EmailText1;
+    //public Button EmailText2;
+    //public Button EmailText3;
+    //public Button EmailText4;
     public Button EmailText5;
 
     public Button Email;
@@ -55,7 +55,7 @@ public class Scene1Script : MonoBehaviour
     public GameObject NotificationMessage;
     public Button Options;
 
-   
+    public GameObject chatContainer;
 
     public Button KatieResp1;
     public Button KatieResp2;
@@ -66,15 +66,17 @@ public class Scene1Script : MonoBehaviour
 
     //all the main raw images for the character and the phone -SD
 
-    public GameObject KatieSad;
-    public GameObject KatieHappy;
+    public Texture KatieSad;
+    public Texture KatieHappy;
+    public GameObject ImageOfKatie;
+    public RawImage MC;
     public RawImage Phone;
     public Button transparentResponse;
     public RawImage EmailBackground;
     //phone headings
-    public RawImage RobinName;
-    public RawImage EmailName;
-
+   // public RawImage RobinName;
+   // public RawImage EmailName;
+//
     // Start is called before the first frame update
     void Start()
     {
@@ -95,7 +97,7 @@ public class Scene1Script : MonoBehaviour
         KatieResp5.gameObject.SetActive(false);
         KatieResp6.gameObject.SetActive(false);
 
-        KatieHappy.gameObject.SetActive(false);
+        
         Phone.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
@@ -120,14 +122,14 @@ public class Scene1Script : MonoBehaviour
         NotificationMessage.SetActive(false);
 
         EmailBackground.gameObject.SetActive(false);
-        EmailText1.gameObject.SetActive(false);
-        EmailText2.gameObject.SetActive(false);
-        EmailText3.gameObject.SetActive(false);
-        EmailText4.gameObject.SetActive(false);
+        //EmailText1.gameObject.SetActive(false);
+        //EmailText2.gameObject.SetActive(false);
+        //EmailText3.gameObject.SetActive(false);
+        //EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
 
-        RobinName.gameObject.SetActive(false);
-        EmailName.gameObject.SetActive(false);
+        //RobinName.gameObject.SetActive(false);
+        //EmailName.gameObject.SetActive(false);
 
         //When each specified button is pressed, it will call the specified method from below and run the appropriate actions accordingly -SD
         //After the introPanel disappears, the first image will be Katie in her room and the text coming in to the thought bubble in a typewriter fashion - SD
@@ -156,14 +158,14 @@ public class Scene1Script : MonoBehaviour
         Button RS3 = RobinSpeech3.GetComponent<Button>();
         RS3.onClick.AddListener(Email1);
 
-        Button E1 = EmailText1.GetComponent<Button>();
-        E1.onClick.AddListener(Email2);
-        Button E2 = EmailText2.GetComponent<Button>();
-        E2.onClick.AddListener(Email3);
-        Button E3 = EmailText3.GetComponent<Button>();
-        E3.onClick.AddListener(Email4);
-        Button E4 = EmailText4.GetComponent<Button>();
-        E4.onClick.AddListener(Email5);
+        //Button E1 = EmailText1.GetComponent<Button>();
+        //E1.onClick.AddListener(Email2);
+        //Button E2 = EmailText2.GetComponent<Button>();
+        //E2.onClick.AddListener(Email3);
+        //Button E3 = EmailText3.GetComponent<Button>();
+        //E3.onClick.AddListener(Email4);
+        //Button E4 = EmailText4.GetComponent<Button>();
+        //E4.onClick.AddListener(Email5);
         Button E5 = EmailText5.GetComponent<Button>();
         E5.onClick.AddListener(KSpeech4);
         Button KS4 = KatieSpeech4.GetComponent<Button>();
@@ -198,6 +200,10 @@ public class Scene1Script : MonoBehaviour
         RS6.onClick.AddListener(KSpeech5);
         Button KS5 = KatieSpeech5.GetComponent<Button>();
         KS5.onClick.AddListener(TB4);
+
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieSad;
     }
 
     // Update is called once per frame
@@ -246,9 +252,9 @@ public class Scene1Script : MonoBehaviour
         NotificationRed.gameObject.SetActive(false);
         NotificationMessage.SetActive(false);
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+        //RobinName.gameObject.SetActive(true);
         StartCoroutine(KatieMessage1());
-        KatieSad.gameObject.SetActive(false);
+    
         transparentResponse.gameObject.SetActive(false);
     }
 
@@ -261,6 +267,7 @@ public class Scene1Script : MonoBehaviour
        // KatieSpeech1.gameObject.SetActive(false);
         
         RobinSpeech1.gameObject.SetActive(true);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
     }
 
     void KSpeech2()
@@ -269,6 +276,7 @@ public class Scene1Script : MonoBehaviour
 
 
         KatieSpeech2.gameObject.SetActive(true);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
     }
 
     void RobinReply2()
@@ -278,8 +286,8 @@ public class Scene1Script : MonoBehaviour
 
         
         RobinSpeech2.gameObject.SetActive(true);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
 
-        
     }
 
     void KSpeech3()
@@ -289,10 +297,11 @@ public class Scene1Script : MonoBehaviour
    
         KatieSpeech3.gameObject.SetActive(true);
 
-        KatieSpeech2.gameObject.SetActive(false);
-        RobinSpeech2.gameObject.SetActive(false);
-        RobinSpeech1.gameObject.SetActive(false);
-        KatieSpeech1.gameObject.SetActive(false);
+        //KatieSpeech2.gameObject.SetActive(false);
+        //RobinSpeech2.gameObject.SetActive(false);
+        //RobinSpeech1.gameObject.SetActive(false);
+        //KatieSpeech1.gameObject.SetActive(false);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
     }
 
     void RobinReply3()
@@ -301,22 +310,25 @@ public class Scene1Script : MonoBehaviour
 
         
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+       // RobinName.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(true);
+        KatieSpeech1.gameObject.SetActive(false);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
 
-        
-        
     }
 
     void Email1()
     {
         //The phone and the first email speech bubble appears on screen saying "Good afternoon Ms Anderson" -SD
-        RobinName.gameObject.SetActive(false);
+        // RobinName.gameObject.SetActive(false);
+        RobinSpeech1.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
+        KatieSpeech2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
         //EmailName.gameObject.SetActive(true);
-        EmailText1.gameObject.SetActive(true);
+        //EmailText1.gameObject.SetActive(true);
+        EmailText5.gameObject.SetActive(true);
         EmailBackground.gameObject.SetActive(true);
         Phone.gameObject.SetActive(false);
     }
@@ -326,7 +338,7 @@ public class Scene1Script : MonoBehaviour
         //The phone and the second email speech bubble appears on screen saying "I am pleased to inform you that after interviewing a lot of candidates," - SD
 
         //EmailText1.gameObject.SetActive(false);
-        EmailText2.gameObject.SetActive(true);
+       // EmailText2.gameObject.SetActive(true);
     }
 
     void Email3()
@@ -334,23 +346,23 @@ public class Scene1Script : MonoBehaviour
         //The phone and the third email speech bubble appears on screen saying "the HR team and I decided to offer you the marketing intern/assistant position in our company" - SD
 
         //EmailText2.gameObject.SetActive(false);
-        EmailText3.gameObject.SetActive(true);
+       // EmailText3.gameObject.SetActive(true);
     }
 
     void Email4()
     {
         //The phone and the fourth email speech bubble appears on screen saying "You are expected to be at the office this Monday 24th of March at 9:00 am." - SD
 
-        EmailText1.gameObject.SetActive(false);
-        EmailText2.gameObject.SetActive(false);
-        EmailText3.gameObject.SetActive(false);
-        EmailText4.gameObject.SetActive(true);
+        //EmailText1.gameObject.SetActive(false);
+        //EmailText2.gameObject.SetActive(false);
+        //EmailText3.gameObject.SetActive(false);
+        //EmailText4.gameObject.SetActive(true);
     }
 
     void Email5()
     {
         //The phone and the final email speech bubble appears on screen saying "We are looking forward to making you part of the team. Kind Regards, Amina Azzi" - SD
-        EmailText5.gameObject.SetActive(true);
+       //EmailText5.gameObject.SetActive(true);
     }
 
     void KSpeech4()
@@ -358,10 +370,14 @@ public class Scene1Script : MonoBehaviour
         
         //Katie's fourth speech bubble appears on screen saying "I got the job! I am telling everyone" -SD
         Phone.gameObject.SetActive(false);
-        EmailName.gameObject.SetActive(false);
-        EmailText4.gameObject.SetActive(false);
+        //EmailName.gameObject.SetActive(false);
+        //EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         KatieSpeech4.gameObject.SetActive(true);
         EmailBackground.gameObject.SetActive(false);
     }
@@ -380,10 +396,11 @@ public class Scene1Script : MonoBehaviour
     {
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+        //RobinName.gameObject.SetActive(true);
         KatieResp1.gameObject.SetActive(true);
 
 
@@ -397,9 +414,10 @@ public class Scene1Script : MonoBehaviour
         response2.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+        //RobinName.gameObject.SetActive(true);
         KatieResp2.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
     }
@@ -475,7 +493,7 @@ public class Scene1Script : MonoBehaviour
         response6.gameObject.SetActive(false);
 
         KatieResp5.gameObject.SetActive(false);
-
+        KatieResp2.gameObject.SetActive(false);
         KatieResp1.gameObject.SetActive(false);
         KatieResp4.gameObject.SetActive(false);
         KatieResp3.gameObject.SetActive(false);
@@ -508,7 +526,7 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech4.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
-        RobinName.gameObject.SetActive(false);
+        //RobinName.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
         KatieResp1.gameObject.SetActive(false);
         KatieResp2.gameObject.SetActive(false);
@@ -517,7 +535,11 @@ public class Scene1Script : MonoBehaviour
         KatieResp5.gameObject.SetActive(false);
         KatieResp6.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
     }
 
     IEnumerator introPanel() //panel timer
