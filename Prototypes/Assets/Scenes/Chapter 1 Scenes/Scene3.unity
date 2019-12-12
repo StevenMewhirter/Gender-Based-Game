@@ -2593,14 +2593,14 @@ MonoBehaviour:
   KatieImage: {fileID: 792027430}
   Robin: {fileID: 500845308}
   RobinHappy: {fileID: 2800000, guid: 9c5aa7b2118ce8841b9e9cdc271d3af4, type: 3}
-  RobinNeutral: {fileID: 0}
+  RobinNeutral: {fileID: 2800000, guid: 9c5aa7b2118ce8841b9e9cdc271d3af4, type: 3}
   RobinImage: {fileID: 78059181}
   Jason: {fileID: 1424481383}
   JasonAngry: {fileID: 2800000, guid: 6cf0a7886a34a9f4c9fd11574385143e, type: 3}
-  JasonNeutral: {fileID: 0}
+  JasonNeutral: {fileID: 2800000, guid: 6cf0a7886a34a9f4c9fd11574385143e, type: 3}
   JasonImage: {fileID: 1389028828}
   Richard: {fileID: 1044927402}
-  RichardNeutral: {fileID: 0}
+  RichardNeutral: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
   RichardAngry: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
   RichardImage: {fileID: 318775153}
   KatieSpeech1: {fileID: 1510274839}
@@ -6693,6 +6693,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 390249697424647339, guid: 4eba36728200826498a88f29d81607e1,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
     - target: {fileID: 390249697424647336, guid: 4eba36728200826498a88f29d81607e1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6723,11 +6728,6 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 390249697424647339, guid: 4eba36728200826498a88f29d81607e1,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eba36728200826498a88f29d81607e1, type: 3}
 --- !u!1 &1650253167

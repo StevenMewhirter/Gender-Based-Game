@@ -309,7 +309,6 @@ void RSpeech()
     {
         Robin.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        //Robin.gameObject.SetActive(true);
 
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
 
@@ -330,6 +329,7 @@ void RSpeech()
 
     void Choices2()
     {
+        Robin.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
 
@@ -345,6 +345,7 @@ void RSpeech()
     void RSpeech2()
     {
         //Katie will appear on screen and say "Really? I am so excited!!!" as the user has previously selected that option - SD
+     
         Choice2.gameObject.SetActive(false);
         Background.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(true);
@@ -356,8 +357,11 @@ void RSpeech()
     void KSpeech2()
     {
         //Robin will appear on screen and say "You should be, girl! You’ll be with Jason the manager... Lucky you!” -SD
+        MC.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(true);
+
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
-        MC.texture = (Texture)RobinNeutral;
+        Robin.texture = (Texture)RobinNeutral;
 
         KatieSpeech3.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(true);
@@ -370,7 +374,12 @@ void RSpeech()
     void Choices3()
     {
         RobinSpeech3.gameObject.SetActive(false);
-       // Robin.gameObject.SetActive(false);
+       Robin.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
 
         Choice3.gameObject.SetActive(true);
        // MC.gameObject.SetActive(true);
@@ -381,7 +390,7 @@ void RSpeech()
     }
     void RSpeech3()
     {
-        MC.gameObject.SetActive(true);
+        //MC.gameObject.SetActive(true);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
 
@@ -415,6 +424,13 @@ void RSpeech()
     void RSpeech4()
     {
         //Jason will appear on screen and say "Morning ladies. Robin you look great as always" -SD
+        Jason.gameObject.SetActive(true);
+        Robin.gameObject.SetActive(false);
+
+        Jason = (RawImage)JasonImage.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonNeutral;
+        
         JasonSpeech1.gameObject.SetActive(true);
         RobinSpeech4.gameObject.SetActive(false);
       //  Jason.gameObject.SetActive(true);
@@ -426,6 +442,7 @@ void RSpeech()
     void JSpeech1()
     {
         Robin.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(false);
 
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
 
@@ -445,6 +462,9 @@ void RSpeech()
         JasonSpeech2.gameObject.SetActive(true);
         RobinSpeech5.gameObject.SetActive(false);
 
+        Robin.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(true);
+
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
 
         Jason.texture = (Texture)JasonNeutral;
@@ -457,6 +477,8 @@ void RSpeech()
 
     void Choices4()
     {
+        Jason.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
         
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
 
@@ -485,6 +507,7 @@ void RSpeech()
     {
         //Jason will appear on screen and say "Oh, ok. I hope it’s all good stuff." -SD
         MC.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(true);
 
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
 
@@ -499,17 +522,15 @@ void RSpeech()
     void JSpeech3()
     {
         //Richard will appear on screen and say "What are you two little lovebirds doing?" -SD
+        Richard.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(false);
         RichardSpeech1.gameObject.SetActive(true);
-        Jason.gameObject.SetActive(false);
-        Richard.gameObject.SetActive(true);
 
         Richard = (RawImage)RichardImage.GetComponent<RawImage>();
 
         Richard.texture = (Texture)RichardNeutral;
 
-        // Jason.gameObject.SetActive(false);
-        // Richard.gameObject.SetActive(true);
         animatorRichard.SetBool("RichardNeutral", true);
     }
 
