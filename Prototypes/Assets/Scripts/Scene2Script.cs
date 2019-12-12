@@ -61,10 +61,10 @@ public class Scene2Script : MonoBehaviour
 
 
     public GameObject MC;
-    public GameObject BossNeutral;
+    public GameObject Boss;
 
-    public GameObject CoWorkerHappy;
-    public GameObject RichardNeutral;
+    public GameObject CoWorker;
+    public GameObject Richard;
   //  public GameObject CoWorkerNeutral;
 
 
@@ -98,10 +98,10 @@ public class Scene2Script : MonoBehaviour
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
         response9.gameObject.SetActive(false);
-        BossNeutral.gameObject.SetActive(false);
+        Boss.gameObject.SetActive(false);
    
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
         //CoWorkerNeutral.gameObject.SetActive(false);
         // CoWorker.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(false);
@@ -214,28 +214,28 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech1.gameObject.SetActive(true);
         RobinSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        CoWorkerHappy.gameObject.SetActive(false);
+        CoWorker.gameObject.SetActive(false);
     }
     void Speech2()
     {
         RobinSpeech2.gameObject.SetActive(true);
         KatieSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        CoWorkerHappy.gameObject.SetActive(true);
+        CoWorker.gameObject.SetActive(true);
     }
     void Speech3()
     {
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        CoWorkerHappy.gameObject.SetActive(false);
+        CoWorker.gameObject.SetActive(false);
     }
     void Speech4()
     {
         KatieSpeech2.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        BossNeutral.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(true);
        
     }
     void Speech5()
@@ -244,7 +244,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(true);
         BossSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        BossNeutral.gameObject.SetActive(false);
+        Boss.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
@@ -257,21 +257,21 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        BossNeutral.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(true);
     }
     void Speech7()
     {
         BossSpeech3.gameObject.SetActive(true);
         BossSpeech2.gameObject.SetActive(false);
-        BossNeutral.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(true);
         
     }
     void Speech8()
     {
         BossSpeech3.gameObject.SetActive(false);
         RichardSpeech1.gameObject.SetActive(true);
-        BossNeutral.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(true);
     }
     void Speech9()
     {
@@ -279,7 +279,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(true);
         RichardSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
         response4.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
@@ -293,7 +293,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(false);
         RichardSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
     }
     void Speech11()
     {
@@ -305,28 +305,28 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech3.gameObject.SetActive(false);
         KatieSpeech5.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
     }
     void Speech13()
     {
         RichardSpeech4.gameObject.SetActive(true);
         KatieSpeech5.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
     }
     void Speech14()
     {
         RichardSpeech4.gameObject.SetActive(false);
         KatieSpeech6.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
     }
     void Speech15()
     {
         RichardSpeech5.gameObject.SetActive(true);
         KatieSpeech6.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
     }
     void Speech16()
     {
@@ -334,7 +334,7 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech5.gameObject.SetActive(false);
         KatieSpeech7.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
         response7.gameObject.SetActive(true);
         response8.gameObject.SetActive(true);
         response9.gameObject.SetActive(true);
@@ -346,21 +346,21 @@ public class Scene2Script : MonoBehaviour
         RichardSpeech6.gameObject.SetActive(true);
         KatieSpeech7.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
     }
     void Speech18()
     {
         RichardSpeech6.gameObject.SetActive(false);
         KatieSpeech8.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        RichardNeutral.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
     }
     void Speech19()
     {
         RichardSpeech7.gameObject.SetActive(true);
         KatieSpeech8.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
-        RichardNeutral.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(true);
     }
     void ResponseG()
     {
