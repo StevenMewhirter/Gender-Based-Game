@@ -10630,6 +10630,8 @@ MonoBehaviour:
   AminaHappy: {fileID: 2800000, guid: 7b34be4068390fb40b26d4aae7b2104d, type: 3}
   AminaAngry: {fileID: 2800000, guid: c1c348f1a8f777842b68e7371eacf096, type: 3}
   ImageOfAmina: {fileID: 1816627797}
+  Background2: {fileID: 2800000, guid: 6f1d68bf88763414b8081e4b75d69e59, type: 3}
+  ImageOfBackground: {fileID: 1315627053}
   BossSpeech1: {fileID: 1249875299}
   BossSpeech2: {fileID: 120516448}
   BossSpeech3: {fileID: 73434550}
@@ -10663,6 +10665,7 @@ MonoBehaviour:
   Boss: {fileID: 1871324653}
   CoWorker: {fileID: 836370545}
   Richard: {fileID: 1525001503}
+  Background: {fileID: 1315627055}
   ResponseKatie1: {fileID: 1043423211}
   ResponseKatie2: {fileID: 1641828472}
   ResponseKatie3: {fileID: 955380861}

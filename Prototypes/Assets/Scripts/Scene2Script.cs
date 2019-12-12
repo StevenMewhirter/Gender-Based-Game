@@ -25,6 +25,9 @@ public class Scene2Script : MonoBehaviour
     public Texture AminaAngry;
     public GameObject ImageOfAmina;
 
+    public Texture Background2;
+    public GameObject ImageOfBackground;
+
 
 
     public Button BossSpeech1;//Text box to hold text
@@ -66,7 +69,8 @@ public class Scene2Script : MonoBehaviour
 
     public RawImage CoWorker;
     public RawImage Richard;
-  //  public GameObject CoWorkerNeutral;
+    public RawImage Background;
+    //  public GameObject CoWorkerNeutral;
 
 
     public Text ResponseKatie1;
@@ -278,6 +282,9 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech7()
     {
+        Background = (RawImage)ImageOfBackground.GetComponent<RawImage>();
+
+        Background.texture = (Texture)Background2;
         Boss = (RawImage)ImageOfAmina.GetComponent<RawImage>();
 
         Boss.texture = (Texture)AminaNeutral;
