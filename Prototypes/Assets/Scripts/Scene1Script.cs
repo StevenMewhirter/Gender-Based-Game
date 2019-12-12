@@ -286,8 +286,8 @@ public class Scene1Script : MonoBehaviour
 
         
         RobinSpeech2.gameObject.SetActive(true);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
 
-        
     }
 
     void KSpeech3()
