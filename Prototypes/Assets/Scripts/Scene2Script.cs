@@ -245,7 +245,7 @@ public class Scene2Script : MonoBehaviour
         BossSpeech3.gameObject.SetActive(true);
         BossSpeech2.gameObject.SetActive(false);
         BossNeutral.gameObject.SetActive(true);
-        BossNeutral.gameObject.SetActive(false);
+        
     }
     void Speech8()
     {
