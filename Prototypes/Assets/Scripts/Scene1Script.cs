@@ -74,8 +74,11 @@ public class Scene1Script : MonoBehaviour
     public Button transparentResponse;
     public RawImage EmailBackground;
     //phone headings
-   // public RawImage RobinName;
-   // public RawImage EmailName;
+    // public RawImage RobinName;
+    // public RawImage EmailName;
+
+    //animators for katie
+    public Animator KatieAnimator;
 //
     // Start is called before the first frame update
     void Start()
@@ -375,6 +378,7 @@ public class Scene1Script : MonoBehaviour
         EmailText5.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieHappy;
@@ -537,6 +541,7 @@ public class Scene1Script : MonoBehaviour
         transparentResponse.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieHappy;
