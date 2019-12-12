@@ -749,7 +749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &165956592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6136,7 +6136,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e00c0d51bfbd5e6488b21049fbea66f3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 56d24de265e10ff49a0328ca38eeba2e, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -10621,8 +10621,6 @@ MonoBehaviour:
   Phone: {fileID: 1209733575}
   transparentResponse: {fileID: 749216194}
   EmailBackground: {fileID: 1382852696}
-  RobinName: {fileID: 165956593}
-  EmailName: {fileID: 2000269160}
 --- !u!4 &1991610547
 Transform:
   m_ObjectHideFlags: 0
@@ -10654,7 +10652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2000269159
 RectTransform:
   m_ObjectHideFlags: 0

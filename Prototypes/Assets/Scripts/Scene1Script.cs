@@ -72,9 +72,9 @@ public class Scene1Script : MonoBehaviour
     public Button transparentResponse;
     public RawImage EmailBackground;
     //phone headings
-    public RawImage RobinName;
-    public RawImage EmailName;
-
+   // public RawImage RobinName;
+   // public RawImage EmailName;
+//
     // Start is called before the first frame update
     void Start()
     {
@@ -126,8 +126,8 @@ public class Scene1Script : MonoBehaviour
         EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
 
-        RobinName.gameObject.SetActive(false);
-        EmailName.gameObject.SetActive(false);
+        //RobinName.gameObject.SetActive(false);
+        //EmailName.gameObject.SetActive(false);
 
         //When each specified button is pressed, it will call the specified method from below and run the appropriate actions accordingly -SD
         //After the introPanel disappears, the first image will be Katie in her room and the text coming in to the thought bubble in a typewriter fashion - SD
@@ -246,7 +246,7 @@ public class Scene1Script : MonoBehaviour
         NotificationRed.gameObject.SetActive(false);
         NotificationMessage.SetActive(false);
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+        //RobinName.gameObject.SetActive(true);
         StartCoroutine(KatieMessage1());
         KatieSad.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
@@ -301,7 +301,7 @@ public class Scene1Script : MonoBehaviour
 
         
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+       // RobinName.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(true);
 
         
@@ -311,7 +311,7 @@ public class Scene1Script : MonoBehaviour
     void Email1()
     {
         //The phone and the first email speech bubble appears on screen saying "Good afternoon Ms Anderson" -SD
-        RobinName.gameObject.SetActive(false);
+       // RobinName.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
@@ -358,7 +358,7 @@ public class Scene1Script : MonoBehaviour
         
         //Katie's fourth speech bubble appears on screen saying "I got the job! I am telling everyone" -SD
         Phone.gameObject.SetActive(false);
-        EmailName.gameObject.SetActive(false);
+        //EmailName.gameObject.SetActive(false);
         EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
         KatieHappy.gameObject.SetActive(true);
@@ -383,7 +383,7 @@ public class Scene1Script : MonoBehaviour
         KatieHappy.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+        //RobinName.gameObject.SetActive(true);
         KatieResp1.gameObject.SetActive(true);
 
 
@@ -397,7 +397,7 @@ public class Scene1Script : MonoBehaviour
         response2.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
-        RobinName.gameObject.SetActive(true);
+        //RobinName.gameObject.SetActive(true);
         KatieResp2.gameObject.SetActive(true);
         KatieHappy.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
@@ -508,7 +508,7 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech4.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
-        RobinName.gameObject.SetActive(false);
+        //RobinName.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
         KatieResp1.gameObject.SetActive(false);
         KatieResp2.gameObject.SetActive(false);
