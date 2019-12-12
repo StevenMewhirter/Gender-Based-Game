@@ -42,10 +42,10 @@ public class Scene1Script : MonoBehaviour
     public Button ThoughtBubble4;
 
     //declares all the buttons for the email text -SD
-    public Button EmailText1;
-    public Button EmailText2;
-    public Button EmailText3;
-    public Button EmailText4;
+    //public Button EmailText1;
+    //public Button EmailText2;
+    //public Button EmailText3;
+    //public Button EmailText4;
     public Button EmailText5;
 
     public Button Email;
@@ -120,10 +120,10 @@ public class Scene1Script : MonoBehaviour
         NotificationMessage.SetActive(false);
 
         EmailBackground.gameObject.SetActive(false);
-        EmailText1.gameObject.SetActive(false);
-        EmailText2.gameObject.SetActive(false);
-        EmailText3.gameObject.SetActive(false);
-        EmailText4.gameObject.SetActive(false);
+        //EmailText1.gameObject.SetActive(false);
+        //EmailText2.gameObject.SetActive(false);
+        //EmailText3.gameObject.SetActive(false);
+        //EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
 
         //RobinName.gameObject.SetActive(false);
@@ -156,14 +156,14 @@ public class Scene1Script : MonoBehaviour
         Button RS3 = RobinSpeech3.GetComponent<Button>();
         RS3.onClick.AddListener(Email1);
 
-        Button E1 = EmailText1.GetComponent<Button>();
-        E1.onClick.AddListener(Email2);
-        Button E2 = EmailText2.GetComponent<Button>();
-        E2.onClick.AddListener(Email3);
-        Button E3 = EmailText3.GetComponent<Button>();
-        E3.onClick.AddListener(Email4);
-        Button E4 = EmailText4.GetComponent<Button>();
-        E4.onClick.AddListener(Email5);
+        //Button E1 = EmailText1.GetComponent<Button>();
+        //E1.onClick.AddListener(Email2);
+        //Button E2 = EmailText2.GetComponent<Button>();
+        //E2.onClick.AddListener(Email3);
+        //Button E3 = EmailText3.GetComponent<Button>();
+        //E3.onClick.AddListener(Email4);
+        //Button E4 = EmailText4.GetComponent<Button>();
+        //E4.onClick.AddListener(Email5);
         Button E5 = EmailText5.GetComponent<Button>();
         E5.onClick.AddListener(KSpeech4);
         Button KS4 = KatieSpeech4.GetComponent<Button>();
@@ -316,7 +316,8 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
         //EmailName.gameObject.SetActive(true);
-        EmailText1.gameObject.SetActive(true);
+        //EmailText1.gameObject.SetActive(true);
+        EmailText5.gameObject.SetActive(true);
         EmailBackground.gameObject.SetActive(true);
         Phone.gameObject.SetActive(false);
     }
@@ -326,7 +327,7 @@ public class Scene1Script : MonoBehaviour
         //The phone and the second email speech bubble appears on screen saying "I am pleased to inform you that after interviewing a lot of candidates," - SD
 
         //EmailText1.gameObject.SetActive(false);
-        EmailText2.gameObject.SetActive(true);
+       // EmailText2.gameObject.SetActive(true);
     }
 
     void Email3()
@@ -334,23 +335,23 @@ public class Scene1Script : MonoBehaviour
         //The phone and the third email speech bubble appears on screen saying "the HR team and I decided to offer you the marketing intern/assistant position in our company" - SD
 
         //EmailText2.gameObject.SetActive(false);
-        EmailText3.gameObject.SetActive(true);
+       // EmailText3.gameObject.SetActive(true);
     }
 
     void Email4()
     {
         //The phone and the fourth email speech bubble appears on screen saying "You are expected to be at the office this Monday 24th of March at 9:00 am." - SD
 
-        EmailText1.gameObject.SetActive(false);
-        EmailText2.gameObject.SetActive(false);
-        EmailText3.gameObject.SetActive(false);
-        EmailText4.gameObject.SetActive(true);
+        //EmailText1.gameObject.SetActive(false);
+        //EmailText2.gameObject.SetActive(false);
+        //EmailText3.gameObject.SetActive(false);
+        //EmailText4.gameObject.SetActive(true);
     }
 
     void Email5()
     {
         //The phone and the final email speech bubble appears on screen saying "We are looking forward to making you part of the team. Kind Regards, Amina Azzi" - SD
-        EmailText5.gameObject.SetActive(true);
+       //EmailText5.gameObject.SetActive(true);
     }
 
     void KSpeech4()
@@ -359,7 +360,7 @@ public class Scene1Script : MonoBehaviour
         //Katie's fourth speech bubble appears on screen saying "I got the job! I am telling everyone" -SD
         Phone.gameObject.SetActive(false);
         //EmailName.gameObject.SetActive(false);
-        EmailText4.gameObject.SetActive(false);
+        //EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
         KatieHappy.gameObject.SetActive(true);
         KatieSpeech4.gameObject.SetActive(true);
