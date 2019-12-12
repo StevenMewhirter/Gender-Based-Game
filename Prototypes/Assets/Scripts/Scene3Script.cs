@@ -7,6 +7,29 @@ using UnityEngine.UI;
 
 public class Scene3Script : MonoBehaviour
 {
+    public RawImage MC;
+    public Texture KatieHappy;
+    public Texture KatieNeutral;
+    public Texture KatieAngry;
+    public GameObject KatieImage;
+
+    public RawImage Robin;
+    public Texture RobinHappy;
+    public Texture RobinNeutral;
+    public GameObject RobinImage;
+
+    public RawImage Jason;
+    public Texture JasonAngry;
+    public Texture JasonNeutral;
+    public GameObject JasonImage;
+
+    public RawImage Richard;
+    public Texture RichardNeutral;
+    public Texture RichardAngry;
+    public GameObject RichardImage;
+
+
+
     //declares all the buttons for Katie's Speech -SD
     public Button KatieSpeech1;
     public Button KatieSpeech2;
@@ -40,35 +63,41 @@ public class Scene3Script : MonoBehaviour
     public Button Choice3;
     public Button Choice4;
 
+    
+    
     //all the main images for the characters -SD
-    public GameObject MC;
-    public GameObject MChappy;
-    public GameObject MCangry;
+    //public GameObject MC;
+    //public GameObject MChappy;
+    //public GameObject MCangry;
 
 
-    public GameObject Richard;
-    public GameObject RichardAngry;
-
-    public GameObject Robin;
-    public GameObject RobinHappy;
+    
+   // public GameObject RichardAngry;
 
 
-    public GameObject Jason;
-    public GameObject JasonAngry;
+  //  public GameObject RobinHappy;
+
+
+   // public GameObject JasonAngry;
 
     public GameObject Background;
 
     //all the animators for the characters - AB
 
-    public Animator animatorKatieHappy;
-    public Animator animatorKatieAngry;
-    public Animator animatorKatieNeutral;
-    public Animator animatorJasonNeutral;
-    public Animator animatorJasonAngry;
-    public Animator animatorRobinNeutral;
-    public Animator animatorRobinHappy;
-    public Animator animatorRichardNeutral;
-    public Animator animatorRichardAngry;
+    //public Animator animatorKatieHappy;
+    //public Animator animatorKatieAngry;
+    //public Animator animatorKatieNeutral;
+    //public Animator animatorJasonNeutral;
+    //public Animator animatorJasonAngry;
+    //public Animator animatorRobinNeutral;
+    //public Animator animatorRobinHappy;
+    //public Animator animatorRichardNeutral;
+    //public Animator animatorRichardAngry;
+
+    public Animator animatorKatie;
+    public Animator animatorJason;
+    public Animator animatorRobin;
+    public Animator animatorRichard;
 
 
     // Start is called before the first frame update
@@ -76,19 +105,15 @@ public class Scene3Script : MonoBehaviour
     {
         //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
         MC.gameObject.SetActive(false);
-        MChappy.gameObject.SetActive(false);
-        MCangry.gameObject.SetActive(false);
 
+        //MChappy.gameObject.SetActive(false);
+        //MCangry.gameObject.SetActive(false);
 
+        //Robin.gameObject.SetActive(false);
         Richard.gameObject.SetActive(false);
-        RichardAngry.gameObject.SetActive(false);
-
-
         Jason.gameObject.SetActive(false);
-        JasonAngry.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
 
-        
-        RobinHappy.gameObject.SetActive(false);
 
 
         KatieSpeech1.gameObject.SetActive(false);
@@ -191,20 +216,33 @@ public class Scene3Script : MonoBehaviour
 
     void Starting()
     {
+        //Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        //MC.texture = (Texture)RobinHappy;
+
         RobinSpeech.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
-        animatorRobinNeutral.SetBool("RobinNeutral", true);
+        animatorRobin.SetBool("RobinNeutral", true);
 
     }
+
     //when each method is called, it will run. The appropriate assets will be added to the screen or removed from the screen depending on the method that's called - SD
-     void Choices1()
+    void Choices1()
     {
-        Choice1.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        Robin.gameObject.SetActive(false);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+
+         MC.texture = (Texture)KatieNeutral;
+
+        
+
+        Robin.gameObject.SetActive(false);
+        Choice1.gameObject.SetActive(true);
         RobinSpeech.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         Background.gameObject.SetActive(true);
-        animatorKatieNeutral.SetBool("KatieNeutral", true);
+        animatorKatie.SetBool("KatieNeutral", true);
 
 
     }
@@ -212,55 +250,97 @@ public class Scene3Script : MonoBehaviour
 void RSpeech()
     {
         //Katie will appear on screen and say "It's great" as the user has previously selected that option - SD
-        
+       
+
         KatieSpeech1.gameObject.SetActive(true);
-        MC.gameObject.SetActive(true);
-        animatorKatieNeutral.SetBool("KatieNeutral", true);
-        MC.gameObject.SetActive(true);
+
+        //KatieImage.gameObject.SetActive(true);
+
+        animatorKatie.SetBool("KatieNeutral", true);
+
+        //MC.gameObject.SetActive(true);
         Choice1.gameObject.SetActive(false);
         Background.gameObject.SetActive(false);
+
+        
     }
 
     
     void KSpeech()
     {
+
+        Robin.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+
+        Robin.texture = (Texture)RobinHappy;
         //Robin will appear on screen and say "I’m so happy we’re working together bestie!” - SD
         KatieSpeech1.gameObject.SetActive(false);
         RobinSpeech1.gameObject.SetActive(true);
-        MC.gameObject.SetActive(false);
-        RobinHappy.gameObject.SetActive(true);
-        animatorRobinHappy.SetBool("RobinHappy", true);
+        // MC.gameObject.SetActive(false);
+
+
+        //RobinHappy.gameObject.SetActive(true);
+        animatorRobin.SetBool("RobinHappy", true);
 
     }
     void RSpeech1()
     {
         //Katie will appear on screen and say "Me too! I wish I had something to do though…" - SD
+        Robin.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
+
+        
+
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech1.gameObject.SetActive(false);
-        MC.gameObject.SetActive(true);
-        RobinHappy.gameObject.SetActive(false);
-        animatorKatieNeutral.SetBool("KatieNeutral", true);
+       // MC.gameObject.SetActive(true);
+        //Robin.gameObject.SetActive(false);
+        animatorKatie.SetBool("KatieNeutral", true);
+
+        
     }
     void KSpeech1()
     {
+        Robin.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+        //Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+
+        Robin.texture = (Texture)RobinHappy;
+        
         //Robin will appear on screen and say "Well, you’re lucky babes! I have your first assignment” - SD
         KatieSpeech2.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(true);
-        MC.gameObject.SetActive(false);
-        RobinHappy.gameObject.SetActive(true);
-        animatorRobinHappy.SetBool("RobinHappy", true);
+
+       // MC.gameObject.SetActive(false);
+        // RobinHappy.gameObject.SetActive(true);
+
+        animatorRobin.SetBool("RobinHappy", true);
+
 
         Handheld.Vibrate();
     }
 
     void Choices2()
     {
-        RobinHappy.gameObject.SetActive(false);
-        RobinSpeech2.gameObject.SetActive(false);       
-        MChappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
+        
+
+        // Robin.gameObject.SetActive(false);
+        RobinSpeech2.gameObject.SetActive(false);
         Choice2.gameObject.SetActive(true);
         Background.gameObject.SetActive(true);
-        animatorKatieHappy.SetBool("KatieHappy", true);
+        animatorKatie.SetBool("KatieHappy", true);
     }
     void RSpeech2()
     {
@@ -269,93 +349,132 @@ void RSpeech()
         Background.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
-        MChappy.gameObject.SetActive(true);
-        RobinHappy.gameObject.SetActive(false);
-        animatorKatieHappy.SetBool("KatieHappy", true);
+      //  MChappy.gameObject.SetActive(true);
+     //   Robin.gameObject.SetActive(false);
+        animatorKatie.SetBool("KatieHappy", true);
     }
     void KSpeech2()
     {
         //Robin will appear on screen and say "You should be, girl! You’ll be with Jason the manager... Lucky you!” -SD
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        MC.texture = (Texture)RobinNeutral;
+
         KatieSpeech3.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(true);
-        MChappy.gameObject.SetActive(false);
-        Robin.gameObject.SetActive(true);
-        animatorRobinNeutral.SetBool("RobinNeutral", true);
+      //  MC.gameObject.SetActive(false);
+       // Robin.gameObject.SetActive(true);
+       animatorRobin.SetBool("RobinNeutral", true);
         Handheld.Vibrate();
     }
 
     void Choices3()
     {
         RobinSpeech3.gameObject.SetActive(false);
-        Robin.gameObject.SetActive(false);
+       // Robin.gameObject.SetActive(false);
 
         Choice3.gameObject.SetActive(true);
-        MC.gameObject.SetActive(true);
+       // MC.gameObject.SetActive(true);
         Background.gameObject.SetActive(true);
-        animatorKatieNeutral.SetBool("KatieNeutral", true);
+       animatorKatie.SetBool("KatieNeutral", true);
+
+      
     }
     void RSpeech3()
     {
+        MC.gameObject.SetActive(true);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieAngry;
+        
         //Katie will appear on screen and say "Can you not sexualize everything for once, Robin?" as the user has previously selected that option - SD
         KatieSpeech4.gameObject.SetActive(true);
         Background.gameObject.SetActive(false);
-        MC.gameObject.SetActive(false);
-        MCangry.gameObject.SetActive(true);
-        Robin.gameObject.SetActive(false);
+        //MC.gameObject.SetActive(false);
+       // Robin.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
-        animatorKatieAngry.SetBool("KatieAngry", true);
+      //  animatorKatie.SetBool("KatieAngry", true);
     }
     void KSpeech3()
     {
+        Robin.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+
+        Robin.texture = (Texture)RobinNeutral;
+
         //Robin will appear on screen and say "Shhhh!!! He is coming!" -SD
         KatieSpeech4.gameObject.SetActive(false);
-        MCangry.gameObject.SetActive(false);
+       // MC.gameObject.SetActive(false);
 
         RobinSpeech4.gameObject.SetActive(true);
-        Robin.gameObject.SetActive(true);
-        animatorRobinNeutral.SetBool("RobinNeutral", true);
+       // Robin.gameObject.SetActive(true);
+        animatorRobin.SetBool("RobinNeutral", true);
     }
     void RSpeech4()
     {
         //Jason will appear on screen and say "Morning ladies. Robin you look great as always" -SD
         JasonSpeech1.gameObject.SetActive(true);
         RobinSpeech4.gameObject.SetActive(false);
-        Jason.gameObject.SetActive(true);
-        Robin.gameObject.SetActive(false);
-        animatorJasonNeutral.SetBool("JasonNeutral", true);
+      //  Jason.gameObject.SetActive(true);
+       // Robin.gameObject.SetActive(false);
+        animatorJason.SetBool("JasonNeutral", true);
+
+        Robin.gameObject.SetActive(true);
     }
     void JSpeech1()
     {
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+
+        Robin.texture = (Texture)RobinHappy;
+        
         //Robin will appear on screen and say "Aw, thanks Jason! I believe you haven’t met Katie..." -SD
         JasonSpeech1.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
-        Jason.gameObject.SetActive(false);
-        RobinHappy.gameObject.SetActive(true);
-        animatorRobinHappy.SetBool("RobinHappy", true);
+
+        //Jason.gameObject.SetActive(false);
+        // RobinHappy.gameObject.SetActive(true);
+
+        animatorRobin.SetBool("RobinHappy", true);
     }
     void RSpeech5()
     {   //Jason will appear on screen and say "Nice to meet you Katie. My name is Jason. I am the manager on this floor." -SD
         JasonSpeech2.gameObject.SetActive(true);
         RobinSpeech5.gameObject.SetActive(false);
-        Jason.gameObject.SetActive(true);
-        RobinHappy.gameObject.SetActive(false);
-        animatorJasonNeutral.SetBool("JasonNeutral", true);
+
+        Jason = (RawImage)JasonImage.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonNeutral;
+
+        // Jason.gameObject.SetActive(true);
+        // Robin.gameObject.SetActive(false);
+        animatorJason.SetBool("JasonNeutral", true);
         Handheld.Vibrate();
     }
 
     void Choices4()
     {
+        
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
+
         Background.gameObject.SetActive(true);
         Choice4.gameObject.SetActive(true);
-        MC.gameObject.SetActive(true);
-        Jason.gameObject.SetActive(false);
+       // MC.gameObject.SetActive(true);
+       // Jason.gameObject.SetActive(false);
         JasonSpeech2.gameObject.SetActive(false);
-        animatorKatieNeutral.SetBool("KatieNeutral", true);
+        animatorKatie.SetBool("KatieNeutral", true);
 
     }
     void JSpeech2()
     {
         //Katie will appear on screen and say "Nice to meet you too. I’ve heard a lot about you" as the user has previously selected that option - SD
+
+
         Background.gameObject.SetActive(false);
         Choice4.gameObject.SetActive(false);
         KatieSpeech5.gameObject.SetActive(true);
@@ -365,11 +484,17 @@ void RSpeech()
     void KSpeech4()
     {
         //Jason will appear on screen and say "Oh, ok. I hope it’s all good stuff." -SD
+        MC.gameObject.SetActive(false);
+
+        Jason = (RawImage)JasonImage.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonNeutral;
+
         KatieSpeech5.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(true);
-        MC.gameObject.SetActive(false);
-        Jason.gameObject.SetActive(true);
-        animatorJasonNeutral.SetBool("JasonNeutral", true);
+       // MC.gameObject.SetActive(false);
+       // Jason.gameObject.SetActive(true);
+        animatorJason.SetBool("JasonNeutral", true);
     }
     void JSpeech3()
     {
@@ -378,35 +503,69 @@ void RSpeech()
         RichardSpeech1.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
-        animatorRichardNeutral.SetBool("RichardNeutral", true);
+
+        Richard = (RawImage)RichardImage.GetComponent<RawImage>();
+
+        Richard.texture = (Texture)RichardNeutral;
+
+        // Jason.gameObject.SetActive(false);
+        // Richard.gameObject.SetActive(true);
+        animatorRichard.SetBool("RichardNeutral", true);
     }
 
     void RISpeech1()
     {
         //Jason will appear on screen and say "Richie is grumpy today, but when isn’t he?" -SD
+        Richard.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(true);
+
+        Jason = (RawImage)JasonImage.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonNeutral;
+
         JasonSpeech4.gameObject.SetActive(true);
         RichardSpeech1.gameObject.SetActive(false);
-        Jason.gameObject.SetActive(true);
-        Richard.gameObject.SetActive(false);
-        animatorJasonNeutral.SetBool("JasonNeutral", true);
+       // Jason.gameObject.SetActive(true);
+      //  Richard.gameObject.SetActive(false);
+        animatorJason.SetBool("JasonNeutral", true);
+
+        
     }
 
     void JSpeech4()
     {
+        Richard.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(false);
+
+        Richard = (RawImage)RichardImage.GetComponent<RawImage>();
+
+        Richard.texture = (Texture)RichardAngry;
+
+        
         //Richard will appear on screen and say "The poor girl is innocent and doesn’t know who to trust!" -SD
         JasonSpeech4.gameObject.SetActive(false);
         RichardSpeech2.gameObject.SetActive(true);
-        Jason.gameObject.SetActive(false);
-        RichardAngry.gameObject.SetActive(true);
-        animatorRichardAngry.SetBool("RichardAngry", true);
+       // Jason.gameObject.SetActive(false);
+
+        //RichardAngry.gameObject.SetActive(true);
+
+        animatorRichard.SetBool("RichardAngry", true);
+
     }
     void RISpeech2()
     {
+        Jason.gameObject.SetActive(true);
+        Richard.gameObject.SetActive(false);
+
+        Jason = (RawImage)JasonImage.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonAngry;
+        
         //Jason will appear on screen and say "Miss Anderson is not a girl, she is WOMAN and she can trust whoever she wants!" -SD
         JasonSpeech5.gameObject.SetActive(true);
         RichardSpeech2.gameObject.SetActive(false);
-        JasonAngry.gameObject.SetActive(true);
-        RichardAngry.gameObject.SetActive(false);
-        animatorJasonAngry.SetBool("JasonAngry", true);
+
+      //  Richard.gameObject.SetActive(false);
+        animatorJason.SetBool("JasonAngry", true);
     }
 }
