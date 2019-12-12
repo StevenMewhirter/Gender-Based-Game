@@ -7722,6 +7722,9 @@ MonoBehaviour:
   JasonNeutral: {fileID: 2800000, guid: 6cf0a7886a34a9f4c9fd11574385143e, type: 3}
   JasonHappy: {fileID: 2800000, guid: 354bb32b3bf5c4f4d8305f09cbcb6c84, type: 3}
   ImageOfJason: {fileID: 1375598536}
+  AminaNeutral: {fileID: 2800000, guid: 4fadbdcb15e739a43a27079f31fe169d, type: 3}
+  AminaHappy: {fileID: 2800000, guid: 7b34be4068390fb40b26d4aae7b2104d, type: 3}
+  ImageOfAmina: {fileID: 502923777}
   FirstBlock: {fileID: 1509576831}
   response1: {fileID: 1767669286}
   response2: {fileID: 350700461}

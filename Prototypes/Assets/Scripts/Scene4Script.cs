@@ -10,6 +10,7 @@ public class Scene4Script : MonoBehaviour
     public Texture KatieSad;
     public Texture KatieAngry;
     public Texture KatieNeutral;
+    public Texture KatieWorried;
     public GameObject ImageOfKatie;
 
     public Texture JasonSad;
@@ -17,6 +18,10 @@ public class Scene4Script : MonoBehaviour
     public Texture JasonNeutral;
     public Texture JasonHappy;
     public GameObject ImageOfJason;
+
+    public Texture AminaNeutral;
+    public Texture AminaHappy;
+    public GameObject ImageOfAmina;
 
 
 
@@ -240,6 +245,9 @@ public class Scene4Script : MonoBehaviour
     }
     void ASpeech1()
     {
+        Boss = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+
+        Boss.texture = (Texture)AminaHappy;
         AminaSpeech2.gameObject.SetActive(true);
         AminaSpeech1.gameObject.SetActive(false);
        
@@ -249,6 +257,10 @@ public class Scene4Script : MonoBehaviour
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieNeutral;
+
+        Boss = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+
+        Boss.texture = (Texture)AminaNeutral;
 
         KatieSpeechResponse1.gameObject.SetActive(true);
         KatieSpeechResponse1.interactable = false; // makes button non iteractable
