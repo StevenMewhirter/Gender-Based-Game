@@ -11,7 +11,7 @@ public class Scene2Script : MonoBehaviour
     public Texture KatieSad;
     public Texture KatieAngry;
     public Texture KatieNeutral;
-    
+    public Texture KatieHappy;
     public GameObject ImageOfKatie;
 
     
@@ -22,6 +22,7 @@ public class Scene2Script : MonoBehaviour
 
     public Texture AminaNeutral;
     public Texture AminaHappy;
+    public Texture AminaAngry;
     public GameObject ImageOfAmina;
 
 
@@ -60,11 +61,11 @@ public class Scene2Script : MonoBehaviour
     public Button RobinSpeech2;
 
 
-    public GameObject MC;
-    public GameObject Boss;
+    public RawImage MC;
+    public RawImage Boss;
 
-    public GameObject CoWorker;
-    public GameObject Richard;
+    public RawImage CoWorker;
+    public RawImage Richard;
   //  public GameObject CoWorkerNeutral;
 
 
@@ -103,6 +104,7 @@ public class Scene2Script : MonoBehaviour
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
         response9.gameObject.SetActive(false);
+
         Boss.gameObject.SetActive(false);
    
         MC.gameObject.SetActive(false);
@@ -240,10 +242,14 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech4()
     {
+        Boss.gameObject.SetActive(true);
+        Boss = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+
+        Boss.texture = (Texture)AminaAngry;
         KatieSpeech2.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        Boss.gameObject.SetActive(true);
+       
         AminaNeutralAnimator.SetBool("AminaNeutral", true);
 
     }
@@ -272,6 +278,9 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech7()
     {
+        Boss = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+
+        Boss.texture = (Texture)AminaNeutral;
         BossSpeech3.gameObject.SetActive(true);
         BossSpeech2.gameObject.SetActive(false);
         Boss.gameObject.SetActive(true);
@@ -311,6 +320,9 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech11()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
         RichardSpeech3.gameObject.SetActive(true);
         RichardSpeech2.gameObject.SetActive(false);
     }
@@ -332,6 +344,9 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech14()
     {
+        Richard = (RawImage)ImageOfRichard.GetComponent<RawImage>();
+
+        Richard.texture = (Texture)RichardAngry;
         RichardSpeech4.gameObject.SetActive(false);
         KatieSpeech6.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
@@ -370,6 +385,9 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech18()
     {
+        Richard = (RawImage)ImageOfRichard.GetComponent<RawImage>();
+
+        Richard.texture = (Texture)RichardHappy;
         RichardSpeech6.gameObject.SetActive(false);
         KatieSpeech8.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
@@ -386,6 +404,9 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseG()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
@@ -399,6 +420,9 @@ public class Scene2Script : MonoBehaviour
 
     void ResponseB()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieSad;
         KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
@@ -412,6 +436,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
+        
         KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
@@ -438,6 +463,9 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse2()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieSad;
         KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 
@@ -450,6 +478,9 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse3()
     {
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieAngry;
         KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 

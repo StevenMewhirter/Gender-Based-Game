@@ -289,9 +289,9 @@ RectTransform:
   m_Children:
   - {fileID: 1315627054}
   - {fileID: 1034407731}
-  - {fileID: 1871324651}
   - {fileID: 836370542}
   - {fileID: 431911461}
+  - {fileID: 1871324651}
   - {fileID: 979943178}
   - {fileID: 1484932047}
   - {fileID: 2001246038}
@@ -2139,7 +2139,7 @@ PrefabInstance:
     - target: {fileID: 8897580665061658174, guid: 4eba36728200826498a88f29d81607e1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8897580665061658174, guid: 4eba36728200826498a88f29d81607e1,
         type: 3}
@@ -3082,7 +3082,7 @@ PrefabInstance:
     - target: {fileID: 417077422419643533, guid: 3da0199d30521c3498a9cf070d95ef08,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 417077422419643533, guid: 3da0199d30521c3498a9cf070d95ef08,
         type: 3}
@@ -3390,7 +3390,7 @@ PrefabInstance:
     - target: {fileID: 7027294750532641984, guid: dc22628b2f891564398b1730212cffb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7027294750532641984, guid: dc22628b2f891564398b1730212cffb4,
         type: 3}
@@ -3525,6 +3525,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &836370545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6965984122371945626, guid: dc22628b2f891564398b1730212cffb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 836370541}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836370543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &842519392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4574,6 +4586,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1034407733 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8821811511805653416, guid: 699aa00f0f0efd44382243f7d8bb8a2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 218003775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034407730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1043423209
 GameObject:
   m_ObjectHideFlags: 0
@@ -7688,6 +7712,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1525001503 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8814490635834285668, guid: 4eba36728200826498a88f29d81607e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 431911460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1525001501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1581346573
 GameObject:
   m_ObjectHideFlags: 0
@@ -9013,6 +9049,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1871324653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 351301961139756247, guid: 3da0199d30521c3498a9cf070d95ef08,
+    type: 3}
+  m_PrefabInstance: {fileID: 717155083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871324650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1909249302
 GameObject:
   m_ObjectHideFlags: 0
@@ -10572,13 +10620,15 @@ MonoBehaviour:
   KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
   KatieAngry: {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
   KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
+  KatieHappy: {fileID: 2800000, guid: 6c163e1967990694c901014831d07eca, type: 3}
   ImageOfKatie: {fileID: 1635875606}
   RichardAngry: {fileID: 2800000, guid: e273751faf3e8044a8983df295a9f5da, type: 3}
   RichardNeut: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
-  RichardHappy: {fileID: 2800000, guid: f4d739d0140a5d2428b0b3fc0e6774ca, type: 3}
+  RichardHappy: {fileID: 2800000, guid: b1131d2b38c3b9c469769390f0bc0a55, type: 3}
   ImageOfRichard: {fileID: 347209284}
   AminaNeutral: {fileID: 2800000, guid: 4fadbdcb15e739a43a27079f31fe169d, type: 3}
   AminaHappy: {fileID: 2800000, guid: 7b34be4068390fb40b26d4aae7b2104d, type: 3}
+  AminaAngry: {fileID: 2800000, guid: c1c348f1a8f777842b68e7371eacf096, type: 3}
   ImageOfAmina: {fileID: 1816627797}
   BossSpeech1: {fileID: 1249875299}
   BossSpeech2: {fileID: 120516448}
@@ -10609,10 +10659,10 @@ MonoBehaviour:
   RichardSpeech7: {fileID: 430692110}
   RobinSpeech1: {fileID: 1091601890}
   RobinSpeech2: {fileID: 1206176997}
-  MC: {fileID: 1034407730}
-  Boss: {fileID: 1871324650}
-  CoWorker: {fileID: 836370543}
-  Richard: {fileID: 1525001501}
+  MC: {fileID: 1034407733}
+  Boss: {fileID: 1871324653}
+  CoWorker: {fileID: 836370545}
+  Richard: {fileID: 1525001503}
   ResponseKatie1: {fileID: 1043423211}
   ResponseKatie2: {fileID: 1641828472}
   ResponseKatie3: {fileID: 955380861}
