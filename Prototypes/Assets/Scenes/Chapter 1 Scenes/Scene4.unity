@@ -2150,7 +2150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: -55}
+  m_AnchoredPosition: {x: -20, y: -55}
   m_SizeDelta: {x: 400, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502923779
@@ -7717,6 +7717,11 @@ MonoBehaviour:
   KatieAngry: {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
   KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
   ImageOfKatie: {fileID: 767848865}
+  JasonSad: {fileID: 2800000, guid: 2ea59d4d4842833439d81548bdef3388, type: 3}
+  JasonAngry: {fileID: 2800000, guid: ba885d4e81824d645a1ecc3c934c421b, type: 3}
+  JasonNeutral: {fileID: 2800000, guid: 6cf0a7886a34a9f4c9fd11574385143e, type: 3}
+  JasonHappy: {fileID: 2800000, guid: 354bb32b3bf5c4f4d8305f09cbcb6c84, type: 3}
+  ImageOfJason: {fileID: 1375598536}
   FirstBlock: {fileID: 1509576831}
   response1: {fileID: 1767669286}
   response2: {fileID: 350700461}

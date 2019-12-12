@@ -6,13 +6,19 @@ using UnityEngine.EventSystems;
 
 public class Scene4Script : MonoBehaviour
 {
-    //Changing of textures to convey emotions
+    //Changing of textures to convey emotions for katie
     public Texture KatieSad;
     public Texture KatieAngry;
     public Texture KatieNeutral;
     public GameObject ImageOfKatie;
 
-    
+    public Texture JasonSad;
+    public Texture JasonAngry;
+    public Texture JasonNeutral;
+    public Texture JasonHappy;
+    public GameObject ImageOfJason;
+
+
 
     //buttons for responses
     public GameObject FirstBlock;
@@ -337,6 +343,9 @@ public class Scene4Script : MonoBehaviour
     }
     void JSpeech2()
     {
+        CoWorker = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        CoWorker.texture = (Texture)JasonAngry;
         KatieSpeech5.gameObject.SetActive(true);
         JasonSpeech2.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
@@ -382,10 +391,10 @@ public class Scene4Script : MonoBehaviour
         responseKatie1.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 14; //goes to the next line
 
-        responseJason2.text = dialogue[currentLine5]; //checks current line 
-        currentLine5 = 26; //goes to the next line
-        responseKatie2.text = dialogue[currentLine4]; //checks current line 
-        currentLine4 = 16; //goes to the next line
+        responseJason2.text = dialogue[currentLine4]; //checks current line 
+        currentLine4 = 28; //goes to the next line
+        responseKatie2.text = dialogue[currentLine5]; //checks current line 
+        currentLine5 = 18; //goes to the next line
         SecondBlock.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
@@ -431,6 +440,9 @@ public class Scene4Script : MonoBehaviour
     }
     void KSpeech6()
     {
+        CoWorker = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        CoWorker.texture = (Texture)JasonNeutral;
         KatieSpeech6.gameObject.SetActive(false);
         JasonSpeech4.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
@@ -464,11 +476,17 @@ public class Scene4Script : MonoBehaviour
     }
     void JSpeech5()
     {
+        CoWorker = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        CoWorker.texture = (Texture)JasonSad;
         JasonSpeech5.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(true);
     }
     void JSpeech6()
     {
+        CoWorker = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        CoWorker.texture = (Texture)JasonHappy;
         JasonSpeech6.gameObject.SetActive(false);
         KatieSpeech8.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
