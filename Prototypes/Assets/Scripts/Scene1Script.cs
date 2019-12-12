@@ -475,7 +475,7 @@ public class Scene1Script : MonoBehaviour
         response6.gameObject.SetActive(false);
 
         KatieResp5.gameObject.SetActive(false);
-
+        KatieResp2.gameObject.SetActive(false);
         KatieResp1.gameObject.SetActive(false);
         KatieResp4.gameObject.SetActive(false);
         KatieResp3.gameObject.SetActive(false);
