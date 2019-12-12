@@ -8,6 +8,24 @@ using System;
 
 public class Scene2Script : MonoBehaviour
 {
+    public Texture KatieSad;
+    public Texture KatieAngry;
+    public Texture KatieNeutral;
+    
+    public GameObject ImageOfKatie;
+
+    
+    public Texture RichardAngry;
+    public Texture RichardNeut;
+    public Texture RichardHappy;
+    public GameObject ImageOfRichard;
+
+    public Texture AminaNeutral;
+    public Texture AminaHappy;
+    public GameObject ImageOfAmina;
+
+
+
     public Button BossSpeech1;//Text box to hold text
     public Button BossSpeech2;//Text box to hold text
     public Button BossSpeech3;
@@ -222,6 +240,7 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech5()
     {
+        KatieSpeech3.interactable = false; // makes button non iteractable
         KatieSpeech3.gameObject.SetActive(true);
         BossSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
@@ -256,6 +275,7 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech9()
     {
+        KatieSpeech4.interactable = false; // makes button non iteractable
         KatieSpeech4.gameObject.SetActive(true);
         RichardSpeech1.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
@@ -310,6 +330,7 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech16()
     {
+        KatieSpeech7.interactable = false; // makes button non iteractable
         RichardSpeech5.gameObject.SetActive(false);
         KatieSpeech7.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
@@ -343,6 +364,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseG()
     {
+        KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 1; //goes to the next line
@@ -355,6 +377,7 @@ public class Scene2Script : MonoBehaviour
 
     void ResponseB()
     {
+        KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 2; //goes to the next line
@@ -367,6 +390,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
+        KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 1; //goes to the next line
@@ -380,6 +404,7 @@ public class Scene2Script : MonoBehaviour
 
     void RichResponse1()
     {
+        KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 10; //goes to the next line
@@ -391,6 +416,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse2()
     {
+        KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 10; //goes to the next line
@@ -402,6 +428,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse3()
     {
+        KatieSpeech4.interactable = true; // makes button iteractable
         KatieSpeech4.gameObject.SetActive(true);
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 11; //goes to the next line
@@ -413,6 +440,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse4()
     {
+        KatieSpeech7.interactable = true; // makes button iteractable
         KatieSpeech7.gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         currentLine4 = 17; //goes to the next line
@@ -422,6 +450,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse5()
     {
+        KatieSpeech7.interactable = true; // makes button iteractable
         KatieSpeech7.gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         currentLine4 = 18; //goes to the next line
@@ -431,6 +460,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse6()
     {
+        KatieSpeech7.interactable = true; // makes button iteractable
         KatieSpeech7.gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         currentLine4 = 19; //goes to the next line

@@ -1448,6 +1448,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325434104}
   m_CullTransparentMesh: 0
+--- !u!1 &347209284 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 390249697424647337, guid: 4eba36728200826498a88f29d81607e1,
+    type: 3}
+  m_PrefabInstance: {fileID: 431911460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &347406219
 GameObject:
   m_ObjectHideFlags: 0
@@ -7779,6 +7785,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582143974}
   m_CullTransparentMesh: 0
+--- !u!1 &1635875606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8821811510978503449, guid: 699aa00f0f0efd44382243f7d8bb8a2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 218003775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641828470
 GameObject:
   m_ObjectHideFlags: 0
@@ -8635,6 +8647,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807217919}
   m_CullTransparentMesh: 0
+--- !u!1 &1816627797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8924232056133248538, guid: 3da0199d30521c3498a9cf070d95ef08,
+    type: 3}
+  m_PrefabInstance: {fileID: 717155083}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1827577348
 GameObject:
   m_ObjectHideFlags: 0
@@ -10475,6 +10493,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea693ccdf99e964098df619d277fd39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
+  KatieAngry: {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
+  KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
+  ImageOfKatie: {fileID: 1635875606}
+  RichardAngry: {fileID: 2800000, guid: e273751faf3e8044a8983df295a9f5da, type: 3}
+  RichardNeut: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
+  RichardHappy: {fileID: 2800000, guid: f4d739d0140a5d2428b0b3fc0e6774ca, type: 3}
+  ImageOfRichard: {fileID: 347209284}
+  AminaNeutral: {fileID: 2800000, guid: 4fadbdcb15e739a43a27079f31fe169d, type: 3}
+  AminaHappy: {fileID: 2800000, guid: 7b34be4068390fb40b26d4aae7b2104d, type: 3}
+  ImageOfAmina: {fileID: 1816627797}
   BossSpeech1: {fileID: 1249875299}
   BossSpeech2: {fileID: 120516448}
   BossSpeech3: {fileID: 73434550}
