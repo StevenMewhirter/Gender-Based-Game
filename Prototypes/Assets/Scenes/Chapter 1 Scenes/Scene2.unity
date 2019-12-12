@@ -3457,6 +3457,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6965984122371945626, guid: dc22628b2f891564398b1730212cffb4,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965984122371945626, guid: dc22628b2f891564398b1730212cffb4,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2275737448311311958, guid: dc22628b2f891564398b1730212cffb4,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -3476,16 +3486,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -55
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965984122371945626, guid: dc22628b2f891564398b1730212cffb4,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965984122371945626, guid: dc22628b2f891564398b1730212cffb4,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2275737448311311957, guid: dc22628b2f891564398b1730212cffb4,
         type: 3}
@@ -10610,9 +10610,9 @@ MonoBehaviour:
   RobinSpeech1: {fileID: 1091601890}
   RobinSpeech2: {fileID: 1206176997}
   MC: {fileID: 1034407730}
-  BossNeutral: {fileID: 1871324650}
-  CoWorkerHappy: {fileID: 836370543}
-  RichardNeutral: {fileID: 1525001501}
+  Boss: {fileID: 1871324650}
+  CoWorker: {fileID: 836370543}
+  Richard: {fileID: 1525001501}
   ResponseKatie1: {fileID: 1043423211}
   ResponseKatie2: {fileID: 1641828472}
   ResponseKatie3: {fileID: 955380861}
@@ -10626,10 +10626,6 @@ MonoBehaviour:
   currentLine3: 0
   currentLine4: 0
   endLine: 22
-  KatieNeutralAnimator: {fileID: 1034407732}
-  AminaNeutralAnimator: {fileID: 1871324652}
-  RobinNeutralAnimator: {fileID: 836370544}
-  RichardNeutralAnimator: {fileID: 1525001502}
 --- !u!4 &2144610363
 Transform:
   m_ObjectHideFlags: 0
