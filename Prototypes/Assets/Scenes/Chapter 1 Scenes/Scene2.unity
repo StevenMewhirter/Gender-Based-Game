@@ -10626,6 +10626,10 @@ MonoBehaviour:
   currentLine3: 0
   currentLine4: 0
   endLine: 22
+  KatieNeutralAnimator: {fileID: 1034407732}
+  AminaNeutralAnimator: {fileID: 1871324652}
+  RobinNeutralAnimator: {fileID: 836370544}
+  RichardNeutralAnimator: {fileID: 1525001502}
 --- !u!4 &2144610363
 Transform:
   m_ObjectHideFlags: 0
