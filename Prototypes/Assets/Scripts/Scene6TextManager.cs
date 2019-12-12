@@ -66,16 +66,30 @@ public class Scene6TextManager : MonoBehaviour
     public Button CoworkerSpeech;
     public Button WaiterSpeech;
 
-    public GameObject KatieNeutral;
-    public GameObject KatieHappy;
-    public GameObject KatieAngry;
+    public Texture KatieAngry;
+    public Texture KatieNeutral;
+    public Texture KatieHappy;
+    public GameObject ImageOfKatie;
 
-    public RawImage BottomBackground;
-    public GameObject AminaHappy;
-    public GameObject AminaNeutral;
-    public GameObject JasonHappy;
-    public GameObject JasonNeutral;
-    public GameObject RichardHappy;
+    public Texture AminaNeutral;
+    public Texture AminaHappy;
+    public GameObject ImageOfAmina;
+
+    public Texture RichardNeutral;
+    public Texture RichardHappy;
+    public GameObject ImageOfRichard;
+
+    public Texture JasonNeutral;
+    public Texture JasonHappy;
+    public GameObject ImageOfJason;
+
+    public RawImage MC;
+    public RawImage Amina;
+    public RawImage Richard;
+    public RawImage Jason;
+
+    public Button BottomBackground;
+   
     public RawImage Phone;
     public RawImage BarExterior;
     public RawImage BarInterior;
@@ -132,7 +146,7 @@ public class Scene6TextManager : MonoBehaviour
         RichardandAminaSpeech.gameObject.SetActive(false);
         JasonAndKatieSpeech.gameObject.SetActive(false);
         CoworkerSpeech.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
+       
         ShowChoice1.gameObject.SetActive(false);
         ShowChoice2.gameObject.SetActive(false);
         ShowChoice3.gameObject.SetActive(false);
@@ -149,13 +163,16 @@ public class Scene6TextManager : MonoBehaviour
         ShowChoice14.gameObject.SetActive(false);
         BottomBackground.gameObject.SetActive(false);
 
-        KatieNeutral.gameObject.SetActive(false);
-        KatieAngry.gameObject.SetActive(false);
-        AminaHappy.gameObject.SetActive(false);
-        AminaNeutral.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
-        JasonNeutral.gameObject.SetActive(false);
-        RichardHappy.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        Amina.gameObject.SetActive(false);
+        ImageOfAmina.gameObject.SetActive(false);
+
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
+
+        Richard.gameObject.SetActive(false);
+        ImageOfRichard.gameObject.SetActive(false);
         //phone.gameObject.SetActive(false);
         BarInterior.gameObject.SetActive(false);
         //BarExterior.gameObject.SetActive(false);
@@ -290,23 +307,37 @@ public class Scene6TextManager : MonoBehaviour
     void KSpeech2()
     {
         KatieSpeech2.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         CoworkerSpeech.gameObject.SetActive(false);
     }
 
     void JSpeech1()
     {
         KatieSpeech2.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(true);
+        ImageOfJason.gameObject.SetActive(true);
+        Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonHappy;
         JasonSpeech1.gameObject.SetActive(true);
        
     }
 
     void Selection1()
     {
-        KatieHappy.gameObject.SetActive(true);
-        JasonHappy.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
         JasonSpeech1.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response7.gameObject.SetActive(true);
@@ -317,37 +348,35 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse1()
     {
-        JasonHappy.gameObject.SetActive(false);
-        JasonSpeech1.gameObject.SetActive(false);
+      
+      
         response1.gameObject.SetActive(false);
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
         ShowChoice1.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+      
         BottomBackground.gameObject.SetActive(false);
     }
 
     void ShowResponse7()
     {
-        JasonHappy.gameObject.SetActive(false);
-        JasonSpeech1.gameObject.SetActive(false);
+        
         response1.gameObject.SetActive(false);
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
         ShowChoice7.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+     
         BottomBackground.gameObject.SetActive(false);
     }
 
     void ShowResponse8()
     {
-        JasonHappy.gameObject.SetActive(false);
-        JasonSpeech1.gameObject.SetActive(false);
+      
         response1.gameObject.SetActive(false);
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
         ShowChoice8.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+   
         BottomBackground.gameObject.SetActive(false);
     }
 
@@ -356,22 +385,32 @@ public class Scene6TextManager : MonoBehaviour
         ShowChoice1.gameObject.SetActive(false);
         ShowChoice7.gameObject.SetActive(false);
         ShowChoice8.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(true);
-        AminaNeutral.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(false);
+        
+        Amina.gameObject.SetActive(true);
+        ImageOfAmina.gameObject.SetActive(true);
+        Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+
+        Amina.texture = (Texture)AminaNeutral;
     }
     void Selection2()
     {
-    
-        KatieNeutral.gameObject.SetActive(true);
+
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
         response2.gameObject.SetActive(true);
         response9.gameObject.SetActive(true);
         response10.gameObject.SetActive(true);
         BottomBackground.gameObject.SetActive(true);
 
         BossSpeech1.gameObject.SetActive(false);
-        AminaNeutral.gameObject.SetActive(false);
+        Amina.gameObject.SetActive(false);
+        ImageOfAmina.gameObject.SetActive(false);
 
 
         Handheld.Vibrate();
@@ -383,8 +422,8 @@ public class Scene6TextManager : MonoBehaviour
         response9.gameObject.SetActive(false);
         response10.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(false);
-        AminaNeutral.gameObject.SetActive(false);
-        KatieNeutral.gameObject.SetActive(true);
+     
+     
         ShowChoice2.gameObject.SetActive(true);
         BottomBackground.gameObject.SetActive(false);
     }
@@ -395,8 +434,8 @@ public class Scene6TextManager : MonoBehaviour
         response9.gameObject.SetActive(false);
         response10.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(false);
-        AminaNeutral.gameObject.SetActive(false);
-        KatieNeutral.gameObject.SetActive(true);
+  
+       
         ShowChoice9.gameObject.SetActive(true);
         BottomBackground.gameObject.SetActive(false);
     }
@@ -407,15 +446,16 @@ public class Scene6TextManager : MonoBehaviour
         response9.gameObject.SetActive(false);
         response10.gameObject.SetActive(false);
         BossSpeech1.gameObject.SetActive(false);
-        AminaNeutral.gameObject.SetActive(false);
-        KatieNeutral.gameObject.SetActive(true);
+       
+       
         ShowChoice10.gameObject.SetActive(true);
         BottomBackground.gameObject.SetActive(false);
     }
 
     void BS1()
     {
-        KatieNeutral.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
         ShowChoice2.gameObject.SetActive(false);
         ShowChoice9.gameObject.SetActive(false);
         ShowChoice10.gameObject.SetActive(false);
@@ -423,14 +463,19 @@ public class Scene6TextManager : MonoBehaviour
         response9.gameObject.SetActive(false);
         response10.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(true);
-        AminaNeutral.gameObject.SetActive(true);
+        Amina.gameObject.SetActive(true);
+        ImageOfAmina.gameObject.SetActive(true);
+        Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+
+        Amina.texture = (Texture)AminaNeutral;
         BossSpeech1.gameObject.SetActive(false);
     }
 
     void Waiter()
     {
         BossSpeech2.gameObject.SetActive(false);
-        AminaNeutral.gameObject.SetActive(false);
+        Amina.gameObject.SetActive(false);
+        ImageOfAmina.gameObject.SetActive(false);
         WaiterSpeech.gameObject.SetActive(true);
     }
 
@@ -438,39 +483,65 @@ public class Scene6TextManager : MonoBehaviour
     {
       WaiterSpeech.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
     }
 
     void RichSpeech1()
     {
         KatieSpeech3.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
-        RichardHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(true);
+        ImageOfRichard.gameObject.SetActive(true);
+        Richard = (RawImage)ImageOfRichard.GetComponent<RawImage>();
+
+        Richard.texture = (Texture)RichardHappy;
         RichardSpeech1.gameObject.SetActive(true);
     }
 
     void JSpeech2()
     {
-        RichardHappy.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
+        ImageOfRichard.gameObject.SetActive(false);
         RichardSpeech1.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(true);
+        ImageOfJason.gameObject.SetActive(true);
+        Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonHappy;
         JasonSpeech2.gameObject.SetActive(true);
     }
 
     void RichSpeech2()
     {
         JasonSpeech2.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
-        RichardHappy.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
+        
+        Richard.gameObject.SetActive(true);
+        ImageOfRichard.gameObject.SetActive(true);
+        Richard = (RawImage)ImageOfRichard.GetComponent<RawImage>();
+
+        Richard.texture = (Texture)RichardHappy;
         RichardSpeech2.gameObject.SetActive(true);
     }
 
     void BS2()
     {
-        RichardHappy.gameObject.SetActive(false);
+        Richard.gameObject.SetActive(false);
+        ImageOfRichard.gameObject.SetActive(false);
         RichardSpeech2.gameObject.SetActive(false);
         BossSpeech3.gameObject.SetActive(true);
-        AminaHappy.gameObject.SetActive(true);
+        Amina.gameObject.SetActive(true);
+        ImageOfAmina.gameObject.SetActive(true);
+        Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+
+        Amina.texture = (Texture)AminaHappy;
     }
 
     void RaA()
@@ -481,105 +552,151 @@ public class Scene6TextManager : MonoBehaviour
 
     void JaKS()
     {
-        AminaHappy.gameObject.SetActive(false);
+        Amina.gameObject.SetActive(false);
+        ImageOfAmina.gameObject.SetActive(false);
         RichardandAminaSpeech.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         JasonAndKatieSpeech.gameObject.SetActive(true);
     }
 
     void JSpeech3()
     {
-        KatieHappy.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
         JasonAndKatieSpeech.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(true);
+        ImageOfJason.gameObject.SetActive(true);
+        Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonHappy;
         JasonSpeech3.gameObject.SetActive(true);
        
     }
 
     void Selection3()
     {
-        JasonHappy.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(false);
         response3.gameObject.SetActive(true);
         response11.gameObject.SetActive(true);
         response12.gameObject.SetActive(true);
         BottomBackground.gameObject.SetActive(true);
         Handheld.Vibrate();
-        KatieHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
     }
 
     void ShowResponse3()
     {
-        JasonHappy.gameObject.SetActive(false);
+        
         JasonSpeech3.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         response11.gameObject.SetActive(false);
         response12.gameObject.SetActive(false);
         ShowChoice3.gameObject.SetActive(true);
-        KatieNeutral.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
         BottomBackground.gameObject.SetActive(false);
     }
 
     void ShowResponse11()
     {
-        JasonHappy.gameObject.SetActive(false);
+     
         JasonSpeech3.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         response11.gameObject.SetActive(false);
         response12.gameObject.SetActive(false);
         ShowChoice11.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         BottomBackground.gameObject.SetActive(false);
     }
 
     void ShowResponse12()
     {
-        JasonHappy.gameObject.SetActive(false);
+      
         JasonSpeech3.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         response11.gameObject.SetActive(false);
         response12.gameObject.SetActive(false);
         ShowChoice12.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         BottomBackground.gameObject.SetActive(false);
     }
 
     void JSpeech4()
     {
         ShowChoice3.gameObject.SetActive(false);
-        KatieNeutral.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(true);
-        JasonSpeech5.gameObject.SetActive(true);
-        KatieHappy.gameObject.SetActive(false);
 
+        Jason.gameObject.SetActive(true);
+        ImageOfJason.gameObject.SetActive(true);
+        Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonHappy;
+        JasonSpeech5.gameObject.SetActive(true);
+
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
     }
 
     void KSpeech4()
     {
         JasonSpeech5.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieHappy;
         KatieSpeech4.gameObject.SetActive(true);
-        JasonHappy.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
     }
 
     void JSpeech5()
     {
-        KatieHappy.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
         KatieSpeech4.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(true);
-        JasonHappy.gameObject.SetActive(true);
-       
+        Jason.gameObject.SetActive(true);
+        ImageOfJason.gameObject.SetActive(true);
+        Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonHappy;
     }
 
     void Selection4()
     {
         JasonSpeech6.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
         response4.gameObject.SetActive(true);
         response13.gameObject.SetActive(true);
         response14.gameObject.SetActive(true);
-        KatieNeutral.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
         BottomBackground.gameObject.SetActive(true);
 
         Handheld.Vibrate();
@@ -588,24 +705,24 @@ public class Scene6TextManager : MonoBehaviour
     void ShowResponse4()
     {
         JasonSpeech6.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
+        
         response4.gameObject.SetActive(false);
         response13.gameObject.SetActive(false);
         response14.gameObject.SetActive(false);
         ShowChoice4.gameObject.SetActive(true);
-        KatieNeutral.gameObject.SetActive(true);
+       
         BottomBackground.gameObject.SetActive(false);
     }
 
     void ShowResponse13()
     {
         JasonSpeech6.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
+     
         response4.gameObject.SetActive(false);
         response13.gameObject.SetActive(false);
         response14.gameObject.SetActive(false);
         ShowChoice13.gameObject.SetActive(true);
-        KatieNeutral.gameObject.SetActive(true);
+        
         BottomBackground.gameObject.SetActive(false);
 
     }
@@ -613,12 +730,12 @@ public class Scene6TextManager : MonoBehaviour
     void ShowResponse14()
     {
         JasonSpeech6.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
+        
         response4.gameObject.SetActive(false);
         response13.gameObject.SetActive(false);
         response14.gameObject.SetActive(false);
         ShowChoice14.gameObject.SetActive(true);
-        KatieNeutral.gameObject.SetActive(true);
+      
         BottomBackground.gameObject.SetActive(false);
     }
 
@@ -627,8 +744,13 @@ public class Scene6TextManager : MonoBehaviour
         ShowChoice4.gameObject.SetActive(false);
         ShowChoice13.gameObject.SetActive(false);
         ShowChoice14.gameObject.SetActive(false);
-        KatieNeutral.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(true);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(true);
+        ImageOfJason.gameObject.SetActive(true);
+        Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonHappy;
         JasonSpeech4.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(false);
         JasonSpeech7.gameObject.SetActive(true);
@@ -642,9 +764,14 @@ public class Scene6TextManager : MonoBehaviour
 
     void Selection5()
     {
-        JasonHappy.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
         JasonSpeech7.gameObject.SetActive(false);
-        KatieNeutral.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieNeutral;
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
         Handheld.Vibrate();
@@ -653,25 +780,34 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse5()
     {
-        KatieNeutral.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-        KatieAngry.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieAngry;
         ShowChoice5.gameObject.SetActive(true);
         JasonSpeech7.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
         BottomBackground.gameObject.SetActive(false);
     }
 
     void ShowResponse6()
     {
-        KatieNeutral.gameObject.SetActive(false);
+        
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-        KatieAngry.gameObject.SetActive(true);
+        MC.gameObject.SetActive(true);
+        ImageOfKatie.gameObject.SetActive(true);
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieAngry;
         ShowChoice6.gameObject.SetActive(true);
         JasonSpeech7.gameObject.SetActive(false);
-        JasonHappy.gameObject.SetActive(false);
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
         BottomBackground.gameObject.SetActive(false);
     }
     void End()
@@ -681,23 +817,30 @@ public class Scene6TextManager : MonoBehaviour
         Messages.gameObject.SetActive(false);
         Options.gameObject.SetActive(false);
         ShowChoice6.gameObject.SetActive(false);
-        KatieAngry.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
         ShowChoice5.gameObject.SetActive(false);
         JasonSpeech7.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
         BarExterior.gameObject.SetActive(false);
         EndScreen.gameObject.SetActive(true);
-        JasonHappy.gameObject.SetActive(false);
-       
+        Jason.gameObject.SetActive(false);
+        ImageOfJason.gameObject.SetActive(false);
+
     }
 
     void JSpeech7()
     {
-        JasonHappy.gameObject.SetActive(true);
+        Jason.gameObject.SetActive(true);
+        ImageOfJason.gameObject.SetActive(true);
+        Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
+
+        Jason.texture = (Texture)JasonHappy;
         ShowChoice11.gameObject.SetActive(false);
         ShowChoice12.gameObject.SetActive(false);
-        KatieHappy.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
         JasonSpeech4.gameObject.SetActive(true);
         JasonSpeech3.gameObject.SetActive(false);
         
