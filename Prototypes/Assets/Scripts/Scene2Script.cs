@@ -44,7 +44,7 @@ public class Scene2Script : MonoBehaviour
 
     public GameObject MC;
     public GameObject BossNeutral;
-    public GameObject BossAngry;
+
     public GameObject CoWorkerHappy;
     public GameObject RichardNeutral;
   //  public GameObject CoWorkerNeutral;
@@ -81,7 +81,7 @@ public class Scene2Script : MonoBehaviour
         response8.gameObject.SetActive(false);
         response9.gameObject.SetActive(false);
         BossNeutral.gameObject.SetActive(false);
-        BossAngry.gameObject.SetActive(false);
+   
         MC.gameObject.SetActive(false);
         RichardNeutral.gameObject.SetActive(false);
         //CoWorkerNeutral.gameObject.SetActive(false);
@@ -238,14 +238,14 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        BossAngry.gameObject.SetActive(true);
+        BossNeutral.gameObject.SetActive(true);
     }
     void Speech7()
     {
         BossSpeech3.gameObject.SetActive(true);
         BossSpeech2.gameObject.SetActive(false);
         BossNeutral.gameObject.SetActive(true);
-        BossAngry.gameObject.SetActive(false);
+        BossNeutral.gameObject.SetActive(false);
     }
     void Speech8()
     {
