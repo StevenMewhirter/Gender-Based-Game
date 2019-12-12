@@ -55,7 +55,7 @@ public class Scene1Script : MonoBehaviour
     public GameObject NotificationMessage;
     public Button Options;
 
-   
+    public GameObject chatContainer;
 
     public Button KatieResp1;
     public Button KatieResp2;
@@ -267,6 +267,7 @@ public class Scene1Script : MonoBehaviour
        // KatieSpeech1.gameObject.SetActive(false);
         
         RobinSpeech1.gameObject.SetActive(true);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
     }
 
     void KSpeech2()
@@ -275,6 +276,7 @@ public class Scene1Script : MonoBehaviour
 
 
         KatieSpeech2.gameObject.SetActive(true);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
     }
 
     void RobinReply2()

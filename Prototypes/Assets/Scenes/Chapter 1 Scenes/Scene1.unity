@@ -7367,7 +7367,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462516047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 74, y: 49.299774, z: -182.2609}
+  m_LocalPosition: {x: 88, y: -476, z: -182.2609}
   m_LocalScale: {x: 1.4465151, y: 1.4465151, z: 1.4465151}
   m_Children:
   - {fileID: 196217767}
@@ -10492,6 +10492,7 @@ MonoBehaviour:
   NotificationRed: {fileID: 1985278019}
   NotificationMessage: {fileID: 1935089812}
   Options: {fileID: 2114910773}
+  chatContainer: {fileID: 1462516047}
   KatieResp1: {fileID: 348989348}
   KatieResp2: {fileID: 162594333}
   KatieResp3: {fileID: 1846136944}
