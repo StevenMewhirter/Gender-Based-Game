@@ -297,10 +297,11 @@ public class Scene1Script : MonoBehaviour
    
         KatieSpeech3.gameObject.SetActive(true);
 
-        KatieSpeech2.gameObject.SetActive(false);
-        RobinSpeech2.gameObject.SetActive(false);
-        RobinSpeech1.gameObject.SetActive(false);
-        KatieSpeech1.gameObject.SetActive(false);
+        //KatieSpeech2.gameObject.SetActive(false);
+        //RobinSpeech2.gameObject.SetActive(false);
+        //RobinSpeech1.gameObject.SetActive(false);
+        //KatieSpeech1.gameObject.SetActive(false);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
     }
 
     void RobinReply3()
@@ -311,17 +312,19 @@ public class Scene1Script : MonoBehaviour
         Phone.gameObject.SetActive(true);
        // RobinName.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(true);
+        KatieSpeech1.gameObject.SetActive(false);
+        chatContainer.transform.position += new Vector3(0, 100, 0);
 
-        
-        
     }
 
     void Email1()
     {
         //The phone and the first email speech bubble appears on screen saying "Good afternoon Ms Anderson" -SD
-       // RobinName.gameObject.SetActive(false);
+        // RobinName.gameObject.SetActive(false);
+        RobinSpeech1.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(false);
         RobinSpeech2.gameObject.SetActive(false);
+        KatieSpeech2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
         //EmailName.gameObject.SetActive(true);
         //EmailText1.gameObject.SetActive(true);
