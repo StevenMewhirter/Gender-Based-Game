@@ -83,16 +83,22 @@ public class Scene6TextManager : MonoBehaviour
     public Texture JasonHappy;
     public GameObject ImageOfJason;
 
+    public Texture Bar1;
+    public Texture Bar2;
+    public Texture Bar3;
+    public GameObject ImageOfBar;
+
     public RawImage MC;
     public RawImage Amina;
     public RawImage Richard;
     public RawImage Jason;
+    public RawImage Bar;
 
     public Button BottomBackground;
    
     public RawImage Phone;
-    public RawImage BarExterior;
-    public RawImage BarInterior;
+
+   
     public RawImage EndScreen;
     public Button Email;
     public Button SocialMedia;
@@ -168,11 +174,14 @@ public class Scene6TextManager : MonoBehaviour
         Jason.gameObject.SetActive(false);
         ImageOfJason.gameObject.SetActive(false);
 
+        Bar.gameObject.SetActive(false);
+        ImageOfBar.gameObject.SetActive(false);
+
         Richard.gameObject.SetActive(false);
         ImageOfRichard.gameObject.SetActive(false);
         //phone.gameObject.SetActive(false);
-        BarInterior.gameObject.SetActive(false);
-        //BarExterior.gameObject.SetActive(false);
+     
+       
         WaiterSpeech.gameObject.SetActive(false);
         EndScreen.gameObject.SetActive(false);
 
@@ -296,8 +305,12 @@ public class Scene6TextManager : MonoBehaviour
         RobinSpeech1.gameObject.SetActive(false);
         RobinName.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
-        BarExterior.gameObject.SetActive(false);
-        BarInterior.gameObject.SetActive(true);
+     
+        Bar.gameObject.SetActive(true);
+        ImageOfBar.gameObject.SetActive(true);
+        Bar = (RawImage)ImageOfBar.GetComponent<RawImage>();
+
+        Bar.texture = (Texture)Bar1;
         CoworkerSpeech.gameObject.SetActive(true);
     }
 
@@ -497,6 +510,11 @@ public class Scene6TextManager : MonoBehaviour
 
     void RichSpeech1()
     {
+        Bar.gameObject.SetActive(true);
+        ImageOfBar.gameObject.SetActive(true);
+        Bar = (RawImage)ImageOfBar.GetComponent<RawImage>();
+
+        Bar.texture = (Texture)Bar2;
         KatieSpeech3.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
@@ -574,6 +592,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void JSpeech3()
     {
+      
         MC.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         JasonAndKatieSpeech.gameObject.SetActive(false);
@@ -774,11 +793,14 @@ public class Scene6TextManager : MonoBehaviour
         JasonSpeech6.gameObject.SetActive(false);
         JasonSpeech7.gameObject.SetActive(true);
        
-        BarExterior.gameObject.SetActive(true);
-        BarInterior.gameObject.SetActive(false);
-        
+       
+        Bar.gameObject.SetActive(true);
+        ImageOfBar.gameObject.SetActive(true);
+        Bar = (RawImage)ImageOfBar.GetComponent<RawImage>();
 
-        
+        Bar.texture = (Texture)Bar3;
+
+
     }
 
     void Selection5()
@@ -845,10 +867,12 @@ public class Scene6TextManager : MonoBehaviour
         JasonSpeech7.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
-        BarExterior.gameObject.SetActive(false);
+   
         EndScreen.gameObject.SetActive(true);
         Jason.gameObject.SetActive(false);
         ImageOfJason.gameObject.SetActive(false);
+        Bar.gameObject.SetActive(false);
+        ImageOfBar.gameObject.SetActive(false);
 
     }
 
