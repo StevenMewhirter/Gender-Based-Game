@@ -29,34 +29,42 @@ public class Scene5Script : MonoBehaviour
 
     public GameObject BackgroundBox;
 
-    public GameObject MC;
-    public GameObject MCsad;
-    public GameObject MCangry;
-    public GameObject MChappy;
+    public GameObject KatieImage;
+    public Texture KatieNeutral;
+    public Texture KatieSad;
+    public Texture KatieHappy;
+    public Texture KatieAngry;
+    public RawImage MC;
 
-    public GameObject CoWorker;
-    public GameObject CoWorkerSad;
-    public GameObject CoWorkerHappy;
+    public GameObject RobinImage;
+    public Texture RobinNeutral;
+    public Texture RobinSad;
+    public RawImage Robin;
+
 
     //animators for the characters
-    public Animator RobinNeutralAnimator;
-    public Animator RobinSadAnimator;
-    public Animator RobinHappyAnimator;
-    public Animator KatieNeutralAnimator;
-    public Animator KatieSadAnimator;
-    public Animator KatieHappyAnimator;
-    public Animator KatieAngryAnimator;
+    //public Animator RobinNeutralAnimator;
+    //public Animator RobinSadAnimator;
+    //public Animator RobinHappyAnimator;
+    //public Animator KatieNeutralAnimator;
+    //public Animator KatieSadAnimator;
+    //public Animator KatieHappyAnimator;
+    //public Animator KatieAngryAnimator;
+
+    public Animator RobinAnimator;
+    public Animator KatieAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
         MC.gameObject.SetActive(false);
-        MCsad.gameObject.SetActive(false);
-        MCangry.gameObject.SetActive(false);
-        MChappy.gameObject.SetActive(false);
-        RobinSadAnimator.SetBool("RobinSad", true);
-        CoWorker.gameObject.SetActive(false);
-        CoWorkerHappy.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinSad;
+
+        RobinAnimator.SetBool("RobinNeutral", true);
+      //  Robin.gameObject.SetActive(false);
 
         BackgroundBox.gameObject.SetActive(false);
 
@@ -129,12 +137,19 @@ public class Scene5Script : MonoBehaviour
 
         void Choices1()
     {
+
+
         Choice1.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        
         BackgroundBox.gameObject.SetActive(true);
         RobinSpeech.gameObject.SetActive(false);
-        CoWorkerSad.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+        MC.texture = (Texture)KatieNeutral;
+
+        KatieAnimator.SetBool("KatieNeutral", true);
     }
 
     void KSpeech()
@@ -143,10 +158,12 @@ public class Scene5Script : MonoBehaviour
         BackgroundBox.gameObject.SetActive(false);
         KatieSpeech.gameObject.SetActive(true);
         RobinSpeech.gameObject.SetActive(false);
-        MC.gameObject.SetActive(false);
-        MCsad.gameObject.SetActive(true);
-        KatieSadAnimator.SetBool("KatieSad", true);
-        CoWorkerSad.gameObject.SetActive(false);
+
+        Robin.gameObject.SetActive(false);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+        MC.texture = (Texture)KatieSad;
+        KatieAnimator.SetBool("KatieNeutral", true);
     }
 
     //Robin - "You're right, ill just ask amina for a week or so off"
@@ -154,9 +171,13 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech.gameObject.SetActive(false);
         RobinSpeech1.gameObject.SetActive(true);
-        MCsad.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(true);
-        RobinNeutralAnimator.SetBool("RobinNeutral", true);
+        MC.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinNeutral;
+
+        RobinAnimator.SetBool("RobinNeutral", true);
     }
 
     //Robin - "That's enough whining. What do you think of your first month in the company"
@@ -171,9 +192,14 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech1.gameObject.SetActive(true);
         RobinSpeech2.gameObject.SetActive(false);
-        MChappy.gameObject.SetActive(true);
-        KatieHappyAnimator.SetBool("KatieHappy", true);
-        CoWorker.gameObject.SetActive(false);
+        MC.gameObject.SetActive(true);
+        Robin.gameObject.SetActive(false);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+        MC.texture = (Texture)KatieHappy;
+
+        KatieAnimator.SetBool("KatieNeutral", true);
+
     }
 
     //Robin - "So everything is fine. Cant believe you were so stressed. Is richard still bothering you?
@@ -181,9 +207,13 @@ public class Scene5Script : MonoBehaviour
     {
         KatieSpeech1.gameObject.SetActive(false);
         RobinSpeech3.gameObject.SetActive(true);
-        MChappy.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(true);
-        RobinNeutralAnimator.SetBool("RobinNeutral", true);
+        MC.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinNeutral;
+
+        RobinAnimator.SetBool("RobinNeutral", true);
     }
 
    
@@ -193,8 +223,13 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech2.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        KatieNeutralAnimator.SetBool("KatieNeutral", true);
-        CoWorker.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+        MC.texture = (Texture)KatieNeutral;
+
+        KatieAnimator.SetBool("KatieNeutral", true);
+
     }
 
     //Robin - "What do you mean?"
@@ -203,8 +238,12 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech2.gameObject.SetActive(false);
         RobinSpeech4.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(true);
-        RobinNeutralAnimator.SetBool("RobinNeutral", true);
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinNeutral;
+
+        RobinAnimator.SetBool("RobinNeutral", true);
 
 
 
@@ -213,11 +252,16 @@ public class Scene5Script : MonoBehaviour
 
     void Choices2()
     {
-        CoWorker.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        KatieNeutralAnimator.SetBool("KatieNeutral", true);
         RobinSpeech4.gameObject.SetActive(false);
         BackgroundBox.gameObject.SetActive(true);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+        MC.texture = (Texture)KatieNeutral;
+
+        KatieAnimator.SetBool("KatieNeutral", true);
+
 
         Choice2.gameObject.SetActive(true);
     }
@@ -229,12 +273,15 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(true);
         RobinSpeech4.gameObject.SetActive(false);
         Choice2.gameObject.SetActive(false);
-        MCangry.gameObject.SetActive(true);
-        KatieAngryAnimator.SetBool("KatieAngry", true);
-        MC.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(false);
-
+        MC.gameObject.SetActive(true);
         Choice3.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+        MC.texture = (Texture)KatieAngry;
+
+        KatieAnimator.SetBool("KatieNeutral", true);
+
 
     }
 
@@ -244,9 +291,13 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(true);
        
-        MCangry.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(true);
-        RobinNeutralAnimator.SetBool("RobinNeutral", true);
+        MC.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinNeutral;
+
+        RobinAnimator.SetBool("RobinNeutral", true);
 
         Handheld.Vibrate();
     }
@@ -254,11 +305,15 @@ public class Scene5Script : MonoBehaviour
     void Choices3()
     {
        BackgroundBox.gameObject.SetActive(true);
-        CoWorker.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
-        KatieNeutralAnimator.SetBool("KatieNeutral", true);
+
+        MC = (RawImage)KatieImage.GetComponent<RawImage>();
+        MC.texture = (Texture)KatieNeutral;
+
+        KatieAnimator.SetBool("KatieNeutral", true);
     }
 
     //Katie - "He's (Jason's) been a bit inappropriate at work"
@@ -268,7 +323,7 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(true);
         RobinSpeech5.gameObject.SetActive(false);
         Choice3.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
     }
 
     //Robin - "Wasnt expecting that. Thought he was a good guy"
@@ -277,8 +332,12 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        CoWorker.gameObject.SetActive(true);
-        RobinNeutralAnimator.SetBool("RobinNeutral", true);
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinNeutral;
+
+        RobinAnimator.SetBool("RobinNeutral", true);
     }
 
     //Katie - "Lets change subject. How's david?"
@@ -287,8 +346,9 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech5.gameObject.SetActive(true);
         RobinSpeech6.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
-        KatieNeutralAnimator.SetBool("KatieNeutral", true);
-        CoWorker.gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieNeutral", true);
+
     }
 
     //Robin - "Leg's pretty bad, but hes in one piece. I wont let him buy a new motorcycle"
@@ -297,7 +357,11 @@ public class Scene5Script : MonoBehaviour
         KatieSpeech5.gameObject.SetActive(false);
         RobinSpeech7.gameObject.SetActive(true);
         MC.gameObject.SetActive(false);
-        CoWorkerSad.gameObject.SetActive(true);
-        RobinSadAnimator.SetBool("RobinSad", true);
+        Robin.gameObject.SetActive(true);
+
+        Robin = (RawImage)RobinImage.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinNeutral;
+
+        RobinAnimator.SetBool("RobinNeutral", true);
     }
 }
