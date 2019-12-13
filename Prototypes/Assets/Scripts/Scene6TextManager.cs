@@ -104,7 +104,7 @@ public class Scene6TextManager : MonoBehaviour
     public Button SocialMedia;
     public Button Messages;
     public Button Options;
-    public RawImage RobinName;
+
 
     public Animator KatieAnimator;
     public Animator RichardAnimator;
@@ -185,7 +185,6 @@ public class Scene6TextManager : MonoBehaviour
         WaiterSpeech.gameObject.SetActive(false);
         EndScreen.gameObject.SetActive(false);
 
-        RobinName.gameObject.SetActive(true);
 
         Button robin1 = RobinSpeech1.GetComponent<Button>();
         robin1.onClick.AddListener(KSpeech1);
@@ -303,7 +302,7 @@ public class Scene6TextManager : MonoBehaviour
     {
         KatieSpeech1.gameObject.SetActive(false);
         RobinSpeech1.gameObject.SetActive(false);
-        RobinName.gameObject.SetActive(false);
+    
         Phone.gameObject.SetActive(false);
      
         Bar.gameObject.SetActive(true);
