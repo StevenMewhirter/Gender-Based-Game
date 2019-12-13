@@ -280,6 +280,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseA()
     {
+        KatieAnimator.SetBool("KatieNeutral", true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieHappy;
@@ -292,6 +293,7 @@ public class Scene4Script : MonoBehaviour
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
+       
     }
     void ResponseB()
     {

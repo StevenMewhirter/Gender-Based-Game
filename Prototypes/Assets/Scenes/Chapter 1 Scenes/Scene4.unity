@@ -7716,8 +7716,8 @@ MonoBehaviour:
   KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
   KatieAngry: {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
   KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
-  KatieWorried: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
-  KatieHappy: {fileID: 2800000, guid: 6c163e1967990694c901014831d07eca, type: 3}
+  KatieWorried: {fileID: 2800000, guid: 0e8bbecd6973f5f4f86d1a287eb56245, type: 3}
+  KatieHappy: {fileID: 2800000, guid: 1c93f6da89abb7c49a4a452ed6b5982b, type: 3}
   ImageOfKatie: {fileID: 767848865}
   JasonSad: {fileID: 2800000, guid: 2ea59d4d4842833439d81548bdef3388, type: 3}
   JasonAngry: {fileID: 2800000, guid: 7b46657f65e678b4daa4b1db90be7dc3, type: 3}

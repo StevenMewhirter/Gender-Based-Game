@@ -10620,7 +10620,7 @@ MonoBehaviour:
   KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
   KatieAngry: {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
   KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
-  KatieHappy: {fileID: 2800000, guid: 6c163e1967990694c901014831d07eca, type: 3}
+  KatieHappy: {fileID: 2800000, guid: 1c93f6da89abb7c49a4a452ed6b5982b, type: 3}
   ImageOfKatie: {fileID: 1635875606}
   RichardAngry: {fileID: 2800000, guid: e273751faf3e8044a8983df295a9f5da, type: 3}
   RichardNeut: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
