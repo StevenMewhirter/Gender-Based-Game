@@ -346,6 +346,7 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfKatie.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
         ImageOfJason.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         JasonAnimator.SetBool("JasonMove", true);
         Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
 
@@ -357,6 +358,7 @@ public class Scene6TextManager : MonoBehaviour
     void Selection1()
     {
         MC.gameObject.SetActive(true);
+        JasonAnimator.SetBool("JasonMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -418,6 +420,7 @@ public class Scene6TextManager : MonoBehaviour
         
         Amina.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         AminaAnimator.SetBool("AminaMove", true);
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
 
@@ -427,11 +430,13 @@ public class Scene6TextManager : MonoBehaviour
     {
 
         MC.gameObject.SetActive(true);
-        KatieAnimator.SetBool("KatieMove", true);
+        
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
-
+        
         MC.texture = (Texture)KatieNeutral;
+        AminaAnimator.SetBool("AminaMove", false);
+        KatieAnimator.SetBool("KatieMove", true);
         SecondBlock.SetActive(true);
         response2.gameObject.SetActive(true);
         response9.gameObject.SetActive(true);
@@ -497,6 +502,7 @@ public class Scene6TextManager : MonoBehaviour
         response10.gameObject.SetActive(false);
         BossSpeech2.gameObject.SetActive(true);
         Amina.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         AminaAnimator.SetBool("AminaMove", true);
         ImageOfAmina.gameObject.SetActive(true);
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
@@ -519,6 +525,7 @@ public class Scene6TextManager : MonoBehaviour
         KatieSpeech3.gameObject.SetActive(true);
 
         MC.gameObject.SetActive(true);
+        AminaAnimator.SetBool("AminaMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -537,6 +544,7 @@ public class Scene6TextManager : MonoBehaviour
         MC.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         RichardAnimator.SetBool("RichardMove", true);
         ImageOfRichard.gameObject.SetActive(true);
         Richard = (RawImage)ImageOfRichard.GetComponent<RawImage>();
@@ -551,6 +559,7 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfRichard.gameObject.SetActive(false);
         RichardSpeech1.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
+        RichardAnimator.SetBool("RichardMove", false);
         JasonAnimator.SetBool("JasonMove", true);
         ImageOfJason.gameObject.SetActive(true);
         Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
@@ -566,6 +575,7 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfJason.gameObject.SetActive(false);
         
         Richard.gameObject.SetActive(true);
+        JasonAnimator.SetBool("JasonMove", false);
         RichardAnimator.SetBool("RichardMove", true);
         ImageOfRichard.gameObject.SetActive(true);
         Richard = (RawImage)ImageOfRichard.GetComponent<RawImage>();
@@ -581,6 +591,7 @@ public class Scene6TextManager : MonoBehaviour
         RichardSpeech2.gameObject.SetActive(false);
         BossSpeech3.gameObject.SetActive(true);
         Amina.gameObject.SetActive(true);
+        RichardAnimator.SetBool("RichardMove", false);
         AminaAnimator.SetBool("AminaMove", true);
         ImageOfAmina.gameObject.SetActive(true);
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
@@ -600,6 +611,7 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfAmina.gameObject.SetActive(false);
         RichardandAminaSpeech.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        AminaAnimator.SetBool("AminaMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -615,6 +627,7 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfKatie.gameObject.SetActive(false);
         JasonAndKatieSpeech.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         JasonAnimator.SetBool("JasonMove", true);
         ImageOfJason.gameObject.SetActive(true);
         Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
@@ -636,6 +649,7 @@ public class Scene6TextManager : MonoBehaviour
         BottomBackground.gameObject.SetActive(true);
         Handheld.Vibrate();
         MC.gameObject.SetActive(true);
+        JasonAnimator.SetBool("JasonMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -735,6 +749,7 @@ public class Scene6TextManager : MonoBehaviour
         KatieSpeech4.gameObject.SetActive(false);
         JasonSpeech6.gameObject.SetActive(true);
         Jason.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         JasonAnimator.SetBool("JasonMove", true);
         ImageOfJason.gameObject.SetActive(true);
         Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
@@ -752,6 +767,7 @@ public class Scene6TextManager : MonoBehaviour
         response13.gameObject.SetActive(true);
         response14.gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
+        JasonAnimator.SetBool("JasonMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -807,6 +823,7 @@ public class Scene6TextManager : MonoBehaviour
         MC.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Jason.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         JasonAnimator.SetBool("JasonMove", true);
         ImageOfJason.gameObject.SetActive(true);
         Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
@@ -832,6 +849,7 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfJason.gameObject.SetActive(false);
         JasonSpeech7.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        JasonAnimator.SetBool("JasonMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -850,6 +868,7 @@ public class Scene6TextManager : MonoBehaviour
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        JasonAnimator.SetBool("JasonMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -868,6 +887,7 @@ public class Scene6TextManager : MonoBehaviour
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
+        JasonAnimator.SetBool("JasonMove", false);
         KatieAnimator.SetBool("KatieMove", true);
         ImageOfKatie.gameObject.SetActive(true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -904,6 +924,7 @@ public class Scene6TextManager : MonoBehaviour
     void JSpeech7()
     {
         Jason.gameObject.SetActive(true);
+        KatieAnimator.SetBool("KatieMove", false);
         JasonAnimator.SetBool("JasonMove", true);
         ImageOfJason.gameObject.SetActive(true);
         Jason = (RawImage)ImageOfJason.GetComponent<RawImage>();
