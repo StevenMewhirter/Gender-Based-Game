@@ -20,12 +20,15 @@ public class Scene6TextManager : MonoBehaviour
     public Button response4;
     public Button response5;
     public Button response6;
+    public GameObject ThirdBlock;
     public Button response7;
     public Button response8;
     public Button response9;
+    public GameObject FourthBlock;
     public Button response10;
     public Button response11;
     public Button response12;
+    public GameObject FifthBlock;
     public Button response13;
     public Button response14;
 
@@ -163,12 +166,15 @@ public class Scene6TextManager : MonoBehaviour
         ShowChoice4.gameObject.SetActive(false);
         ShowChoice5.gameObject.SetActive(false);
         ShowChoice6.gameObject.SetActive(false);
+        ThirdBlock.SetActive(false);
         ShowChoice7.gameObject.SetActive(false);
         ShowChoice8.gameObject.SetActive(false);
         ShowChoice9.gameObject.SetActive(false);
+        FourthBlock.SetActive(false);
         ShowChoice10.gameObject.SetActive(false);
         ShowChoice11.gameObject.SetActive(false);
         ShowChoice12.gameObject.SetActive(false);
+        FifthBlock.SetActive(false);
         ShowChoice13.gameObject.SetActive(false);
         ShowChoice14.gameObject.SetActive(false);
         BottomBackground.gameObject.SetActive(false);
@@ -623,6 +629,7 @@ public class Scene6TextManager : MonoBehaviour
         Jason.gameObject.SetActive(false);
         ImageOfJason.gameObject.SetActive(false);
         JasonSpeech3.gameObject.SetActive(false);
+        ThirdBlock.SetActive(true);
         response3.gameObject.SetActive(true);
         response11.gameObject.SetActive(true);
         response12.gameObject.SetActive(true);
@@ -640,6 +647,7 @@ public class Scene6TextManager : MonoBehaviour
     {
         
         JasonSpeech3.gameObject.SetActive(false);
+        ThirdBlock.SetActive(false);
         response3.gameObject.SetActive(false);
         response11.gameObject.SetActive(false);
         response12.gameObject.SetActive(false);
@@ -657,6 +665,7 @@ public class Scene6TextManager : MonoBehaviour
     {
      
         JasonSpeech3.gameObject.SetActive(false);
+        ThirdBlock.SetActive(false);
         response3.gameObject.SetActive(false);
         response11.gameObject.SetActive(false);
         response12.gameObject.SetActive(false);
@@ -674,6 +683,7 @@ public class Scene6TextManager : MonoBehaviour
     {
       
         JasonSpeech3.gameObject.SetActive(false);
+        ThirdBlock.SetActive(false);
         response3.gameObject.SetActive(false);
         response11.gameObject.SetActive(false);
         response12.gameObject.SetActive(false);
@@ -737,6 +747,7 @@ public class Scene6TextManager : MonoBehaviour
         JasonSpeech6.gameObject.SetActive(false);
         Jason.gameObject.SetActive(false);
         ImageOfJason.gameObject.SetActive(false);
+        FourthBlock.SetActive(true);
         response4.gameObject.SetActive(true);
         response13.gameObject.SetActive(true);
         response14.gameObject.SetActive(true);
@@ -754,7 +765,7 @@ public class Scene6TextManager : MonoBehaviour
     void ShowResponse4()
     {
         JasonSpeech6.gameObject.SetActive(false);
-        
+        FourthBlock.SetActive(false);
         response4.gameObject.SetActive(false);
         response13.gameObject.SetActive(false);
         response14.gameObject.SetActive(false);
@@ -766,7 +777,7 @@ public class Scene6TextManager : MonoBehaviour
     void ShowResponse13()
     {
         JasonSpeech6.gameObject.SetActive(false);
-     
+        FourthBlock.SetActive(false);
         response4.gameObject.SetActive(false);
         response13.gameObject.SetActive(false);
         response14.gameObject.SetActive(false);
@@ -779,7 +790,7 @@ public class Scene6TextManager : MonoBehaviour
     void ShowResponse14()
     {
         JasonSpeech6.gameObject.SetActive(false);
-        
+        FourthBlock.SetActive(false);
         response4.gameObject.SetActive(false);
         response13.gameObject.SetActive(false);
         response14.gameObject.SetActive(false);
@@ -826,6 +837,7 @@ public class Scene6TextManager : MonoBehaviour
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieNeutral;
+        FifthBlock.SetActive(true);
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
         Handheld.Vibrate();
@@ -834,6 +846,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse5()
     {
+        FifthBlock.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
@@ -851,7 +864,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse6()
     {
-        
+        FifthBlock.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
