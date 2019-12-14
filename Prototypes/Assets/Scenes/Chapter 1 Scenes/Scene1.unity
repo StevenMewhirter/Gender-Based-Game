@@ -5736,7 +5736,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 56d24de265e10ff49a0328ca38eeba2e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5f01449ae2d23b744b1a01bc3e02093b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -7318,7 +7318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462516047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 88, y: -476, z: -182.2609}
+  m_LocalPosition: {x: 88, y: -335, z: -182.2609}
   m_LocalScale: {x: 1.4465151, y: 1.4465151, z: 1.4465151}
   m_Children:
   - {fileID: 196217767}
@@ -9792,12 +9792,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -12.5
       objectReference: {fileID: 0}
-    - target: {fileID: 3626757338825609528, guid: 82a933ee59bf78c4f82f407e7ae6f35b,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a3ef57e2497d99a48b41c51c8a728011,
-        type: 3}
     - target: {fileID: 3626757340624686282, guid: 82a933ee59bf78c4f82f407e7ae6f35b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -9818,6 +9812,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -166.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3626757338825609528, guid: 82a933ee59bf78c4f82f407e7ae6f35b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a3ef57e2497d99a48b41c51c8a728011,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82a933ee59bf78c4f82f407e7ae6f35b, type: 3}
 --- !u!224 &1952337249 stripped
@@ -10441,6 +10441,7 @@ MonoBehaviour:
   NotificationMessage: {fileID: 1935089812}
   Options: {fileID: 2114910773}
   chatContainer: {fileID: 1462516047}
+  choiceContainerForMessage: {fileID: 1984180071}
   KatieResp1: {fileID: 348989348}
   KatieResp2: {fileID: 162594333}
   KatieResp3: {fileID: 1846136944}
@@ -11465,11 +11466,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.6913167
       objectReference: {fileID: 0}
-    - target: {fileID: 5784572874160616773, guid: 52002024fde4b2741b1fcbb89827f55e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5784572874160616775, guid: 52002024fde4b2741b1fcbb89827f55e,
         type: 3}
       propertyPath: m_Text
@@ -11494,6 +11490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.a
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784572874160616773, guid: 52002024fde4b2741b1fcbb89827f55e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5784572874160616769, guid: 52002024fde4b2741b1fcbb89827f55e, type: 3}

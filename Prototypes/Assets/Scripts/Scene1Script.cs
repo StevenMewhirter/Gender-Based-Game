@@ -56,6 +56,7 @@ public class Scene1Script : MonoBehaviour
     public Button Options;
 
     public GameObject chatContainer;
+    public GameObject choiceContainerForMessage;
 
     public Button KatieResp1;
     public Button KatieResp2;
@@ -114,7 +115,8 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
 
-       
+        choiceContainerForMessage.SetActive(false);
+
         ThoughtBubble1.gameObject.SetActive(false);
 
         ThoughtBubble2.gameObject.SetActive(false);
@@ -304,7 +306,8 @@ public class Scene1Script : MonoBehaviour
         //RobinSpeech2.gameObject.SetActive(false);
         //RobinSpeech1.gameObject.SetActive(false);
         //KatieSpeech1.gameObject.SetActive(false);
-        chatContainer.transform.position += new Vector3(0, 100, 0);
+        KatieSpeech1.gameObject.SetActive(false);
+        chatContainer.transform.position += new Vector3(0, 50, 0);
     }
 
     void RobinReply3()
@@ -315,8 +318,8 @@ public class Scene1Script : MonoBehaviour
         Phone.gameObject.SetActive(true);
        // RobinName.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(true);
-        KatieSpeech1.gameObject.SetActive(false);
-        chatContainer.transform.position += new Vector3(0, 100, 0);
+        
+        chatContainer.transform.position += new Vector3(0, 50, 0);
 
     }
 
@@ -373,6 +376,7 @@ public class Scene1Script : MonoBehaviour
         
         //Katie's fourth speech bubble appears on screen saying "I got the job! I am telling everyone" -SD
         Phone.gameObject.SetActive(false);
+        
         //EmailName.gameObject.SetActive(false);
         //EmailText4.gameObject.SetActive(false);
         EmailText5.gameObject.SetActive(false);
@@ -389,6 +393,7 @@ public class Scene1Script : MonoBehaviour
     void Choice1()
     {
         //the choice buttons will appear on screen prompting the user to pick between them
+        choiceContainerForMessage.SetActive(true);
         KatieSpeech4.gameObject.SetActive(false);
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
