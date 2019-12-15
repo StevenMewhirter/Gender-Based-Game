@@ -2532,7 +2532,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303480026}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 0e48bdc5bb0641f43b902833a6db9434, type: 2}
   m_CullingMode: 0
@@ -3564,7 +3564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 14.3, y: -28.3}
+  m_AnchoredPosition: {x: 14.299988, y: -28.300003}
   m_SizeDelta: {x: -328.6, y: -293.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &408420527
@@ -7174,7 +7174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20, y: -25.575008}
+  m_AnchoredPosition: {x: 20, y: -57}
   m_SizeDelta: {x: -310, y: -298.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &809903522
@@ -8216,7 +8216,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958784402}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: af6ce0faa25c30e48b1b12cb3b11f2f2, type: 2}
   m_CullingMode: 0
@@ -10342,7 +10342,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325031694}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 6e0768ed3b29afb42bd1b17f18cc8deb, type: 2}
   m_CullingMode: 0
@@ -12798,7 +12798,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684495099}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: df4259576189f054a9a0e9b96041951b, type: 2}
   m_CullingMode: 0
@@ -14339,7 +14339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -61.8, y: -36}
+  m_AnchoredPosition: {x: -38, y: -92}
   m_SizeDelta: {x: -312.7, y: -277.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1973284401
@@ -15150,7 +15150,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139116893}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d1b36d891008cc244af2c53264b61fa2, type: 2}
   m_CullingMode: 0
