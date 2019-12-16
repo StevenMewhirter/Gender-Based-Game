@@ -41,6 +41,7 @@ public class Scene1Script : MonoBehaviour
     public Button ThoughtBubble3;
     public Button ThoughtBubble4;
 
+    public int moveUp = 100;
     //declares all the buttons for the email text -SD
     //public Button EmailText1;
     //public Button EmailText2;
@@ -272,7 +273,9 @@ public class Scene1Script : MonoBehaviour
        // KatieSpeech1.gameObject.SetActive(false);
         
         RobinSpeech1.gameObject.SetActive(true);
-        chatContainer.transform.position += new Vector3(0, 100, 0);
+        KatieSpeech1.interactable = false;
+        // chatContainer.transform.position += new Vector3(0, 100, 0);
+        //moveMessagesUp(100);
     }
 
     void KSpeech2()
@@ -281,7 +284,8 @@ public class Scene1Script : MonoBehaviour
 
 
         KatieSpeech2.gameObject.SetActive(true);
-        chatContainer.transform.position += new Vector3(0, 100, 0);
+        RobinSpeech1.interactable = false;
+       // moveMessagesUp(50);
     }
 
     void RobinReply2()
@@ -291,7 +295,8 @@ public class Scene1Script : MonoBehaviour
 
         
         RobinSpeech2.gameObject.SetActive(true);
-        chatContainer.transform.position += new Vector3(0, 100, 0);
+        KatieSpeech2.interactable = false;
+        //moveMessagesUp(100);
 
     }
 
@@ -301,13 +306,13 @@ public class Scene1Script : MonoBehaviour
         
    
         KatieSpeech3.gameObject.SetActive(true);
-
+        RobinSpeech2.interactable = false;
         //KatieSpeech2.gameObject.SetActive(false);
         //RobinSpeech2.gameObject.SetActive(false);
         //RobinSpeech1.gameObject.SetActive(false);
         //KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech1.gameObject.SetActive(false);
-        chatContainer.transform.position += new Vector3(0, 50, 0);
+        //moveMessagesUp(100);
     }
 
     void RobinReply3()
@@ -318,8 +323,8 @@ public class Scene1Script : MonoBehaviour
         Phone.gameObject.SetActive(true);
        // RobinName.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(true);
-        
-        chatContainer.transform.position += new Vector3(0, 50, 0);
+        KatieSpeech3.interactable = false;
+        moveMessagesUp(100);
 
     }
 
@@ -563,5 +568,10 @@ public class Scene1Script : MonoBehaviour
     {
         yield return new WaitForSeconds(0.7f);
         KatieSpeech1.gameObject.SetActive(true);
+    }
+
+    public void moveMessagesUp(float boxHeight)
+    {
+        chatContainer.transform.position += new Vector3(0, boxHeight, 0);
     }
 }
