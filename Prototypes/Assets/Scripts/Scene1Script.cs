@@ -13,6 +13,8 @@ public class Scene1Script : MonoBehaviour
     bool notif = false;
 
     //declares all the buttons for the player's choices -SD
+    public GameObject firstblock;
+    public GameObject secondblock;
     public Button response1;
     public Button response2;
     public Button response3;
@@ -41,7 +43,7 @@ public class Scene1Script : MonoBehaviour
     public Button ThoughtBubble3;
     public Button ThoughtBubble4;
 
-    public int moveUp = 100;
+    //public int moveUp = 150;
     //declares all the buttons for the email text -SD
     //public Button EmailText1;
     //public Button EmailText2;
@@ -88,6 +90,8 @@ public class Scene1Script : MonoBehaviour
         StartCoroutine(introPanel()); //start panel timer (to make it disappear)
 
         //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
+        firstblock.gameObject.SetActive(false);
+        secondblock.gameObject.SetActive(false);
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -324,7 +328,7 @@ public class Scene1Script : MonoBehaviour
        // RobinName.gameObject.SetActive(true);
         RobinSpeech3.gameObject.SetActive(true);
         KatieSpeech3.interactable = false;
-        moveMessagesUp(100);
+        moveMessagesUp(150);
 
     }
 
@@ -400,6 +404,7 @@ public class Scene1Script : MonoBehaviour
         //the choice buttons will appear on screen prompting the user to pick between them
         choiceContainerForMessage.SetActive(true);
         KatieSpeech4.gameObject.SetActive(false);
+        
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
         transparentResponse.gameObject.SetActive(true);
@@ -408,6 +413,7 @@ public class Scene1Script : MonoBehaviour
 
     void KatieResponse1()
     {
+        
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
@@ -415,8 +421,8 @@ public class Scene1Script : MonoBehaviour
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         //RobinName.gameObject.SetActive(true);
-        KatieResp1.gameObject.SetActive(true);
 
+        StartCoroutine(KatieMessage2());
 
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
@@ -429,7 +435,8 @@ public class Scene1Script : MonoBehaviour
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
         //RobinName.gameObject.SetActive(true);
-        KatieResp2.gameObject.SetActive(true);
+        StartCoroutine(KatieMessage3());
+        
         ImageOfKatie.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         RobinSpeech5.gameObject.SetActive(false);
@@ -447,7 +454,7 @@ public class Scene1Script : MonoBehaviour
 
         RobinSpeech5.gameObject.SetActive(false);
         RobinSpeech6.gameObject.SetActive(false);
-
+        firstblock.gameObject.SetActive(true);
         response3.gameObject.SetActive(true);
         response4.gameObject.SetActive(true);
 
@@ -456,6 +463,7 @@ public class Scene1Script : MonoBehaviour
 
     void KatieResponse3()
     {
+        firstblock.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
         response4.gameObject.SetActive(false);
 
@@ -477,6 +485,7 @@ public class Scene1Script : MonoBehaviour
        // KatieResp4.gameObject.SetActive(false);
 
         RobinSpeech5.gameObject.SetActive(true);
+        secondblock.gameObject.SetActive(true);
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
 
@@ -488,6 +497,7 @@ public class Scene1Script : MonoBehaviour
 
     void KatieResponse5()
     {
+        secondblock.gameObject.SetActive(false);
         response5.gameObject.SetActive(false);
         response6.gameObject.SetActive(false);
 
@@ -569,6 +579,18 @@ public class Scene1Script : MonoBehaviour
         yield return new WaitForSeconds(0.7f);
         KatieSpeech1.gameObject.SetActive(true);
     }
+
+    IEnumerator KatieMessage2()
+    {
+        yield return new WaitForSeconds(0.7f);
+        KatieResp1.gameObject.SetActive(true);
+    }
+    IEnumerator KatieMessage3()
+    {
+        yield return new WaitForSeconds(0.7f);
+        KatieResp2.gameObject.SetActive(true);
+    }
+    
 
     public void moveMessagesUp(float boxHeight)
     {
