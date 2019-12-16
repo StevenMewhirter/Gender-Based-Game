@@ -9033,7 +9033,7 @@ MonoBehaviour:
   KatieResp5: {fileID: 1376634262}
   KatieResp6: {fileID: 2028079492}
   KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
-  KatieHappy: {fileID: 2800000, guid: 6c163e1967990694c901014831d07eca, type: 3}
+  KatieHappy: {fileID: 2800000, guid: 1c93f6da89abb7c49a4a452ed6b5982b, type: 3}
   ImageOfKatie: {fileID: 1470820250}
   MC: {fileID: 1470820252}
   Phone: {fileID: 1209733575}
