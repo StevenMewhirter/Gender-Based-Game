@@ -12,7 +12,7 @@ public class Scene6TextManager : MonoBehaviour
     public Button BossSpeech2;//Text box to hold text
     public Button BossSpeech3;
 
-    public GameObject FirstBlock;
+    //public GameObject FirstBlock;
     public Button response1;
     public Button response2;
     public Button response3;
@@ -158,7 +158,7 @@ public class Scene6TextManager : MonoBehaviour
         JasonAndKatieSpeech.gameObject.SetActive(false);
         CoworkerSpeech.gameObject.SetActive(false);
 
-        FirstBlock.SetActive(false);
+        //FirstBlock.SetActive(false);
         ShowChoice1.gameObject.SetActive(false);
         ShowChoice2.gameObject.SetActive(false);
         ShowChoice3.gameObject.SetActive(false);
@@ -367,7 +367,7 @@ public class Scene6TextManager : MonoBehaviour
         Jason.gameObject.SetActive(false);
         ImageOfJason.gameObject.SetActive(false);
         JasonSpeech1.gameObject.SetActive(false);
-        FirstBlock.SetActive(true);
+       // FirstBlock.SetActive(true);
         response1.gameObject.SetActive(true);
         response7.gameObject.SetActive(true);
         response8.gameObject.SetActive(true);
@@ -378,7 +378,7 @@ public class Scene6TextManager : MonoBehaviour
     void ShowResponse1()
     {
 
-        FirstBlock.SetActive(false);
+       // FirstBlock.SetActive(false);
         response1.gameObject.SetActive(false);
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
@@ -389,7 +389,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse7()
     {
-        FirstBlock.SetActive(false);
+       // FirstBlock.SetActive(false);
         response1.gameObject.SetActive(false);
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
@@ -400,7 +400,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse8()
     {
-        FirstBlock.SetActive(false);
+       // FirstBlock.SetActive(false);
         response1.gameObject.SetActive(false);
         response7.gameObject.SetActive(false);
         response8.gameObject.SetActive(false);
