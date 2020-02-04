@@ -12,6 +12,12 @@ public class Scene1Script : MonoBehaviour
 
     bool notif = false;
 
+    public Button NoteActivator;
+    public Button Note;
+    public Button level2; 
+    public Button Frame;
+    public Button photo;
+
     //declares all the buttons for the player's choices -SD
     public GameObject firstblock;
     public GameObject secondblock;
@@ -128,6 +134,11 @@ public class Scene1Script : MonoBehaviour
         ThoughtBubble3.gameObject.SetActive(false);
         ThoughtBubble4.gameObject.SetActive(false);
 
+        NoteActivator.gameObject.SetActive(false);
+        Note.gameObject.SetActive(false);
+        level2.gameObject.SetActive(false);
+        Frame.gameObject.SetActive(false);
+        photo.gameObject.SetActive(false);
         NotificationRed.SetActive(false);
         NotificationMessage.SetActive(false);
 
@@ -151,6 +162,8 @@ public class Scene1Script : MonoBehaviour
         t2.onClick.AddListener(TB3);
         Button t3 = ThoughtBubble3.GetComponent<Button>();
         t3.onClick.AddListener(MesNotif);
+        Button t4 = ThoughtBubble4.GetComponent<Button>();
+        t4.onClick.AddListener(Interactibles);
 
         Button mes = Messages.GetComponent<Button>();
         mes.onClick.AddListener(KSpeech1);
@@ -210,6 +223,16 @@ public class Scene1Script : MonoBehaviour
         RS6.onClick.AddListener(KSpeech5);
         Button KS5 = KatieSpeech5.GetComponent<Button>();
         KS5.onClick.AddListener(TB4);
+
+        Button n1 = NoteActivator.GetComponent<Button>();
+        n1.onClick.AddListener(Read);
+        Button n2 = Note.GetComponent<Button>();
+        n2.onClick.AddListener(Interactibles);
+
+        Button p1 = Frame.GetComponent<Button>();
+        p1.onClick.AddListener(viewPhoto);
+        Button p2 = photo.GetComponent<Button>();
+        p2.onClick.AddListener(Interactibles);
 
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
@@ -566,6 +589,39 @@ public class Scene1Script : MonoBehaviour
 
         MC.texture = (Texture)KatieHappy;
     }
+
+    void Interactibles()
+    {
+        Frame.gameObject.SetActive(true);
+        NoteActivator.gameObject.SetActive(true);
+        level2.gameObject.SetActive(true);
+        photo.gameObject.SetActive(false);
+        Note.gameObject.SetActive(false);
+        transparentResponse.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        ThoughtBubble4.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
+    }
+
+    void Read()
+    {
+        Frame.gameObject.SetActive(false);
+        NoteActivator.gameObject.SetActive(false);
+        Note.gameObject.SetActive(true);
+        level2.gameObject.SetActive(false);
+    }
+
+
+
+    void viewPhoto()
+    {
+        Frame.gameObject.SetActive(false);
+        NoteActivator.gameObject.SetActive(false);
+        photo.gameObject.SetActive(true);
+        level2.gameObject.SetActive(false);
+    }
+
+
 
     IEnumerator introPanel() //panel timer
     {
