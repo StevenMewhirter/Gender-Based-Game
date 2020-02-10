@@ -9985,35 +9985,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introScreen: {fileID: 540777387}
   introImage: {fileID: 1749347622}
-  NoteActivator: {fileID: 1946559987}
-  Note: {fileID: 1030426043}
+  PlayerResponses:
+  - {fileID: 266000830}
+  - {fileID: 1348387836}
+  - {fileID: 173696926}
+  - {fileID: 312246588}
+  - {fileID: 321436114}
+  - {fileID: 2087140693}
+  Interactive:
+  - {fileID: 1946559987}
+  - {fileID: 1030426043}
+  - {fileID: 740973294}
+  - {fileID: 1150168788}
+  KatieSpeech:
+  - {fileID: 196217768}
+  - {fileID: 1492966322}
+  - {fileID: 1245498032}
+  - {fileID: 473887935}
+  - {fileID: 1959405584}
+  RobinSpeech:
+  - {fileID: 1901829159}
+  - {fileID: 207922005}
+  - {fileID: 143050127}
+  - {fileID: 481743679}
+  - {fileID: 1834336139}
+  - {fileID: 1174732646}
+  ThoughtBubbles:
+  - {fileID: 1952337250}
+  - {fileID: 1585566980}
+  - {fileID: 1381147326}
+  - {fileID: 2106732156}
+  KatieResponses:
+  - {fileID: 348989348}
+  - {fileID: 162594333}
+  - {fileID: 1846136944}
+  - {fileID: 2143041106}
+  - {fileID: 1376634262}
+  - {fileID: 2028079492}
+  EmailResponses:
+  - {fileID: 534373956}
   level2: {fileID: 960650001}
-  Frame: {fileID: 740973294}
-  photo: {fileID: 1150168788}
   firstblock: {fileID: 1544095300}
   secondblock: {fileID: 69526035}
-  response1: {fileID: 266000830}
-  response2: {fileID: 1348387836}
-  response3: {fileID: 173696926}
-  response4: {fileID: 312246588}
-  response5: {fileID: 321436114}
-  response6: {fileID: 2087140693}
-  KatieSpeech1: {fileID: 196217768}
-  KatieSpeech2: {fileID: 1492966322}
-  KatieSpeech3: {fileID: 1245498032}
-  KatieSpeech4: {fileID: 473887935}
-  KatieSpeech5: {fileID: 1959405584}
-  RobinSpeech1: {fileID: 1901829159}
-  RobinSpeech2: {fileID: 207922005}
-  RobinSpeech3: {fileID: 143050127}
-  RobinSpeech4: {fileID: 481743679}
-  RobinSpeech5: {fileID: 1834336139}
-  RobinSpeech6: {fileID: 1174732646}
-  ThoughtBubble1: {fileID: 1952337250}
-  ThoughtBubble2: {fileID: 1585566980}
-  ThoughtBubble3: {fileID: 1381147326}
-  ThoughtBubble4: {fileID: 2106732156}
-  EmailText5: {fileID: 534373956}
   Email: {fileID: 651271376}
   SocialMedia: {fileID: 333920408}
   Messages: {fileID: 132224999}
@@ -10022,12 +10035,6 @@ MonoBehaviour:
   Options: {fileID: 2114910773}
   chatContainer: {fileID: 1462516047}
   choiceContainerForMessage: {fileID: 1984180071}
-  KatieResp1: {fileID: 348989348}
-  KatieResp2: {fileID: 162594333}
-  KatieResp3: {fileID: 1846136944}
-  KatieResp4: {fileID: 2143041106}
-  KatieResp5: {fileID: 1376634262}
-  KatieResp6: {fileID: 2028079492}
   KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
   KatieHappy: {fileID: 2800000, guid: 1c93f6da89abb7c49a4a452ed6b5982b, type: 3}
   ImageOfKatie: {fileID: 1470820250}
