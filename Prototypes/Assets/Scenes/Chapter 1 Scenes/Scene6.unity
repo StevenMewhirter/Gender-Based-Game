@@ -1197,76 +1197,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db8c81b370c372b4096cb5d3973e8ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossSpeech1: {fileID: 624710907}
-  BossSpeech2: {fileID: 1199525895}
-  BossSpeech3: {fileID: 431866722}
-  response1: {fileID: 1691366219}
-  response2: {fileID: 766457177}
-  response3: {fileID: 753703527}
-  SecondBlock: {fileID: 1325031694}
-  response4: {fileID: 216306681}
-  response5: {fileID: 1835483305}
-  response6: {fileID: 370469773}
-  ThirdBlock: {fileID: 303480026}
-  response7: {fileID: 1039230266}
-  response8: {fileID: 719145795}
-  response9: {fileID: 2086810021}
-  FourthBlock: {fileID: 1684495099}
-  response10: {fileID: 558380192}
-  response11: {fileID: 1222219032}
-  response12: {fileID: 758419045}
-  FifthBlock: {fileID: 958784402}
-  response13: {fileID: 1374267547}
-  response14: {fileID: 737862776}
-  ShowChoice1: {fileID: 894936874}
-  ShowChoice2: {fileID: 1980103642}
-  ShowChoice3: {fileID: 980575953}
-  ShowChoice4: {fileID: 2054025091}
-  ShowChoice5: {fileID: 600118286}
-  ShowChoice6: {fileID: 43885448}
-  ShowChoice7: {fileID: 606231808}
-  ShowChoice8: {fileID: 188214264}
-  ShowChoice9: {fileID: 1976222628}
-  ShowChoice10: {fileID: 1162537307}
-  ShowChoice11: {fileID: 916051778}
-  ShowChoice12: {fileID: 706923689}
-  ShowChoice13: {fileID: 676056074}
-  ShowChoice14: {fileID: 1562265120}
-  JasonSpeech1: {fileID: 1630757625}
-  JasonSpeech2: {fileID: 1621978454}
-  JasonSpeech3: {fileID: 1934325882}
-  JasonSpeech4: {fileID: 1298511061}
-  JasonSpeech5: {fileID: 271651751}
-  JasonSpeech6: {fileID: 769442323}
-  JasonSpeech7: {fileID: 1100928665}
-  KatieSpeech1: {fileID: 1457982488}
-  KatieSpeech2: {fileID: 1412158089}
-  KatieSpeech3: {fileID: 368051413}
-  KatieSpeech4: {fileID: 708113210}
+  AminaSpeech:
+  - {fileID: 624710907}
+  - {fileID: 1199525895}
+  - {fileID: 431866722}
+  CoWorkersSpeech:
+  - {fileID: 1414010090}
+  - {fileID: 1261022278}
+  - {fileID: 330524115}
+  JasonSpeech:
+  - {fileID: 1630757625}
+  - {fileID: 1621978454}
+  - {fileID: 1934325882}
+  - {fileID: 1298511061}
+  - {fileID: 271651751}
+  - {fileID: 769442323}
+  - {fileID: 1100928665}
+  KatieSpeech:
+  - {fileID: 1457982488}
+  - {fileID: 1412158089}
+  - {fileID: 368051413}
+  - {fileID: 708113210}
+  Responses:
+  - {fileID: 1691366219}
+  - {fileID: 766457177}
+  - {fileID: 753703527}
+  - {fileID: 216306681}
+  - {fileID: 1835483305}
+  - {fileID: 370469773}
+  - {fileID: 1039230266}
+  - {fileID: 719145795}
+  - {fileID: 2086810021}
+  - {fileID: 558380192}
+  - {fileID: 1222219032}
+  - {fileID: 758419045}
+  - {fileID: 1374267547}
+  - {fileID: 737862776}
   RobinSpeech1: {fileID: 1595656587}
-  RichardSpeech1: {fileID: 81487149}
-  RichardSpeech2: {fileID: 680931486}
-  RichardandAminaSpeech: {fileID: 1261022278}
-  JasonAndKatieSpeech: {fileID: 330524115}
-  CoworkerSpeech: {fileID: 1414010090}
+  RichardSpeech:
+  - {fileID: 81487149}
+  - {fileID: 680931486}
+  Social:
+  - {fileID: 271438260}
+  - {fileID: 1254920201}
+  - {fileID: 1796856784}
+  - {fileID: 4982514}
+  ShowChoices:
+  - {fileID: 894936874}
+  - {fileID: 1980103642}
+  - {fileID: 980575953}
+  - {fileID: 2054025091}
+  - {fileID: 600118286}
+  - {fileID: 43885448}
+  - {fileID: 606231808}
+  - {fileID: 188214264}
+  - {fileID: 1976222628}
+  - {fileID: 1162537307}
+  - {fileID: 916051778}
+  - {fileID: 706923689}
+  - {fileID: 676056074}
+  - {fileID: 1562265120}
   WaiterSpeech: {fileID: 745464517}
-  KatieAngry: {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
-  KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
-  KatieHappy: {fileID: 2800000, guid: 6c163e1967990694c901014831d07eca, type: 3}
-  ImageOfKatie: {fileID: 350529864}
-  AminaNeutral: {fileID: 2800000, guid: 4fadbdcb15e739a43a27079f31fe169d, type: 3}
-  AminaHappy: {fileID: 2800000, guid: 7b34be4068390fb40b26d4aae7b2104d, type: 3}
+  Blocks:
+  - {fileID: 1325031694}
+  - {fileID: 303480026}
+  - {fileID: 1684495099}
+  - {fileID: 958784402}
   ImageOfAmina: {fileID: 371421490}
-  RichardNeutral: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
-  RichardHappy: {fileID: 2800000, guid: f4d739d0140a5d2428b0b3fc0e6774ca, type: 3}
-  ImageOfRichard: {fileID: 71409276}
-  JasonNeutral: {fileID: 2800000, guid: 6cf0a7886a34a9f4c9fd11574385143e, type: 3}
-  JasonHappy: {fileID: 2800000, guid: 354bb32b3bf5c4f4d8305f09cbcb6c84, type: 3}
-  ImageOfJason: {fileID: 2042572970}
-  Bar1: {fileID: 2800000, guid: 25c09da4a241c234fbb0a6f9cb7dc079, type: 3}
-  Bar2: {fileID: 2800000, guid: 2e578b83a7288644da6ce91c1a9e7d73, type: 3}
-  Bar3: {fileID: 2800000, guid: a5148bb0f50278b4f9f383602bdbc104, type: 3}
   ImageOfBar: {fileID: 54931125}
+  ImageOfJason: {fileID: 2042572970}
+  ImageOfKatie: {fileID: 350529864}
+  ImageOfRichard: {fileID: 71409276}
+  AminaEmotions:
+  - {fileID: 2800000, guid: 4fadbdcb15e739a43a27079f31fe169d, type: 3}
+  - {fileID: 2800000, guid: 7b34be4068390fb40b26d4aae7b2104d, type: 3}
+  Bars:
+  - {fileID: 2800000, guid: 511d5399cf6469247bfca029ee78376c, type: 3}
+  - {fileID: 2800000, guid: 2a622f9e4335aba4994c1a346a7b5bda, type: 3}
+  - {fileID: 2800000, guid: 40bb0d497b3409a43acf2d61b1ceaf7c, type: 3}
+  JasonEmotions:
+  - {fileID: 2800000, guid: 354bb32b3bf5c4f4d8305f09cbcb6c84, type: 3}
+  - {fileID: 2800000, guid: 6cf0a7886a34a9f4c9fd11574385143e, type: 3}
+  KatieEmotions:
+  - {fileID: 2800000, guid: 1c93f6da89abb7c49a4a452ed6b5982b, type: 3}
+  - {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
+  - {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
+  RichardEmotions:
+  - {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
+  - {fileID: 2800000, guid: f4d739d0140a5d2428b0b3fc0e6774ca, type: 3}
   MC: {fileID: 350529866}
   Amina: {fileID: 371421492}
   Richard: {fileID: 71409278}
@@ -1275,10 +1293,6 @@ MonoBehaviour:
   BottomBackground: {fileID: 1813963492}
   Phone: {fileID: 460546246}
   EndScreen: {fileID: 1443010128}
-  Email: {fileID: 271438260}
-  SocialMedia: {fileID: 1796856784}
-  Messages: {fileID: 1254920201}
-  Options: {fileID: 4982514}
   messagesContainer: {fileID: 141451906}
   KatieAnimator: {fileID: 835101151}
   RichardAnimator: {fileID: 362893867}
