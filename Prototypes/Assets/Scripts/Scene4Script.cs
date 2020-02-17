@@ -6,6 +6,10 @@ using UnityEngine.EventSystems;
 
 public class Scene4Script : MonoBehaviour
 {
+    public DiaryTexts transitionScreen;
+    public Button transitionImage;
+    bool canClick = false;
+
     //Changing of textures to convey emotions for katie
     public Texture KatieSad;
     public Texture KatieAngry;
@@ -96,9 +100,14 @@ public class Scene4Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        StartCoroutine(transitionPanel());
+
+        Button Transition = transitionImage.GetComponent<Button>();
+        Transition.onClick.AddListener(Starting);
+
         Boss.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(false);
+        KatieSpeech1.gameObject.SetActive(false);
         KatieSpeech2.gameObject.SetActive(false);
         KatieSpeech3.gameObject.SetActive(false);
         KatieSpeech4.gameObject.SetActive(false);
@@ -214,6 +223,13 @@ public class Scene4Script : MonoBehaviour
         
         KatieAnimator.SetBool("KatieNeutral", true);
     }
+
+    void Starting()
+    {
+        KatieSpeech1.gameObject.SetActive(true);
+        transitionScreen.gameObject.SetActive(false);
+    }
+
     void KSpeech1()
     {
         KatieSpeech1.gameObject.SetActive(false);
@@ -535,6 +551,12 @@ public class Scene4Script : MonoBehaviour
         CoWorker.gameObject.SetActive(false);
         Background.SetBool("SlideToOther", false);
         KatieAnimator.SetBool("KatieNeutral", true);
+    }
+
+    IEnumerator transitionPanel() //panel timer
+    {
+        yield return new WaitForSeconds(1f);
+        canClick = true;
     }
 }
 

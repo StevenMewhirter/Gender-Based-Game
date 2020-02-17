@@ -3012,7 +3012,7 @@ PrefabInstance:
     - target: {fileID: 1419265437138363023, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: fullText
-      value: Robin has been helping me get around alot this week, she is great! I
+      value: Robin has been helping me get around a lot this week, she is great! I
         couldn't ask for a better friend.
       objectReference: {fileID: 0}
     - target: {fileID: 1419265436415440997, guid: 1a870dc3794876f46ac97abcbb857c66,
@@ -3028,7 +3028,7 @@ PrefabInstance:
     - target: {fileID: 1419265436415440996, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: fullText
-      value: 'I just wish I got a proper project at some point to prove myself. '
+      value: 'I just wish I get a proper project at some point to prove myself. '
       objectReference: {fileID: 0}
     - target: {fileID: 1419265437066608153, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
