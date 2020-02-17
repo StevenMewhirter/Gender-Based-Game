@@ -4127,6 +4127,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045007748}
   m_CullTransparentMesh: 0
+--- !u!114 &1054677646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 873370192910357955, guid: 04527fd1ad00ac94690f7a8b18358201,
+    type: 3}
+  m_PrefabInstance: {fileID: 716838208306362890}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1066331530
 GameObject:
   m_ObjectHideFlags: 0
@@ -9830,6 +9842,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 716838207772991905, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: date
+      value: 
+      objectReference: {fileID: 1054677646}
     - target: {fileID: 716838208460970660, guid: 04527fd1ad00ac94690f7a8b18358201,
         type: 3}
       propertyPath: m_Controller
@@ -9855,6 +9872,52 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f817dade2be065a46906923706791fbd, type: 2}
+    - target: {fileID: 716838208460970663, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 716838206887268344, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 716838207837761481, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 716838208558593316, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 716838207901135704, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 716838207579174053, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 716838206565504809, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 716838208558593317, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: fullText
+      value: Another month without a job and I will have to go back to my parents
+        :(
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466459318518875956, guid: 04527fd1ad00ac94690f7a8b18358201,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04527fd1ad00ac94690f7a8b18358201, type: 3}
 --- !u!1001 &5784572874809603556
