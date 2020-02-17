@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DiaryTexts : MonoBehaviour
 {
+    public TypeWriting date;
     public TypeWriting dear;
     public TypeWriting main;
     public TypeWriting main1;
@@ -13,6 +14,7 @@ public class DiaryTexts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        date.gameObject.SetActive(false);
         dear.gameObject.SetActive(false);
         main.gameObject.SetActive(false);
         main1.gameObject.SetActive(false);
@@ -32,6 +34,8 @@ public class DiaryTexts : MonoBehaviour
     IEnumerator waitForZoom()
     {
         yield return new WaitForSeconds(4f);
+        date.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
         dear.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f);
         main.gameObject.SetActive(true);

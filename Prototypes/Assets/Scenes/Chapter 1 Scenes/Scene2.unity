@@ -5030,6 +5030,119 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091601888}
   m_CullTransparentMesh: 0
+--- !u!1 &1129337004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129337005}
+  - component: {fileID: 1129337009}
+  - component: {fileID: 1129337008}
+  - component: {fileID: 1129337007}
+  - component: {fileID: 1129337006}
+  m_Layer: 5
+  m_Name: Date
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1129337005
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129337004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 716838208035383666}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 123.1, y: 226.1}
+  m_SizeDelta: {x: 171.7, y: 46.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1129337006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129337004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: March, 25th
+--- !u!95 &1129337007
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129337004}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1129337008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129337004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.009433985, g: 0.009389485, b: 0.009389485, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a3a05f1a51034794a809e36471719740, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1.5
+  m_Text: '
+
+'
+--- !u!222 &1129337009
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129337004}
+  m_CullTransparentMesh: 0
 --- !u!1 &1171855487
 GameObject:
   m_ObjectHideFlags: 0
@@ -10844,6 +10957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ea693ccdf99e964098df619d277fd39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transitionScreen: {fileID: 716838208035383678}
+  transitionImage: {fileID: 716838206823145459}
   KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
   KatieAngry: {fileID: 2800000, guid: 03ec64b0a62b719469aea135cf54400d, type: 3}
   KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
@@ -10976,7 +11091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: 'Still waiting for an answer from the interview last week... '
+  fullText: I can't believe that I actually got the job!!
 --- !u!1 &716838206605969188
 GameObject:
   m_ObjectHideFlags: 0
@@ -11028,11 +11143,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716838208035383666}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 145}
+  m_AnchoredPosition: {x: 14, y: 97}
   m_SizeDelta: {x: 353.2, y: 106.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716838206750574592
@@ -11199,7 +11314,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716838208035383666}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11329,8 +11444,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: 'Robin says everything is going to be alright, but I am really stressing
-    out... '
+  fullText: I am more excited than ever and can't wait to start this new chapter in
+    my life.
 --- !u!222 &716838207563769618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11383,11 +11498,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716838208035383666}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.999992, y: 38.50003}
+  m_AnchoredPosition: {x: 13.999994, y: 18.999985}
   m_SizeDelta: {x: 353.2, y: 106.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &716838207563769623
@@ -11462,7 +11577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: Sincerely, me
+  fullText: Katie
 --- !u!1 &716838207635012484
 GameObject:
   m_ObjectHideFlags: 0
@@ -11514,11 +11629,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716838208035383666}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7, y: -163}
+  m_AnchoredPosition: {x: 12.000002, y: -211.00002}
   m_SizeDelta: {x: 353.2, y: 69.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &716838207860505700
@@ -11569,7 +11684,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716838208035383666}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11593,7 +11708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &716838208035383666
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11611,6 +11726,7 @@ RectTransform:
   - {fileID: 458461290}
   - {fileID: 1214925463}
   - {fileID: 1712230466}
+  - {fileID: 1129337005}
   - {fileID: 716838208186520184}
   - {fileID: 716838206605969191}
   - {fileID: 716838207563769622}
@@ -11640,12 +11756,12 @@ GameObject:
   - component: {fileID: 716838208035383679}
   - component: {fileID: 716838208035383678}
   m_Layer: 5
-  m_Name: IntroPanel
+  m_Name: TransitionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &716838208035383676
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11694,6 +11810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908a893f151179d4cad1cd497c7c0d8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  date: {fileID: 1129337006}
   dear: {fileID: 716838208186520164}
   main: {fileID: 716838206605969187}
   main1: {fileID: 716838207563769617}
@@ -11751,11 +11868,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716838208035383666}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 228}
+  m_AnchoredPosition: {x: 14.000002, y: 179.99998}
   m_SizeDelta: {x: 353.2, y: 46.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &716838208186520185
@@ -11922,8 +12039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullText: Another month without a job and I will have to move back to Aberdeen!
-    :(
+  fullText: Got to get ready for my first day at the company, wish me luck xx
 --- !u!224 &716838208286178811
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11936,11 +12052,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 716838208035383666}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.000008, y: -67.999985}
+  m_AnchoredPosition: {x: 14.00001, y: -116}
   m_SizeDelta: {x: 353.2, y: 106.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &716838208571396048

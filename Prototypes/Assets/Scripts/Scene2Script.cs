@@ -8,6 +8,10 @@ using System;
 
 public class Scene2Script : MonoBehaviour
 {
+    public DiaryTexts transitionScreen;
+    public Button transitionImage;
+    bool canClick = false;
+
     public Texture KatieSad;
     public Texture KatieAngry;
     public Texture KatieNeutral;
@@ -98,7 +102,11 @@ public class Scene2Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(transitionPanel());
+
+        Button Transition = transitionImage.GetComponent<Button>();
+        Transition.onClick.AddListener(TB1);
+
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -205,6 +213,16 @@ public class Scene2Script : MonoBehaviour
         Button KS8 = KatieSpeech8.GetComponent<Button>();
         KS8.onClick.AddListener(Speech19);
         
+    }
+
+    void TB1()
+    {
+        //the first thought bubble will be displayed" -SD
+        if (canClick)
+        {
+            transitionScreen.gameObject.SetActive(false);
+            RobinSpeech1.gameObject.SetActive(true);
+        }
     }
 
     private void SceneChange()
@@ -529,5 +547,9 @@ public class Scene2Script : MonoBehaviour
         response9.gameObject.SetActive(false);
     }
 
-
+    IEnumerator transitionPanel() //panel timer
+    {
+        yield return new WaitForSeconds(1f);
+        canClick = true;
+    }
 }
