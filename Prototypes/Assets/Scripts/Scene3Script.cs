@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class Scene3Script : MonoBehaviour
 {
+    public DiaryTexts transitionScreen;
+    public Button transitionImage;
+    bool canClick = false;
+
     public RawImage MC;
     public Texture KatieHappy;
     public Texture KatieNeutral;
@@ -103,6 +107,11 @@ public class Scene3Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(transitionPanel());
+
+        Button Transition = transitionImage.GetComponent<Button>();
+        Transition.onClick.AddListener(TB1);
+
         //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
         MC.gameObject.SetActive(false);
 
@@ -200,7 +209,7 @@ public class Scene3Script : MonoBehaviour
 
         Handheld.Vibrate();
 
-        Starting();
+        //Starting();
 
     }
 
@@ -213,6 +222,16 @@ public class Scene3Script : MonoBehaviour
         
     }
 
+    void TB1()
+    {
+        //the first thought bubble will be displayed" -SD
+        if (canClick)
+        {
+            transitionScreen.gameObject.SetActive(false);
+            //RobinSpeech1.gameObject.SetActive(true);
+            Starting();
+        }
+    }
 
     void Starting()
     {
@@ -565,5 +584,11 @@ public class Scene3Script : MonoBehaviour
 
       //  Richard.gameObject.SetActive(false);
         animatorJason.SetBool("JasonNeutral", true);
+    }
+
+    IEnumerator transitionPanel() //panel timer
+    {
+        yield return new WaitForSeconds(1f);
+        canClick = true;
     }
 }
