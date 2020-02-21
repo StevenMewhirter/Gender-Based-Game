@@ -26,11 +26,10 @@ public class Scene1Script : MonoBehaviour
     private UnityAction[] KatieResponsesFunctionsToCall;
     public Button[] EmailResponses;
     private UnityAction[] EmailFunctionsToCall;
+    public Texture[] KatieEmotions;
     public Button level2;
     //declares all the buttons for the player's choices -SD
-    public GameObject firstblock;
-    public GameObject secondblock;
-    //public int moveUp = 150;
+    public GameObject[] Blocks;
     public Button Email;
     public Button SocialMedia;
     public Button Messages;
@@ -39,9 +38,6 @@ public class Scene1Script : MonoBehaviour
     public Button Options;
     public GameObject chatContainer;
     public GameObject choiceContainerForMessage;
-    //all the main raw images for the character and the phone -SD
-    public Texture KatieSad;
-    public Texture KatieHappy;
     public GameObject ImageOfKatie;
     public RawImage MC;
     public RawImage Phone;
@@ -56,8 +52,10 @@ public class Scene1Script : MonoBehaviour
         StartCoroutine(introPanel()); //start panel timer (to make it disappear)
 
         //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
-        firstblock.gameObject.SetActive(false);
-        secondblock.gameObject.SetActive(false);
+        for (int responseIndex = 0; responseIndex < Blocks.Length; ++responseIndex)
+        {
+            Blocks[responseIndex].gameObject.SetActive(false);
+        }
 
         for (int responseIndex = 0; responseIndex < Interactive.Length; ++responseIndex)
         {
@@ -170,7 +168,7 @@ public class Scene1Script : MonoBehaviour
 
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
-        MC.texture = (Texture)KatieSad;
+        MC.texture = (Texture)KatieEmotions[0];
 
         for (int responseIndex = 0; responseIndex < Interactive.Length; ++responseIndex)
         {
@@ -346,7 +344,7 @@ public class Scene1Script : MonoBehaviour
         MC.gameObject.SetActive(true);
         KatieAnimator.SetBool("KatieMove", true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieHappy;
+        MC.texture = (Texture)KatieEmotions[1];
         KatieSpeech[3].gameObject.SetActive(true);
         EmailBackground.gameObject.SetActive(false);
     }
@@ -396,7 +394,7 @@ public class Scene1Script : MonoBehaviour
         RobinSpeech[3].gameObject.SetActive(true);
         RobinSpeech[4].gameObject.SetActive(false);
         RobinSpeech[5].gameObject.SetActive(false);
-        firstblock.gameObject.SetActive(true);
+        Blocks[0].SetActive(true);
         PlayerResponses[2].gameObject.SetActive(true);
         PlayerResponses[3].gameObject.SetActive(true);
         Handheld.Vibrate();
@@ -404,7 +402,7 @@ public class Scene1Script : MonoBehaviour
 
     void KatieResponse3()
     {
-        firstblock.gameObject.SetActive(false);
+        Blocks[0].SetActive(false);
         PlayerResponses[2].gameObject.SetActive(false);
         PlayerResponses[3].gameObject.SetActive(false);
         KatieResponses[2].gameObject.SetActive(true);
@@ -421,7 +419,7 @@ public class Scene1Script : MonoBehaviour
     {
         //The phone and Robin's fifth speech bubble appears on screen saying "Well, I have a list of requests……" and the choice buttons will appear on screen prompting the user to pick between them-SD
         RobinSpeech[4].gameObject.SetActive(true);
-        secondblock.gameObject.SetActive(true);
+        Blocks[1].SetActive(true);
         PlayerResponses[4].gameObject.SetActive(true);
         PlayerResponses[5].gameObject.SetActive(true);
         Handheld.Vibrate();
@@ -429,7 +427,7 @@ public class Scene1Script : MonoBehaviour
 
     void KatieResponse5()
     {
-        secondblock.gameObject.SetActive(false);
+        Blocks[1].SetActive(false);
         PlayerResponses[4].gameObject.SetActive(false);
         PlayerResponses[5].gameObject.SetActive(false);
         KatieResponses[0].gameObject.SetActive(false);
@@ -487,7 +485,7 @@ public class Scene1Script : MonoBehaviour
         MC.gameObject.SetActive(true);
         KatieAnimator.SetBool("KatieMove", true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieHappy;
+        MC.texture = (Texture)KatieEmotions[1];
     }
 
     void Interactibles()

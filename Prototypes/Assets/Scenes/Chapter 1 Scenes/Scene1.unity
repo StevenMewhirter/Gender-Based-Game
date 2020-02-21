@@ -8977,10 +8977,14 @@ MonoBehaviour:
   - {fileID: 2028079492}
   EmailResponses:
   - {fileID: 534373956}
+  KatieEmotions:
+  - {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
+  - {fileID: 2800000, guid: 1c93f6da89abb7c49a4a452ed6b5982b, type: 3}
   level2: {fileID: 960650001}
-  firstblock: {fileID: 1544095300}
-  secondblock: {fileID: 69526035}
-  Email: {fileID: 651271376}
+  Blocks:
+  - {fileID: 1984180071}
+  - {fileID: 69526035}
+  Email: {fileID: 0}
   SocialMedia: {fileID: 333920408}
   Messages: {fileID: 132224999}
   NotificationRed: {fileID: 1985278019}
@@ -8988,8 +8992,6 @@ MonoBehaviour:
   Options: {fileID: 2114910773}
   chatContainer: {fileID: 1462516047}
   choiceContainerForMessage: {fileID: 1984180071}
-  KatieSad: {fileID: 2800000, guid: d15577f3c35437a40a2f74b33c21b815, type: 3}
-  KatieHappy: {fileID: 2800000, guid: 1c93f6da89abb7c49a4a452ed6b5982b, type: 3}
   ImageOfKatie: {fileID: 1470820250}
   MC: {fileID: 1470820252}
   Phone: {fileID: 1209733575}
