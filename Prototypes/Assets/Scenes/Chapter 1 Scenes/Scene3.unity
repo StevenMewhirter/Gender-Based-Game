@@ -1982,18 +1982,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &292512680 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1419265437878983277, guid: 1a870dc3794876f46ac97abcbb857c66,
-    type: 3}
-  m_PrefabInstance: {fileID: 659731888}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &318775153 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6752152409235049468, guid: 4eba36728200826498a88f29d81607e1,
@@ -2598,13 +2586,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50da39b3acdc8604ebc40c216d88ac3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionScreen: {fileID: 1796343243}
-  transitionImage: {fileID: 292512680}
+  buttons:
+  - {fileID: 53657438}
+  - {fileID: 1832596077}
+  - {fileID: 1510274839}
+  - {fileID: 841213091}
+  - {fileID: 68806351}
+  - {fileID: 2057138644}
+  - {fileID: 1140675391}
+  - {fileID: 184268038}
+  - {fileID: 157088425}
+  - {fileID: 233945562}
+  - {fileID: 1966910931}
+  - {fileID: 631882412}
+  - {fileID: 138394779}
+  - {fileID: 1234950355}
+  - {fileID: 818458157}
+  - {fileID: 1801676050}
+  - {fileID: 1985509740}
+  - {fileID: 1170726091}
+  - {fileID: 1096300852}
+  - {fileID: 932333142}
+  - {fileID: 1661034371}
+  - {fileID: 161641278}
   MC: {fileID: 1813087335}
   KatieHappy: {fileID: 2800000, guid: 6c163e1967990694c901014831d07eca, type: 3}
   KatieNeutral: {fileID: 2800000, guid: 1f4b8e224ec1c714b99e24c58f204e1d, type: 3}
   KatieAngry: {fileID: 2800000, guid: 85f831c0410120540bc7a1b8e83a508c, type: 3}
   KatieImage: {fileID: 792027430}
+  introScreen: {fileID: 1520899235}
+  introImage: {fileID: 2085276501}
   Robin: {fileID: 500845308}
   RobinHappy: {fileID: 2800000, guid: 9c5aa7b2118ce8841b9e9cdc271d3af4, type: 3}
   RobinNeutral: {fileID: 2800000, guid: 9c5aa7b2118ce8841b9e9cdc271d3af4, type: 3}
@@ -2617,28 +2628,6 @@ MonoBehaviour:
   RichardNeutral: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
   RichardAngry: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
   RichardImage: {fileID: 318775153}
-  KatieSpeech1: {fileID: 1510274839}
-  KatieSpeech2: {fileID: 68806351}
-  KatieSpeech3: {fileID: 184268038}
-  KatieSpeech4: {fileID: 1966910931}
-  KatieSpeech5: {fileID: 1985509740}
-  RobinSpeech: {fileID: 53657438}
-  RobinSpeech1: {fileID: 841213091}
-  RobinSpeech2: {fileID: 2057138644}
-  RobinSpeech3: {fileID: 157088425}
-  RobinSpeech4: {fileID: 631882412}
-  RobinSpeech5: {fileID: 1234950355}
-  JasonSpeech1: {fileID: 138394779}
-  JasonSpeech2: {fileID: 818458157}
-  JasonSpeech3: {fileID: 1170726091}
-  JasonSpeech5: {fileID: 161641278}
-  JasonSpeech4: {fileID: 932333142}
-  RichardSpeech1: {fileID: 1096300852}
-  RichardSpeech2: {fileID: 1661034371}
-  Choice1: {fileID: 1832596077}
-  Choice2: {fileID: 1140675391}
-  Choice3: {fileID: 233945562}
-  Choice4: {fileID: 1801676050}
   Background: {fileID: 543227692}
   animatorKatie: {fileID: 792027432}
   animatorJason: {fileID: 1389028830}
@@ -6154,6 +6143,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1520899235 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1419265436670455008, guid: 1a870dc3794876f46ac97abcbb857c66,
+    type: 3}
+  m_PrefabInstance: {fileID: 659731888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908a893f151179d4cad1cd497c7c0d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1530177147
 GameObject:
   m_ObjectHideFlags: 0
@@ -6911,6 +6912,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 390249697424647339, guid: 4eba36728200826498a88f29d81607e1,
+        type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
     - target: {fileID: 390249697424647336, guid: 4eba36728200826498a88f29d81607e1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -6941,11 +6947,6 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 390249697424647339, guid: 4eba36728200826498a88f29d81607e1,
-        type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 2800000, guid: a2af95695c497e940908505e6502627b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4eba36728200826498a88f29d81607e1, type: 3}
 --- !u!1 &1650253167
@@ -7634,18 +7635,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullText: Well, you're lucky babes! I have your first assignment!
---- !u!114 &1796343243 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1419265436670455008, guid: 1a870dc3794876f46ac97abcbb857c66,
-    type: 3}
-  m_PrefabInstance: {fileID: 659731888}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908a893f151179d4cad1cd497c7c0d8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1801676046
 GameObject:
   m_ObjectHideFlags: 0
@@ -9285,3 +9274,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081032356}
   m_CullTransparentMesh: 0
+--- !u!114 &2085276501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1419265437878983277, guid: 1a870dc3794876f46ac97abcbb857c66,
+    type: 3}
+  m_PrefabInstance: {fileID: 659731888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
