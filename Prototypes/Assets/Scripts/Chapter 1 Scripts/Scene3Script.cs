@@ -38,36 +38,8 @@ public class Scene3Script : MonoBehaviour
     public GameObject RichardImage;
 
 
-
-
-    //all the main images for the characters -SD
-    //public GameObject MC;
-    //public GameObject MChappy;
-    //public GameObject MCangry;
-
-
-
-    // public GameObject RichardAngry;
-
-
-    //  public GameObject RobinHappy;
-
-
-    // public GameObject JasonAngry;
-
     public GameObject Background;
 
-    //all the animators for the characters - AB
-
-    //public Animator animatorKatieHappy;
-    //public Animator animatorKatieAngry;
-    //public Animator animatorKatieNeutral;
-    //public Animator animatorJasonNeutral;
-    //public Animator animatorJasonAngry;
-    //public Animator animatorRobinNeutral;
-    //public Animator animatorRobinHappy;
-    //public Animator animatorRichardNeutral;
-    //public Animator animatorRichardAngry;
 
     public Animator animatorKatie;
     public Animator animatorJason;
@@ -87,9 +59,10 @@ public class Scene3Script : MonoBehaviour
             buttons[responseIndex].gameObject.SetActive(false);
         }
 
+        //all of the methods
         functionsToCall = new UnityAction[]
         {
-            /*RSpeech,*/ Choices1, KSpeech1, RSpeech2, KSpeech2, RSpeech3, Choices2, KSpeech3, RSpeech4, Choices3,
+            Choices1, KSpeech1, RSpeech2, KSpeech2, RSpeech3, Choices2, KSpeech3, RSpeech4, Choices3,
             KSpeech4, RSpeech5, JSpeech1, RSpeech6, JSpeech2, Choices4, KSpeech5, JSpeech3,
             RISpeech1, JSpeech4, RISpeech2, JSpeech5
         };
@@ -113,12 +86,12 @@ public class Scene3Script : MonoBehaviour
 
         Button Intro = introImage.GetComponent<Button>();
         Intro.onClick.AddListener(RSpeech);
-        //RSpeech();
+       
 
+        //starts the button array from one, as the first variable (RSpeech) to run does not need a button to be pressed in order to work
         for (int responseIndex = 0; responseIndex < buttons.Length - 1; ++responseIndex)
         {
             AddListenerToButton(buttons[responseIndex], functionsToCall[responseIndex]);
-            //buttons[responseIndex].onClick.AddListener(OnButtonClick);
         }
 
     }
@@ -126,36 +99,6 @@ public class Scene3Script : MonoBehaviour
     private void AddListenerToButton(Button button, UnityEngine.Events.UnityAction functionToCall)
     {
         button.onClick.AddListener(functionToCall);
-    }
-
-    /*
-	private void OnButtonClick()
-	{
-		AdvanceButton();//insert parameters
-	}
-
-	void AdvanceButton(RawImage image1, RawImage image2, bool displayImage1, bool displayImage2, int currentButtonIndex, GameObject imageToChange, Texture texture,
-	Animator animatorCharacter, string animationName)
-	{
-		image1.gameObject.SetActive(displayImage1);
-		image2.gameObject.SetActive(displayImage2);
-
-		buttons[currentButtonIndex].gameObject.SetActive(true);
-		if (currentButtonIndex > 0)
-		{
-			buttons[currentButtonIndex - 1].gameObject.SetActive(false);
-		}
-
-		imageToChange.GetComponent<RawImage>().texture = texture;
-
-		animatorCharacter.SetBool(animationName, true);
-	}
-	*/
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
 
@@ -226,8 +169,6 @@ public class Scene3Script : MonoBehaviour
         animatorRobin.SetBool("RobinNeutral", true);
 
     }
-
-
 
 
     void KSpeech2()
