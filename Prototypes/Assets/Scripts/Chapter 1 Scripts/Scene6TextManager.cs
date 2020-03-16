@@ -50,6 +50,7 @@ public class Scene6TextManager : MonoBehaviour
     public Animator RichardAnimator;
     public Animator JasonAnimator;
     public Animator AminaAnimator;
+    public Button ChangeScene;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +96,7 @@ public class Scene6TextManager : MonoBehaviour
         }
 
         BottomBackground.gameObject.SetActive(false);
+        ChangeScene.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Amina.gameObject.SetActive(false);
@@ -800,6 +802,7 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfJason.gameObject.SetActive(false);
         Bar.gameObject.SetActive(false);
         ImageOfBar.gameObject.SetActive(false);
+        ChangeScene.gameObject.SetActive(true);
     }
 
     void JSpeech7()
