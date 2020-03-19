@@ -9,6 +9,10 @@ using System;
 public class Scene5Script : MonoBehaviour
 {
 
+    public DiaryTexts transitionScreen;
+    public Button transitionImage;
+    bool canClick = false;
+
     public Button[] buttons;
     private UnityAction[] functionsToCall;
 
@@ -56,8 +60,13 @@ public class Scene5Script : MonoBehaviour
             KatSpeech5, RobSpeech6
         };
 
+        StartCoroutine(transitionPanel());
 
-        StartSpeech();
+        Button Transition = transitionImage.GetComponent<Button>();
+        Transition.onClick.AddListener(StartSpeech);
+
+        //took this out to add the transition screen. it is being called exactly above this line. (E.A.)
+        //StartSpeech(); 
 
         //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
         //Robins.texture = (Texture)RobinsSad;
@@ -78,17 +87,21 @@ public class Scene5Script : MonoBehaviour
 
     void StartSpeech()
     {
-        // MainChar.gameObject.SetActive(false);
+        if (canClick) // added this because of the connection with the transition screen (E.A.)
+        {
+            // MainChar.gameObject.SetActive(false);
 
-        // BgBox.gameObject.SetActive(false);
+            // BgBox.gameObject.SetActive(false);
+            transitionScreen.gameObject.SetActive(false); // added this because of the connection with the transition screen (E.A.)
 
-        buttons[0].gameObject.SetActive(true);
-        Robins.gameObject.SetActive(true);
+            buttons[0].gameObject.SetActive(true);
+            Robins.gameObject.SetActive(true);
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinsSad;
+            //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
+            //Robins.texture = (Texture)RobinsSad;
 
-        RobinAnimator.SetBool("RobinNeutral", true);
+            RobinAnimator.SetBool("RobinNeutral", true);
+        }
     }
 
     void Choice1() 
@@ -305,5 +318,11 @@ public class Scene5Script : MonoBehaviour
         //Robins.texture = (Texture)RobinNeutral;
 
         RobinAnimator.SetBool("RobinNeutral", true);
+    }
+
+    IEnumerator transitionPanel() //panel timer
+    {
+        yield return new WaitForSeconds(1f);
+        canClick = true;
     }
 }
