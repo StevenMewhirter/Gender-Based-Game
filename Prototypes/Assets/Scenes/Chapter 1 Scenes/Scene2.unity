@@ -1305,6 +1305,7 @@ GameObject:
   - component: {fileID: 316215858}
   - component: {fileID: 316215857}
   - component: {fileID: 316215856}
+  - component: {fileID: 316215859}
   m_Layer: 5
   m_Name: ChangeText
   m_TagString: Untagged
@@ -1337,13 +1338,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm so??
+  m_Text: 
 --- !u!222 &316215857
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1371,6 +1372,20 @@ RectTransform:
   m_AnchoredPosition: {x: -37.019993, y: -5}
   m_SizeDelta: {x: -302.44, y: -300.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &316215859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316215855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: 'I viewed you as a serious person, Miss Anderson. I might''ve been mistaken.
+    It''s time I showed you around. Please, be professional. '
 --- !u!1 &325434104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1481,7 @@ GameObject:
   - component: {fileID: 347406220}
   - component: {fileID: 347406222}
   - component: {fileID: 347406221}
+  - component: {fileID: 347406223}
   m_Layer: 5
   m_Name: ChangeText
   m_TagString: Untagged
@@ -1489,7 +1505,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -111.600006, y: -5}
+  m_AnchoredPosition: {x: -59, y: -4.399994}
   m_SizeDelta: {x: -332.44, y: -300.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &347406221
@@ -1517,13 +1533,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Amina? The boss? She is so fri..
+  m_Text: 
 --- !u!222 &347406222
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1532,6 +1548,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347406219}
   m_CullTransparentMesh: 0
+--- !u!114 &347406223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347406219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: Amina? The boss? She is so fri..
 --- !u!1 &369313780
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,6 +2996,7 @@ GameObject:
   - component: {fileID: 702532697}
   - component: {fileID: 702532699}
   - component: {fileID: 702532698}
+  - component: {fileID: 702532700}
   m_Layer: 5
   m_Name: ChangeText
   m_TagString: Untagged
@@ -3018,13 +3048,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome Katie! You're not feeling too nervous, are you?
+  m_Text: 
 --- !u!222 &702532699
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3033,6 +3063,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702532696}
   m_CullTransparentMesh: 0
+--- !u!114 &702532700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702532696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: Welcome Katie! You're not feeling too nervous, are you?
 --- !u!1001 &717155083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3298,8 +3341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 72}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787627148
 MonoBehaviour:
@@ -3572,8 +3615,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 72}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842519394
 MonoBehaviour:
@@ -3768,7 +3811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &896753974
@@ -4359,8 +4402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 72}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002427792
 MonoBehaviour:
@@ -4536,7 +4579,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0042876b7b9a25b4ebe73a2bd1c817ae, type: 3}
-    m_FontSize: 16
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -5172,7 +5215,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203757375}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5181,8 +5224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 72}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203757377
 MonoBehaviour:
@@ -6008,7 +6051,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.7, y: -18}
+  m_AnchoredPosition: {x: 1.02, y: -16}
   m_SizeDelta: {x: 547.4, y: 1053.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1315627055
@@ -6329,6 +6372,7 @@ GameObject:
   - component: {fileID: 1328350230}
   - component: {fileID: 1328350232}
   - component: {fileID: 1328350231}
+  - component: {fileID: 1328350233}
   m_Layer: 5
   m_Name: ChangeText
   m_TagString: Untagged
@@ -6352,7 +6396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -111.600006, y: -5}
+  m_AnchoredPosition: {x: -61, y: -4.399994}
   m_SizeDelta: {x: -332.44, y: -300.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1328350231
@@ -6380,13 +6424,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Erm, I am a bit, New job, new people.
+  m_Text: 
 --- !u!222 &1328350232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6395,6 +6439,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328350229}
   m_CullTransparentMesh: 0
+--- !u!114 &1328350233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328350229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: Erm, I am a bit, New job, new people.
 --- !u!1 &1333456491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,6 +6540,7 @@ GameObject:
   - component: {fileID: 1341251984}
   - component: {fileID: 1341251986}
   - component: {fileID: 1341251985}
+  - component: {fileID: 1341251987}
   m_Layer: 5
   m_Name: ChangeText
   m_TagString: Untagged
@@ -6534,14 +6592,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "So, this is everything you need to know for now. If you have any\r\nquestions,
-    I will be in my office."
+  m_Text: 
 --- !u!222 &1341251986
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6550,6 +6607,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341251983}
   m_CullTransparentMesh: 0
+--- !u!114 &1341251987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341251983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: So, this is everything you need to know for now. If you have any questions,
+    I will be in my office.
 --- !u!1 &1374760870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,6 +6752,7 @@ GameObject:
   - component: {fileID: 1413371426}
   - component: {fileID: 1413371428}
   - component: {fileID: 1413371427}
+  - component: {fileID: 1413371429}
   m_Layer: 5
   m_Name: ChangeText
   m_TagString: Untagged
@@ -6704,8 +6776,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -37.019993, y: -5}
-  m_SizeDelta: {x: -302.44, y: -300.8}
+  m_AnchoredPosition: {x: -15.9, y: -5}
+  m_SizeDelta: {x: -344.6, y: -300.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413371427
 MonoBehaviour:
@@ -6732,15 +6804,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Come on, I''ll take you to Amina and she can show you around. Just relax!
-
-'
+  m_Text: 
 --- !u!222 &1413371428
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6749,6 +6819,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413371425}
   m_CullTransparentMesh: 0
+--- !u!114 &1413371429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413371425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: Come on, I'll take you to Amina and she can show you around. Just relax!
 --- !u!1 &1414576279
 GameObject:
   m_ObjectHideFlags: 0
@@ -7057,8 +7140,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 72}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1437244240
 MonoBehaviour:
@@ -7750,7 +7833,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581346573}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -7759,8 +7842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 72}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581346575
 MonoBehaviour:
@@ -8170,6 +8253,7 @@ GameObject:
   - component: {fileID: 1714986827}
   - component: {fileID: 1714986829}
   - component: {fileID: 1714986828}
+  - component: {fileID: 1714986830}
   m_Layer: 5
   m_Name: ChangeText
   m_TagString: Untagged
@@ -8193,7 +8277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -37.019993, y: -5}
+  m_AnchoredPosition: {x: 121, y: -4.399994}
   m_SizeDelta: {x: -302.44, y: -300.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714986828
@@ -8221,13 +8305,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm so??
+  m_Text: 
 --- !u!222 &1714986829
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8236,6 +8320,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714986826}
   m_CullTransparentMesh: 0
+--- !u!114 &1714986830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714986826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8ab582632f8ad47ab6a5eaadafced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullText: I'm so....??
 --- !u!1 &1748263689
 GameObject:
   m_ObjectHideFlags: 0
@@ -8370,7 +8467,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0042876b7b9a25b4ebe73a2bd1c817ae, type: 3}
-    m_FontSize: 16
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -8781,8 +8878,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107, y: 72}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: 95, y: 67}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827577350
 MonoBehaviour:
@@ -9197,7 +9294,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0042876b7b9a25b4ebe73a2bd1c817ae, type: 3}
-    m_FontSize: 16
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -10851,6 +10948,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1891660176206370293, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_Text
+      value: "Dear diary, \n\nStill waiting for an answer from the interview last
+        week... \n\nRobin says everything is going to be alright, but I am really
+        stressing out...\n \nAnother month without a job and I will have to go back
+        to my parents :(\n\n\n      Sincerely, me\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a870dc3794876f46ac97abcbb857c66, type: 3}
