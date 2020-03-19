@@ -9,6 +9,10 @@ using System;
 
 public class Scene6TextManager : MonoBehaviour
 {
+    public DiaryTexts transitionScreen;
+    public Button transitionImage;
+    bool canClick = false;
+
     public Button[] AminaSpeech;
     private UnityAction[] AminaFunctions;
     public Button[] CoWorkersSpeech;
@@ -167,8 +171,14 @@ public class Scene6TextManager : MonoBehaviour
             BS2
         };
 
-        Button robin1 = RobinSpeech1.GetComponent<Button>();
-        robin1.onClick.AddListener(KSpeech1);
+        StartCoroutine(transitionPanel());
+
+        Button Transition = transitionImage.GetComponent<Button>();
+        Transition.onClick.AddListener(StartMessages);
+
+        //moved this into the StartMessages function to enable it after the transition screen (E.A.)
+        //Button robin1 = RobinSpeech1.GetComponent<Button>();
+        //robin1.onClick.AddListener(KSpeech1);
 
         ChoicesFunctions = new UnityAction[]
         {
@@ -260,10 +270,24 @@ public class Scene6TextManager : MonoBehaviour
     {
         ShowChoices.onClick.AddListener(ChoicesFunctions);
     }
+
+    void StartMessages()
+    {
+        if (canClick)
+        {
+            transitionScreen.gameObject.SetActive(false);
+            Button robin1 = RobinSpeech1.GetComponent<Button>();
+            robin1.onClick.AddListener(KSpeech1);
+        }
+    }
+
     void KSpeech1()
     {
-        messagesContainer.transform.position += new Vector3(0, 100, 0);
+        
+
+         messagesContainer.transform.position += new Vector3(0, 100, 0);
         KatieSpeech[0].gameObject.SetActive(true);
+        
     }
 
     void EnviroChange1()
@@ -819,5 +843,11 @@ public class Scene6TextManager : MonoBehaviour
         ImageOfKatie.gameObject.SetActive(false);
         JasonSpeech[3].gameObject.SetActive(true);
         JasonSpeech[2].gameObject.SetActive(false);
+    }
+
+    IEnumerator transitionPanel() //panel timer
+    {
+        yield return new WaitForSeconds(1f);
+        canClick = true;
     }
 } 
