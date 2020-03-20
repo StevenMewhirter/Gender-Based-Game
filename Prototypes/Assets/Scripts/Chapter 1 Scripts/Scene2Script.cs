@@ -437,7 +437,7 @@ public class Scene2Script : MonoBehaviour
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 1; //goes to the next line
         ResponseKatie1.text = dialogue[currentLine]; //checks current line 
-        currentLine = 4; //goes to the next line
+        currentLine = 5; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -453,7 +453,7 @@ public class Scene2Script : MonoBehaviour
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 2; //goes to the next line
         ResponseKatie1.text = dialogue[currentLine]; //checks current line 
-        currentLine = 5; //goes to the next line
+        currentLine = 6; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
@@ -467,7 +467,7 @@ public class Scene2Script : MonoBehaviour
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 1; //goes to the next line
         ResponseKatie1.text = dialogue[currentLine]; //checks current line 
-        currentLine = 6; //goes to the next line
+        currentLine = 4; //goes to the next line
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
         response3.gameObject.SetActive(false);
