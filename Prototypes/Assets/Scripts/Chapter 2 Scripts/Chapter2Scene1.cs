@@ -20,6 +20,7 @@ public class Chapter2Scene1 : MonoBehaviour
     public Texture[] RobinEmotions;
     public Texture[] AminaEmotions;
     public GameObject ImageOfAmina;
+    public GameObject Transparent;
     public GameObject ImageOfRobin;
     public RawImage Robin;
     public RawImage Amina;
@@ -52,6 +53,7 @@ public class Chapter2Scene1 : MonoBehaviour
         }
         ThoughtBubbles[0].gameObject.SetActive(true);
         Amina.gameObject.SetActive(false);
+        Transparent.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(false);
         ImageOfRobin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -168,6 +170,7 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void RSpeech1()
     {
+      Transparent.gameObject.SetActive(false);
       ThoughtBubbles[3].gameObject.SetActive(false);
       RobinSpeech[0].gameObject.SetActive(true);
     }
@@ -225,10 +228,12 @@ public class Chapter2Scene1 : MonoBehaviour
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
+        Transparent.gameObject.SetActive(true);
     }
 
     void Response1()
     {
+        Transparent.gameObject.SetActive(false);
         Choices[1].gameObject.SetActive(false);
         Choices[0].gameObject.SetActive(false);
         Responses[1].gameObject.SetActive(true);
@@ -236,6 +241,7 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void Response2()
     {
+        Transparent.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[1];
         Choices[1].gameObject.SetActive(false);
@@ -271,7 +277,7 @@ public class Chapter2Scene1 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(false);
         Amina.gameObject.SetActive(false);
-        AminaSpeech[3].gameObject.SetActive(false);
+        AminaSpeech[4].gameObject.SetActive(false);
         RobinSpeech[3].gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -283,7 +289,7 @@ public class Chapter2Scene1 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(false);
         Amina.gameObject.SetActive(false);
-        AminaSpeech[4].gameObject.SetActive(false);
+        AminaSpeech[3].gameObject.SetActive(false);
         RobinSpeech[2].gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
