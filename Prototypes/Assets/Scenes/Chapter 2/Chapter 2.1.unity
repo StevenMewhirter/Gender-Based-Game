@@ -1160,6 +1160,7 @@ GameObject:
   - component: {fileID: 340484900}
   - component: {fileID: 340484902}
   - component: {fileID: 340484901}
+  - component: {fileID: 340484903}
   m_Layer: 5
   m_Name: Robin
   m_TagString: Untagged
@@ -1220,6 +1221,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340484899}
   m_CullTransparentMesh: 0
+--- !u!95 &340484903
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340484899}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4206364bbc1b284f93e0533f833c1d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &367682618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2171,7 @@ GameObject:
   - component: {fileID: 644864521}
   - component: {fileID: 644864523}
   - component: {fileID: 644864522}
+  - component: {fileID: 644864524}
   m_Layer: 5
   m_Name: Amina
   m_TagString: Untagged
@@ -2211,6 +2232,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644864520}
   m_CullTransparentMesh: 0
+--- !u!95 &644864524
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644864520}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b85ed06fa1e127746ba3a8359716e99e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &690035168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2942,6 +2982,10 @@ MonoBehaviour:
   ImageOfRobin: {fileID: 1582114006}
   Robin: {fileID: 1582114008}
   Amina: {fileID: 1450352286}
+  AminaAnimator: {fileID: 644864524}
+  RobinAnimator: {fileID: 340484903}
+  AminaRIAnimator: {fileID: 1450352288}
+  RobinRIAnimator: {fileID: 1582114010}
 --- !u!4 &906178590
 Transform:
   m_ObjectHideFlags: 0
@@ -4783,6 +4827,7 @@ GameObject:
   - component: {fileID: 1450352285}
   - component: {fileID: 1450352287}
   - component: {fileID: 1450352286}
+  - component: {fileID: 1450352288}
   m_Layer: 5
   m_Name: Amina RI
   m_TagString: Untagged
@@ -4842,6 +4887,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450352284}
   m_CullTransparentMesh: 0
+--- !u!95 &1450352288
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450352284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97f67b6a8f2bb8e4ba354682e614acc3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1531213796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5230,6 +5294,7 @@ GameObject:
   - component: {fileID: 1582114007}
   - component: {fileID: 1582114009}
   - component: {fileID: 1582114008}
+  - component: {fileID: 1582114010}
   m_Layer: 5
   m_Name: Robin RI
   m_TagString: Untagged
@@ -5289,6 +5354,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582114006}
   m_CullTransparentMesh: 0
+--- !u!95 &1582114010
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582114006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86290d605df58e642836232f407a7119, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1639830294
 GameObject:
   m_ObjectHideFlags: 0

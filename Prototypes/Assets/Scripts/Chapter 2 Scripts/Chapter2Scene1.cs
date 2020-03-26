@@ -24,6 +24,11 @@ public class Chapter2Scene1 : MonoBehaviour
     public GameObject ImageOfRobin;
     public RawImage Robin;
     public RawImage Amina;
+
+    public Animator AminaAnimator;
+    public Animator RobinAnimator;
+    public Animator AminaRIAnimator;
+    public Animator RobinRIAnimator;
     // Start is called before the first frame update
     void Start()
     {
@@ -173,6 +178,8 @@ public class Chapter2Scene1 : MonoBehaviour
       Transparent.gameObject.SetActive(false);
       ThoughtBubbles[3].gameObject.SetActive(false);
       RobinSpeech[0].gameObject.SetActive(true);
+      RobinAnimator.SetBool("RobinMove", true);
+      RobinRIAnimator.SetBool("RobinRIMove", true);
     }
 
     void AminaSpeech1()
@@ -185,12 +192,16 @@ public class Chapter2Scene1 : MonoBehaviour
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
         Amina.texture = (Texture)AminaEmotions[0];
         AminaSpeech[0].gameObject.SetActive(true);
+        AminaRIAnimator.SetBool("AminaRIMove", true);
+        AminaAnimator.SetBool("AminaMove", true);
     }
 
     void AminaSpeech2()
     {
         AminaSpeech[1].gameObject.SetActive(true);
         AminaSpeech[0].gameObject.SetActive(false);
+        AminaRIAnimator.SetBool("AminaRIMove", true);
+        AminaAnimator.SetBool("AminaMove", true);
     }
 
     void RobinSpeech2()
@@ -203,6 +214,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinRIMove", true);
     }
 
     void AminaSpeech3()
@@ -215,6 +228,8 @@ public class Chapter2Scene1 : MonoBehaviour
         AminaSpeech[2].gameObject.SetActive(true);
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
         Amina.texture = (Texture)AminaEmotions[0];
+        AminaAnimator.SetBool("AminaMove", true);
+        AminaRIAnimator.SetBool("AminaRIMove", true);
     }
 
     void Choice()
@@ -229,6 +244,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
         Transparent.gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinRIMove", true);
     }
 
     void Response1()
@@ -247,6 +264,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Choices[1].gameObject.SetActive(false);
         Choices[0].gameObject.SetActive(false);
         Responses[0].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinRIMove", true);
     }
 
     void AminaSpeech4()
@@ -259,6 +278,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Amina.gameObject.SetActive(true);
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
         Amina.texture = (Texture)AminaEmotions[0];
+        AminaAnimator.SetBool("AminaMove", true);
+        AminaRIAnimator.SetBool("AminaRIMove", true);
     }
 
     void AminaSpeech5()
@@ -271,6 +292,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
         Amina.texture = (Texture)AminaEmotions[1];
         AminaSpeech[4].gameObject.SetActive(true);
+        AminaAnimator.SetBool("AminaMove", true);
+        AminaRIAnimator.SetBool("AminaRIMove", true);
     }
     void RobinSpeech5()
     {
@@ -282,6 +305,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
+        AminaAnimator.SetBool("AminaMove", true);
+        AminaRIAnimator.SetBool("AminaRIMove", true);
     }
 
     void RobinSpeech6()
@@ -294,6 +319,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinRIMove", true);
     }
 
     void RobinSpeech7()
@@ -313,6 +340,8 @@ public class Chapter2Scene1 : MonoBehaviour
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
         Amina.texture = (Texture)AminaEmotions[0];
         AminaSpeech[5].gameObject.SetActive(true);
+        AminaAnimator.SetBool("AminaMove", true);
+        AminaRIAnimator.SetBool("AminaRIMove", true);
     }
 
     void AminaSpeech7()
@@ -337,5 +366,7 @@ public class Chapter2Scene1 : MonoBehaviour
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinRIMove", true);
     }
 }

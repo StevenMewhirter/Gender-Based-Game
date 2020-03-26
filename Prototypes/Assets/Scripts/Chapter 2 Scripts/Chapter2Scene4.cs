@@ -45,6 +45,11 @@ public class Chapter2Scene4 : MonoBehaviour
     public RawImage Katie;
     public RawImage EndScreen;
     public Button ChangeScene;
+
+    public Animator KatieAnimator;
+    public Animator RobinAnimator;
+    public Animator KatieRIAnimator;
+    public Animator RobinRIAnimator;
     void Start()
     {
         for (int responseIndex = 0; responseIndex < Choices.Length; ++responseIndex)
@@ -102,6 +107,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
         RobinSpeech[0].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
 
         //Declares the functions that will be called when each button in the 
         //list of Katie's speech bubbles is pressed -SD
@@ -302,6 +309,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinSpeech[0].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinSpeech2()
@@ -314,6 +323,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         RobinSpeech[1].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void RobinSpeech3()
@@ -332,6 +343,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinSpeech[2].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinSpeech4()
@@ -344,6 +357,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         RobinSpeech[3].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void RobinSpeech5()
@@ -368,6 +383,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinSpeech[5].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinSpeech7()
@@ -380,6 +397,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         RobinSpeech[6].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void RobinSpeech8()
@@ -387,6 +406,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Robin.texture = (Texture)RobinEmotions[0];
         RobinSpeech[6].gameObject.SetActive(false);
         RobinSpeech[7].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech4()
@@ -399,6 +420,9 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinSpeech[7].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
+
     }
 
     void RobinSpeech9()
@@ -411,6 +435,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         RobinSpeech[8].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void RobinSpeech10()
@@ -429,6 +455,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinSpeech[9].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinSpeech11()
@@ -441,6 +469,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         RobinSpeech[10].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void ThoughtBubble1()
@@ -467,6 +497,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinSpeech[11].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void choice1()
@@ -482,6 +514,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[1].gameObject.SetActive(true);
         Choices[2].gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void RobinResponse1()
@@ -491,6 +525,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[2].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         RobinResponses[0].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech7()
@@ -503,6 +539,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[0].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinResponse2()
@@ -512,6 +550,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[2].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         RobinResponses[1].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech8()
@@ -524,6 +564,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[1].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinResponse3()
@@ -533,6 +575,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[2].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         RobinResponses[2].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech9()
@@ -545,6 +589,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[2].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void choice2()
@@ -562,6 +608,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[4].gameObject.SetActive(true);
         Choices[5].gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void RobinResponse4()
@@ -583,6 +631,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[3].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinResponse5()
@@ -592,6 +642,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[5].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         RobinResponses[4].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech11()
@@ -604,6 +656,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[4].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinResponse6()
@@ -613,6 +667,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[5].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         RobinResponses[5].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech12()
@@ -625,6 +681,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[5].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void choice3()
@@ -642,6 +700,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[7].gameObject.SetActive(true);
         Choices[8].gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void RobinResponse7()
@@ -663,6 +723,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[6].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinResponse8()
@@ -672,6 +734,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[8].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         RobinResponses[7].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech14()
@@ -684,6 +748,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[7].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void RobinResponse9()
@@ -693,6 +759,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Choices[8].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         RobinResponses[8].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void KatieSpeech15()
@@ -705,6 +773,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinResponses[8].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void GoodKatie1()
@@ -716,6 +786,8 @@ public class Chapter2Scene4 : MonoBehaviour
         GoodScenarioKatie[0].gameObject.SetActive(true);
         KatieSpeech[14].gameObject.SetActive(false);
         KatieSpeech[12].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void GoodRobin1()
@@ -728,6 +800,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[2];
         GoodScenarioRobin[0].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void GoodRobin2()
@@ -752,6 +826,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         GoodScenarioKatie[1].gameObject.SetActive(true);
         GoodScenarioRobin[2].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void GoodKatie3()
@@ -782,6 +858,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[2];
         GoodScenarioRobin[3].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void GoodRobin5()
@@ -806,6 +884,8 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(false);
         GoodScenarioKatie[5].gameObject.SetActive(true);
         GoodScenarioRobin[5].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void GoodRobin7()
@@ -818,6 +898,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[2];
         GoodScenarioRobin[6].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void BadKatie1()
@@ -828,6 +910,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Katie.texture = (Texture)KatieEmotions[1];
         BadScenarioKatie[0].gameObject.SetActive(true);
         KatieSpeech[13].gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void BadRobin1()
@@ -840,6 +924,8 @@ public class Chapter2Scene4 : MonoBehaviour
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[2];
         BadScenarioRobin[0].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
     }
 
     void BadKatie2()
@@ -852,6 +938,8 @@ public class Chapter2Scene4 : MonoBehaviour
         BadScenarioRobin[0].gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         ImageOfRobin.gameObject.SetActive(false);
+        KatieAnimator.SetBool("KatieMove", true);
+        KatieRIAnimator.SetBool("KatieMove", true);
     }
 
     void End()
