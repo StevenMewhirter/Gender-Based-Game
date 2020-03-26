@@ -120,12 +120,14 @@ public class Scene1Script : MonoBehaviour
             Interactibles
         };
         Button mes = Messages.GetComponent<Button>();
-        mes.onClick.AddListener(KSpeech1);
+        mes.onClick.AddListener(RSpeech1);
 
         KatieSpeechFunctionsToCall = new UnityAction[]
         {
             RobinReply1,
+            
             RobinReply2,
+            
             RobinReply3,
            Choice1,
            TB4
@@ -133,11 +135,14 @@ public class Scene1Script : MonoBehaviour
 
         RobinSpeechFunctionsToCall = new UnityAction[]
         {
+            KSpeech1,
+            RobinReplyAfter1,
             KSpeech2,
+            RobinReplyAfter2,
             KSpeech3,
             Email1,
             RobinReply4,
-           RobinReply5,
+            RobinReply5,
             KSpeech5
         };
 
@@ -273,42 +278,64 @@ public class Scene1Script : MonoBehaviour
         NotificationRed.SetActive(true);
     }
 
-    void KSpeech1()
+    void RSpeech1()
     {
         //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
+        //Robin's first speech bubble appears on screen saying "What's up?" -SD
         NotificationRed.gameObject.SetActive(false);
         NotificationMessage.SetActive(false);
         Phone.gameObject.SetActive(true);
-        StartCoroutine(KatieMessage1());
+        StartCoroutine(RobinMessage1());
         transparentResponse.gameObject.SetActive(false);
+    }
+
+    void KSpeech1()
+    {
+        //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
+        KatieSpeech[0].gameObject.SetActive(true);
+        RobinSpeech[0].interactable = false;
     }
 
     void RobinReply1()
     {
-        //The phone and Robin's first speech bubble appears on screen saying "Don’t say that! I think it went better than you think" -SD
-        RobinSpeech[0].gameObject.SetActive(true);
+        //The phone and Robin's first speech bubble appears on screen saying "Don’t say that!" -SD
+        RobinSpeech[1].gameObject.SetActive(true);
         KatieSpeech[0].interactable = false;
+    }
+
+    void RobinReplyAfter1()
+    {
+        //The phone and Robin's first speech bubble appears on screen saying "I think it went better than you think" -SD
+        RobinSpeech[2].gameObject.SetActive(true);
+        RobinSpeech[1].interactable = false;
     }
 
     void KSpeech2()
     {
         //Katie's second speech bubble appears on screen saying "That boss of yours.. omg, she was so scary during the interview" -SD
         KatieSpeech[1].gameObject.SetActive(true);
-        RobinSpeech[0].interactable = false;
+        RobinSpeech[2].interactable = false;
     }
 
     void RobinReply2()
     {
-        //The phone and Robin's second speech bubble appears on screen saying "Other people say that too (smiley face) but I think she’s cool. Breaking the glass ceiling and stuff (smiley face)" -SD
-        RobinSpeech[1].gameObject.SetActive(true);
+        //The phone and Robin's second speech bubble appears on screen saying "Other people say that too (smiley face)" -SD
+        RobinSpeech[3].gameObject.SetActive(true);
         KatieSpeech[1].interactable = false;
+    }
+
+    void RobinReplyAfter2()
+    {
+        //The phone and Robin's second speech bubble appears on screen saying "but I think she’s cool. Breaking the glass ceiling and stuff (smiley face)" -SD
+        RobinSpeech[4].gameObject.SetActive(true);
+        RobinSpeech[3].interactable = false;
     }
 
     void KSpeech3()
     {
         //Katie's third speech bubble appears on screen saying "Oh well, I guess I’ll like her if she gives me the job… Talk to you later" -SD
         KatieSpeech[2].gameObject.SetActive(true);
-        RobinSpeech[1].interactable = false;
+        RobinSpeech[4].interactable = false;
         KatieSpeech[0].gameObject.SetActive(false);
     }
 
@@ -316,19 +343,30 @@ public class Scene1Script : MonoBehaviour
     {
         //The phone and Robin's third speech bubble appears on screen saying "Keep it together man. Ciao" -SD
         Phone.gameObject.SetActive(true);
-        RobinSpeech[2].gameObject.SetActive(true);
+        RobinSpeech[5].gameObject.SetActive(true);
         KatieSpeech[2].interactable = false;
-        moveMessagesUp(150);
+        //moveMessagesUp(150);
+    }
+
+    //a function to be call when the first block of messages is to be active or not
+    void setTrueOrFalse(bool setIt)
+    {
+        RobinSpeech[0].gameObject.SetActive(setIt);
+        RobinSpeech[1].gameObject.SetActive(setIt);
+        RobinSpeech[2].gameObject.SetActive(setIt);
+        RobinSpeech[3].gameObject.SetActive(setIt);
+        RobinSpeech[4].gameObject.SetActive(setIt);
+        RobinSpeech[5].gameObject.SetActive(setIt);
+        KatieSpeech[0].gameObject.SetActive(setIt);
+        KatieSpeech[1].gameObject.SetActive(setIt);
+        KatieSpeech[2].gameObject.SetActive(setIt);
+        RobinSpeech[5].interactable = false;
     }
 
     void Email1()
     {
         //The phone and the first email speech bubble appears on screen saying "Good afternoon Ms Anderson" -SD
-        RobinSpeech[0].gameObject.SetActive(false);
-        RobinSpeech[2].gameObject.SetActive(false);
-        RobinSpeech[1].gameObject.SetActive(false);
-        KatieSpeech[1].gameObject.SetActive(false);
-        KatieSpeech[2].gameObject.SetActive(false);
+        setTrueOrFalse(false);
         EmailResponses[0].gameObject.SetActive(true);
         EmailBackground.gameObject.SetActive(true);
         Phone.gameObject.SetActive(false);
@@ -360,26 +398,33 @@ public class Scene1Script : MonoBehaviour
         Handheld.Vibrate();
     }
 
+    //for first choice in first block
     void KatieResponse1()
     {
+        
+        //StartCoroutine(WaitForMessages2());
         PlayerResponses[0].gameObject.SetActive(false);
         PlayerResponses[1].gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
-        StartCoroutine(KatieMessage2());
+        StartCoroutine(KatieMessage1());
         RobinSpeech[4].gameObject.SetActive(false);
         RobinSpeech[5].gameObject.SetActive(false);
     }
 
+
+    //for second choice in first block
     void KatieResponse2()
     {
+        //StartCoroutine(WaitForMessages2());
+       
         PlayerResponses[0].gameObject.SetActive(false);
         PlayerResponses[1].gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         Phone.gameObject.SetActive(true);
-        StartCoroutine(KatieMessage3());
+        StartCoroutine(KatieMessage2());
         ImageOfKatie.gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         RobinSpeech[4].gameObject.SetActive(false);
@@ -391,78 +436,91 @@ public class Scene1Script : MonoBehaviour
         //The phone and Robin's fourth speech bubble appears on screen saying "I told you were overreacting! Congrats!" and the choice buttons will appear on screen prompting the user to pick between them-SD
         PlayerResponses[4].gameObject.SetActive(false);
         PlayerResponses[5].gameObject.SetActive(false);
-        RobinSpeech[3].gameObject.SetActive(true);
-        RobinSpeech[4].gameObject.SetActive(false);
-        RobinSpeech[5].gameObject.SetActive(false);
+        RobinSpeech[6].gameObject.SetActive(true);
+        RobinSpeech[6].interactable = false;
+        RobinSpeech[7].gameObject.SetActive(false);
+        RobinSpeech[8].gameObject.SetActive(false);
         Blocks[0].SetActive(true);
         PlayerResponses[2].gameObject.SetActive(true);
         PlayerResponses[3].gameObject.SetActive(true);
         Handheld.Vibrate();
     }
 
+    //for first choice in second block
     void KatieResponse3()
     {
         Blocks[0].SetActive(false);
         PlayerResponses[2].gameObject.SetActive(false);
         PlayerResponses[3].gameObject.SetActive(false);
         KatieResponses[2].gameObject.SetActive(true);
+        KatieResponses[1].interactable = false;
     }
 
+    //for second choice in second block
     void KatieResponse4()
     {
         PlayerResponses[2].gameObject.SetActive(false);
         PlayerResponses[3].gameObject.SetActive(false);
         KatieResponses[3].gameObject.SetActive(true);
+        KatieResponses[1].interactable = false;
     }
 
     void RobinReply5()
     {
         //The phone and Robin's fifth speech bubble appears on screen saying "Well, I have a list of requests……" and the choice buttons will appear on screen prompting the user to pick between them-SD
-        RobinSpeech[4].gameObject.SetActive(true);
+        RobinSpeech[7].gameObject.SetActive(true);
+        RobinSpeech[7].interactable = false;
         Blocks[1].SetActive(true);
         PlayerResponses[4].gameObject.SetActive(true);
         PlayerResponses[5].gameObject.SetActive(true);
+        KatieResponses[1].interactable = false;
+        KatieResponses[2].interactable = false;
         Handheld.Vibrate();
     }
 
+    //for first choice in third block
     void KatieResponse5()
     {
         Blocks[1].SetActive(false);
         PlayerResponses[4].gameObject.SetActive(false);
         PlayerResponses[5].gameObject.SetActive(false);
-        KatieResponses[0].gameObject.SetActive(false);
-        KatieResponses[1].gameObject.SetActive(false);
-        KatieResponses[2].gameObject.SetActive(false);
-        KatieResponses[3].gameObject.SetActive(false);
-        RobinSpeech[3].gameObject.SetActive(false);
-        RobinSpeech[4].gameObject.SetActive(false);
+        
+        RobinSpeech[7].interactable = false;
+        KatieResponses[1].interactable = false;
+        KatieResponses[2].interactable = false;
+       
         KatieResponses[4].gameObject.SetActive(true);
     }
 
+    //for second choice in third block
     void KatieResponse6()
     {
         PlayerResponses[4].gameObject.SetActive(false);
         PlayerResponses[5].gameObject.SetActive(false);
-        KatieResponses[4].gameObject.SetActive(false);
-        KatieResponses[1].gameObject.SetActive(false);
-        KatieResponses[0].gameObject.SetActive(false);
-        KatieResponses[3].gameObject.SetActive(false);
-        KatieResponses[2].gameObject.SetActive(false);
-        RobinSpeech[3].gameObject.SetActive(false);
-        RobinSpeech[4].gameObject.SetActive(false);
+       
+        RobinSpeech[7].interactable = false;
+        KatieResponses[1].interactable = false;
+        KatieResponses[2].interactable = false;
+        
         KatieResponses[5].gameObject.SetActive(true);
     }
 
     void RobinReply6()
     {
         //The phone and Robin's sixth speech bubble appears on screen saying "Starting with a few drinks is not a bad idea (smiley face)"-SD
-        RobinSpeech[5].gameObject.SetActive(true);
+        RobinSpeech[8].gameObject.SetActive(true);
+        KatieResponses[5].interactable = false;
+        KatieResponses[1].interactable = false;
+        KatieResponses[2].interactable = false;
     }
 
     void KSpeech5()
     {
         //Katie's fifth speech bubble appears on screen saying "Perfect I’ll call you in ten to tell you where to meet! Ciao!" -SD
         KatieSpeech[4].gameObject.SetActive(true);
+        RobinSpeech[8].interactable = false;
+        KatieResponses[2].interactable = false;
+        KatieResponses[3].interactable = false;
     }
 
     void TB4()
@@ -470,9 +528,10 @@ public class Scene1Script : MonoBehaviour
         // the fourth thought bubble will be displayed saying "I can’t believe it’s actually happening! I can take a break finally…”" - SD
         KatieSpeech[4].gameObject.SetActive(false);
         ThoughtBubbles[3].gameObject.SetActive(true);
-        RobinSpeech[3].gameObject.SetActive(false);
-        RobinSpeech[4].gameObject.SetActive(false);
-        RobinSpeech[5].gameObject.SetActive(false);
+        setTrueOrFalse(false);
+        RobinSpeech[6].gameObject.SetActive(false);
+        RobinSpeech[7].gameObject.SetActive(false);
+        RobinSpeech[8].gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
         KatieResponses[0].gameObject.SetActive(false);
         KatieResponses[1].gameObject.SetActive(false);
@@ -523,21 +582,33 @@ public class Scene1Script : MonoBehaviour
         canClick = true;
     }
 
+    IEnumerator RobinMessage1()
+    {
+        yield return new WaitForSeconds(0.7f);
+        //KatieSpeech[0].gameObject.SetActive(true);
+        RobinSpeech[0].gameObject.SetActive(true);
+    }
+
+    //for first choice
     IEnumerator KatieMessage1()
     {
         yield return new WaitForSeconds(0.7f);
-        KatieSpeech[0].gameObject.SetActive(true);
+        KatieResponses[0].gameObject.SetActive(true);
+        setTrueOrFalse(true);
     }
 
+    //for second choice
     IEnumerator KatieMessage2()
     {
         yield return new WaitForSeconds(0.7f);
-        KatieResponses[0].gameObject.SetActive(true);
+        KatieResponses[1].gameObject.SetActive(true);
+        setTrueOrFalse(true);
     }
-    IEnumerator KatieMessage3()
+
+    IEnumerator WaitForMessages2()
     {
         yield return new WaitForSeconds(0.7f);
-        KatieResponses[1].gameObject.SetActive(true);
+        
     }
 
     public void moveMessagesUp(float boxHeight)

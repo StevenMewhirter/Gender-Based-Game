@@ -461,7 +461,9 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
-        
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieAngry;
         KatieSpeech3.interactable = true; // makes button iteractable
         KatieSpeech3.gameObject.SetActive(true);
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line 
