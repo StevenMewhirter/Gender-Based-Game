@@ -111,7 +111,7 @@ public class MenuScript : MonoBehaviour
         optionsScreen.SetActive(false);
 
         logo.gameObject.SetActive(false);
-        header.gameObject.SetActive(true);
+        header.gameObject.SetActive(false);
 
         back.gameObject.SetActive(true);
         options.gameObject.SetActive(false);
