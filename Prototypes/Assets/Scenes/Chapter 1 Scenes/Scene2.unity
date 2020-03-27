@@ -10829,6 +10829,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionScreen: {fileID: 716838208035383678}
   transitionImage: {fileID: 716838206823145459}
+  PlayerResponses: []
+  Interactive: []
+  KatieSpeech:
+  - {fileID: 2125968593}
+  - {fileID: 1986629545}
+  - {fileID: 1671592439}
+  - {fileID: 2013469838}
+  - {fileID: 1374760872}
+  - {fileID: 2137197472}
+  - {fileID: 1802553616}
+  - {fileID: 1476527043}
+  RobinSpeech:
+  - {fileID: 1091601890}
+  - {fileID: 1206176997}
+  ThoughtBubbles:
+  - {fileID: 979943179}
+  - {fileID: 1484932048}
+  - {fileID: 2001246041}
+  - {fileID: 171666883}
+  - {fileID: 581055842}
+  - {fileID: 1495325107}
+  - {fileID: 2082983643}
+  - {fileID: 1841162084}
+  - {fileID: 420196235}
+  BossResponses:
+  - {fileID: 1249875299}
+  - {fileID: 120516448}
+  - {fileID: 73434550}
+  RichardResponses:
+  - {fileID: 1182507867}
+  - {fileID: 465643610}
+  - {fileID: 910677428}
+  - {fileID: 1315758450}
+  - {fileID: 1256316046}
+  - {fileID: 963834906}
+  - {fileID: 430692110}
+  KatieEmotions: []
+  Blocks: []
   KatieSad: {fileID: 2800000, guid: ae328df2e24e96744a15a0fde499df02, type: 3}
   KatieAngry: {fileID: 2800000, guid: 5b1871f8f02700041bfa9d45c11d1582, type: 3}
   KatieNeutral: {fileID: 2800000, guid: 190c0d5f520f97a47806d2ecf723a6d6, type: 3}
@@ -10844,35 +10882,6 @@ MonoBehaviour:
   ImageOfAmina: {fileID: 1816627797}
   Background2: {fileID: 2800000, guid: 6f1d68bf88763414b8081e4b75d69e59, type: 3}
   ImageOfBackground: {fileID: 1315627053}
-  BossSpeech1: {fileID: 1249875299}
-  BossSpeech2: {fileID: 120516448}
-  BossSpeech3: {fileID: 73434550}
-  response1: {fileID: 979943179}
-  response2: {fileID: 1484932048}
-  response3: {fileID: 2001246041}
-  response4: {fileID: 171666883}
-  response5: {fileID: 581055842}
-  response6: {fileID: 1495325107}
-  response7: {fileID: 2082983643}
-  response8: {fileID: 1841162084}
-  response9: {fileID: 420196235}
-  KatieSpeech1: {fileID: 2125968593}
-  KatieSpeech2: {fileID: 1986629545}
-  KatieSpeech3: {fileID: 1671592439}
-  KatieSpeech4: {fileID: 2013469838}
-  KatieSpeech5: {fileID: 1374760872}
-  KatieSpeech6: {fileID: 2137197472}
-  KatieSpeech7: {fileID: 1802553616}
-  KatieSpeech8: {fileID: 1476527043}
-  RichardSpeech1: {fileID: 1182507867}
-  RichardSpeech2: {fileID: 465643610}
-  RichardSpeech3: {fileID: 910677428}
-  RichardSpeech4: {fileID: 1315758450}
-  RichardSpeech5: {fileID: 1256316046}
-  RichardSpeech6: {fileID: 963834906}
-  RichardSpeech7: {fileID: 430692110}
-  RobinSpeech1: {fileID: 1091601890}
-  RobinSpeech2: {fileID: 1206176997}
   MC: {fileID: 1034407733}
   Boss: {fileID: 1871324653}
   CoWorker: {fileID: 836370545}
