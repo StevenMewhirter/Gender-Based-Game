@@ -5,12 +5,31 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using System;
+using UnityEngine.Events;
 
 public class Scene2Script : MonoBehaviour
 {
     public DiaryTexts transitionScreen;
     public Button transitionImage;
     bool canClick = false;
+
+
+    public Button[] PlayerResponses;
+    private UnityAction[] PlayerResponseFunctionsToCall;
+    public Button[] Interactive;
+    private UnityAction[] InteractiveFunctionsToCall;
+    public Button[] KatieSpeech;
+    private UnityAction[] KatieSpeechFunctionsToCall;
+    public Button[] RobinSpeech;
+    private UnityAction[] RobinSpeechFunctionsToCall;
+    public Button[] ThoughtBubbles;
+    private UnityAction[] ThoughtBubblesFunctionsToCall;
+    public Button[] BossResponses;
+    private UnityAction[] BossResponsesFunctionsToCall;
+    public Button[] RichardResponses;
+    private UnityAction[] RichardFunctionsToCall;
+    public Texture[] KatieEmotions;
+    public GameObject[] Blocks;
 
     public Texture KatieSad;
     public Texture KatieAngry;
@@ -104,8 +123,49 @@ public class Scene2Script : MonoBehaviour
     {
         StartCoroutine(transitionPanel());
 
+        //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
+        for (int responseIndex = 0; responseIndex < Blocks.Length; ++responseIndex)
+        {
+            Blocks[responseIndex].gameObject.SetActive(false);
+        }
+
+        for (int responseIndex = 0; responseIndex < Interactive.Length; ++responseIndex)
+        {
+            Interactive[responseIndex].gameObject.SetActive(false);
+        }
+
+        for (int responseIndex = 0; responseIndex < PlayerResponses.Length; ++responseIndex)
+        {
+            PlayerResponses[responseIndex].gameObject.SetActive(false);
+        }
+
+        for (int responseIndex = 0; responseIndex < RichardResponses.Length; ++responseIndex)
+        {
+            RichardResponses[responseIndex].gameObject.SetActive(false);
+        }
+
+        for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
+        {
+            KatieSpeech[responseIndex].gameObject.SetActive(false);
+        }
+
+        for (int responseIndex = 0; responseIndex < RobinSpeech.Length; ++responseIndex)
+        {
+            RobinSpeech[responseIndex].gameObject.SetActive(false);
+        }
+
+        for (int responseIndex = 0; responseIndex < BossResponses.Length; ++responseIndex)
+        {
+            BossResponses[responseIndex].gameObject.SetActive(false);
+        }
+
+        for (int responseIndex = 0; responseIndex < ThoughtBubbles.Length; ++responseIndex)
+        {
+            ThoughtBubbles[responseIndex].gameObject.SetActive(false);
+        }
+
         Button Transition = transitionImage.GetComponent<Button>();
-        Transition.onClick.AddListener(TB1);
+        Transition.onClick.AddListener(Speech1);
 
         response1.gameObject.SetActive(false);
         response2.gameObject.SetActive(false);
@@ -145,90 +205,170 @@ public class Scene2Script : MonoBehaviour
         RobinSpeech2.gameObject.SetActive(false);
         RobinNeutralAnimator.SetBool("RobinNeutral", true);
 
+        Button Intro = transitionImage.GetComponent<Button>();
+        Intro.onClick.AddListener(Speech1);
+
+        ThoughtBubblesFunctionsToCall = new UnityAction[]
+        {
+            ResponseG,
+            ResponseB,
+            ResponseS,
+            RichResponse1,
+            RichResponse2,
+            RichResponse3,
+            RichResponse4,
+            RichResponse5,
+            RichResponse6,
+        };
+
+        InteractiveFunctionsToCall = new UnityAction[]
+        {
+            //Read,
+            //Interactibles,
+            //viewPhoto,
+            //Interactibles
+        };
+        
+
+        KatieSpeechFunctionsToCall = new UnityAction[]
+        {
+           Speech3,
+           Speech5,
+           Speech7,
+           Speech11,
+           Speech14,
+           Speech16,
+           Speech18,
+
+           
+        };
+
+        RobinSpeechFunctionsToCall = new UnityAction[]
+        {
+           Speech2,
+           Speech4,
+        };
+
+        BossResponsesFunctionsToCall = new UnityAction[]
+        {
+           Speech6,
+           Speech8,
+           Speech9
+        };
+
+        RichardFunctionsToCall = new UnityAction[]
+        {
+           Speech10,
+           Speech12,
+           Speech13,
+           Speech15,
+           Speech17,
+           Speech19
+        };
+
+        //PlayerResponseFunctionsToCall = new UnityAction[]
+        //{
+        //    KatieResponse1,
+        //    KatieResponse2,
+        //    KatieResponse3,
+        //    KatieResponse4,
+        //    KatieResponse5,
+        //    KatieResponse6
+        //};
+
         if (textFile != null) // checks if there is text
         {
             dialogue = (textFile.text.Split('\n'));// retreiving the dialogue from file and split it into spaces
- 
+
         }
 
-        if(endLine == 0) // stops the text at the last line
+        if (endLine == 0) // stops the text at the last line
         {
-            endLine = dialogue.Length - 1; 
+            endLine = dialogue.Length - 1;
         }
 
-        Button r1 = response1.GetComponent<Button>();
-        r1.onClick.AddListener(ResponseG);
-        Button r2 = response2.GetComponent<Button>();
-        r2.onClick.AddListener(ResponseB);
-        Button r3 = response3.GetComponent<Button>();
-        r3.onClick.AddListener(ResponseS);
-        Button r4 = response4.GetComponent<Button>();
-        r4.onClick.AddListener(RichResponse1);
-        Button r5 = response5.GetComponent<Button>();
-        r5.onClick.AddListener(RichResponse2);
-        Button r6 = response6.GetComponent<Button>();
-        r6.onClick.AddListener(RichResponse3);
-        Button r7 = response7.GetComponent<Button>();
-        r7.onClick.AddListener(RichResponse4);
-        Button r8 = response8.GetComponent<Button>();
-        r8.onClick.AddListener(RichResponse5);
-        Button r9 = response9.GetComponent<Button>();
-        r9.onClick.AddListener(RichResponse6);
-        Button RS1 = RobinSpeech1.GetComponent<Button>();
-        RS1.onClick.AddListener(Speech1);
-        Button KS1 = KatieSpeech1.GetComponent<Button>();
-        KS1.onClick.AddListener(Speech2);
-        Button RS2 = RobinSpeech2.GetComponent<Button>();
-        RS2.onClick.AddListener(Speech3);
-        Button KS2 = KatieSpeech2.GetComponent<Button>();
-        KS2.onClick.AddListener(Speech4);
-        Button  BS1 = BossSpeech1.GetComponent<Button>();
-        BS1.onClick.AddListener(Speech5);
-        Button KS3 = KatieSpeech3.GetComponent<Button>();
-        KS3.onClick.AddListener(Speech6);
-        Button BS2 = BossSpeech2.GetComponent<Button>();
-        BS2.onClick.AddListener(Speech7);
-        Button BS3 = BossSpeech3.GetComponent<Button>();
-        BS3.onClick.AddListener(Speech8);
-        Button RichS1 = RichardSpeech1.GetComponent<Button>();
-        RichS1.onClick.AddListener(Speech9);
-        Button KS4 = KatieSpeech4.GetComponent<Button>();
-        KS4.onClick.AddListener(Speech10);
-        Button RichS2 = RichardSpeech2.GetComponent<Button>();
-        RichS2.onClick.AddListener(Speech11);
-        Button RichS3 = RichardSpeech3.GetComponent<Button>();
-        RichS3.onClick.AddListener(Speech12);
-        Button KS5 = KatieSpeech5.GetComponent<Button>();
-        KS5.onClick.AddListener(Speech13);
-        Button RichS4 = RichardSpeech4.GetComponent<Button>();
-        RichS4.onClick.AddListener(Speech14);
-        Button KS6 = KatieSpeech6.GetComponent<Button>();
-        KS6.onClick.AddListener(Speech15);
-        Button RichS5 = RichardSpeech5.GetComponent<Button>();
-        RichS5.onClick.AddListener(Speech16);
-        Button KS7 = KatieSpeech7.GetComponent<Button>();
-        KS7.onClick.AddListener(Speech17);
-        Button RichS6 = RichardSpeech6.GetComponent<Button>();
-        RichS6.onClick.AddListener(Speech18);
-        Button KS8 = KatieSpeech8.GetComponent<Button>();
-        KS8.onClick.AddListener(Speech19);
-        
+        MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+
+        MC.texture = (Texture)KatieEmotions[0];
+
+        for (int responseIndex = 0; responseIndex < Interactive.Length; ++responseIndex)
+        {
+            AddListenerToInteractiveButton(Interactive[responseIndex], InteractiveFunctionsToCall[responseIndex]);
+        }
+
+        for (int responseIndex = 0; responseIndex < ThoughtBubbles.Length; ++responseIndex)
+        {
+            AddListenerToThoughtButton(ThoughtBubbles[responseIndex], ThoughtBubblesFunctionsToCall[responseIndex]);
+        }
+
+        for (int responseIndex = 0; responseIndex < PlayerResponses.Length; ++responseIndex)
+        {
+            AddListenerToPlayerResponsesButton(PlayerResponses[responseIndex], PlayerResponseFunctionsToCall[responseIndex]);
+        }
+
+        for (int responseIndex = 0; responseIndex <BossResponses.Length; ++responseIndex)
+        {
+            AddListenerToBossResponsesButton(BossResponses[responseIndex], BossResponsesFunctionsToCall[responseIndex]);
+        }
+
+        for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
+        {
+            AddListenerToKatieSpeechButton(KatieSpeech[responseIndex], KatieSpeechFunctionsToCall[responseIndex]);
+        }
+
+        for (int responseIndex = 0; responseIndex < RobinSpeech.Length; ++responseIndex)
+        {
+            AddListenerToRobinSpeechButton(RobinSpeech[responseIndex], RobinSpeechFunctionsToCall[responseIndex]);
+        }
+
+        for (int responseIndex = 0; responseIndex < RichardResponses.Length; ++responseIndex)
+        {
+            AddListenerToRichardResponsesButton(RichardResponses[responseIndex], RichardFunctionsToCall[responseIndex]);
+        }
     }
 
-    void TB1()
+    private void AddListenerToInteractiveButton(Button Interactive, UnityEngine.Events.UnityAction InteractiveFunctionsToCall)
     {
-        //the first thought bubble will be displayed" -SD
-        if (canClick)
-        {
-            transitionScreen.gameObject.SetActive(false);
-            RobinSpeech1.gameObject.SetActive(true);
-        }
+        Interactive.onClick.AddListener(InteractiveFunctionsToCall);
     }
+
+    private void AddListenerToThoughtButton(Button ThoughtBubbles, UnityEngine.Events.UnityAction ThoughtBubblesFunctionsToCall)
+    {
+        ThoughtBubbles.onClick.AddListener(ThoughtBubblesFunctionsToCall);
+    }
+
+    private void AddListenerToPlayerResponsesButton(Button KatieResponses, UnityEngine.Events.UnityAction PlayerResponseFunctionsToCall)
+    {
+        KatieResponses.onClick.AddListener(PlayerResponseFunctionsToCall);
+    }
+
+    private void AddListenerToBossResponsesButton(Button KatieResponses, UnityEngine.Events.UnityAction KatieResponsesFunctionsToCall)
+    {
+        KatieResponses.onClick.AddListener(KatieResponsesFunctionsToCall);
+    }
+
+    private void AddListenerToKatieSpeechButton(Button KatieSpeech, UnityEngine.Events.UnityAction KatieSpeechFunctionsToCall)
+    {
+        KatieSpeech.onClick.AddListener(KatieSpeechFunctionsToCall);
+    }
+
+    private void AddListenerToRobinSpeechButton(Button RobinSpeech, UnityEngine.Events.UnityAction RobinSpeechFunctionsToCall)
+    {
+        RobinSpeech.onClick.AddListener(RobinSpeechFunctionsToCall);
+    }
+
+    private void AddListenerToRichardResponsesButton(Button EmailResponses, UnityEngine.Events.UnityAction EmailFunctionsToCall)
+    {
+        EmailResponses.onClick.AddListener(EmailFunctionsToCall);
+    }
+        
+
 
     private void SceneChange()
     {
         throw new NotImplementedException();
     }
+
 
     void Update()
     {
