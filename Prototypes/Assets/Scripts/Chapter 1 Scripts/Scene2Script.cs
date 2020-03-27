@@ -37,6 +37,7 @@ public class Scene2Script : MonoBehaviour
     public Texture KatieHappy;
     public GameObject ImageOfKatie;
 
+    public Button NextScene;
     
     public Texture RichardAngry;
     public Texture RichardNeut;
@@ -132,8 +133,9 @@ public class Scene2Script : MonoBehaviour
         Transition.onClick.AddListener(Speech0);
         RobinNeutralAnimator.SetBool("RobinNeutral", true);
 
-        Button Intro = transitionImage.GetComponent<Button>();
-        Intro.onClick.AddListener(Speech0);
+
+        //Button Intro = transitionImage.GetComponent<Button>();
+        //Intro.onClick.AddListener(Speech0);
 
         ThoughtBubblesFunctionsToCall = new UnityAction[]
         {
@@ -166,7 +168,8 @@ public class Scene2Script : MonoBehaviour
            Speech11,
            Speech14,
            Speech16,
-           Speech18
+           Speech18,
+           Speech19
 
            
         };
@@ -306,9 +309,12 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech0()
     {
-        
-        RobinSpeech[0].gameObject.SetActive(true);
-        CoWorker.gameObject.SetActive(true);
+        if (canClick)
+        {
+            transitionImage.gameObject.SetActive(false);
+            RobinSpeech[0].gameObject.SetActive(true);
+            CoWorker.gameObject.SetActive(true);
+        }
     }
     void Speech1()
     {
@@ -493,7 +499,7 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech19()
     {
-        RichardResponses[6].gameObject.SetActive(true);
+        NextScene.gameObject.SetActive(true);
         KatieSpeech[7].gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);

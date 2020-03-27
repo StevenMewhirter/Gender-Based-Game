@@ -10864,7 +10864,6 @@ MonoBehaviour:
   - {fileID: 1315758450}
   - {fileID: 1256316046}
   - {fileID: 963834906}
-  - {fileID: 430692110}
   KatieEmotions: []
   Blocks: []
   KatieSad: {fileID: 2800000, guid: ae328df2e24e96744a15a0fde499df02, type: 3}
@@ -10872,6 +10871,7 @@ MonoBehaviour:
   KatieNeutral: {fileID: 2800000, guid: 190c0d5f520f97a47806d2ecf723a6d6, type: 3}
   KatieHappy: {fileID: 2800000, guid: ae48388751fb7034591057ff153d74b9, type: 3}
   ImageOfKatie: {fileID: 1635875606}
+  NextScene: {fileID: 430692110}
   RichardAngry: {fileID: 2800000, guid: c7d82bf3365eac04c93fe74a4dbf6e2d, type: 3}
   RichardNeut: {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
   RichardHappy: {fileID: 2800000, guid: e38b679de003e634692cb4d92b38e4b7, type: 3}
