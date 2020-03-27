@@ -131,7 +131,9 @@ public class Scene2Script : MonoBehaviour
 
         Button Transition = transitionImage.GetComponent<Button>();
         Transition.onClick.AddListener(Speech0);
-        RobinNeutralAnimator.SetBool("RobinNeutral", true);
+     
+        NextScene.gameObject.SetActive(false);
+
 
 
         //Button Intro = transitionImage.GetComponent<Button>();
@@ -311,6 +313,7 @@ public class Scene2Script : MonoBehaviour
     {
         if (canClick)
         {
+            RobinNeutralAnimator.SetBool("RobinNeutral", true);
             transitionImage.gameObject.SetActive(false);
             RobinSpeech[0].gameObject.SetActive(true);
             CoWorker.gameObject.SetActive(true);
