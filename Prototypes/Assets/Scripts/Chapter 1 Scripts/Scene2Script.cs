@@ -310,7 +310,7 @@ public class Scene2Script : MonoBehaviour
         if (canClick)
         {
             RobinNeutralAnimator.SetBool("RobinNeutral", true);
-            transitionImage.gameObject.SetActive(false);
+            transitionScreen.gameObject.SetActive(false);
             RobinSpeech[0].gameObject.SetActive(true);
             CoWorker.gameObject.SetActive(true);
         }
