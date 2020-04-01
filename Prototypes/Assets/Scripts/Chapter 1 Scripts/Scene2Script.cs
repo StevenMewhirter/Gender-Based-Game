@@ -135,10 +135,6 @@ public class Scene2Script : MonoBehaviour
         NextScene.gameObject.SetActive(false);
 
 
-
-        //Button Intro = transitionImage.GetComponent<Button>();
-        //Intro.onClick.AddListener(Speech0);
-
         ThoughtBubblesFunctionsToCall = new UnityAction[]
         {
             ResponseG,
