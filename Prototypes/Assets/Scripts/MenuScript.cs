@@ -108,7 +108,7 @@ public class MenuScript : MonoBehaviour
         mainMenuScreen.SetActive(false);
         newGameScreen.SetActive(false);
         chapterSelectScreen.SetActive(false);
-        optionsScreen.SetActive(false);
+        optionsScreen.SetActive(true);
 
         logo.gameObject.SetActive(false);
         header.gameObject.SetActive(false);
