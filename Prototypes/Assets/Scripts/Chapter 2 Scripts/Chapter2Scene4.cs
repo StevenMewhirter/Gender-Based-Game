@@ -45,11 +45,14 @@ public class Chapter2Scene4 : MonoBehaviour
     public RawImage Katie;
     public RawImage EndScreen;
     public Button ChangeScene;
-
+    public GameObject ImageOfBedroom;
+    public Texture[] Bedrooms;
+    public RawImage Bedroom;
     public Animator KatieAnimator;
     public Animator RobinAnimator;
     public Animator KatieRIAnimator;
     public Animator RobinRIAnimator;
+
     void Start()
     {
         for (int responseIndex = 0; responseIndex < Choices.Length; ++responseIndex)
@@ -109,6 +112,10 @@ public class Chapter2Scene4 : MonoBehaviour
         RobinSpeech[0].gameObject.SetActive(true);
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinMove", true);
+        Bedroom.gameObject.SetActive(true);
+        ImageOfBedroom.gameObject.SetActive(true);
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
 
         //Declares the functions that will be called when each button in the 
         //list of Katie's speech bubbles is pressed -SD
@@ -301,6 +308,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech1()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -315,6 +324,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void RobinSpeech2()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -335,6 +346,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech2()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -349,6 +362,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void RobinSpeech4()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -375,6 +390,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech3()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -389,6 +406,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void RobinSpeech7()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -412,6 +431,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech4()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -427,6 +448,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void RobinSpeech9()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -447,6 +470,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech5()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -461,6 +486,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void RobinSpeech11()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -489,6 +516,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech6()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -503,6 +532,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void choice1()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -531,6 +562,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech7()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -556,6 +589,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech8()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -581,6 +616,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech9()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -595,6 +632,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void choice2()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -623,6 +662,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech10()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -648,6 +689,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech11()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -673,6 +716,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech12()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -687,6 +732,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void choice3()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
@@ -715,6 +762,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech13()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -740,6 +789,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech14()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -765,6 +816,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void KatieSpeech15()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[1];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -779,6 +832,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void GoodKatie1()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[2];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -792,6 +847,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void GoodRobin1()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         GoodScenarioKatie[0].gameObject.SetActive(false);
@@ -818,6 +875,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void GoodKatie2()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[2];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -850,6 +909,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void GoodRobin4()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         GoodScenarioKatie[4].gameObject.SetActive(false);
@@ -876,6 +937,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void GoodKatie6()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[2];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -890,6 +953,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void GoodRobin7()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         GoodScenarioKatie[5].gameObject.SetActive(false);
@@ -904,6 +969,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void BadKatie1()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[2];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -916,6 +983,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void BadRobin1()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[0];
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         BadScenarioKatie[0].gameObject.SetActive(false);
@@ -930,6 +999,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void BadKatie2()
     {
+        Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
+        Bedroom.texture = (Texture)Bedrooms[2];
         Katie.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
@@ -944,6 +1015,8 @@ public class Chapter2Scene4 : MonoBehaviour
 
     void End()
     {
+        Bedroom.gameObject.SetActive(false);
+        ImageOfBedroom.gameObject.SetActive(false);
         ChangeScene.gameObject.SetActive(true);
         EndScreen.gameObject.SetActive(true);
         Katie.gameObject.SetActive(false);

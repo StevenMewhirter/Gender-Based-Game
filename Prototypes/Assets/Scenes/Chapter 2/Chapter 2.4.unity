@@ -809,7 +809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 82e2d9a551ff8b64e8ca531213aa3420, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 664538fe100682c458afbb54bc47b02e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1683,6 +1683,12 @@ MonoBehaviour:
   Katie: {fileID: 843027343}
   EndScreen: {fileID: 568483551}
   ChangeScene: {fileID: 642728316}
+  ImageOfBedroom: {fileID: 1232948774}
+  Bedrooms:
+  - {fileID: 2800000, guid: 15f3552584c66534ba9b475d796cb221, type: 3}
+  - {fileID: 2800000, guid: 01da535bea46b6541bae93d309032191, type: 3}
+  - {fileID: 2800000, guid: e5050c791044afc4a8c59f5e9234c059, type: 3}
+  Bedroom: {fileID: 1232948776}
   KatieAnimator: {fileID: 1117385565}
   RobinAnimator: {fileID: 522252249}
   KatieRIAnimator: {fileID: 843027345}
@@ -11086,7 +11092,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: a63692d4d22927540a42f0da7029746f, type: 3}
+  m_Texture: {fileID: 2800000, guid: 15f3552584c66534ba9b475d796cb221, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
