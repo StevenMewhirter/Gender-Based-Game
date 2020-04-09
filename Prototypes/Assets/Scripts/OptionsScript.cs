@@ -1,54 +1,92 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionsScript : MonoBehaviour
 {
-    public bool audioSetting;
-    public bool vibrateSetting;
-    public bool colourBlindSetting;
+    private bool audioSetting = true;
+    private bool vibrateSetting = true;
+    private bool colourBlindSetting = false;
+
+    [SerializeField]
+    private Button audioOn, audioOff, vibrateOn, vibrateOff, colourBlindOn, colourBlindOff, slowSpeed, mediumSpeed, fastSpeed;
 
     // 1 = slow, 2 = medium, 3 = fast
-    public int textSpeedSetting;
+    public int textSpeedSetting = 2;
 
-    public static GameObject audioManager;
+    void Awake()
+    {
+         
+    }
 
-    // Start is called before the first frame update
-    void awake()
+
+    public void ChangeAudioSettingsON()
     {
         audioSetting = true;
+        audioOn.enabled = false;
+        audioOff.enabled = true;
+    }
+
+    public void ChangeAudioSettingsOFF()
+    {
+        audioSetting = false;
+        audioOff.enabled = false;
+        audioOn.enabled = true;
+    }
+
+    public void ChangeVibrateSettingsON()
+    {
         vibrateSetting = true;
+        vibrateOn.enabled = false;
+        vibrateOff.enabled = true;
+    }
+
+    public void ChangeVibrateSettingsOFF()
+    {
+        vibrateSetting = false;
+        vibrateOff.enabled = false;
+        vibrateOn.enabled = true;
+    }
+
+    public void ChangeColourBlindSettingON()
+    {
+        colourBlindSetting = true;
+        colourBlindOn.enabled = false;
+        colourBlindOff.enabled = true;
+    }
+
+    public void ChangeColourBlindSettingOFF()
+    {
         colourBlindSetting = false;
+        colourBlindOff.enabled = false;
+        colourBlindOn.enabled = true;
+    }
+
+    public void TextSlowSpeed()
+    {
+        slowSpeed.enabled = false;
+        mediumSpeed.enabled = true;
+        fastSpeed.enabled = true;
+
+        textSpeedSetting = 1;
+    }
+
+    public void TextMediumSpeed()
+    {
+        slowSpeed.enabled = true;
+        mediumSpeed.enabled = false;
+        fastSpeed.enabled = true;
+
         textSpeedSetting = 2;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TextFastSpeed()
     {
-        
-    }
+        slowSpeed.enabled = true;
+        mediumSpeed.enabled = true;
+        fastSpeed.enabled = false;
 
-    void ChangeAudioSettings()
-    {
-        if (audioSetting == false)
-        {
-            audioSetting = true;
-        }
-        else
-        {
-            audioSetting = false;
-        }
-    }
-
-    void ChangeVibrateSettings()
-    {
-        if (vibrateSetting == false)
-        {
-            vibrateSetting = true;
-        }
-        else
-        {
-            vibrateSetting = false;
-        }
+        textSpeedSetting = 3;
     }
 }

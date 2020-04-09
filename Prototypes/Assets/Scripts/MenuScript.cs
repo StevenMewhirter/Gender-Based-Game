@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
@@ -87,6 +88,11 @@ public class MenuScript : MonoBehaviour
 
         back.gameObject.SetActive(true);
         options.gameObject.SetActive(true);
+    }
+
+    public void NewStory()
+    {
+        SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
     }
 
    public void ChapterSelectScreen()

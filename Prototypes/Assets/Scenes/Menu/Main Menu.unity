@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 76525372}
   - component: {fileID: 76525371}
   m_Layer: 0
-  m_Name: On
+  m_Name: ColourBlindOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,7 +472,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 76525372}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: ChangeColourBlindSettingON
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &76525372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,7 +989,7 @@ GameObject:
   - component: {fileID: 418924244}
   - component: {fileID: 418924243}
   m_Layer: 0
-  m_Name: On
+  m_Name: VibrateOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,7 +1057,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 418924244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: ChangeVibrateSettingsON
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &418924244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,7 +1118,7 @@ GameObject:
   - component: {fileID: 455798513}
   - component: {fileID: 455798512}
   m_Layer: 0
-  m_Name: Off
+  m_Name: VibrateOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1164,7 +1186,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 455798513}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: ChangeVibrateSettingsOFF
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &455798513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1429,7 +1462,7 @@ GameObject:
   - component: {fileID: 648059337}
   - component: {fileID: 648059336}
   m_Layer: 0
-  m_Name: Off
+  m_Name: AudioOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1497,7 +1530,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 648059337}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: ChangeAudioSettingsOFF
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &648059337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,7 +1659,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 720830661}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: TextFastSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &720830661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2704,7 +2759,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1139802254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 614690041}
+        m_MethodName: NewStory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1139802254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3186,7 +3252,7 @@ GameObject:
   - component: {fileID: 1445951238}
   - component: {fileID: 1445951237}
   m_Layer: 0
-  m_Name: On
+  m_Name: AudioOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3236,7 +3302,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3254,7 +3320,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1445951238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: ChangeAudioSettingsON
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1445951238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3673,10 +3750,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88644617724f6641ad6df7266fac35f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSetting: 0
-  vibrateSetting: 0
-  colourBlindSetting: 0
-  textSpeedSetting: 0
+  audioOn: {fileID: 1445951237}
+  audioOff: {fileID: 648059336}
+  vibrateOn: {fileID: 418924243}
+  vibrateOff: {fileID: 455798512}
+  colourBlindOn: {fileID: 76525371}
+  colourBlindOff: {fileID: 2048881257}
+  slowSpeed: {fileID: 1906105820}
+  mediumSpeed: {fileID: 2105119780}
+  fastSpeed: {fileID: 720830660}
+  textSpeedSetting: 2
 --- !u!4 &1609306713
 Transform:
   m_ObjectHideFlags: 0
@@ -4198,7 +4281,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1906105821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: TextSlowSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1906105821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4719,7 +4813,7 @@ GameObject:
   - component: {fileID: 2048881258}
   - component: {fileID: 2048881257}
   m_Layer: 0
-  m_Name: Off
+  m_Name: ColourBlindOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4787,7 +4881,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2048881258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: ChangeColourBlindSettingOFF
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2048881258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5183,7 +5288,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2105119781}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1609306712}
+        m_MethodName: TextMediumSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2105119781
 MonoBehaviour:
   m_ObjectHideFlags: 0
