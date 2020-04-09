@@ -160,13 +160,13 @@ public class Scene2Script : MonoBehaviour
         KatieSpeechFunctionsToCall = new UnityAction[]
         {
            
-           Speech3,
-           Speech5,
-           Speech7,
-           Speech11,
-           Speech14,
-           Speech16,
-           Speech18,
+           Speech2,
+           Speech4,
+           Speech6,
+           Speech10,
+           Speech13,
+           Speech15,
+           Speech17,
            Speech19
 
            
@@ -175,25 +175,25 @@ public class Scene2Script : MonoBehaviour
         RobinSpeechFunctionsToCall = new UnityAction[]
         {
            Speech1,
-           Speech2,
-           Speech4,
+           Speech3
+           
         };
 
         BossResponsesFunctionsToCall = new UnityAction[]
         {
-           Speech6,
-           Speech8,
-           Speech9
+           Speech5,
+           Speech7,
+           Speech8
         };
 
         RichardFunctionsToCall = new UnityAction[]
         {
-           Speech10,
+           Speech9,
+           Speech11,
            Speech12,
-           Speech13,
-           Speech15,
-           Speech17,
-           Speech19
+           Speech14,
+           Speech16,
+           Speech18
         };
 
         //PlayerResponseFunctionsToCall = new UnityAction[]
@@ -342,7 +342,7 @@ public class Scene2Script : MonoBehaviour
     void Speech4()
     {
         Boss.gameObject.SetActive(true);
-        Boss = (RawImage)ImageOfAmina.GetComponent<RawImage>();
+        //Boss = (RawImage)ImageOfAmina.GetComponent<RawImage>();
 
         Boss.texture = (Texture)AminaAngry;
         KatieSpeech[1].gameObject.SetActive(false);
