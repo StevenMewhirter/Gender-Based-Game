@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RobinValueStatic : MonoBehaviour
+public class RichardValueStatic : MonoBehaviour
 {
-  static public float RValue = 0;
-  public Slider RobinSlider;
+    static public float RichValue = 0;
+    public Slider RichardSlider;
     // Start is called before the first frame update
     void Start()
     {
-      
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        RobinSlider.value = RValue;
-       // RValue += Time.deltaTime * 1.5f;
+        RichardSlider.value = RichValue;
+        // RValue += Time.deltaTime * 1.5f;
         if (Input.GetKey(KeyCode.T))
         {
-            Debug.Log(RValue);
+            Debug.Log(RichValue);
         }
     }
 }

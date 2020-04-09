@@ -9,6 +9,16 @@ using UnityEngine.Events;
 
 public class Scene2Script : MonoBehaviour
 {
+
+     public float RobinValue = 50;
+    
+
+     public float AminaValue = 50;
+   
+
+     public float RichardValue = 50;
+   
+
     public DiaryTexts transitionScreen;
     public Button transitionImage;
     bool canClick = false;
@@ -86,6 +96,7 @@ public class Scene2Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         StartCoroutine(transitionPanel());
 
         //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
@@ -133,6 +144,8 @@ public class Scene2Script : MonoBehaviour
         Transition.onClick.AddListener(Speech0);
      
         NextScene.gameObject.SetActive(false);
+
+       
 
 
         ThoughtBubblesFunctionsToCall = new UnityAction[]
@@ -297,13 +310,30 @@ public class Scene2Script : MonoBehaviour
         throw new NotImplementedException();
     }
 
+   
     void Update()
     {
+        RobinValueStatic.RValue = RobinValue;
+        RichardValueStatic.RichValue = RichardValue;
+        //AminaSlider.value = AminaValue;
+        //RichardSlider.value = RichardValue;
+
         ResponseBoss1.text = dialogue[currentLine1]; //checks current line  
         ResponseKatie1.text = dialogue[currentLine]; //checks current line  
         ResponseKatie2.text = dialogue[currentLine3]; //checks current line  
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line  
+
+        if (RobinValue <= 40)
+        {
+            ThoughtBubbles[2].gameObject.SetActive(false);
+        }
+
+        if (RichardValue <= 40)
+        {
+            ThoughtBubbles[4].gameObject.SetActive(false);
+            ThoughtBubbles[8].gameObject.SetActive(false);
+        }
     }
     void Speech0()
     {
@@ -506,6 +536,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseG()
     {
+        RobinValue -= 10;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieHappy;
@@ -522,6 +553,7 @@ public class Scene2Script : MonoBehaviour
 
     void ResponseB()
     {
+        
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieSad;
@@ -538,6 +570,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
+        RobinValue += 10f;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieAngry;
@@ -567,6 +600,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse2()
     {
+        RichardValue += 10f;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieSad;
@@ -582,6 +616,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse3()
     {
+        RichardValue -= 10f;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieAngry;
@@ -607,6 +642,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse5()
     {
+        RichardValue -= 10f;
         KatieSpeech[6].interactable = true; // makes button iteractable
         KatieSpeech[6].gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
@@ -617,6 +653,7 @@ public class Scene2Script : MonoBehaviour
     }
     void RichResponse6()
     {
+        RichardValue += 10f;
         KatieSpeech[6].interactable = true; // makes button iteractable
         KatieSpeech[6].gameObject.SetActive(true);
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
