@@ -98,6 +98,7 @@ public class Scene1Script : MonoBehaviour
         NotificationRed.SetActive(false);
         NotificationMessage.SetActive(false);
         EmailBackground.gameObject.SetActive(false);
+        Messages.interactable= false;
 
         //When each specified button is pressed, it will call the specified method from below and run the appropriate actions accordingly -SD
         //After the introPanel disappears, the first image will be Katie in her room and the text coming in to the thought bubble in a typewriter fashion - SD
@@ -274,6 +275,7 @@ public class Scene1Script : MonoBehaviour
     {
         //the third thought bubble will be displayed saying "It’s been over a week. I don’t think I got it.." -SD
         ThoughtBubbles[2].gameObject.SetActive(false);
+        Messages.interactable = true;
         NotificationMessage.SetActive(true);
         NotificationRed.SetActive(true);
     }
@@ -283,6 +285,7 @@ public class Scene1Script : MonoBehaviour
         //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
         //Robin's first speech bubble appears on screen saying "What's up?" -SD
         NotificationRed.gameObject.SetActive(false);
+        Messages.interactable = false;
         NotificationMessage.SetActive(false);
         Phone.gameObject.SetActive(true);
         StartCoroutine(RobinMessage1());
