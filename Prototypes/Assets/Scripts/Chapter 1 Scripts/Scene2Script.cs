@@ -313,7 +313,8 @@ public class Scene2Script : MonoBehaviour
    
     void Update()
     {
-        RobinValueStatic.RValue = RobinValue;
+        
+        AminaValueStatic.AValue = AminaValue;
         RichardValueStatic.RichValue = RichardValue;
         //AminaSlider.value = AminaValue;
         //RichardSlider.value = RichardValue;
@@ -324,9 +325,9 @@ public class Scene2Script : MonoBehaviour
         ResponseKatie3.text = dialogue[currentLine4]; //checks current line 
         ResponseRichard1.text = dialogue[currentLine2]; //checks current line  
 
-        if (RobinValue <= 40)
+        if (AminaValue <= 40)
         {
-            ThoughtBubbles[2].gameObject.SetActive(false);
+          //  ThoughtBubbles[2].gameObject.SetActive(false);
         }
 
         if (RichardValue <= 40)
@@ -536,7 +537,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseG()
     {
-        RobinValue -= 10;
+        AminaValue -= 10f;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieHappy;
@@ -570,7 +571,7 @@ public class Scene2Script : MonoBehaviour
     }
     void ResponseS()
     {
-        RobinValue += 10f;
+        AminaValue += 10f;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieAngry;

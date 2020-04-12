@@ -20,7 +20,7 @@ public class RobinValueStatic : MonoBehaviour
        // RValue += Time.deltaTime * 1.5f;
         if (Input.GetKey(KeyCode.T))
         {
-            Debug.Log(RValue);
+            Debug.Log(RValue +"Robin");
         }
     }
 }

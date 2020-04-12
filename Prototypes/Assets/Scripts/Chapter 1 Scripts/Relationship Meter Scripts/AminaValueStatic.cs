@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RichardValueStatic : MonoBehaviour
+public class AminaValueStatic : MonoBehaviour
 {
-    static public float RichValue = 0;
-    public Slider RichardSlider;
+    static public float AValue = 0;
+    public Slider AminaSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +16,11 @@ public class RichardValueStatic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RichardSlider.value = RichValue;
+        AminaSlider.value = AValue;
         // RValue += Time.deltaTime * 1.5f;
         if (Input.GetKey(KeyCode.T))
         {
-            Debug.Log(RichValue);
+            Debug.Log(AValue + "Amina");
         }
     }
 }
