@@ -8,6 +8,13 @@ using UnityEngine.Events;
 
 public class Scene4Script : MonoBehaviour
 {
+
+
+    public float AminaValue;
+
+
+    public float JasonValue;
+
     public DiaryTexts transitionScreen;
     public Button transitionImage;
     bool canClick = false;
@@ -53,11 +60,6 @@ public class Scene4Script : MonoBehaviour
     //Buttons for speech
    
     public Button KatieSpeech9;
-
-   
-
-   
-
     public RawImage MC;
     public RawImage Boss;
     public RawImage CoWorker;
@@ -265,7 +267,10 @@ public class Scene4Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        AminaValueStatic.AValue = AminaValue;
+        JasonValueStatic.JValue = JasonValue;
+
         responseKatie.text = dialogue[currentLine]; //checks current line
         response.text = dialogue[currentLine1];
         responseKatie1.text = dialogue[currentLine2];
@@ -351,6 +356,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseA()
     {
+        AminaValue += 10f;
         KatieAnimator.SetBool("KatieNeutral", true);
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
@@ -384,6 +390,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseC()
     {
+        AminaValue -= 10f;
         KatieSpeech[4].interactable = true;
         response.text = dialogue[currentLine1]; //checks current line 
         currentLine1 = 10; //goes to the next line
@@ -473,6 +480,7 @@ public class Scene4Script : MonoBehaviour
     void ResponseD()
 
     {
+        JasonValue += 10f;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieSad;
@@ -513,6 +521,7 @@ public class Scene4Script : MonoBehaviour
     }
     void ResponseF()
     {
+        JasonValue -= 10f;
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
 
         MC.texture = (Texture)KatieAngry;

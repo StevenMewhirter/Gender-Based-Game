@@ -9,6 +9,12 @@ using System;
 
 public class Scene6TextManager : MonoBehaviour
 {
+
+    public float AminaValue;
+
+
+    public float JasonValue;
+
     public DiaryTexts transitionScreen;
     public Button transitionImage;
     bool canClick = false;
@@ -271,7 +277,14 @@ public class Scene6TextManager : MonoBehaviour
         ShowChoices.onClick.AddListener(ChoicesFunctions);
     }
 
-    void StartMessages()
+    void Update()
+    {
+
+        AminaValueStatic.AValue = AminaValue;
+        JasonValueStatic.JValue = JasonValue;
+    }
+
+        void StartMessages()
     {
         if (canClick)
         {
@@ -347,6 +360,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse1()
     {
+        JasonValue += 10f;
         Responses[0].gameObject.SetActive(false);
         Responses[6].gameObject.SetActive(false);
         Responses[7].gameObject.SetActive(false);
@@ -408,6 +422,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse2()
     {
+        AminaValue += 10f;
         Blocks[0].SetActive(false);
         Responses[1].gameObject.SetActive(false);
         Responses[8].gameObject.SetActive(false);
@@ -430,6 +445,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse10()
     {
+        AminaValue -= 10f;
         Blocks[0].SetActive(false);
         Responses[1].gameObject.SetActive(false);
         Responses[8].gameObject.SetActive(false);
@@ -575,6 +591,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void Selection3()
     {
+        
         Jason.gameObject.SetActive(false);
         ImageOfJason.gameObject.SetActive(false);
         JasonSpeech[2].gameObject.SetActive(false);
@@ -610,6 +627,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse11()
     {
+        JasonValue += 10f;
         JasonSpeech[2].gameObject.SetActive(false);
         Blocks[1].SetActive(false);
         Responses[2].gameObject.SetActive(false);
@@ -626,6 +644,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse12()
     {
+        JasonValue -= 10f;
         JasonSpeech[2].gameObject.SetActive(false);
         Blocks[1].SetActive(false);
         Responses[2].gameObject.SetActive(false);
@@ -702,6 +721,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse4()
     {
+        JasonValue += 10f;
         JasonSpeech[5].gameObject.SetActive(false);
         Blocks[2].SetActive(false);
         Responses[3].gameObject.SetActive(false);
@@ -724,6 +744,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse14()
     {
+        JasonValue -= 10f;
         JasonSpeech[5].gameObject.SetActive(false);
         Blocks[2].SetActive(false);
         Responses[3].gameObject.SetActive(false);
@@ -775,6 +796,7 @@ public class Scene6TextManager : MonoBehaviour
 
     void ShowResponse5()
     {
+        JasonValue -= 10f;
         Blocks[3].SetActive(false);
         Responses[4].gameObject.SetActive(false);
         Responses[5].gameObject.SetActive(false);
