@@ -9,6 +9,7 @@ public class TypeWriting : MonoBehaviour
     public string fullText;
     private string currentText = "";
     bool functionCalled = false;
+    //float textSpeed;
 
 
     void Update()
@@ -19,6 +20,19 @@ public class TypeWriting : MonoBehaviour
             StartCoroutine(ShowText());
 
         }
+        //textSpeed = OptionsScript.textSpeedSetting;
+        //if (textSpeed == 1)
+        //{
+        //    typeTime = 0.005f * 3;
+        //}
+        //else if (textSpeed == 2)
+        //{
+        //    typeTime = 0.005f;
+        //}
+        //else if (textSpeed == 3)
+        //{
+        //    typeTime = 0.005f / 3;
+        //}
     }
     IEnumerator ShowText()
     {

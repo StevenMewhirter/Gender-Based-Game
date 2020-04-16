@@ -13,7 +13,7 @@ public class OptionsScript : MonoBehaviour
     private Button audioOn, audioOff, vibrateOn, vibrateOff, colourBlindOn, colourBlindOff, slowSpeed, mediumSpeed, fastSpeed;
 
     // 1 = slow, 2 = medium, 3 = fast
-    public int textSpeedSetting = 2;
+    public static int textSpeedSetting = 2;
 
     void Awake()
     {
@@ -26,6 +26,7 @@ public class OptionsScript : MonoBehaviour
         audioSetting = true;
         audioOn.enabled = false;
         audioOff.enabled = true;
+        AudioListener.volume = 0.5f;
     }
 
     public void ChangeAudioSettingsOFF()
@@ -33,6 +34,7 @@ public class OptionsScript : MonoBehaviour
         audioSetting = false;
         audioOff.enabled = false;
         audioOn.enabled = true;
+        AudioListener.volume = 0f;
     }
 
     public void ChangeVibrateSettingsON()
