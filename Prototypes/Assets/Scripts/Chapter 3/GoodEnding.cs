@@ -334,12 +334,13 @@ public class GoodEnding : MonoBehaviour
         Responses[3].gameObject.SetActive(false);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.gameObject.SetActive(true);
-        Robin.texture = (Texture)RobinEmotions[0];
+        Robin.texture = (Texture)RobinEmotions[1];
         RobinSpeech[6].gameObject.SetActive(true);
     }
 
     void RobinSpeech8()
     {
+        Robin.texture = (Texture)RobinEmotions[0];
         RobinSpeech[5].gameObject.SetActive(false);
         RobinSpeech[6].gameObject.SetActive(false);
         RobinSpeech[7].gameObject.SetActive(true);
