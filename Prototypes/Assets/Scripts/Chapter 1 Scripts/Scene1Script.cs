@@ -285,6 +285,8 @@ public class Scene1Script : MonoBehaviour
         //Katie's first speech bubble appears on screen saying "I’m not getting the marketing job, am I?" -SD
         //Robin's first speech bubble appears on screen saying "What's up?" -SD
         NotificationRed.gameObject.SetActive(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         Messages.interactable = false;
         NotificationMessage.SetActive(false);
         Phone.gameObject.SetActive(true);
@@ -370,6 +372,8 @@ public class Scene1Script : MonoBehaviour
     {
         //The phone and the first email speech bubble appears on screen saying "Good afternoon Ms Anderson" -SD
         setTrueOrFalse(false);
+        ImageOfKatie.gameObject.SetActive(false);
+        MC.gameObject.SetActive(false);
         EmailResponses[0].gameObject.SetActive(true);
         EmailBackground.gameObject.SetActive(true);
         Phone.gameObject.SetActive(false);

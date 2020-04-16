@@ -8,7 +8,7 @@ public class TextAligned : MonoBehaviour
     //this an empty gameobject (child of the text box gameobject) where the text is going to be moved to, so it always appears in the correct position
     public GameObject textBoxCenter;
     public Text thisText;
-    int thisFontSize = 30;
+    int thisFontSize = 28;
 
     // Start is called before the first frame update
     void Start()

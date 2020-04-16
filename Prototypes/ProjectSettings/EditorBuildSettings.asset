@@ -5,43 +5,43 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu/Main Menu.unity
     guid: dce15c81b4b2b204590d2bc5564662f1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 1 Scenes/Scene1.unity
     guid: 632222b9fae360445a2d036390309ce9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 1 Scenes/Scene2.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 1 Scenes/Scene3.unity
     guid: d0c668234b1bc0f429a6df00126370fd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 1 Scenes/Scene4.unity
     guid: 5b4326ee90313544284314183b2ada0c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 1 Scenes/Scene5.unity
     guid: 6993cad1973a4ca4486ce57f5b81a00a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 1 Scenes/Scene6.unity
     guid: 3780d188ae1ae5b4fb8dd47a2d2f6746
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 2/Chapter 2.1.unity
     guid: f0e7a5b210fa6c34199b7a57c42ab124
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 2/Chapter 2.4.unity
     guid: 22b41d4f4ed4d5040900f74cacd78ba4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 3/GoodEnding.unity
     guid: 86920a5d93d96ba468365941ca1211ff
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Test Scene/Test Scene.unity
     guid: 6bff15daec42f1d469b19b74b1afce64
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Test Scene/Test Scene 2.unity
     guid: ebd0a4b6375737d4a9d080e3e0c271bd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Chapter 1 Scenes/Scene7.unity
     guid: 93e18620f2bca8144b15209411285118
   - enabled: 1
