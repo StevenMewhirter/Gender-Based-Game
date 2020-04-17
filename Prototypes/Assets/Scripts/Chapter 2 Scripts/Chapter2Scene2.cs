@@ -37,14 +37,18 @@ public class Chapter2Scene2 : MonoBehaviour
     public RawImage Robin;
     public RawImage Katie;
 
+    public Text ResponseRobin2;
     public Text ResponseRobin1;
     public Text ResponseRobin;
+    public Text ResponseKatie;
 
     public TextAsset textFile; //stores the text file
     public string[] dialogue; //creates a list of each text line
   
     public int currentLine;
     public int currentLine1;
+    public int currentLine2;
+    public int currentLine3;
     public int endLine;
 
 
@@ -52,7 +56,7 @@ public class Chapter2Scene2 : MonoBehaviour
     void Start()
     {
         StartCoroutine(transitionPanel());
-       // KatieSpeech[0].gameObject.SetActive(false);
+      // RobinSpeech[6].gameObject.SetActive(false);
        
 
         for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
@@ -76,18 +80,27 @@ public class Chapter2Scene2 : MonoBehaviour
         {
            Response,
            Response1,
-           Response2
+           Response2,
+           Response3,
+           Response4
 
         };
 
         RobinSpeechFunctionsToCall = new UnityAction[]
        {
-          RSpeech
+          RSpeech,
+          RSpeech1,
+          RSpeech2,
+          RSpeech3,
+          RSpeech4
 
        };
         KatieSpeechFunctionsToCall = new UnityAction[]
         {
-            KSpeech
+            KSpeech,
+            KSpeech1,
+            KSpeech2,
+            KSpeech3
             
         };
 
@@ -134,7 +147,9 @@ public class Chapter2Scene2 : MonoBehaviour
     void Update()
     {
         ResponseRobin.text = dialogue[currentLine]; //checks current line  
-      //  ResponseRobin1.text = dialogue[currentLine1];
+        ResponseRobin1.text = dialogue[currentLine1];
+        ResponseRobin2.text = dialogue[currentLine3];
+        ResponseKatie.text = dialogue[currentLine2];
     }
         void Speech0()
     {
@@ -175,8 +190,8 @@ public class Chapter2Scene2 : MonoBehaviour
     }
     void Response2()
     {
-        //Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
-        //Robin.texture = (Texture)RobinAngry;
+        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinAngry;
 
         RobinSpeech[0].interactable = true; // makes button iteractable
         ResponseRobin.text = dialogue[currentLine]; //checks current line 
@@ -196,11 +211,110 @@ public class Chapter2Scene2 : MonoBehaviour
     }
     void KSpeech()
     {
-        
+        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinSad;
         RobinSpeech[1].gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         KatieSpeech[0].gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
+    }
+    void RSpeech1()
+    {
+        Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
+        Katie.texture = (Texture)KatieSad;
+        RobinSpeech[1].gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+        KatieSpeech[1].gameObject.SetActive(true);
+        Katie.gameObject.SetActive(true);
+    }
+    void KSpeech1()
+    {
+        //Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        //Robin.texture = (Texture)RobinNeutral;
+        RobinSpeech[2].gameObject.SetActive(true);
+        Robin.gameObject.SetActive(true);
+        KatieSpeech[1].gameObject.SetActive(false);
+        Katie.gameObject.SetActive(false);
+    }
+    void RSpeech2()
+    {
+        //Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        //Robin.texture = (Texture)RobinNeutral;
+        RobinSpeech[2].gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+        KatieSpeech[2].gameObject.SetActive(true);
+        Katie.gameObject.SetActive(true);
+    }
+    void KSpeech2()
+    {
+        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinNeutral;
+        RobinSpeech[3].gameObject.SetActive(true);
+        Robin.gameObject.SetActive(true);
+        KatieSpeech[2].gameObject.SetActive(false);
+        Katie.gameObject.SetActive(false);
+        RobinSpeech[3].interactable = false;
+        ThoughtBubbles[4].gameObject.SetActive(true);
+        ThoughtBubbles[3].gameObject.SetActive(true);
+    }
+   
+
+    void Response3()
+    {
+        ResponseKatie.text = dialogue[currentLine2]; //checks current line 
+        currentLine2 = 9; //goes to the next line
+        RobinSpeech[3].interactable = true; // makes button iteractable
+        ResponseRobin1.text = dialogue[currentLine1]; //checks current line 
+        currentLine1 = 6; //goes to the next line
+        ResponseRobin2.text = dialogue[currentLine3]; //checks current line 
+        currentLine3 = 12; //goes to the next line
+        ThoughtBubbles[3].gameObject.SetActive(false);
+        ThoughtBubbles[4].gameObject.SetActive(false);
+       
+    }
+    void Response4()
+    {
+        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinAngry;
+        RobinSpeech[3].interactable = true; // makes button iteractable
+        ResponseRobin1.text = dialogue[currentLine1]; //checks current line 
+        currentLine1 = 7; //goes to the next line
+        ResponseKatie.text = dialogue[currentLine2]; //checks current line 
+        currentLine2 = 10; //goes to the next line
+        ResponseRobin2.text = dialogue[currentLine3]; //checks current line 
+        currentLine3 = 13; //goes to the next line
+        ThoughtBubbles[4].gameObject.SetActive(false);
+        ThoughtBubbles[3].gameObject.SetActive(false);
+    }
+    void RSpeech3()
+    {
+        //Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        //Robin.texture = (Texture)RobinNeutral;
+        RobinSpeech[3].gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+        KatieSpeech[3].gameObject.SetActive(true);
+        Katie.gameObject.SetActive(true);
+    }
+    void KSpeech3()
+    {
+        //Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        //Robin.texture = (Texture)RobinNeutral;
+
+        RobinSpeech[4].gameObject.SetActive(true);
+        Robin.gameObject.SetActive(true);
+        KatieSpeech[3].gameObject.SetActive(false);
+        Katie.gameObject.SetActive(false);
+    }
+    void RSpeech4()
+    {
+      //  Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        //Robin.texture = (Texture)RobinNeutral;
+
+        RobinSpeech[5].gameObject.SetActive(true);
+        Robin.gameObject.SetActive(true);
+        RobinSpeech[4].gameObject.SetActive(false);
+       
+
     }
 
     IEnumerator transitionPanel() //panel timer
