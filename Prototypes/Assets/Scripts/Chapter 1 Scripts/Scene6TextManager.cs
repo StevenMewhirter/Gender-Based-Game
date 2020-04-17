@@ -296,15 +296,13 @@ public class Scene6TextManager : MonoBehaviour
 
     void KSpeech1()
     {
-        
-
-         messagesContainer.transform.position += new Vector3(0, 100, 0);
         KatieSpeech[0].gameObject.SetActive(true);
         
     }
 
     void EnviroChange1()
     {
+        messagesContainer.SetActive(false);
         KatieSpeech[0].gameObject.SetActive(false);
         RobinSpeech1.gameObject.SetActive(false);
         Phone.gameObject.SetActive(false);
