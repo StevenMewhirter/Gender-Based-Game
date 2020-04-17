@@ -91,7 +91,7 @@ public class Scene2Script : MonoBehaviour
     public Animator AminaNeutralAnimator;
     public Animator RobinNeutralAnimator;
     public Animator RichardNeutralAnimator;
-
+     
 
     // Start is called before the first frame update
     void Start()
@@ -139,7 +139,7 @@ public class Scene2Script : MonoBehaviour
         {
             ThoughtBubbles[responseIndex].gameObject.SetActive(false);
         }
-
+     
         Button Transition = transitionImage.GetComponent<Button>();
         Transition.onClick.AddListener(Speech0);
      
@@ -338,6 +338,7 @@ public class Scene2Script : MonoBehaviour
     }
     void Speech0()
     {
+        
         if (canClick)
         {
             RobinNeutralAnimator.SetBool("RobinNeutral", true);
