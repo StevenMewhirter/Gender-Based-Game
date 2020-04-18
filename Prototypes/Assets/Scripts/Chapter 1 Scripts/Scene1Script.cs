@@ -118,6 +118,8 @@ public class Scene1Script : MonoBehaviour
             Read,
             Interactibles,
             viewPhoto,
+            Interactibles,
+            viewLaptop,
             Interactibles
         };
         Button mes = Messages.GetComponent<Button>();
@@ -561,6 +563,8 @@ public class Scene1Script : MonoBehaviour
         level2.gameObject.SetActive(true);
         Interactive[2].gameObject.SetActive(true);
         Interactive[3].gameObject.SetActive(false);
+        Interactive[4].gameObject.SetActive(true);
+        Interactive[5].gameObject.SetActive(false);
         transparentResponse.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
         ThoughtBubbles[3].gameObject.SetActive(false);
@@ -572,6 +576,7 @@ public class Scene1Script : MonoBehaviour
         Interactive[0].gameObject.SetActive(false);
         Interactive[1].gameObject.SetActive(true);
         Interactive[2].gameObject.SetActive(false);
+        Interactive[4].gameObject.SetActive(false);
         level2.gameObject.SetActive(false);
     }
 
@@ -580,6 +585,15 @@ public class Scene1Script : MonoBehaviour
         Interactive[0].gameObject.SetActive(false);
         Interactive[2].gameObject.SetActive(false);
         Interactive[3].gameObject.SetActive(true);
+        Interactive[4].gameObject.SetActive(false);
+        level2.gameObject.SetActive(false);
+    }
+    void viewLaptop()
+    {
+        Interactive[0].gameObject.SetActive(false);
+        Interactive[2].gameObject.SetActive(false);
+        Interactive[4].gameObject.SetActive(false);
+        Interactive[5].gameObject.SetActive(true);
         level2.gameObject.SetActive(false);
     }
 
