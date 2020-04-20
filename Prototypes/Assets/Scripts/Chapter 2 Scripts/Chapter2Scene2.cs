@@ -19,6 +19,13 @@ public class Chapter2Scene2 : MonoBehaviour
     private UnityAction[] RobinSpeechFunctionsToCall;
     public Button[] ThoughtBubbles;
     private UnityAction[] ThoughtBubblesFunctionsToCall;
+    public Button[] Interactive;
+    private UnityAction[] InteractiveFunctionsToCall;
+
+    public Button Laptop;
+    public Button Diary;
+    public Button KatieInter;
+    public Button Bin;
 
 
     public Texture KatieSad;
@@ -56,8 +63,11 @@ public class Chapter2Scene2 : MonoBehaviour
     void Start()
     {
         StartCoroutine(transitionPanel());
-      // RobinSpeech[6].gameObject.SetActive(false);
-       
+      Bin.gameObject.SetActive(false);
+        Diary.gameObject.SetActive(false);
+        KatieInter.gameObject.SetActive(false);
+        Laptop.gameObject.SetActive(false);
+
 
         for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
         {
@@ -71,6 +81,10 @@ public class Chapter2Scene2 : MonoBehaviour
         for (int responseIndex = 0; responseIndex < ThoughtBubbles.Length; ++responseIndex)
         {
             ThoughtBubbles[responseIndex].gameObject.SetActive(false);
+        }
+        for (int responseIndex = 0; responseIndex < Interactive.Length; ++responseIndex)
+        {
+            Interactive[responseIndex].gameObject.SetActive(false);
         }
 
         Button Transition = transitionImage.GetComponent<Button>();
@@ -92,7 +106,8 @@ public class Chapter2Scene2 : MonoBehaviour
           RSpeech1,
           RSpeech2,
           RSpeech3,
-          RSpeech4
+          RSpeech4,
+          Interactibles
 
        };
         KatieSpeechFunctionsToCall = new UnityAction[]
@@ -104,6 +119,18 @@ public class Chapter2Scene2 : MonoBehaviour
             
         };
 
+        InteractiveFunctionsToCall = new UnityAction[]
+       {
+           viewBin,
+             Interactibles,
+           viewDiary,
+             Interactibles,
+           viewKatie,
+             Interactibles,
+           viewLaptop,
+             Interactibles
+       };
+
         if (textFile != null) // checks if there is text
         {
             dialogue = (textFile.text.Split('\n'));// retreiving the dialogue from file and split it into spaces
@@ -114,6 +141,7 @@ public class Chapter2Scene2 : MonoBehaviour
         {
             endLine = dialogue.Length - 1;
         }
+
 
         for (int responseIndex = 0; responseIndex < ThoughtBubbles.Length; ++responseIndex)
         {
@@ -130,6 +158,10 @@ public class Chapter2Scene2 : MonoBehaviour
             AddListenerToRobinSpeechButton(RobinSpeech[responseIndex], RobinSpeechFunctionsToCall[responseIndex]);
         }
 
+        for (int responseIndex = 0; responseIndex < Interactive.Length; ++responseIndex)
+        {
+            AddListenerToInteractiveButton(Interactive[responseIndex], InteractiveFunctionsToCall[responseIndex]);
+        }
     }
     private void AddListenerToThoughtButton(Button ThoughtBubbles, UnityEngine.Events.UnityAction ThoughtBubblesFunctionsToCall)
     {
@@ -143,6 +175,10 @@ public class Chapter2Scene2 : MonoBehaviour
     private void AddListenerToRobinSpeechButton(Button RobinSpeech, UnityEngine.Events.UnityAction RobinSpeechFunctionsToCall)
     {
         RobinSpeech.onClick.AddListener(RobinSpeechFunctionsToCall);
+    }
+    private void AddListenerToInteractiveButton(Button Interactive, UnityEngine.Events.UnityAction InteractiveFunctionsToCall)
+    {
+        Interactive.onClick.AddListener(InteractiveFunctionsToCall);
     }
     void Update()
     {
@@ -321,5 +357,67 @@ public class Chapter2Scene2 : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         canClick = true;
+    }
+
+    void Interactibles()
+    {
+        RobinSpeech[5].gameObject.SetActive(false);
+        Robin.gameObject.SetActive(false);
+        Interactive[0].gameObject.SetActive(false);
+        Interactive[1].gameObject.SetActive(false);
+        Interactive[2].gameObject.SetActive(false);
+        Interactive[3].gameObject.SetActive(false);
+        Laptop.gameObject.SetActive(true);
+        KatieInter.gameObject.SetActive(true);
+        Bin.gameObject.SetActive(true);
+        Diary.gameObject.SetActive(true);
+        //Interactive[4].gameObject.SetActive(true);
+        //Interactive[5].gameObject.SetActive(false);
+        //Interactive[6].gameObject.SetActive(true);
+        //Interactive[7].gameObject.SetActive(false);
+    }
+    void viewLaptop()
+    {
+        Interactive[0].gameObject.SetActive(false);
+        Interactive[1].gameObject.SetActive(true);
+        Interactive[2].gameObject.SetActive(false);
+        Interactive[3].gameObject.SetActive(false);
+        Laptop.gameObject.SetActive(false);
+        KatieInter.gameObject.SetActive(false);
+        Bin.gameObject.SetActive(false);
+        Diary.gameObject.SetActive(false);
+    }
+    void viewDiary()
+    {
+        Interactive[0].gameObject.SetActive(false);
+        Interactive[1].gameObject.SetActive(true);
+        Interactive[2].gameObject.SetActive(false);
+        Interactive[3].gameObject.SetActive(false);
+        Laptop.gameObject.SetActive(false);
+        KatieInter.gameObject.SetActive(false);
+        Bin.gameObject.SetActive(false);
+        Diary.gameObject.SetActive(false);
+    }
+    void viewKatie()
+    {
+        Interactive[0].gameObject.SetActive(false);
+        Interactive[1].gameObject.SetActive(false);
+        Interactive[2].gameObject.SetActive(true);
+        Interactive[3].gameObject.SetActive(false);
+        Laptop.gameObject.SetActive(false);
+        KatieInter.gameObject.SetActive(false);
+        Bin.gameObject.SetActive(false);
+        Diary.gameObject.SetActive(false);
+    }
+    void viewBin()
+    {
+        Interactive[0].gameObject.SetActive(false);
+        Interactive[1].gameObject.SetActive(false);
+        Interactive[2].gameObject.SetActive(true);
+        Interactive[3].gameObject.SetActive(false);
+        Laptop.gameObject.SetActive(false);
+        KatieInter.gameObject.SetActive(false);
+        Bin.gameObject.SetActive(false);
+        Diary.gameObject.SetActive(false);
     }
 }
