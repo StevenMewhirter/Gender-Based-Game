@@ -363,25 +363,26 @@ public class Chapter2Scene2 : MonoBehaviour
     {
         RobinSpeech[5].gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
-        Interactive[0].gameObject.SetActive(false);
+        Interactive[0].gameObject.SetActive(true);
         Interactive[1].gameObject.SetActive(false);
-        Interactive[2].gameObject.SetActive(false);
+        Interactive[2].gameObject.SetActive(true);
         Interactive[3].gameObject.SetActive(false);
-        Laptop.gameObject.SetActive(true);
-        KatieInter.gameObject.SetActive(true);
+        Interactive[4].gameObject.SetActive(true);
+        Interactive[5].gameObject.SetActive(false);
+        Interactive[6].gameObject.SetActive(true);
+        Interactive[7].gameObject.SetActive(false);
         Bin.gameObject.SetActive(true);
-        Diary.gameObject.SetActive(true);
-        //Interactive[4].gameObject.SetActive(true);
-        //Interactive[5].gameObject.SetActive(false);
-        //Interactive[6].gameObject.SetActive(true);
-        //Interactive[7].gameObject.SetActive(false);
     }
     void viewLaptop()
     {
         Interactive[0].gameObject.SetActive(false);
-        Interactive[1].gameObject.SetActive(true);
+        Interactive[1].gameObject.SetActive(false);
         Interactive[2].gameObject.SetActive(false);
         Interactive[3].gameObject.SetActive(false);
+        Interactive[4].gameObject.SetActive(false);
+        Interactive[5].gameObject.SetActive(false);
+        Interactive[6].gameObject.SetActive(false);
+        Interactive[7].gameObject.SetActive(true);
         Laptop.gameObject.SetActive(false);
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
@@ -390,9 +391,13 @@ public class Chapter2Scene2 : MonoBehaviour
     void viewDiary()
     {
         Interactive[0].gameObject.SetActive(false);
-        Interactive[1].gameObject.SetActive(true);
+        Interactive[1].gameObject.SetActive(false);
         Interactive[2].gameObject.SetActive(false);
-        Interactive[3].gameObject.SetActive(false);
+        Interactive[3].gameObject.SetActive(true);
+        Interactive[4].gameObject.SetActive(false);
+        Interactive[5].gameObject.SetActive(false);
+        Interactive[6].gameObject.SetActive(false);
+        Interactive[7].gameObject.SetActive(false);
         Laptop.gameObject.SetActive(false);
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
@@ -402,8 +407,12 @@ public class Chapter2Scene2 : MonoBehaviour
     {
         Interactive[0].gameObject.SetActive(false);
         Interactive[1].gameObject.SetActive(false);
-        Interactive[2].gameObject.SetActive(true);
+        Interactive[2].gameObject.SetActive(false);
         Interactive[3].gameObject.SetActive(false);
+        Interactive[4].gameObject.SetActive(false);
+        Interactive[5].gameObject.SetActive(true);
+        Interactive[6].gameObject.SetActive(false);
+        Interactive[7].gameObject.SetActive(false);
         Laptop.gameObject.SetActive(false);
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
@@ -412,9 +421,13 @@ public class Chapter2Scene2 : MonoBehaviour
     void viewBin()
     {
         Interactive[0].gameObject.SetActive(false);
-        Interactive[1].gameObject.SetActive(false);
-        Interactive[2].gameObject.SetActive(true);
+        Interactive[1].gameObject.SetActive(true);
+        Interactive[2].gameObject.SetActive(false);
         Interactive[3].gameObject.SetActive(false);
+        Interactive[4].gameObject.SetActive(false);
+        Interactive[5].gameObject.SetActive(false);
+        Interactive[6].gameObject.SetActive(false);
+        Interactive[7].gameObject.SetActive(false);
         Laptop.gameObject.SetActive(false);
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
