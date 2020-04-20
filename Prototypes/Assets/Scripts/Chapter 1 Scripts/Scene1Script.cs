@@ -12,6 +12,7 @@ public class Scene1Script : MonoBehaviour
     public Button introImage;
     bool canClick = false;
     bool notif = false;
+    public GameObject[] Descriptions;
     public Button[] PlayerResponses;
     private UnityAction[] PlayerResponseFunctionsToCall;
     public Button[] Interactive;
@@ -52,6 +53,11 @@ public class Scene1Script : MonoBehaviour
         StartCoroutine(introPanel()); //start panel timer (to make it disappear)
 
         //gets rid of all the objects we don't want to appear on the screen at the start of the game -SD
+        for (int responseIndex = 0; responseIndex < Descriptions.Length; ++responseIndex)
+        {
+            Descriptions[responseIndex].gameObject.SetActive(false);
+        }
+
         for (int responseIndex = 0; responseIndex < Blocks.Length; ++responseIndex)
         {
             Blocks[responseIndex].gameObject.SetActive(false);
@@ -569,10 +575,14 @@ public class Scene1Script : MonoBehaviour
         ImageOfKatie.gameObject.SetActive(false);
         ThoughtBubbles[3].gameObject.SetActive(false);
         MC.gameObject.SetActive(false);
+        Descriptions[0].SetActive(false);
+        Descriptions[2].SetActive(false);
+        Descriptions[1].SetActive(false);
     }
 
     void Read()
     {
+        Descriptions[0].SetActive(true);
         Interactive[0].gameObject.SetActive(false);
         Interactive[1].gameObject.SetActive(true);
         Interactive[2].gameObject.SetActive(false);
@@ -582,6 +592,7 @@ public class Scene1Script : MonoBehaviour
 
     void viewPhoto()
     {
+        Descriptions[1].SetActive(true);
         Interactive[0].gameObject.SetActive(false);
         Interactive[2].gameObject.SetActive(false);
         Interactive[3].gameObject.SetActive(true);
@@ -590,6 +601,7 @@ public class Scene1Script : MonoBehaviour
     }
     void viewLaptop()
     {
+        Descriptions[2].SetActive(true);
         Interactive[0].gameObject.SetActive(false);
         Interactive[2].gameObject.SetActive(false);
         Interactive[4].gameObject.SetActive(false);
