@@ -48,6 +48,7 @@ public class Chapter2Scene2 : MonoBehaviour
     public Text ResponseRobin1;
     public Text ResponseRobin;
     public Text ResponseKatie;
+    public Text clue;
 
     public TextAsset textFile; //stores the text file
     public string[] dialogue; //creates a list of each text line
@@ -56,6 +57,7 @@ public class Chapter2Scene2 : MonoBehaviour
     public int currentLine1;
     public int currentLine2;
     public int currentLine3;
+    public int currentLine4;
     public int endLine;
 
 
@@ -186,6 +188,7 @@ public class Chapter2Scene2 : MonoBehaviour
         ResponseRobin1.text = dialogue[currentLine1];
         ResponseRobin2.text = dialogue[currentLine3];
         ResponseKatie.text = dialogue[currentLine2];
+        clue.text = dialogue[currentLine4];
     }
         void Speech0()
     {
@@ -304,8 +307,11 @@ public class Chapter2Scene2 : MonoBehaviour
         currentLine1 = 6; //goes to the next line
         ResponseRobin2.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 12; //goes to the next line
+        clue.text = dialogue[currentLine4]; //checks current line 
+        currentLine4 = 15; //goes to the next line
         ThoughtBubbles[3].gameObject.SetActive(false);
         ThoughtBubbles[4].gameObject.SetActive(false);
+        Destroy(KatieInter.gameObject);
        
     }
     void Response4()
@@ -319,8 +325,11 @@ public class Chapter2Scene2 : MonoBehaviour
         currentLine2 = 10; //goes to the next line
         ResponseRobin2.text = dialogue[currentLine3]; //checks current line 
         currentLine3 = 13; //goes to the next line
+        clue.text = dialogue[currentLine4]; //checks current line 
+        currentLine4 = 16; //goes to the next line
         ThoughtBubbles[4].gameObject.SetActive(false);
         ThoughtBubbles[3].gameObject.SetActive(false);
+        
     }
     void RSpeech3()
     {
