@@ -237,31 +237,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6090531498628788726, guid: 7e61dab61413bf049ac68d65e26fd246,
-        type: 3}
-      propertyPath: m_Text
-      value: After quitting her job, Katie moved back to her parents'.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6090531500354824506, guid: 7e61dab61413bf049ac68d65e26fd246,
-        type: 3}
-      propertyPath: m_Text
-      value: Jason stayed at the company but left after a few months.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6090531500657374894, guid: 7e61dab61413bf049ac68d65e26fd246,
-        type: 3}
-      propertyPath: m_Text
-      value: Everyone scorned him because of Katie.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6090531500327404345, guid: 7e61dab61413bf049ac68d65e26fd246,
-        type: 3}
-      propertyPath: m_Text
-      value: Katie never got the career she dreamed of and turned in on herself.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6090531499335211505, guid: 7e61dab61413bf049ac68d65e26fd246,
-        type: 3}
-      propertyPath: m_Text
-      value: She was never the same..
-      objectReference: {fileID: 0}
     - target: {fileID: 6090531498628788727, guid: 7e61dab61413bf049ac68d65e26fd246,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -272,10 +247,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.69999695
       objectReference: {fileID: 0}
+    - target: {fileID: 6090531498628788726, guid: 7e61dab61413bf049ac68d65e26fd246,
+        type: 3}
+      propertyPath: m_Text
+      value: After quiting her job, Katie moved back to her parents'.
+      objectReference: {fileID: 0}
     - target: {fileID: 6090531500354824507, guid: 7e61dab61413bf049ac68d65e26fd246,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -87.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090531500354824506, guid: 7e61dab61413bf049ac68d65e26fd246,
+        type: 3}
+      propertyPath: m_Text
+      value: Jason stayed at the company but left after a few months.
       objectReference: {fileID: 0}
     - target: {fileID: 6090531500657374895, guid: 7e61dab61413bf049ac68d65e26fd246,
         type: 3}
@@ -302,6 +287,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 87
       objectReference: {fileID: 0}
+    - target: {fileID: 6090531500657374894, guid: 7e61dab61413bf049ac68d65e26fd246,
+        type: 3}
+      propertyPath: m_Text
+      value: Everyone scorned him because of Katie.
+      objectReference: {fileID: 0}
     - target: {fileID: 6090531500327404346, guid: 7e61dab61413bf049ac68d65e26fd246,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -311,6 +301,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -87.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090531500327404345, guid: 7e61dab61413bf049ac68d65e26fd246,
+        type: 3}
+      propertyPath: m_Text
+      value: Katie never got the career she dreamed of and turned in on herself.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090531499335211505, guid: 7e61dab61413bf049ac68d65e26fd246,
+        type: 3}
+      propertyPath: m_Text
+      value: She was never the same..
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e61dab61413bf049ac68d65e26fd246, type: 3}
