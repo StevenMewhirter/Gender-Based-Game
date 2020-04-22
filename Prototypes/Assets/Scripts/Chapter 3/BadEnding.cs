@@ -305,6 +305,7 @@ public class BadEnding : MonoBehaviour
         Amina.texture = (Texture)AminaEmotions[0];
         Choices[0].gameObject.SetActive(true);
         Choices[1].gameObject.SetActive(true);
+        Handheld.Vibrate();
         ImageOfAmina.gameObject.SetActive(true);
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
@@ -405,6 +406,7 @@ public class BadEnding : MonoBehaviour
         Amina.texture = (Texture)AminaEmotions[0];
         Choices[2].gameObject.SetActive(true);
         Choices[3].gameObject.SetActive(true);
+        Handheld.Vibrate();
         ImageOfAmina.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
@@ -500,6 +502,7 @@ public class BadEnding : MonoBehaviour
         Amina.texture = (Texture)AminaEmotions[0];
         Choices[4].gameObject.SetActive(true);
         Choices[5].gameObject.SetActive(true);
+        Handheld.Vibrate();
         ImageOfAmina.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
@@ -760,6 +763,7 @@ public class BadEnding : MonoBehaviour
         Amina.texture = (Texture)AminaEmotions[0];
         Choices[6].gameObject.SetActive(true);
         Choices[7].gameObject.SetActive(true);
+        Handheld.Vibrate();
         ImageOfAmina.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
@@ -869,6 +873,7 @@ public class BadEnding : MonoBehaviour
         Amina.texture = (Texture)AminaEmotions[0];
         Choices[8].gameObject.SetActive(true);
         Choices[9].gameObject.SetActive(true);
+        Handheld.Vibrate();
         ImageOfAmina.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
