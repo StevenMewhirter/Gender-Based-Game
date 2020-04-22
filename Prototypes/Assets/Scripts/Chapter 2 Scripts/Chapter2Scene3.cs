@@ -59,11 +59,11 @@ public class Chapter2Scene3 : MonoBehaviour
 
     public GameObject Background;
     public GameObject EndBackground;
-
+    public Button NextScene;
 
     void Start()
     {
-
+        NextScene.gameObject.SetActive(false);
         AminaRawIm.gameObject.SetActive(false);
         JasonRawIm.gameObject.SetActive(false);
         RichardRawIm.gameObject.SetActive(false);
@@ -766,7 +766,6 @@ public class Chapter2Scene3 : MonoBehaviour
 
         Background.gameObject.SetActive(true);
         RobinRawIm.gameObject.SetActive(true);
-
-        Robin[25].gameObject.SetActive(true);
+        NextScene.gameObject.SetActive(true);
     }
 }
