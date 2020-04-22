@@ -43,8 +43,6 @@ public class Chapter2Scene4 : MonoBehaviour
     public RawImage Robin;
     //Sets up a public raw image variable for Katie - SD
     public RawImage Katie;
-    public RawImage EndScreen;
-    public Button ChangeScene;
     public GameObject ImageOfBedroom;
     public Texture[] Bedrooms;
     public RawImage Bedroom;
@@ -52,6 +50,7 @@ public class Chapter2Scene4 : MonoBehaviour
     public Animator RobinAnimator;
     public Animator KatieRIAnimator;
     public Animator RobinRIAnimator;
+    public Button[] EndingLinks;
 
     void Start()
     {
@@ -100,9 +99,8 @@ public class Chapter2Scene4 : MonoBehaviour
         {
             ThoughtBubbles[responseIndex].gameObject.SetActive(false);
         }
-
-        EndScreen.gameObject.SetActive(false);
-        ChangeScene.gameObject.SetActive(false);
+        EndingLinks[0].gameObject.SetActive(false);
+        EndingLinks[1].gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
@@ -137,14 +135,12 @@ public class Chapter2Scene4 : MonoBehaviour
             GoodKatie2,
             GoodRobin5,
             GoodRobin6,
-            GoodKatie6,
-            End
+            GoodKatie6
         };
 
         BadKatieFunctionsToCall = new UnityAction[]
        {
-           BadRobin1,
-           End
+           BadRobin1
        };
 
         BadRobinFunctionsToCall = new UnityAction[]
@@ -965,9 +961,9 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfRobin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[2];
-        GoodScenarioRobin[6].gameObject.SetActive(true);
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinMove", true);
+        EndingLinks[0].gameObject.SetActive(true);
     }
 
     void BadKatie1()
@@ -1008,25 +1004,13 @@ public class Chapter2Scene4 : MonoBehaviour
         ImageOfKatie.gameObject.SetActive(true);
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
         Katie.texture = (Texture)KatieEmotions[1];
-        BadScenarioKatie[1].gameObject.SetActive(true);
         BadScenarioRobin[0].gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         ImageOfRobin.gameObject.SetActive(false);
         KatieAnimator.SetBool("KatieMove", true);
         KatieRIAnimator.SetBool("KatieMove", true);
+        EndingLinks[1].gameObject.SetActive(true);
     }
 
-    void End()
-    {
-        Bedroom.gameObject.SetActive(false);
-        ImageOfBedroom.gameObject.SetActive(false);
-        ChangeScene.gameObject.SetActive(true);
-        EndScreen.gameObject.SetActive(true);
-        Katie.gameObject.SetActive(false);
-        ImageOfKatie.gameObject.SetActive(false);
-        BadScenarioKatie[1].gameObject.SetActive(false);
-        Robin.gameObject.SetActive(false);
-        ImageOfRobin.gameObject.SetActive(false);
-        GoodScenarioRobin[6].gameObject.SetActive(false);
-    }
+
 }
