@@ -24,7 +24,7 @@ public class Chapter2Scene2 : MonoBehaviour
     public Button Diary;
     public Button KatieInter;
     public Button Bin;
-
+    public Button NextLevel;
 
     public Texture KatieSad;
     public Texture KatieAngry;
@@ -68,7 +68,7 @@ public class Chapter2Scene2 : MonoBehaviour
         KatieInter.gameObject.SetActive(false);
         Laptop.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
-
+        NextLevel.gameObject.SetActive(false);
         for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
         {
             KatieSpeech[responseIndex].gameObject.SetActive(false);
@@ -381,6 +381,7 @@ public class Chapter2Scene2 : MonoBehaviour
         Interactive[6].gameObject.SetActive(true);
         Interactive[7].gameObject.SetActive(false);
         Bin.gameObject.SetActive(true);
+        NextLevel.gameObject.SetActive(true);
     }
     void viewLaptop()
     {
@@ -396,6 +397,7 @@ public class Chapter2Scene2 : MonoBehaviour
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
         Diary.gameObject.SetActive(false);
+        NextLevel.gameObject.SetActive(false);
     }
     void viewDiary()
     {
@@ -411,6 +413,7 @@ public class Chapter2Scene2 : MonoBehaviour
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
         Diary.gameObject.SetActive(false);
+        NextLevel.gameObject.SetActive(false);
     }
     void viewKatie()
     {
@@ -426,6 +429,7 @@ public class Chapter2Scene2 : MonoBehaviour
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
         Diary.gameObject.SetActive(false);
+        NextLevel.gameObject.SetActive(false);
     }
     void viewBin()
     {
@@ -441,5 +445,6 @@ public class Chapter2Scene2 : MonoBehaviour
         KatieInter.gameObject.SetActive(false);
         Bin.gameObject.SetActive(false);
         Diary.gameObject.SetActive(false);
+        NextLevel.gameObject.SetActive(false);
     }
 }

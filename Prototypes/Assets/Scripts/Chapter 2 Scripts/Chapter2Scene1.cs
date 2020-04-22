@@ -18,7 +18,7 @@ public class Chapter2Scene1 : MonoBehaviour
     private UnityAction[] ChoicefunctionsToCall;
     public Button[] Responses;
     private UnityAction[] ResponsesfunctionsToCall;
-
+    public Button ChangeScene;
     public Texture[] RobinEmotions;
     public Texture[] AminaEmotions;
     public GameObject ImageOfAmina;
@@ -69,7 +69,7 @@ public class Chapter2Scene1 : MonoBehaviour
         Robin.texture = (Texture)RobinEmotions[0];
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinRIMove", true);
-
+        ChangeScene.gameObject.SetActive(false);
         AminaSpeechfunctionsToCall = new UnityAction[]
       {
             AminaSpeech2,
@@ -94,8 +94,7 @@ public class Chapter2Scene1 : MonoBehaviour
             AminaSpeech3,
             RobinSpeech7,
             RobinSpeech7,
-            AminaSpeech6,
-            RobinSpeech8
+            AminaSpeech6
         };
 
         ThoughtBubblesfunctionsToCall = new UnityAction[]
@@ -368,12 +367,12 @@ public class Chapter2Scene1 : MonoBehaviour
         ImageOfAmina.gameObject.SetActive(false);
         Amina.gameObject.gameObject.SetActive(false);
         AminaSpeech[7].gameObject.SetActive(false);
-        RobinSpeech[5].gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinEmotions[0];
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinRIMove", true);
+        ChangeScene.gameObject.SetActive(true);
     }
 
     IEnumerator waitForTransition()

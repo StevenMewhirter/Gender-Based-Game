@@ -2612,7 +2612,6 @@ MonoBehaviour:
   - {fileID: 191252338}
   - {fileID: 1449491277}
   - {fileID: 1377817805}
-  - {fileID: 1862888767}
   AminaSpeech:
   - {fileID: 1661641016}
   - {fileID: 1639830296}
@@ -2628,6 +2627,7 @@ MonoBehaviour:
   Responses:
   - {fileID: 924850117}
   - {fileID: 504232449}
+  ChangeScene: {fileID: 1862888767}
   RobinEmotions:
   - {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
   - {fileID: 2800000, guid: d974c823bc51b65408d6dfd7472ae542, type: 3}
@@ -5842,6 +5842,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBoxCenter: {fileID: 1017177760}
   thisText: {fileID: 1733611744}
+--- !u!1 &1820285782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820285784}
+  - component: {fileID: 1820285783}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1820285783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820285782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5db829d474aef42aecac35bc24a45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1820285784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820285782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 191.27081, y: 147.48242, z: -127.819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843240454
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,7 +6137,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1862888765}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1820285783}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Chapter 2.2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1963548142
 GameObject:
   m_ObjectHideFlags: 0
