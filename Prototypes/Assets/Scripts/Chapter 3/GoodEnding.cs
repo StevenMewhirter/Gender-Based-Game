@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class GoodEnding : MonoBehaviour
 {
+    public Button[] Epilogues;
     public Button[] AminaSpeech;
     public Button[] Choices;
     public Button[] KatieSpeech;
@@ -40,7 +41,10 @@ public class GoodEnding : MonoBehaviour
         {
             Choices[responseIndex].gameObject.SetActive(false);
         }
-
+        for (int responseIndex = 0; responseIndex < Epilogues.Length; ++responseIndex)
+        {
+            Epilogues[responseIndex].gameObject.SetActive(false);
+        }
         for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
         {
             KatieSpeech[responseIndex].gameObject.SetActive(false);
@@ -141,8 +145,6 @@ public class GoodEnding : MonoBehaviour
             KatieSpeech21,
             choices5,
             KatieSpeech23,
-            KatieSpeech23,
-            KatieSpeech25,
             KatieSpeech25
         };
 
@@ -929,8 +931,8 @@ public class GoodEnding : MonoBehaviour
     void KatieSpeech23()
     {
         KatieSpeech[21].gameObject.SetActive(false);
-        KatieSpeech[22].gameObject.SetActive(true);
-    }
+        Epilogues[0].gameObject.SetActive(true);
+            }
     void AminaResponse13()
     {
         Choices[8].gameObject.SetActive(false);
@@ -952,11 +954,11 @@ public class GoodEnding : MonoBehaviour
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
         Katie.gameObject.SetActive(true);
         Katie.texture = (Texture)KatieEmotions[0];
-        KatieSpeech[23].gameObject.SetActive(true);
+        KatieSpeech[22].gameObject.SetActive(true);
     }
     void KatieSpeech25()
     {
-        KatieSpeech[23].gameObject.SetActive(false);
-        KatieSpeech[24].gameObject.SetActive(true);
+        KatieSpeech[22].gameObject.SetActive(false);
+        Epilogues[1].gameObject.SetActive(true);
     }
 }

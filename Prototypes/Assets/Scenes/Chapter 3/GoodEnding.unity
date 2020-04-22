@@ -1394,7 +1394,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126138193}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1945530548}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Good
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &130172217
 GameObject:
   m_ObjectHideFlags: 0
@@ -15623,7 +15634,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1226753625}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1945530548}
+        m_MethodName: LoadLevel
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Neutral
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1230947468
 GameObject:
   m_ObjectHideFlags: 0
@@ -22980,6 +23002,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f55a735c4ffd97439a1aa2b0a066671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Epilogues:
+  - {fileID: 126138195}
+  - {fileID: 1226753627}
   AminaSpeech:
   - {fileID: 444915670}
   - {fileID: 335803346}
@@ -23047,9 +23072,7 @@ MonoBehaviour:
   - {fileID: 1176694508}
   - {fileID: 1775772939}
   - {fileID: 710830101}
-  - {fileID: 126138195}
   - {fileID: 1483085271}
-  - {fileID: 1226753627}
   Responses:
   - {fileID: 1035048253}
   - {fileID: 1281710882}
@@ -25388,6 +25411,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936449220}
   m_CullTransparentMesh: 0
+--- !u!1 &1945530547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945530549}
+  - component: {fileID: 1945530548}
+  m_Layer: 0
+  m_Name: Level Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1945530548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945530547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5db829d474aef42aecac35bc24a45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1945530549
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945530547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.236547, y: 104.5101, z: -51.755077}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1962474957
 GameObject:
   m_ObjectHideFlags: 0
