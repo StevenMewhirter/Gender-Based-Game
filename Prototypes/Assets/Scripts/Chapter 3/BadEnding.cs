@@ -9,6 +9,7 @@ public class BadEnding : MonoBehaviour
 {
     public Button[] AminaSpeech;
     public Button[] Choices;
+    public Button[] EpilogueLinks;
     public Button[] KatieSpeech;
     public Button[] Responses;
     public Button[] RobinSpeech;
@@ -38,6 +39,10 @@ public class BadEnding : MonoBehaviour
         for (int responseIndex = 0; responseIndex < Choices.Length; ++responseIndex)
         {
             Choices[responseIndex].gameObject.SetActive(false);
+        }
+        for (int responseIndex = 0; responseIndex < EpilogueLinks.Length; ++responseIndex)
+        {
+            EpilogueLinks[responseIndex].gameObject.SetActive(false);
         }
 
         for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
@@ -96,9 +101,7 @@ public class BadEnding : MonoBehaviour
             KatieSpeech21,
             KatieSpeech21,
             AminaSpeech30,
-            AminaSpeech30,
             AminaSpeech32,
-            AminaSpeech32
         };
 
 
@@ -923,7 +926,7 @@ public class BadEnding : MonoBehaviour
     void AminaSpeech30()
     {
         AminaSpeech[28].gameObject.SetActive(false);
-        AminaSpeech[29].gameObject.SetActive(true);
+        EpilogueLinks[0].gameObject.SetActive(true);
     }
     void AminaResponse13()
     {
@@ -953,7 +956,7 @@ public class BadEnding : MonoBehaviour
         Amina = (RawImage)ImageOfAmina.GetComponent<RawImage>();
         Amina.gameObject.SetActive(true);
         Amina.texture = (Texture)AminaEmotions[0];
-        AminaSpeech[30].gameObject.SetActive(true);
+        AminaSpeech[29].gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(true);
         ImageOfKatie.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
@@ -961,8 +964,8 @@ public class BadEnding : MonoBehaviour
     }
     void AminaSpeech32()
     {
-        AminaSpeech[30].gameObject.SetActive(false);
-        AminaSpeech[31].gameObject.SetActive(true);
+        AminaSpeech[29].gameObject.SetActive(false);
+        EpilogueLinks[1].gameObject.SetActive(true);
     }
 }
 
