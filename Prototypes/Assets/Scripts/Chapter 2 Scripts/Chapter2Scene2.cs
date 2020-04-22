@@ -9,9 +9,7 @@ using System.Collections;
 
 public class Chapter2Scene2 : MonoBehaviour
 {
-    public DiaryTexts transitionScreen;
-    public Button transitionImage;
-    bool canClick = false;
+    public GameObject transition;
 
     public Button[] KatieSpeech;
     private UnityAction[] KatieSpeechFunctionsToCall;
@@ -64,12 +62,12 @@ public class Chapter2Scene2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(transitionPanel());
-      Bin.gameObject.SetActive(false);
+        StartCoroutine(waitForTransition());
+        Bin.gameObject.SetActive(false);
         Diary.gameObject.SetActive(false);
         KatieInter.gameObject.SetActive(false);
         Laptop.gameObject.SetActive(false);
-
+        Katie.gameObject.SetActive(false);
 
         for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
         {
@@ -88,9 +86,9 @@ public class Chapter2Scene2 : MonoBehaviour
         {
             Interactive[responseIndex].gameObject.SetActive(false);
         }
-
-        Button Transition = transitionImage.GetComponent<Button>();
-        Transition.onClick.AddListener(Speech0);
+        RobinSpeech[0].gameObject.SetActive(true);
+        //Button Transition = transitionImage.GetComponent<Button>();
+        //Transition.onClick.AddListener(Speech0);
 
         ThoughtBubblesFunctionsToCall = new UnityAction[]
         {
@@ -192,18 +190,18 @@ public class Chapter2Scene2 : MonoBehaviour
     }
         void Speech0()
     {
-        if (canClick)
-        {
-            transitionScreen.gameObject.SetActive(false);
+        //if (canClick)
+        //{
+            //transitionScreen.gameObject.SetActive(false);
            // KatieSpeech[0].gameObject.SetActive(false);
             RobinSpeech[0].gameObject.SetActive(true);
             Robin.gameObject.SetActive(true);
-            Katie.gameObject.SetActive(false);
+           
             RobinSpeech[0].interactable = false;
             ThoughtBubbles[0].gameObject.SetActive(true);
             ThoughtBubbles[2].gameObject.SetActive(true);
             ThoughtBubbles[1].gameObject.SetActive(true);
-        }
+        //}
     }
     void Response()
     {
@@ -362,10 +360,12 @@ public class Chapter2Scene2 : MonoBehaviour
 
     }
 
-    IEnumerator transitionPanel() //panel timer
+    IEnumerator waitForTransition()
     {
-        yield return new WaitForSeconds(1f);
-        canClick = true;
+        yield return new WaitForSeconds(8f);
+        transition.SetActive(false);
+        //ThoughtBubbles[0].gameObject.SetActive(true);
+        Speech0();
     }
 
     void Interactibles()
