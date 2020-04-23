@@ -1861,6 +1861,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 431911460}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &347209285
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347209284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c28964f745f1d0a4a80db984e352957c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &347406219
 GameObject:
   m_ObjectHideFlags: 0
@@ -8886,6 +8905,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 218003775}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1635875610
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635875606}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb868a7539b6f524aa43aa1b769fc6ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1641828470
 GameObject:
   m_ObjectHideFlags: 0
@@ -11826,6 +11864,8 @@ MonoBehaviour:
   AminaNeutralAnimator: {fileID: 1871324652}
   RobinNeutralAnimator: {fileID: 836370544}
   RichardNeutralAnimator: {fileID: 1525001502}
+  KatieAnimator: {fileID: 1635875610}
+  RichardAnimator: {fileID: 347209285}
 --- !u!4 &2144610363
 Transform:
   m_ObjectHideFlags: 0

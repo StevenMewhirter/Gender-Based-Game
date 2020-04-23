@@ -91,7 +91,9 @@ public class Scene2Script : MonoBehaviour
     public Animator AminaNeutralAnimator;
     public Animator RobinNeutralAnimator;
     public Animator RichardNeutralAnimator;
-     
+    public Animator KatieAnimator;
+    public Animator RichardAnimator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -353,6 +355,7 @@ public class Scene2Script : MonoBehaviour
         RobinSpeech[0].gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         CoWorker.gameObject.SetActive(false);
     }
     void Speech2()
@@ -362,6 +365,7 @@ public class Scene2Script : MonoBehaviour
         MC.gameObject.SetActive(false);
         CoWorker.gameObject.SetActive(true);
         RobinNeutralAnimator.SetBool("RobinNeutral", true);
+        
     }
     void Speech3()
     {
@@ -369,6 +373,7 @@ public class Scene2Script : MonoBehaviour
         RobinSpeech[1].gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         CoWorker.gameObject.SetActive(false);
     }
     void Speech4()
@@ -391,6 +396,7 @@ public class Scene2Script : MonoBehaviour
         BossResponses[0].gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         Boss.gameObject.SetActive(false);
         ThoughtBubbles[0].gameObject.SetActive(true);
         ThoughtBubbles[2].gameObject.SetActive(true);
@@ -427,6 +433,7 @@ public class Scene2Script : MonoBehaviour
         Boss.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
         RichardNeutralAnimator.SetBool("RichardNeutral", true);
+        RichardAnimator.SetBool("RichardMove", true);
     }
     void Speech9()
     {
@@ -435,6 +442,7 @@ public class Scene2Script : MonoBehaviour
         RichardResponses[0].gameObject.SetActive(false);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         Richard.gameObject.SetActive(false);
         ThoughtBubbles[3].gameObject.SetActive(true);
         ThoughtBubbles[4].gameObject.SetActive(true);
@@ -451,6 +459,7 @@ public class Scene2Script : MonoBehaviour
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
         RichardNeutralAnimator.SetBool("RichardNeutral", true);
+        RichardAnimator.SetBool("RichardMove", true);
     }
     void Speech11()
     {
@@ -466,6 +475,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech[4].gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         Richard.gameObject.SetActive(false);
     }
     void Speech13()
@@ -475,6 +485,7 @@ public class Scene2Script : MonoBehaviour
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
         RichardNeutralAnimator.SetBool("RichardNeutral", true);
+        RichardAnimator.SetBool("RichardMove", true);
     }
     void Speech14()
     {
@@ -485,6 +496,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech[5].gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         Richard.gameObject.SetActive(false);
     }
     void Speech15()
@@ -494,6 +506,7 @@ public class Scene2Script : MonoBehaviour
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
         RichardNeutralAnimator.SetBool("RichardNeutral", true);
+        RichardAnimator.SetBool("RichardMove", true);
     }
     void Speech16()
     {
@@ -502,6 +515,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech[6].gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         Richard.gameObject.SetActive(false);
         ThoughtBubbles[6].gameObject.SetActive(true);
         ThoughtBubbles[7].gameObject.SetActive(true);
@@ -516,6 +530,7 @@ public class Scene2Script : MonoBehaviour
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
         RichardNeutralAnimator.SetBool("RichardNeutral", true);
+        RichardAnimator.SetBool("RichardMove", true);
     }
     void Speech18()
     {
@@ -526,6 +541,7 @@ public class Scene2Script : MonoBehaviour
         KatieSpeech[7].gameObject.SetActive(true);
         MC.gameObject.SetActive(true);
         KatieNeutralAnimator.SetBool("KatieNeutral", true);
+        KatieAnimator.SetBool("KatieMove", true);
         Richard.gameObject.SetActive(false);
     }
     void Speech19()
@@ -535,6 +551,7 @@ public class Scene2Script : MonoBehaviour
         MC.gameObject.SetActive(false);
         Richard.gameObject.SetActive(true);
         RichardNeutralAnimator.SetBool("RichardNeutral", true);
+        RichardAnimator.SetBool("RichardMove", true);
     }
     void ResponseG()
     {
