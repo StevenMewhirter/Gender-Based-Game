@@ -35,25 +35,29 @@ public class Chapter2Scene3 : MonoBehaviour
     private UnityAction[] ClueFunctionToCall;
 
     public RawImage RobinRawIm;
-    public Texture RobinNeutral;
-    public Texture RobinSad;
+    //public Texture RobinNeutral;
+    //public Texture RobinSad;
+    public Texture[] RobinEmotions;
     public GameObject RobinImage;
 
     public RawImage AminaRawIm;
-    public Texture AminaNeutral;
-    public Texture AminaHappy;
+    //public Texture AminaNeutral;
+    //public Texture AminaHappy;
+    public Texture[] AminaEmotions;
     public GameObject AminaImage;
     public GameObject AminaHead;
 
     public RawImage JasonRawIm;
-    public Texture JasonNeutral;
-    public Texture JasonAngry;
+    //public Texture JasonNeutral;
+    //public Texture JasonAngry;
+    public Texture[] JasonEmotions;
     public GameObject JasonImage;
     public GameObject JasonHead;
 
     public RawImage RichardRawIm;
-    public Texture RichardNeutral;
-    public Texture RichardAngry;
+    //public Texture RichardNeutral;
+    //public Texture RichardAngry;
+    public Texture[] RichardEmotions;
     public GameObject RichardImage;
     public GameObject RichardHead;
 
@@ -281,6 +285,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Background.gameObject.SetActive(true);
         RobinRawIm.gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
+
         RobinRIAnimator.SetBool("RobinMove", false);
         Robin[0].gameObject.SetActive(true);
     }
@@ -311,7 +318,10 @@ public class Chapter2Scene3 : MonoBehaviour
         AminaAnimator.SetBool("AminaMove", true);
         AminaRawIm.gameObject.SetActive(true);
         Amina[0].gameObject.SetActive(true);
-        
+
+        AminaRawIm = (RawImage)AminaImage.GetComponent<RawImage>();
+        AminaRawIm.texture = (Texture)AminaEmotions[0];
+
     }
 
     void Choice1()
@@ -320,6 +330,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Amina[0].gameObject.SetActive(false);
 
         RobinRIAnimator.SetBool("RobinMove", true);
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
+
         RobinRawIm.gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
 
@@ -351,6 +364,9 @@ public class Chapter2Scene3 : MonoBehaviour
         AminaRawIm.gameObject.SetActive(true);
         Amina[1].gameObject.SetActive(true);
 
+        AminaRawIm = (RawImage)AminaImage.GetComponent<RawImage>();
+        AminaRawIm.texture = (Texture)AminaEmotions[0];
+
         AminaClue = "Katie stayed with Jason after Amina left";
     }
     
@@ -377,6 +393,9 @@ public class Chapter2Scene3 : MonoBehaviour
         
         Amina[2].gameObject.SetActive(true);
 
+        AminaRawIm = (RawImage)AminaImage.GetComponent<RawImage>();
+        AminaRawIm.texture = (Texture)AminaEmotions[0];
+
         AminaClue = "No clue collected.";
     }
 
@@ -390,7 +409,7 @@ public class Chapter2Scene3 : MonoBehaviour
 
         Robin[5].gameObject.SetActive(true);
 
-        AminaClue = "Amina looked relieved when she heard Katie was OK";
+
     }
 
     //Thanks for letting me know, Robin. I will try contacting her again
@@ -403,6 +422,11 @@ public class Chapter2Scene3 : MonoBehaviour
         AminaRawIm.gameObject.SetActive(true);
         
         Amina[3].gameObject.SetActive(true);
+
+        AminaClue = "Amina looked relieved when she heard Katie was OK";
+
+        AminaRawIm = (RawImage)AminaImage.GetComponent<RawImage>();
+        AminaRawIm.texture = (Texture)AminaEmotions[1];
     }
 
     //Thanks, Amina
@@ -417,6 +441,9 @@ public class Chapter2Scene3 : MonoBehaviour
         RobinRawIm.gameObject.SetActive(true);
         
         Robin[6].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[1];
     }
 
     //Hmm, Amina didnt really notice anything
@@ -427,6 +454,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         Transparent.gameObject.SetActive(true);
         Robin[7].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 
     //lets ask Jason now
@@ -443,6 +473,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Transparent.gameObject.SetActive(false);
 
         Robin[9].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[1];
     }
 
     //Hello, gorgeous. Not bad, not bad... yourself?
@@ -454,7 +487,9 @@ public class Chapter2Scene3 : MonoBehaviour
         JasonRawIm.gameObject.SetActive(true);
 
         Jason[0].gameObject.SetActive(true);
-        
+
+        JasonRawIm = (RawImage)JasonImage.GetComponent<RawImage>();
+        JasonRawIm.texture = (Texture)JasonEmotions[1];
     }
 
     //Could be better. I wanted to be there on Friday, but I had a family emergency
@@ -465,6 +500,9 @@ public class Chapter2Scene3 : MonoBehaviour
         
         RobinRawIm.gameObject.SetActive(true);
         Robin[10].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[2];
     }
 
     //oh, yeah. I had a really great time
@@ -477,6 +515,9 @@ public class Chapter2Scene3 : MonoBehaviour
         JasonRawIm.gameObject.SetActive(true);
 
         Jason[1].gameObject.SetActive(true);
+
+        JasonRawIm = (RawImage)JasonImage.GetComponent<RawImage>();
+        JasonRawIm.texture = (Texture)JasonEmotions[1];
     }
 
     //yeah, about that...
@@ -487,6 +528,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RobinRawIm.gameObject.SetActive(true);
         Robin[11].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 
     void Choice2()
@@ -510,6 +554,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Choices[4].gameObject.SetActive(false);
         Choices[5].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[2];
     }
 
     //Oh, yeah. She shouldnt drink that much. It's not safe for girls like her
@@ -522,6 +569,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Jason[2].gameObject.SetActive(true);
 
         JasonClue = "Jason said Katie was drunk";
+
+        JasonRawIm = (RawImage)JasonImage.GetComponent<RawImage>();
+        JasonRawIm.texture = (Texture)JasonEmotions[0];
     }
 
     //Did you tell her anything that could've made her upset?
@@ -543,6 +593,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         JasonRawIm.gameObject.SetActive(true);
         Jason[3].gameObject.SetActive(true);
+
+        JasonRawIm = (RawImage)JasonImage.GetComponent<RawImage>();
+        JasonRawIm.texture = (Texture)JasonEmotions[3];
 
         JasonClue = "Jason was angry when Robin asked if he had an argument with Katie";
     }
@@ -567,6 +620,9 @@ public class Chapter2Scene3 : MonoBehaviour
         JasonRawIm.gameObject.SetActive(true);
         Jason[4].gameObject.SetActive(true);
 
+        JasonRawIm = (RawImage)JasonImage.GetComponent<RawImage>();
+        JasonRawIm.texture = (Texture)JasonEmotions[1];
+
         JasonClue = "No clue collected.";
     }
 
@@ -580,6 +636,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RobinRawIm.gameObject.SetActive(true);
         Robin[15].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 
     //right, that was awkward
@@ -589,6 +648,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         Robin[16].gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[2];
     }
 
     //I think Richard was there, too. I better ask him as well
@@ -597,6 +659,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Robin[16].gameObject.SetActive(false);
 
         Robin[17].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 
     //Hi there! How are you today, Richard?
@@ -606,6 +671,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Transparent.gameObject.SetActive(false);
 
         Robin[18].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[1];
     }
 
     //Ahh, same old, same old. Still recovering from friday night. I drunk waaaay too much
@@ -616,6 +684,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RichardRawIm.gameObject.SetActive(true);
         Richard[0].gameObject.SetActive(true);
+
+        RichardRawIm = (RawImage)RichardImage.GetComponent<RawImage>();
+        RichardRawIm.texture = (Texture)RichardEmotions[2];
     }
 
     //Oh, sorry to hear that! Since you mentioned it, I have some questions about that night
@@ -626,6 +697,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RobinRawIm.gameObject.SetActive(true);
         Robin[19].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[2];
     }
 
     void Choice3()
@@ -648,6 +722,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Transparent.gameObject.SetActive(false);
 
         Robin[20].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 
     //When isnt he weird and annoying?
@@ -658,6 +735,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RichardRawIm.gameObject.SetActive(true);
         Richard[1].gameObject.SetActive(true);
+
+        RichardRawIm = (RawImage)RichardImage.GetComponent<RawImage>();
+        RichardRawIm.texture = (Texture)RichardEmotions[1];
 
         RichardClue = "Richard said Jason urged Katie to drink more";
     }
@@ -671,6 +751,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Transparent.gameObject.SetActive(false);
 
         Robin[21].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[2];
     }
 
     //No, she was having fun. She tried at least, if you consider Jason was there
@@ -683,6 +766,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Richard[2].gameObject.SetActive(true);
 
         RichardClue = "Richard said Katie was fine before he left";
+
+        RichardRawIm = (RawImage)RichardImage.GetComponent<RawImage>();
+        RichardRawIm.texture = (Texture)RichardEmotions[0];
     }
 
     //Are you sure you didnt say something insulting to Katie?
@@ -694,6 +780,9 @@ public class Chapter2Scene3 : MonoBehaviour
         Transparent.gameObject.SetActive(false);
 
         Robin[22].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 
     //Im not always rude, OK? Im just stressed lately. I didnt tell her anything
@@ -705,6 +794,9 @@ public class Chapter2Scene3 : MonoBehaviour
         RichardRawIm.gameObject.SetActive(true);
         Richard[3].gameObject.SetActive(true);
         RichardClue = "No clue collected.";
+
+        RichardRawIm = (RawImage)RichardImage.GetComponent<RawImage>();
+        RichardRawIm.texture = (Texture)RichardEmotions[3];
     }
 
     //Thanks, Richard.
@@ -717,6 +809,9 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RobinRawIm.gameObject.SetActive(true);
         Robin[23].gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 
     //So I think I know where this is going... I should check all the clues I gathered again.
@@ -775,5 +870,8 @@ public class Chapter2Scene3 : MonoBehaviour
         Background.gameObject.SetActive(true);
         RobinRawIm.gameObject.SetActive(true);
         NextScene.gameObject.SetActive(true);
+
+        RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
+        RobinRawIm.texture = (Texture)RobinEmotions[0];
     }
 }

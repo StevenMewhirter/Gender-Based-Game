@@ -8345,22 +8345,34 @@ MonoBehaviour:
   - {fileID: 1784658046}
   - {fileID: 343049058}
   RobinRawIm: {fileID: 1650341087}
-  RobinNeutral: {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
-  RobinSad: {fileID: 2800000, guid: 9dffca7d84ae04b4383c6582230e57b9, type: 3}
+  RobinEmotions:
+  - {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
+  - {fileID: 2800000, guid: 748c9fa75a77c584d86d532d38b454ac, type: 3}
+  - {fileID: 2800000, guid: 9dffca7d84ae04b4383c6582230e57b9, type: 3}
+  - {fileID: 2800000, guid: d974c823bc51b65408d6dfd7472ae542, type: 3}
   RobinImage: {fileID: 1650341085}
   AminaRawIm: {fileID: 1013850641}
-  AminaNeutral: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
-  AminaHappy: {fileID: 2800000, guid: 707e8d548d238c84fb77672d84d85b90, type: 3}
+  AminaEmotions:
+  - {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
+  - {fileID: 2800000, guid: 707e8d548d238c84fb77672d84d85b90, type: 3}
+  - {fileID: 2800000, guid: 71d3e7f16d160f846ad58745be7ec312, type: 3}
+  - {fileID: 2800000, guid: e6936edc18afa1343bf1086b11652bd0, type: 3}
   AminaImage: {fileID: 1013850639}
   AminaHead: {fileID: 1343506811}
   JasonRawIm: {fileID: 696573066}
-  JasonNeutral: {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
-  JasonAngry: {fileID: 2800000, guid: 1e3ced746a5e17a4f8bdf7f83a274574, type: 3}
+  JasonEmotions:
+  - {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
+  - {fileID: 2800000, guid: 97bc9a92d34c01844b3fe0999b93a78e, type: 3}
+  - {fileID: 2800000, guid: 15b4a72da1378194e959472e47d1217d, type: 3}
+  - {fileID: 2800000, guid: 1e3ced746a5e17a4f8bdf7f83a274574, type: 3}
   JasonImage: {fileID: 696573064}
   JasonHead: {fileID: 1317143183}
   RichardRawIm: {fileID: 973893737}
-  RichardNeutral: {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
-  RichardAngry: {fileID: 2800000, guid: c7d82bf3365eac04c93fe74a4dbf6e2d, type: 3}
+  RichardEmotions:
+  - {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
+  - {fileID: 2800000, guid: e38b679de003e634692cb4d92b38e4b7, type: 3}
+  - {fileID: 2800000, guid: 8a54ccb20d6b4d34d8592151e8b9ec17, type: 3}
+  - {fileID: 2800000, guid: c7d82bf3365eac04c93fe74a4dbf6e2d, type: 3}
   RichardImage: {fileID: 2090314273}
   RichardHead: {fileID: 1497796829}
   Background: {fileID: 1707826539}

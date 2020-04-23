@@ -236,7 +236,7 @@ public class Scene3Script : MonoBehaviour
         // buttons[6].gameObject.SetActive(false);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieEmotions[0];
+        MC.texture = (Texture)KatieEmotions[1];
 
         animatorKatie.SetBool("KatieNeutral", true);
     }
