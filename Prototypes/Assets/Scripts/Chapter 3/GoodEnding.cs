@@ -28,6 +28,9 @@ public class GoodEnding : MonoBehaviour
     private UnityAction[] KatieFunctions;
     private UnityAction[] ResponsesfunctionsToCall;
     private UnityAction[] RobinSpeechfunctionsToCall;
+    public Animator KatieAnimator;
+    public Animator RobinAnimator;
+    public Animator AminaAnimator;
 
 
     void Start()

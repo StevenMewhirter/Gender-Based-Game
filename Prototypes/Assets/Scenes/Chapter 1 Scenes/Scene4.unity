@@ -11136,15 +11136,58 @@ PrefabInstance:
         just wish I get a proper project at some point to prove myself.\r\n\nMaybe
         this week, I'll have my chance :)\r\n"
       objectReference: {fileID: 0}
-    - target: {fileID: 1419265438100374201, guid: 1a870dc3794876f46ac97abcbb857c66,
+    - target: {fileID: 1891660175535461680, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 79.69999
+      propertyPath: fullText
+      value: April, 15th
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265438100374205, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: I feel exhausted... But I have to keep going.
       objectReference: {fileID: 0}
     - target: {fileID: 1419265437138363016, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265437138363023, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: 'I still can''t believe Jason sent me that message last night. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265436415440996, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: He's become very intrusive and I don't like it. How the fuck did he find
+        my number???
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265437066608157, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: I need to focus on my work now, I have to show Amina I can do this..
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737769805862502585, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_Text
+      value: 'April, 2nd
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265438100374201, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 79.69999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265436415440997, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -132.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265436415440997, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 1419265437066608153, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
@@ -11165,49 +11208,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 351.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265436415440996, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: He's become very intrusive and I don't like it. How the fuck did he find
-        my number???
-      objectReference: {fileID: 0}
-    - target: {fileID: 1891660175535461680, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: April, 15th
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265438100374205, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: I feel exhausted... But I have to keep going.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265437138363023, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: 'I still can''t believe Jason sent me that message last night. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265437066608157, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: I need to focus on my work now, I have to show Amina I can do this..
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737769805862502585, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: m_Text
-      value: 'April, 2nd
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265436415440997, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -132.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265436415440997, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 1419265436452231140, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}

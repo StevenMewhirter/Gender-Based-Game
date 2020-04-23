@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 51212664}
   - component: {fileID: 51212666}
   - component: {fileID: 51212665}
+  - component: {fileID: 51212667}
   m_Layer: 5
   m_Name: Amina
   m_TagString: Untagged
@@ -624,6 +625,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51212663}
   m_CullTransparentMesh: 0
+--- !u!95 &51212667
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51212663}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6f238438391b76542aeb4531e63ee253, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &65581677
 GameObject:
   m_ObjectHideFlags: 0
@@ -11631,6 +11651,7 @@ GameObject:
   - component: {fileID: 979724689}
   - component: {fileID: 979724691}
   - component: {fileID: 979724690}
+  - component: {fileID: 979724692}
   m_Layer: 5
   m_Name: Robin
   m_TagString: Untagged
@@ -11690,6 +11711,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 979724688}
   m_CullTransparentMesh: 0
+--- !u!95 &979724692
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979724688}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2400f3b5a7906cb42a1918c6ed8cfe42, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &983965411
 GameObject:
   m_ObjectHideFlags: 0
@@ -15972,6 +16012,7 @@ GameObject:
   - component: {fileID: 1242271976}
   - component: {fileID: 1242271978}
   - component: {fileID: 1242271977}
+  - component: {fileID: 1242271979}
   m_Layer: 5
   m_Name: Katie
   m_TagString: Untagged
@@ -16031,6 +16072,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242271975}
   m_CullTransparentMesh: 0
+--- !u!95 &1242271979
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242271975}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f76fcb33b99b0e46baa4cb1d58f7b95, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1250909653
 GameObject:
   m_ObjectHideFlags: 0
@@ -23115,6 +23175,9 @@ MonoBehaviour:
   RobinEmotions:
   - {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
   - {fileID: 2800000, guid: d974c823bc51b65408d6dfd7472ae542, type: 3}
+  KatieAnimator: {fileID: 1242271979}
+  RobinAnimator: {fileID: 979724692}
+  AminaAnimator: {fileID: 51212667}
 --- !u!4 &1756317551
 Transform:
   m_ObjectHideFlags: 0

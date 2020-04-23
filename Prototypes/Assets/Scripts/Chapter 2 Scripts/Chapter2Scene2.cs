@@ -58,6 +58,11 @@ public class Chapter2Scene2 : MonoBehaviour
     public int currentLine4;
     public int endLine;
 
+    public Animator KatieAnimator;
+    public Animator RobinAnimator;
+    public Animator KatieMain;
+    public Animator RobinMain;
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +74,8 @@ public class Chapter2Scene2 : MonoBehaviour
         Laptop.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
         NextLevel.gameObject.SetActive(false);
+        RobinAnimator.SetBool("RobinMove", false);
+        
         for (int responseIndex = 0; responseIndex < KatieSpeech.Length; ++responseIndex)
         {
             KatieSpeech[responseIndex].gameObject.SetActive(false);
@@ -229,7 +236,7 @@ public class Chapter2Scene2 : MonoBehaviour
     {
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinAngry;
-
+        
         RobinSpeech[0].interactable = true; // makes button iteractable
         ResponseRobin.text = dialogue[currentLine]; //checks current line 
         currentLine = 4; //goes to the next line
@@ -250,6 +257,7 @@ public class Chapter2Scene2 : MonoBehaviour
     {
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinSad;
+
         RobinSpeech[1].gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         KatieSpeech[0].gameObject.SetActive(false);
@@ -259,6 +267,7 @@ public class Chapter2Scene2 : MonoBehaviour
     {
         Katie = (RawImage)ImageOfKatie.GetComponent<RawImage>();
         Katie.texture = (Texture)KatieSad;
+
         RobinSpeech[1].gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         KatieSpeech[1].gameObject.SetActive(true);
@@ -286,6 +295,7 @@ public class Chapter2Scene2 : MonoBehaviour
     {
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinNeutral;
+
         RobinSpeech[3].gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
         KatieSpeech[2].gameObject.SetActive(false);
@@ -335,6 +345,7 @@ public class Chapter2Scene2 : MonoBehaviour
         //Robin.texture = (Texture)RobinNeutral;
         RobinSpeech[3].gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
+
         KatieSpeech[3].gameObject.SetActive(true);
         Katie.gameObject.SetActive(true);
     }
@@ -345,6 +356,7 @@ public class Chapter2Scene2 : MonoBehaviour
 
         RobinSpeech[4].gameObject.SetActive(true);
         Robin.gameObject.SetActive(true);
+
         KatieSpeech[3].gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
     }

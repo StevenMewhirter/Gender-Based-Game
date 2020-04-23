@@ -343,7 +343,7 @@ public class Scene4Script : MonoBehaviour
         BossResponses[1].gameObject.SetActive(false);
         KatieSpeech[4].gameObject.SetActive(true);
         KatieSpeech[4].interactable = false; // makes button non iteractable
-        
+        KatieAnimator.SetBool("KatieNeutral", true);
         MC.gameObject.SetActive(true);
         Boss.gameObject.SetActive(false);
         Background.SetBool("SlideToOther", false);

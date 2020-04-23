@@ -3506,6 +3506,7 @@ GameObject:
   - component: {fileID: 815616533}
   - component: {fileID: 815616535}
   - component: {fileID: 815616534}
+  - component: {fileID: 815616536}
   m_Layer: 0
   m_Name: Robin
   m_TagString: Untagged
@@ -3565,6 +3566,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815616532}
   m_CullTransparentMesh: 0
+--- !u!95 &815616536
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815616532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: efed3ebd003980143bf9b938cbcd4a10, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &823701526
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,6 +5282,7 @@ GameObject:
   - component: {fileID: 1178347414}
   - component: {fileID: 1178347416}
   - component: {fileID: 1178347415}
+  - component: {fileID: 1178347417}
   m_Layer: 0
   m_Name: Katie
   m_TagString: Untagged
@@ -5321,6 +5342,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178347413}
   m_CullTransparentMesh: 0
+--- !u!95 &1178347417
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178347413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8cf4adc17fd15a04a87bddd2b2d2de92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1181481383
 GameObject:
   m_ObjectHideFlags: 0
@@ -5528,6 +5568,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1280270445}
+  - component: {fileID: 1280270446}
   m_Layer: 0
   m_Name: RobinNeutral
   m_TagString: Untagged
@@ -5555,6 +5596,25 @@ RectTransform:
   m_AnchoredPosition: {x: -62.661, y: 163.25}
   m_SizeDelta: {x: 364.6, y: 526.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1280270446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280270444}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e0556a22a79dae74f9efa211996c44de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1306176764
 GameObject:
   m_ObjectHideFlags: 0
@@ -5564,6 +5624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306176765}
+  - component: {fileID: 1306176766}
   m_Layer: 0
   m_Name: KatieNeutral
   m_TagString: Untagged
@@ -5591,6 +5652,25 @@ RectTransform:
   m_AnchoredPosition: {x: -62.661, y: 163.25}
   m_SizeDelta: {x: 364.6, y: 526.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1306176766
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306176764}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e198bf8cc65d1384a8d662396259a1ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1307093236
 GameObject:
   m_ObjectHideFlags: 0
@@ -7437,6 +7517,10 @@ MonoBehaviour:
   currentLine3: 0
   currentLine4: 0
   endLine: 10
+  KatieAnimator: {fileID: 1178347417}
+  RobinAnimator: {fileID: 815616536}
+  KatieMain: {fileID: 1306176766}
+  RobinMain: {fileID: 1280270446}
 --- !u!4 &1961032847
 Transform:
   m_ObjectHideFlags: 0

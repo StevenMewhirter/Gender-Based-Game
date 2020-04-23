@@ -494,6 +494,7 @@ GameObject:
   - component: {fileID: 43471794}
   - component: {fileID: 43471796}
   - component: {fileID: 43471795}
+  - component: {fileID: 43471797}
   m_Layer: 5
   m_Name: JasonRi
   m_TagString: Untagged
@@ -553,6 +554,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43471793}
   m_CullTransparentMesh: 0
+--- !u!95 &43471797
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43471793}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: adc37c08ab5997940b0ba874d6fb3e1c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &65792294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2815,6 +2835,7 @@ GameObject:
   - component: {fileID: 311612749}
   - component: {fileID: 311612751}
   - component: {fileID: 311612750}
+  - component: {fileID: 311612752}
   m_Layer: 5
   m_Name: RobinRi
   m_TagString: Untagged
@@ -2874,6 +2895,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311612748}
   m_CullTransparentMesh: 0
+--- !u!95 &311612752
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311612748}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 21b146699de0d7345acb99a32d14e268, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &318981846
 GameObject:
   m_ObjectHideFlags: 0
@@ -8050,6 +8090,11 @@ MonoBehaviour:
   Background: {fileID: 1707826539}
   EndBackground: {fileID: 875092902}
   NextScene: {fileID: 1970251583}
+  RobinRIAnimator: {fileID: 311612752}
+  AminaRIAnimator: {fileID: 1394491596}
+  JasonRIAnimator: {fileID: 43471797}
+  RichardRIAnimator: {fileID: 2090314277}
+  AminaAnimator: {fileID: 1013850643}
 --- !u!4 &965432902
 Transform:
   m_ObjectHideFlags: 0
@@ -8509,6 +8554,7 @@ GameObject:
   - component: {fileID: 1013850640}
   - component: {fileID: 1013850642}
   - component: {fileID: 1013850641}
+  - component: {fileID: 1013850643}
   m_Layer: 5
   m_Name: Amina
   m_TagString: Untagged
@@ -8569,6 +8615,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013850639}
   m_CullTransparentMesh: 0
+--- !u!95 &1013850643
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013850639}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4956cda8cc8d9747ae2d174a0dc7e7b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1032361508
 GameObject:
   m_ObjectHideFlags: 0
@@ -11303,6 +11368,7 @@ GameObject:
   - component: {fileID: 1394491593}
   - component: {fileID: 1394491595}
   - component: {fileID: 1394491594}
+  - component: {fileID: 1394491596}
   m_Layer: 5
   m_Name: AminaRi
   m_TagString: Untagged
@@ -11362,6 +11428,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394491592}
   m_CullTransparentMesh: 0
+--- !u!95 &1394491596
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394491592}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e9e993278a1443d4cb17e94b9fad4ec0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1428593481
 GameObject:
   m_ObjectHideFlags: 0
@@ -16841,6 +16926,7 @@ GameObject:
   - component: {fileID: 2090314274}
   - component: {fileID: 2090314276}
   - component: {fileID: 2090314275}
+  - component: {fileID: 2090314277}
   m_Layer: 5
   m_Name: RichardRi
   m_TagString: Untagged
@@ -16900,6 +16986,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090314273}
   m_CullTransparentMesh: 0
+--- !u!95 &2090314277
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090314273}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 61f807b03f330e349b4cc32851929cb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2090456411
 GameObject:
   m_ObjectHideFlags: 0

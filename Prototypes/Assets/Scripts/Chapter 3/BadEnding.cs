@@ -28,6 +28,10 @@ public class BadEnding : MonoBehaviour
     private UnityAction[] KatieFunctions;
     private UnityAction[] ResponsesfunctionsToCall;
     private UnityAction[] RobinSpeechfunctionsToCall;
+    public Animator AminaAnimator;
+    public Animator RobinAnimator;
+    public Animator KatieAnimator;
+
     void Start()
     {
         for (int responseIndex = 0; responseIndex < AminaSpeech.Length; ++responseIndex)
@@ -69,6 +73,7 @@ public class BadEnding : MonoBehaviour
         Robin.texture = (Texture)RobinEmotions[0];
         RobinSpeech[0].gameObject.SetActive(true);
         TransparentResponse.gameObject.SetActive(false);
+        RobinAnimator.SetBool("RobinMove", false);
 
         AminaSpeechfunctionsToCall = new UnityAction[]
         {

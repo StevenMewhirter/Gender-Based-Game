@@ -61,6 +61,13 @@ public class Chapter2Scene3 : MonoBehaviour
     public GameObject EndBackground;
     public Button NextScene;
 
+    public Animator RobinRIAnimator;
+    public Animator AminaRIAnimator;
+    public Animator JasonRIAnimator;
+    public Animator RichardRIAnimator;
+    public Animator AminaAnimator;
+
+
     void Start()
     {
         NextScene.gameObject.SetActive(false);
@@ -70,7 +77,7 @@ public class Chapter2Scene3 : MonoBehaviour
         EndBackground.gameObject.SetActive(false);
         ClueBox.gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
-
+     
         AminaHead.gameObject.SetActive(false);
         JasonHead.gameObject.SetActive(false);
         RichardHead.gameObject.SetActive(false);
@@ -274,7 +281,7 @@ public class Chapter2Scene3 : MonoBehaviour
         Background.gameObject.SetActive(true);
         RobinRawIm.gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
-
+        RobinRIAnimator.SetBool("RobinMove", false);
         Robin[0].gameObject.SetActive(true);
     }
 
@@ -291,7 +298,7 @@ public class Chapter2Scene3 : MonoBehaviour
     {
         Robin[1].gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
-
+        AminaAnimator.SetBool("AminaMove", true);
         Robin[2].gameObject.SetActive(true);
     }
 
@@ -300,7 +307,8 @@ public class Chapter2Scene3 : MonoBehaviour
     {
         RobinRawIm.gameObject.SetActive(false);
         Robin[2].gameObject.SetActive(false);
-
+        //AminaRIAnimator.SetBool("AminaMove", true);
+        AminaAnimator.SetBool("AminaMove", true);
         AminaRawIm.gameObject.SetActive(true);
         Amina[0].gameObject.SetActive(true);
         
@@ -310,8 +318,8 @@ public class Chapter2Scene3 : MonoBehaviour
     {
         AminaRawIm.gameObject.SetActive(false);
         Amina[0].gameObject.SetActive(false);
-        
 
+        RobinRIAnimator.SetBool("RobinMove", true);
         RobinRawIm.gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
 
@@ -442,7 +450,7 @@ public class Chapter2Scene3 : MonoBehaviour
     {
         RobinRawIm.gameObject.SetActive(false);
         Robin[9].gameObject.SetActive(false);
-        
+        JasonRIAnimator.SetBool("JasonTestBool", true);
         JasonRawIm.gameObject.SetActive(true);
 
         Jason[0].gameObject.SetActive(true);
