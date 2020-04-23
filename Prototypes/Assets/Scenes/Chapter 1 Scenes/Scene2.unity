@@ -7005,7 +7005,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ed24d281a2360724383eeecf76cf2911, type: 3}
+  m_Texture: {fileID: 2800000, guid: 92b8439ceaf079840ab44c8bbdd8fa6b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -12278,7 +12278,7 @@ MonoBehaviour:
   AminaHappy: {fileID: 2800000, guid: 707e8d548d238c84fb77672d84d85b90, type: 3}
   AminaAngry: {fileID: 2800000, guid: e6936edc18afa1343bf1086b11652bd0, type: 3}
   ImageOfAmina: {fileID: 1816627797}
-  Background2: {fileID: 2800000, guid: 6f1d68bf88763414b8081e4b75d69e59, type: 3}
+  Background2: {fileID: 2800000, guid: 3281da069e23c1b46b61f7c589475b49, type: 3}
   ImageOfBackground: {fileID: 1315627053}
   MC: {fileID: 1034407733}
   Boss: {fileID: 1871324653}
