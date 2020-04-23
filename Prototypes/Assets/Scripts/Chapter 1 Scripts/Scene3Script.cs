@@ -13,9 +13,11 @@ public class Scene3Script : MonoBehaviour
     private UnityAction[] functionsToCall;
 
     public RawImage MC;
-    public Texture KatieHappy;
-    public Texture KatieNeutral;
-    public Texture KatieAngry;
+
+    public Texture[] KatieEmotions;
+    //public Texture KatieHappy;
+    //public Texture KatieNeutral;
+    //public Texture KatieAngry;
     public GameObject KatieImage;
     public DiaryTexts introScreen;
     public Button introImage;
@@ -23,18 +25,21 @@ public class Scene3Script : MonoBehaviour
     bool canClick = false;
 
     public RawImage Robin;
-    public Texture RobinHappy;
-    public Texture RobinNeutral;
+    public Texture[] RobinEmotions;
+    //public Texture RobinHappy;
+    //public Texture RobinNeutral;
     public GameObject RobinImage;
 
     public RawImage Jason;
-    public Texture JasonAngry;
-    public Texture JasonNeutral;
+    public Texture[] JasonEmotions;
+    //public Texture JasonAngry;
+    //public Texture JasonNeutral;
     public GameObject JasonImage;
 
     public RawImage Richard;
-    public Texture RichardNeutral;
-    public Texture RichardAngry;
+    public Texture[] RichardEmotions;
+    //public Texture RichardNeutral;
+    //public Texture RichardAngry;
     public GameObject RichardImage;
 
 
@@ -131,7 +136,7 @@ public class Scene3Script : MonoBehaviour
         Background.gameObject.SetActive(true);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieNeutral;
+        MC.texture = (Texture)KatieEmotions[0];
 
         animatorKatie.SetBool("KatieNeutral", true);
 
@@ -143,7 +148,7 @@ public class Scene3Script : MonoBehaviour
         //Katie will appear on screen and say "It's great" as the user has previously selected that option - SD
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
 
-        MC.texture = (Texture)KatieHappy;
+        MC.texture = (Texture)KatieEmotions[1];
 
         buttons[2].gameObject.SetActive(true);
         buttons[1].gameObject.SetActive(false);
@@ -164,7 +169,7 @@ public class Scene3Script : MonoBehaviour
         buttons[3].gameObject.SetActive(true);
 
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
-        Robin.texture = (Texture)RobinHappy;
+        Robin.texture = (Texture)RobinEmotions[1];
 
         animatorRobin.SetBool("RobinNeutral", true);
 
@@ -180,7 +185,7 @@ public class Scene3Script : MonoBehaviour
         buttons[3].gameObject.SetActive(false);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieNeutral;
+        MC.texture = (Texture)KatieEmotions[0];
 
         animatorKatie.SetBool("KatieNeutral", true);
 
@@ -198,7 +203,7 @@ public class Scene3Script : MonoBehaviour
         buttons[5].gameObject.SetActive(true);
 
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
-        Robin.texture = (Texture)RobinHappy;
+        Robin.texture = (Texture)RobinEmotions[1];
 
         animatorRobin.SetBool("RobinNeutral", true);
 
@@ -216,7 +221,7 @@ public class Scene3Script : MonoBehaviour
         Background.gameObject.SetActive(true);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieNeutral;
+        MC.texture = (Texture)KatieEmotions[0];
 
         animatorKatie.SetBool("KatieNeutral", true);
     }
@@ -231,7 +236,7 @@ public class Scene3Script : MonoBehaviour
         // buttons[6].gameObject.SetActive(false);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieNeutral;
+        MC.texture = (Texture)KatieEmotions[0];
 
         animatorKatie.SetBool("KatieNeutral", true);
     }
@@ -246,7 +251,7 @@ public class Scene3Script : MonoBehaviour
         buttons[8].gameObject.SetActive(true);
 
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
-        Robin.texture = (Texture)RobinNeutral;
+        Robin.texture = (Texture)RobinEmotions[0];
 
         animatorRobin.SetBool("RobinNeutral", true);
 
@@ -263,7 +268,7 @@ public class Scene3Script : MonoBehaviour
         Background.gameObject.SetActive(true);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieNeutral;
+        MC.texture = (Texture)KatieEmotions[0];
 
 
         animatorKatie.SetBool("KatieNeutral", true);
@@ -281,7 +286,7 @@ public class Scene3Script : MonoBehaviour
         buttons[9].gameObject.SetActive(false);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieAngry;
+        MC.texture = (Texture)KatieEmotions[2];
 
 
         animatorKatie.SetBool("KatieNeutral", true);
@@ -297,7 +302,7 @@ public class Scene3Script : MonoBehaviour
         buttons[11].gameObject.SetActive(true);
 
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
-        Robin.texture = (Texture)RobinNeutral;
+        Robin.texture = (Texture)RobinEmotions[0];
 
         animatorRobin.SetBool("RobinNeutral", true);
     }
@@ -312,7 +317,7 @@ public class Scene3Script : MonoBehaviour
         buttons[11].gameObject.SetActive(false);
 
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
-        Jason.texture = (Texture)JasonNeutral;
+        Jason.texture = (Texture)JasonEmotions[0];
 
 
         animatorJason.SetBool("JasonNeutral", true);
@@ -338,7 +343,7 @@ public class Scene3Script : MonoBehaviour
         buttons[13].gameObject.SetActive(true);
 
         Robin = (RawImage)RobinImage.GetComponent<RawImage>();
-        Robin.texture = (Texture)RobinHappy;
+        Robin.texture = (Texture)RobinEmotions[1];
 
         animatorRobin.SetBool("RobinNeutral", true);
     }
@@ -354,7 +359,7 @@ public class Scene3Script : MonoBehaviour
 
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
 
-        Jason.texture = (Texture)JasonNeutral;
+        Jason.texture = (Texture)JasonEmotions[0];
 
         // Jason.gameObject.SetActive(true);
         // Robin.gameObject.SetActive(false);
@@ -372,7 +377,7 @@ public class Scene3Script : MonoBehaviour
         buttons[14].gameObject.SetActive(false);
 
         MC = (RawImage)KatieImage.GetComponent<RawImage>();
-        MC.texture = (Texture)KatieNeutral;
+        MC.texture = (Texture)KatieEmotions[0];
 
         animatorKatie.SetBool("KatieNeutral", true);
 
@@ -400,7 +405,7 @@ public class Scene3Script : MonoBehaviour
         buttons[17].gameObject.SetActive(true);
 
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
-        Jason.texture = (Texture)JasonNeutral;
+        Jason.texture = (Texture)JasonEmotions[0];
 
         animatorJason.SetBool("JasonNeutral", true);
     }
@@ -415,7 +420,7 @@ public class Scene3Script : MonoBehaviour
         buttons[18].gameObject.SetActive(true);
 
         Richard = (RawImage)RichardImage.GetComponent<RawImage>();
-        Richard.texture = (Texture)RichardNeutral;
+        Richard.texture = (Texture)RichardEmotions[0];
 
         animatorRichard.SetBool("RichardNeutral", true);
     }
@@ -430,7 +435,7 @@ public class Scene3Script : MonoBehaviour
         buttons[18].gameObject.SetActive(false);
 
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
-        Jason.texture = (Texture)JasonNeutral;
+        Jason.texture = (Texture)JasonEmotions[0];
 
         animatorJason.SetBool("JasonNeutral", true);
 
@@ -447,7 +452,7 @@ public class Scene3Script : MonoBehaviour
         buttons[20].gameObject.SetActive(true);
 
         Richard = (RawImage)RichardImage.GetComponent<RawImage>();
-        Richard.texture = (Texture)RichardAngry;
+        Richard.texture = (Texture)RichardEmotions[2];
 
         animatorRichard.SetBool("RichardNeutral", true);
 
@@ -463,7 +468,7 @@ public class Scene3Script : MonoBehaviour
         buttons[20].gameObject.SetActive(false);
 
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
-        Jason.texture = (Texture)JasonAngry;
+        Jason.texture = (Texture)JasonEmotions[2];
 
 
 
