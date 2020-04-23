@@ -91,7 +91,10 @@ public class Scene3Script : MonoBehaviour
 		functionsToCall[2];
 		*/
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
 
         Button Intro = introImage.GetComponent<Button>();
         Intro.onClick.AddListener(RSpeech);
@@ -212,7 +215,10 @@ public class Scene3Script : MonoBehaviour
         animatorRobin.SetBool("RobinNeutral", true);
 
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
 
@@ -259,7 +265,10 @@ public class Scene3Script : MonoBehaviour
 
         animatorRobin.SetBool("RobinNeutral", true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
 
@@ -368,7 +377,10 @@ public class Scene3Script : MonoBehaviour
         // Jason.gameObject.SetActive(true);
         // Robin.gameObject.SetActive(false);
         animatorJason.SetBool("JasonNeutral", true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
 

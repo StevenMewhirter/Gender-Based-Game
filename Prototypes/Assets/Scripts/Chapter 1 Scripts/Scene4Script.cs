@@ -355,7 +355,10 @@ public class Scene4Script : MonoBehaviour
         ThoughtBubbles[0].gameObject.SetActive(true);
         ThoughtBubbles[1].gameObject.SetActive(true);
         ThoughtBubbles[2].gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
     void ResponseA()
     {
@@ -478,7 +481,10 @@ public class Scene4Script : MonoBehaviour
         ThoughtBubbles[4].gameObject.SetActive(true);
         ThoughtBubbles[5].gameObject.SetActive(true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
     void ResponseD()
 
@@ -556,7 +562,10 @@ public class Scene4Script : MonoBehaviour
         Background.SetBool("SlideToOther", true);
         JasonAnimator.SetBool("JasonNeutral", true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
     void JSpeech4()
     {

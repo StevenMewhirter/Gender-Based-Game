@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class OptionsScript : MonoBehaviour
 {
-    private bool audioSetting = true;
-    private bool vibrateSetting = true;
-    private bool colourBlindSetting = false;
+    public bool audioSetting = true;
+    public static bool vibrateSetting = true;
+    public bool colourBlindSetting = false;
 
     [SerializeField]
     private Button audioOn, audioOff, vibrateOn, vibrateOff, colourBlindOn, colourBlindOff, slowSpeed, mediumSpeed, fastSpeed;

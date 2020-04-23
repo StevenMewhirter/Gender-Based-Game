@@ -410,7 +410,11 @@ public class Scene1Script : MonoBehaviour
         PlayerResponses[0].gameObject.SetActive(true);
         PlayerResponses[1].gameObject.SetActive(true);
         transparentResponse.gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
+        
     }
 
     //for first choice in first block
@@ -458,7 +462,10 @@ public class Scene1Script : MonoBehaviour
         Blocks[0].SetActive(true);
         PlayerResponses[2].gameObject.SetActive(true);
         PlayerResponses[3].gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     //for first choice in second block
@@ -490,7 +497,10 @@ public class Scene1Script : MonoBehaviour
         PlayerResponses[5].gameObject.SetActive(true);
         KatieResponses[1].interactable = false;
         KatieResponses[2].interactable = false;
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     //for first choice in third block

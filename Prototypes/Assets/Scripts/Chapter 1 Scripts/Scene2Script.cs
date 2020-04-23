@@ -403,7 +403,10 @@ public class Scene2Script : MonoBehaviour
         ThoughtBubbles[1].gameObject.SetActive(true);
 
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
     void Speech6()
     {
@@ -449,7 +452,10 @@ public class Scene2Script : MonoBehaviour
         ThoughtBubbles[5].gameObject.SetActive(true);
 
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void Speech10()
@@ -521,7 +527,10 @@ public class Scene2Script : MonoBehaviour
         ThoughtBubbles[7].gameObject.SetActive(true);
         ThoughtBubbles[8].gameObject.SetActive(true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
     void Speech17()
     {
