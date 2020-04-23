@@ -26,7 +26,9 @@ public class Chapter2Scene1 : MonoBehaviour
     public GameObject ImageOfRobin;
     public RawImage Robin;
     public RawImage Amina;
-
+    public GameObject ImageOfOffice;
+    public Texture[] Offices;
+    public RawImage Office;
     public Animator AminaAnimator;
     public Animator RobinAnimator;
     public Animator AminaRIAnimator;
@@ -70,8 +72,13 @@ public class Chapter2Scene1 : MonoBehaviour
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinRIMove", true);
         ChangeScene.gameObject.SetActive(false);
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[0];
         AminaSpeechfunctionsToCall = new UnityAction[]
-      {
+       
+        {
             AminaSpeech2,
             RobinSpeech2,
             Choice,
@@ -188,6 +195,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void AminaSpeech1()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[1];
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
         RobinSpeech[0].gameObject.SetActive(false);
@@ -210,6 +221,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void RobinSpeech2()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[0];
         ImageOfRobin.gameObject.SetActive(true);
         AminaSpeech[1].gameObject.SetActive(false);
         ImageOfAmina.gameObject.SetActive(false);
@@ -238,6 +253,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void Choice()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[0];
         ImageOfRobin.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(false);
         Amina.gameObject.SetActive(false);
@@ -275,6 +294,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void AminaSpeech4()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[1];
         ImageOfAmina.gameObject.SetActive(true);
         Responses[1].gameObject.SetActive(false);
         AminaSpeech[3].gameObject.SetActive(true);
@@ -302,6 +325,10 @@ public class Chapter2Scene1 : MonoBehaviour
     }
     void RobinSpeech5()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[0];
         ImageOfRobin.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(false);
         Amina.gameObject.SetActive(false);
@@ -316,6 +343,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void RobinSpeech6()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[0];
         ImageOfRobin.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(false);
         Amina.gameObject.SetActive(false);
@@ -337,6 +368,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void AminaSpeech6()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[1];
         ImageOfAmina.gameObject.SetActive(true);
         RobinSpeech[4].gameObject.SetActive(false);
         ImageOfRobin.gameObject.SetActive(false);
@@ -363,6 +398,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void RobinSpeech8()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[0];
         ImageOfRobin.gameObject.SetActive(true);
         ImageOfAmina.gameObject.SetActive(false);
         Amina.gameObject.gameObject.SetActive(false);
