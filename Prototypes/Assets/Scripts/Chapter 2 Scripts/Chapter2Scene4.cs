@@ -543,7 +543,10 @@ public class Chapter2Scene4 : MonoBehaviour
         Transparent.gameObject.SetActive(true);
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinMove", true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void RobinResponse1()
@@ -646,7 +649,10 @@ public class Chapter2Scene4 : MonoBehaviour
         Transparent.gameObject.SetActive(true);
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinMove", true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void RobinResponse4()
@@ -747,7 +753,10 @@ public class Chapter2Scene4 : MonoBehaviour
         Transparent.gameObject.SetActive(true);
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinMove", true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void RobinResponse7()

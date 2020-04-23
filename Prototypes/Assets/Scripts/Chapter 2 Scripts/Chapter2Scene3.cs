@@ -340,7 +340,10 @@ public class Chapter2Scene3 : MonoBehaviour
         Choices[1].gameObject.SetActive(true);
         Choices[2].gameObject.SetActive(true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     //Did Katie leave before you?
@@ -542,7 +545,10 @@ public class Chapter2Scene3 : MonoBehaviour
         Choices[5].gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     //Do you remember if Katie had a lot to drink?
@@ -710,7 +716,10 @@ public class Chapter2Scene3 : MonoBehaviour
         Choices[7].gameObject.SetActive(true);
         Choices[8].gameObject.SetActive(true);
         Transparent.gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     //Do you remember if Jason was acting weird, or was drunk?

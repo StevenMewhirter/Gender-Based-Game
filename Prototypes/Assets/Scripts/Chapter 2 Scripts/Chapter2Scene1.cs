@@ -273,7 +273,10 @@ public class Chapter2Scene1 : MonoBehaviour
         Transparent.gameObject.SetActive(true);
         RobinAnimator.SetBool("RobinMove", true);
         RobinRIAnimator.SetBool("RobinRIMove", true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void Response1()

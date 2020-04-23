@@ -284,7 +284,10 @@ public class BedroomTextManager : MonoBehaviour
         response1.gameObject.SetActive(true);
         response2.gameObject.SetActive(true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void RobinReply4()
@@ -299,7 +302,10 @@ public class BedroomTextManager : MonoBehaviour
         response3.gameObject.SetActive(true);
         response4.gameObject.SetActive(true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void RobinReply5()
@@ -312,7 +318,10 @@ public class BedroomTextManager : MonoBehaviour
         response5.gameObject.SetActive(true);
         response6.gameObject.SetActive(true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void RobinReply6()

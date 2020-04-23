@@ -210,7 +210,10 @@ public class Scene5Script : MonoBehaviour
 
 
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void Choice2()
@@ -259,7 +262,10 @@ public class Scene5Script : MonoBehaviour
 
         RobinAnimator.SetBool("RobinNeutral", true);
 
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void Choice3()

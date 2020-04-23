@@ -353,7 +353,10 @@ public class Scene6TextManager : MonoBehaviour
         Responses[6].gameObject.SetActive(true);
         Responses[7].gameObject.SetActive(true);
         BottomBackground.gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void ShowResponse1()
@@ -415,7 +418,10 @@ public class Scene6TextManager : MonoBehaviour
         AminaSpeech[0].gameObject.SetActive(false);
         Amina.gameObject.SetActive(false);
         ImageOfAmina.gameObject.SetActive(false);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void ShowResponse2()
@@ -598,7 +604,10 @@ public class Scene6TextManager : MonoBehaviour
         Responses[10].gameObject.SetActive(true);
         Responses[11].gameObject.SetActive(true);
         BottomBackground.gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
         MC.gameObject.SetActive(true);
         JasonAnimator.SetBool("JasonMove", false);
         KatieAnimator.SetBool("KatieMove", true);
@@ -714,7 +723,10 @@ public class Scene6TextManager : MonoBehaviour
         MC = (RawImage)ImageOfKatie.GetComponent<RawImage>();
         MC.texture = (Texture)KatieEmotions[1];
         BottomBackground.gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
     }
 
     void ShowResponse4()
@@ -788,7 +800,10 @@ public class Scene6TextManager : MonoBehaviour
         Blocks[3].SetActive(true);
         Responses[4].gameObject.SetActive(true);
         Responses[5].gameObject.SetActive(true);
-        Handheld.Vibrate();
+        if (OptionsScript.vibrateSetting == true)
+        {
+            Handheld.Vibrate();
+        }
         BottomBackground.gameObject.SetActive(true);
     }
 
