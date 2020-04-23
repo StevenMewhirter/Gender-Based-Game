@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 
 public class GoodEnding : MonoBehaviour
 {
+    public GameObject ImageOfOffice;
+    public Texture[] Offices;
+    public RawImage Office;
     public Button[] Epilogues;
     public Button[] AminaSpeech;
     public Button[] Choices;
@@ -62,7 +65,10 @@ public class GoodEnding : MonoBehaviour
         {
             RobinSpeech[responseIndex].gameObject.SetActive(false);
         }
-
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[0];
         Amina.gameObject.SetActive(false);
         ImageOfAmina.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
@@ -273,6 +279,10 @@ public class GoodEnding : MonoBehaviour
 
     void RobinSpeech5()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[1];
         RobinSpeech[3].gameObject.SetActive(false);
         RobinSpeech[4].gameObject.SetActive(true);
     }
@@ -377,6 +387,10 @@ public class GoodEnding : MonoBehaviour
     }
     void AminaSpeech4()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[2];
         AminaSpeech[2].gameObject.SetActive(false);
         AminaSpeech[3].gameObject.SetActive(true);
     }

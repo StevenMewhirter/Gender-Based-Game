@@ -239,6 +239,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void AminaSpeech3()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[1];
         RobinSpeech[1].gameObject.SetActive(false);
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
@@ -312,6 +316,10 @@ public class Chapter2Scene1 : MonoBehaviour
 
     void AminaSpeech5()
     {
+        Office.gameObject.SetActive(true);
+        ImageOfOffice.gameObject.SetActive(true);
+        Office = (RawImage)ImageOfOffice.GetComponent<RawImage>();
+        Office.texture = (Texture)Offices[1];
         Responses[0].gameObject.SetActive(false);
         ImageOfRobin.gameObject.SetActive(false);
         Robin.gameObject.SetActive(false);
