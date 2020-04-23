@@ -5,24 +5,24 @@ using UnityEngine;
 public class Sound : MonoBehaviour
 {
 
-    private static Sound instance = null;
-    private AudioSource audio;
+    private static Sound time = null;
+    private AudioSource sound;
 
     private void Awake()
     {
-        if (instance == null)
+        if (time == null)
         {
-            instance = this;
+            time = this;
          
             return;
         }
-        if (instance == this) return;
+        if (time == this) return;
         Destroy(gameObject);
     }
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-        audio.Play();
+        sound = GetComponent<AudioSource>();
+        sound.Play();
     }
 }    
