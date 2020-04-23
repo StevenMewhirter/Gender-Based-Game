@@ -50,6 +50,10 @@ public class Scene3Script : MonoBehaviour
     public Animator animatorJason;
     public Animator animatorRobin;
     public Animator animatorRichard;
+    public Animator KatieAnimator;
+    public Animator RobinAnimator;
+    public Animator JasonAnimator;
+    public Animator RichardAnimator;
 
 
     // Start is called before the first frame update

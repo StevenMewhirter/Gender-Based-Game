@@ -811,6 +811,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1536456020}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &131655116
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131655113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70bee7097af918a49b6715dec7242fd0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &137637738
 GameObject:
   m_ObjectHideFlags: 0
@@ -2651,6 +2670,10 @@ MonoBehaviour:
   animatorJason: {fileID: 1389028830}
   animatorRobin: {fileID: 78059183}
   animatorRichard: {fileID: 318775155}
+  KatieAnimator: {fileID: 131655116}
+  RobinAnimator: {fileID: 1526903806}
+  JasonAnimator: {fileID: 0}
+  RichardAnimator: {fileID: 0}
 --- !u!4 &615910840
 Transform:
   m_ObjectHideFlags: 0
@@ -3002,11 +3025,6 @@ PrefabInstance:
       propertyPath: fullText
       value: April, 2nd
       objectReference: {fileID: 0}
-    - target: {fileID: 1419265436452231162, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: Hi there!
-      objectReference: {fileID: 0}
     - target: {fileID: 1419265438100374205, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: fullText
@@ -3028,6 +3046,23 @@ PrefabInstance:
       value: Robin has been helping me get around a lot this week, she is great! I
         couldn't ask for a better friend.
       objectReference: {fileID: 0}
+    - target: {fileID: 1419265436415440996, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: 'I just wish I get a proper project at some point to prove myself. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265437066608157, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: Maybe this week, I'll have my chance :)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3737769805862502585, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_Text
+      value: 'March, 25th
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 1419265436415440997, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3037,11 +3072,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 134.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265436415440996, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: 'I just wish I get a proper project at some point to prove myself. '
       objectReference: {fileID: 0}
     - target: {fileID: 1419265437066608153, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
@@ -3058,17 +3088,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Alignment
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1419265437066608157, guid: 1a870dc3794876f46ac97abcbb857c66,
+    - target: {fileID: 1419265436452231162, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: fullText
-      value: Maybe this week, I'll have my chance :)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3737769805862502585, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: m_Text
-      value: 'March, 25th
-
-'
+      value: Hi there!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a870dc3794876f46ac97abcbb857c66, type: 3}
@@ -6191,6 +6214,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 59884759}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1526903806
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526903803}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1a8063767840544d87132ce955f374b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1530177147
 GameObject:
   m_ObjectHideFlags: 0
@@ -6398,7 +6440,7 @@ PrefabInstance:
     - target: {fileID: 8821811510978503448, guid: 699aa00f0f0efd44382243f7d8bb8a2e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 245
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 8821811510978503448, guid: 699aa00f0f0efd44382243f7d8bb8a2e,
         type: 3}

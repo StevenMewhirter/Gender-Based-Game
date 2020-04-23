@@ -88,6 +88,9 @@ public class Scene4Script : MonoBehaviour
     public Animator JasonAnimator;
     public Animator AminaAnimator;
     public Animator Background;
+    public Animator KatieAltAnimator;
+    public Animator JasonAltAnimator;
+    public Animator AminaAltAnimator;
 
     // Start is called before the first frame update
     void Start()

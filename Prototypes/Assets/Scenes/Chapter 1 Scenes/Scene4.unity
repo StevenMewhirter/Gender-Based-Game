@@ -2136,6 +2136,7 @@ GameObject:
   - component: {fileID: 502923778}
   - component: {fileID: 502923780}
   - component: {fileID: 502923779}
+  - component: {fileID: 502923781}
   m_Layer: 5
   m_Name: Amina
   m_TagString: Untagged
@@ -2195,6 +2196,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502923777}
   m_CullTransparentMesh: 0
+--- !u!95 &502923781
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502923777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af7806cbdba2f6d4d908e8afe52a2631, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &506738054
 GameObject:
   m_ObjectHideFlags: 0
@@ -3907,6 +3927,7 @@ GameObject:
   - component: {fileID: 767848866}
   - component: {fileID: 767848868}
   - component: {fileID: 767848867}
+  - component: {fileID: 767848869}
   m_Layer: 5
   m_Name: Katie
   m_TagString: Untagged
@@ -3966,6 +3987,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767848865}
   m_CullTransparentMesh: 0
+--- !u!95 &767848869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767848865}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 76dc0c25ed1b1a4448a3d13a6275c1d2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &780281282
 GameObject:
   m_ObjectHideFlags: 0
@@ -7610,6 +7650,7 @@ GameObject:
   - component: {fileID: 1375598537}
   - component: {fileID: 1375598539}
   - component: {fileID: 1375598538}
+  - component: {fileID: 1375598540}
   m_Layer: 5
   m_Name: Jason
   m_TagString: Untagged
@@ -7669,6 +7710,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375598536}
   m_CullTransparentMesh: 0
+--- !u!95 &1375598540
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375598536}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e55f3102495c4f47979f94e6de8c901, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1381829911
 GameObject:
   m_ObjectHideFlags: 0
@@ -8868,6 +8928,9 @@ MonoBehaviour:
   JasonAnimator: {fileID: 52313130}
   AminaAnimator: {fileID: 1680234601}
   Background: {fileID: 464332125}
+  KatieAltAnimator: {fileID: 767848869}
+  JasonAltAnimator: {fileID: 1375598540}
+  AminaAltAnimator: {fileID: 502923781}
 --- !u!4 &1536324360
 Transform:
   m_ObjectHideFlags: 0
@@ -11174,11 +11237,6 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
-    - target: {fileID: 1419265438100374201, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 79.69999
-      objectReference: {fileID: 0}
     - target: {fileID: 1419265436415440997, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -11209,17 +11267,22 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 351.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1419265437066608159, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265438100374201, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 79.69999
+      objectReference: {fileID: 0}
     - target: {fileID: 1419265436452231140, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: m_Text
       value: '
 
 '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265437066608159, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a870dc3794876f46ac97abcbb857c66, type: 3}

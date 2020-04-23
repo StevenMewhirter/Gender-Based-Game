@@ -44,6 +44,8 @@ public class Scene5Script : MonoBehaviour
 
     public Animator RobinAnimator;
     public Animator KatieAnimator;
+    public Animator KatieAltAnimator;
+    public Animator RobinAltAnimator;
 
     void Start()
     {
