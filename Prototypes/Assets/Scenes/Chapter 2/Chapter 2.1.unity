@@ -2965,11 +2965,11 @@ MonoBehaviour:
   - {fileID: 504232449}
   ChangeScene: {fileID: 1862888767}
   RobinEmotions:
-  - {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
-  - {fileID: 2800000, guid: d974c823bc51b65408d6dfd7472ae542, type: 3}
+  - {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
+  - {fileID: 2800000, guid: f2f60be204ba3df4fa88d02c70f5a316, type: 3}
   AminaEmotions:
-  - {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
-  - {fileID: 2800000, guid: e6936edc18afa1343bf1086b11652bd0, type: 3}
+  - {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
+  - {fileID: 2800000, guid: ab3a2e916a071a94ca39cd20a6014892, type: 3}
   ImageOfAmina: {fileID: 1450352284}
   Transparent: {fileID: 1557071387}
   ImageOfRobin: {fileID: 1582114006}
@@ -4936,7 +4936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5463,7 +5463,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -7066,6 +7066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527607191250325969, guid: 035dac525c5a0534db2f9b5669f9fb59,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2527607191250325968, guid: 035dac525c5a0534db2f9b5669f9fb59,
         type: 3}

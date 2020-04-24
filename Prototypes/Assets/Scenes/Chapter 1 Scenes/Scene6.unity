@@ -975,7 +975,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
+  m_Texture: {fileID: 2800000, guid: 4e9e5dd48c8809a4ebff35e04c10a4a9, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1587,22 +1587,22 @@ MonoBehaviour:
   ImageOfKatie: {fileID: 350529864}
   ImageOfRichard: {fileID: 71409276}
   AminaEmotions:
-  - {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
-  - {fileID: 2800000, guid: 707e8d548d238c84fb77672d84d85b90, type: 3}
+  - {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
+  - {fileID: 2800000, guid: bae18b8aecd25ce4c9bd503e3a8ec392, type: 3}
   Bars:
   - {fileID: 2800000, guid: 9244479eedee49d4495fff3449870939, type: 3}
   - {fileID: 2800000, guid: 50b7569bb6409bf48a7814b587ce8ada, type: 3}
   - {fileID: 2800000, guid: dee4baab4930f5e46926dd6eb6bb03fc, type: 3}
   JasonEmotions:
-  - {fileID: 2800000, guid: 97bc9a92d34c01844b3fe0999b93a78e, type: 3}
-  - {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
+  - {fileID: 2800000, guid: 63257ed68bc035c41af6e85b3f09d105, type: 3}
+  - {fileID: 2800000, guid: 966a86090222fbb4981bb0ad810a4d76, type: 3}
   KatieEmotions:
   - {fileID: 2800000, guid: ae48388751fb7034591057ff153d74b9, type: 3}
   - {fileID: 2800000, guid: 190c0d5f520f97a47806d2ecf723a6d6, type: 3}
   - {fileID: 2800000, guid: 5b1871f8f02700041bfa9d45c11d1582, type: 3}
   RichardEmotions:
-  - {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
-  - {fileID: 2800000, guid: e38b679de003e634692cb4d92b38e4b7, type: 3}
+  - {fileID: 2800000, guid: 4e9e5dd48c8809a4ebff35e04c10a4a9, type: 3}
+  - {fileID: 2800000, guid: 418b8c694ef615544a64d755422d5b13, type: 3}
   MC: {fileID: 350529866}
   Amina: {fileID: 371421492}
   Richard: {fileID: 71409278}
@@ -3873,7 +3873,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -11506,6 +11506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScrollMessage 1 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4803598960469015552, guid: 931d42b495be2f24da8a7c8df45b1259,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4803598960469015553, guid: 931d42b495be2f24da8a7c8df45b1259,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17899,7 +17904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 966a86090222fbb4981bb0ad810a4d76, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

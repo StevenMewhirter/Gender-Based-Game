@@ -15828,7 +15828,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -20830,7 +20830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -22705,13 +22705,13 @@ MonoBehaviour:
   Katie: {fileID: 1483597086}
   Robin: {fileID: 1109376318}
   AminaEmotions:
-  - {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
-  - {fileID: 2800000, guid: 71d3e7f16d160f846ad58745be7ec312, type: 3}
+  - {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
+  - {fileID: 2800000, guid: cd24538ff8a91b041a3b59cd463a40a4, type: 3}
   KatieEmotions:
   - {fileID: 2800000, guid: ae328df2e24e96744a15a0fde499df02, type: 3}
   - {fileID: 2800000, guid: 5b1871f8f02700041bfa9d45c11d1582, type: 3}
   RobinEmotions:
-  - {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
+  - {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
   AminaAnimator: {fileID: 1508246189}
   RobinAnimator: {fileID: 1109376320}
   KatieAnimator: {fileID: 1483597088}
@@ -25314,9 +25314,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d1ea881e7ba038740b963443a27e55ca, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.617
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -28473,6 +28473,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Choice 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8179556972860356704, guid: 588fa4345a88354429dd647ceb77dae7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8179556972860356711, guid: 588fa4345a88354429dd647ceb77dae7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28596,6 +28601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Choice 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8924028397248485321, guid: b1e8a28c5af01d445abcd0549e7b0084,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8924028397248485320, guid: b1e8a28c5af01d445abcd0549e7b0084,
         type: 3}
