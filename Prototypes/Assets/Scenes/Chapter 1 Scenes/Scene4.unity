@@ -1935,7 +1935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4ed80475975ac9541ab7545e1fe27e61, type: 3}
+  m_Texture: {fileID: 2800000, guid: 3281da069e23c1b46b61f7c589475b49, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2181,7 +2181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -8115,7 +8115,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 966a86090222fbb4981bb0ad810a4d76, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9330,12 +9330,12 @@ MonoBehaviour:
   KatieHappy: {fileID: 2800000, guid: ae48388751fb7034591057ff153d74b9, type: 3}
   ImageOfKatie: {fileID: 767848865}
   JasonSad: {fileID: 2800000, guid: 15b4a72da1378194e959472e47d1217d, type: 3}
-  JasonAngry: {fileID: 2800000, guid: 1e3ced746a5e17a4f8bdf7f83a274574, type: 3}
-  JasonNeutral: {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
-  JasonHappy: {fileID: 2800000, guid: 97bc9a92d34c01844b3fe0999b93a78e, type: 3}
+  JasonAngry: {fileID: 2800000, guid: dfa8a0dc929b3dc45b613efb0065810c, type: 3}
+  JasonNeutral: {fileID: 2800000, guid: 966a86090222fbb4981bb0ad810a4d76, type: 3}
+  JasonHappy: {fileID: 2800000, guid: 63257ed68bc035c41af6e85b3f09d105, type: 3}
   ImageOfJason: {fileID: 1375598536}
-  AminaNeutral: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
-  AminaHappy: {fileID: 2800000, guid: 707e8d548d238c84fb77672d84d85b90, type: 3}
+  AminaNeutral: {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
+  AminaHappy: {fileID: 2800000, guid: bae18b8aecd25ce4c9bd503e3a8ec392, type: 3}
   ImageOfAmina: {fileID: 502923777}
   PlayerResponses: []
   Interactive: []

@@ -2789,7 +2789,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
+      objectReference: {fileID: 2800000, guid: 4e9e5dd48c8809a4ebff35e04c10a4a9, type: 3}
     - target: {fileID: 390249697424647336, guid: 4eba36728200826498a88f29d81607e1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -4039,7 +4039,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
+      objectReference: {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3da0199d30521c3498a9cf070d95ef08, type: 3}
 --- !u!1 &752755595
@@ -4425,7 +4425,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
+      objectReference: {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc22628b2f891564398b1730212cffb4, type: 3}
 --- !u!224 &836370542 stripped
@@ -12420,12 +12420,12 @@ MonoBehaviour:
   ImageOfKatie: {fileID: 1635875606}
   NextScene: {fileID: 430692110}
   RichardAngry: {fileID: 2800000, guid: c7d82bf3365eac04c93fe74a4dbf6e2d, type: 3}
-  RichardNeut: {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
-  RichardHappy: {fileID: 2800000, guid: e38b679de003e634692cb4d92b38e4b7, type: 3}
+  RichardNeut: {fileID: 2800000, guid: 4e9e5dd48c8809a4ebff35e04c10a4a9, type: 3}
+  RichardHappy: {fileID: 2800000, guid: 418b8c694ef615544a64d755422d5b13, type: 3}
   ImageOfRichard: {fileID: 347209284}
-  AminaNeutral: {fileID: 2800000, guid: 5cd4d3a7699b39948834b4e71150613a, type: 3}
-  AminaHappy: {fileID: 2800000, guid: 707e8d548d238c84fb77672d84d85b90, type: 3}
-  AminaAngry: {fileID: 2800000, guid: e6936edc18afa1343bf1086b11652bd0, type: 3}
+  AminaNeutral: {fileID: 2800000, guid: 782299fc400e06745b77663a1c31e422, type: 3}
+  AminaHappy: {fileID: 2800000, guid: bae18b8aecd25ce4c9bd503e3a8ec392, type: 3}
+  AminaAngry: {fileID: 2800000, guid: ab3a2e916a071a94ca39cd20a6014892, type: 3}
   ImageOfAmina: {fileID: 1816627797}
   Background2: {fileID: 2800000, guid: 3281da069e23c1b46b61f7c589475b49, type: 3}
   ImageOfBackground: {fileID: 1315627053}
