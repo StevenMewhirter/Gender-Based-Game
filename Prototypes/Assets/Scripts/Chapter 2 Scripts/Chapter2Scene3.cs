@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class Chapter2Scene3 : MonoBehaviour
 {
+    public GameObject transition;
+
     public Button[] Choices;
     private UnityAction[] ChoicesFunctionToCall;
     private string AminaClue;
@@ -127,7 +129,7 @@ public class Chapter2Scene3 : MonoBehaviour
         //RobinImage.gameObject.SetActive(true);
         //Background.gameObject.SetActive(true);
 
-        RSpeech1();
+        StartCoroutine(waitForTransition());
 
 
         ChoicesFunctionToCall = new UnityAction[]
@@ -882,5 +884,13 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RobinRawIm = (RawImage)RobinImage.GetComponent<RawImage>();
         RobinRawIm.texture = (Texture)RobinEmotions[0];
+    }
+
+    IEnumerator waitForTransition()
+    {
+        yield return new WaitForSeconds(8f);
+        transition.SetActive(false);
+        //ThoughtBubbles[0].gameObject.SetActive(true);
+        RSpeech1(); 
     }
 }

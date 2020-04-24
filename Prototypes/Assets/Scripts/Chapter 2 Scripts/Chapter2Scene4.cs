@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class Chapter2Scene4 : MonoBehaviour
 {
+    public GameObject transition;
+
     public Button[] Choices;
     private UnityAction[] ChoicesFunctionsToCall;
     public Button[] BadScenarioRobin;
@@ -104,16 +106,13 @@ public class Chapter2Scene4 : MonoBehaviour
         Katie.gameObject.SetActive(false);
         Transparent.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
-        ImageOfRobin.gameObject.SetActive(true);
-        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
-        Robin.texture = (Texture)RobinEmotions[0];
-        RobinSpeech[0].gameObject.SetActive(true);
-        RobinAnimator.SetBool("RobinMove", true);
-        RobinRIAnimator.SetBool("RobinMove", true);
+        
         Bedroom.gameObject.SetActive(true);
         ImageOfBedroom.gameObject.SetActive(true);
         Bedroom = (RawImage)ImageOfBedroom.GetComponent<RawImage>();
         Bedroom.texture = (Texture)Bedrooms[0];
+
+        StartCoroutine(waitForTransition());
 
         //Declares the functions that will be called when each button in the 
         //list of Katie's speech bubbles is pressed -SD
@@ -1021,5 +1020,16 @@ public class Chapter2Scene4 : MonoBehaviour
         EndingLinks[1].gameObject.SetActive(true);
     }
 
-
+    IEnumerator waitForTransition()
+    {
+        yield return new WaitForSeconds(8f);
+        transition.SetActive(false);
+        //ThoughtBubbles[0].gameObject.SetActive(true);
+        ImageOfRobin.gameObject.SetActive(true);
+        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        Robin.texture = (Texture)RobinEmotions[0];
+        RobinSpeech[0].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", true);
+        RobinRIAnimator.SetBool("RobinMove", true);
+    }
 }
