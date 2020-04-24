@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class BadEnding : MonoBehaviour
 {
+    public GameObject transition;
+
     public GameObject ImageOfOffice;
     public Texture[] Offices;
     public RawImage Office;
@@ -73,13 +75,10 @@ public class BadEnding : MonoBehaviour
         ImageOfAmina.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
-        ImageOfRobin.gameObject.SetActive(true);
-        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
-        Robin.gameObject.SetActive(true);
-        Robin.texture = (Texture)RobinEmotions[0];
-        RobinSpeech[0].gameObject.SetActive(true);
         TransparentResponse.gameObject.SetActive(false);
-        RobinAnimator.SetBool("RobinMove", false);
+        ImageOfRobin.gameObject.SetActive(false);
+
+        StartCoroutine(waitForTransition());
 
         AminaSpeechfunctionsToCall = new UnityAction[]
         {
@@ -1028,6 +1027,18 @@ public class BadEnding : MonoBehaviour
     {
         AminaSpeech[29].gameObject.SetActive(false);
         EpilogueLinks[1].gameObject.SetActive(true);
+    }
+
+    IEnumerator waitForTransition()
+    {
+        yield return new WaitForSeconds(8f);
+        transition.SetActive(false);
+        ImageOfRobin.gameObject.SetActive(true);
+        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        Robin.gameObject.SetActive(true);
+        Robin.texture = (Texture)RobinEmotions[0];
+        RobinSpeech[0].gameObject.SetActive(true);
+        RobinAnimator.SetBool("RobinMove", false);
     }
 }
 
