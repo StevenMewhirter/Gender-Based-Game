@@ -10,6 +10,7 @@ using System.Collections;
 public class Chapter2Scene2 : MonoBehaviour
 {
     public GameObject transition;
+    bool katieOn = false;
 
     public Button[] KatieSpeech;
     private UnityAction[] KatieSpeechFunctionsToCall;
@@ -308,6 +309,7 @@ public class Chapter2Scene2 : MonoBehaviour
 
     void Response3()
     {
+        katieOn = false;
         ResponseKatie.text = dialogue[currentLine2]; //checks current line 
         currentLine2 = 9; //goes to the next line
         RobinSpeech[3].interactable = true; // makes button iteractable
@@ -319,11 +321,12 @@ public class Chapter2Scene2 : MonoBehaviour
         currentLine4 = 15; //goes to the next line
         ThoughtBubbles[3].gameObject.SetActive(false);
         ThoughtBubbles[4].gameObject.SetActive(false);
-        Destroy(KatieInter.gameObject);
-       
+        //Destroy(KatieInter.gameObject);
+        KatieInter.gameObject.SetActive(false);
     }
     void Response4()
     {
+        katieOn = true;
         Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
         Robin.texture = (Texture)RobinAngry;
         RobinSpeech[3].interactable = true; // makes button iteractable
@@ -388,7 +391,10 @@ public class Chapter2Scene2 : MonoBehaviour
         Interactive[1].gameObject.SetActive(false);
         Interactive[2].gameObject.SetActive(true);
         Interactive[3].gameObject.SetActive(false);
-        Interactive[4].gameObject.SetActive(true);
+        if(katieOn)
+            Interactive[4].gameObject.SetActive(true);
+        else
+            Interactive[4].gameObject.SetActive(false);
         Interactive[5].gameObject.SetActive(false);
         Interactive[6].gameObject.SetActive(true);
         Interactive[7].gameObject.SetActive(false);
