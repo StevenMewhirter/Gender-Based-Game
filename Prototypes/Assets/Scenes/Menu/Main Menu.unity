@@ -96,7 +96,6 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -2014,7 +2013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -801.99994}
+  m_AnchoredPosition: {x: 0.000027806, y: -707}
   m_SizeDelta: {x: 466.5, y: 209}
   m_Pivot: {x: 0.50000006, y: 0.50000006}
 --- !u!114 &795735393
@@ -2713,7 +2712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55, y: -619}
+  m_AnchoredPosition: {x: -57.999992, y: -499}
   m_SizeDelta: {x: 340, y: 692}
   m_Pivot: {x: 0.5, y: 0.16890416}
 --- !u!114 &1111492437
@@ -3156,7 +3155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 102, y: 325}
+  m_AnchoredPosition: {x: 99, y: 445}
   m_SizeDelta: {x: 340, y: 692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1274780191
@@ -3778,8 +3777,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -345.7937, y: 575.14825}
-  m_SizeDelta: {x: 340, y: 692}
+  m_AnchoredPosition: {x: -308.7, y: 695.14825}
+  m_SizeDelta: {x: 284.3, y: 692}
   m_Pivot: {x: 0.28001902, y: 0.85136855}
 --- !u!114 &1571459229
 MonoBehaviour:
