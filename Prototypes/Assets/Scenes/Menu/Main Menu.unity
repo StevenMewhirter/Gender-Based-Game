@@ -3383,7 +3383,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1455928637
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3540,7 +3540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1556150284
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3757,7 +3757,6 @@ MonoBehaviour:
   slowSpeed: {fileID: 1906105820}
   mediumSpeed: {fileID: 2105119780}
   fastSpeed: {fileID: 720830660}
-  textSpeedSetting: 2
 --- !u!4 &1609306713
 Transform:
   m_ObjectHideFlags: 0
