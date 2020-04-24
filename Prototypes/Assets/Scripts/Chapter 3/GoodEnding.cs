@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class GoodEnding : MonoBehaviour
 {
+    public GameObject transition;
+
     public GameObject ImageOfOffice;
     public Texture[] Offices;
     public RawImage Office;
@@ -73,12 +75,11 @@ public class GoodEnding : MonoBehaviour
         ImageOfAmina.gameObject.SetActive(false);
         Katie.gameObject.SetActive(false);
         ImageOfKatie.gameObject.SetActive(false);
-        ImageOfRobin.gameObject.SetActive(true);
-        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
-        Robin.gameObject.SetActive(true);
-        Robin.texture = (Texture)RobinEmotions[0];
-        RobinSpeech[0].gameObject.SetActive(true);
         TransparentResponse.gameObject.SetActive(false);
+        ImageOfRobin.gameObject.SetActive(false);
+
+        StartCoroutine(waitForTransition());
+
 
         AminaSpeechfunctionsToCall = new UnityAction[]
      {
@@ -993,4 +994,16 @@ public class GoodEnding : MonoBehaviour
         KatieSpeech[22].gameObject.SetActive(false);
         Epilogues[1].gameObject.SetActive(true);
     }
+
+    IEnumerator waitForTransition()
+    {
+        yield return new WaitForSeconds(8f);
+        transition.SetActive(false);
+        ImageOfRobin.gameObject.SetActive(true);
+        Robin = (RawImage)ImageOfRobin.GetComponent<RawImage>();
+        Robin.gameObject.SetActive(true);
+        Robin.texture = (Texture)RobinEmotions[0];
+        RobinSpeech[0].gameObject.SetActive(true);
+    }
+    
 }
