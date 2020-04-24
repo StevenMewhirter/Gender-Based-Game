@@ -109,6 +109,31 @@ public class MenuScript : MonoBehaviour
         options.gameObject.SetActive(false);
     }
 
+    public void Katie()
+    {
+        SceneManager.LoadScene("Scene1", LoadSceneMode.Single);
+    }
+
+    public void Robin()
+    {
+        SceneManager.LoadScene("Chapter 2.1", LoadSceneMode.Single);
+    }
+    
+    public void Amina()
+    {
+        float randomScene = Random.value;
+        if (randomScene <= 0.5f)
+        {
+            SceneManager.LoadScene("BadEnding", LoadSceneMode.Single);
+            Debug.Log("Bad Ending Loaded");
+        }
+        else
+        {
+            SceneManager.LoadScene("GoodEnding", LoadSceneMode.Single);
+            Debug.Log("Good Ending Loaded");
+        }
+    }
+
    public void OptionsScreen()
     {
         mainMenuScreen.SetActive(false);
