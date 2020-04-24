@@ -350,7 +350,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
+      objectReference: {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
     - target: {fileID: 6397858335843589417, guid: 464581ae2bdef044b94486e935d2311b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2883,20 +2883,20 @@ MonoBehaviour:
   introImage: {fileID: 2085276501}
   Robin: {fileID: 500845308}
   RobinEmotions:
-  - {fileID: 2800000, guid: 0526148f432cf6d45bb880e48148db91, type: 3}
-  - {fileID: 2800000, guid: 748c9fa75a77c584d86d532d38b454ac, type: 3}
-  - {fileID: 2800000, guid: d974c823bc51b65408d6dfd7472ae542, type: 3}
+  - {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
+  - {fileID: 2800000, guid: 4df406c23f93eec4fbf525c331fe3569, type: 3}
+  - {fileID: 2800000, guid: f2f60be204ba3df4fa88d02c70f5a316, type: 3}
   RobinImage: {fileID: 1526903803}
   Jason: {fileID: 1424481383}
   JasonEmotions:
-  - {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
-  - {fileID: 2800000, guid: 97bc9a92d34c01844b3fe0999b93a78e, type: 3}
-  - {fileID: 2800000, guid: 1e3ced746a5e17a4f8bdf7f83a274574, type: 3}
+  - {fileID: 2800000, guid: 966a86090222fbb4981bb0ad810a4d76, type: 3}
+  - {fileID: 2800000, guid: 63257ed68bc035c41af6e85b3f09d105, type: 3}
+  - {fileID: 2800000, guid: dfa8a0dc929b3dc45b613efb0065810c, type: 3}
   JasonImage: {fileID: 1005791270}
   Richard: {fileID: 1044927402}
   RichardEmotions:
-  - {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
-  - {fileID: 2800000, guid: e38b679de003e634692cb4d92b38e4b7, type: 3}
+  - {fileID: 2800000, guid: 4e9e5dd48c8809a4ebff35e04c10a4a9, type: 3}
+  - {fileID: 2800000, guid: 418b8c694ef615544a64d755422d5b13, type: 3}
   - {fileID: 2800000, guid: c7d82bf3365eac04c93fe74a4dbf6e2d, type: 3}
   RichardImage: {fileID: 649658114}
   Background: {fileID: 543227692}
@@ -3266,6 +3266,37 @@ PrefabInstance:
         more excited than ever and can't wait to start this new chapter in my life.\n\nGot
         to get ready for my first day at the company, wish me luck xx\n\n\n      Katie\n"
       objectReference: {fileID: 0}
+    - target: {fileID: 1891660175535461680, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: April, 2nd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265436452231162, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: Hi there!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265438100374205, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: This week has been amazing!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265437138363023, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: Robin has been helping me get around a lot this week, she is great! I
+        couldn't ask for a better friend.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265436415440996, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: 'I just wish I get a proper project at some point to prove myself. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1419265437066608157, guid: 1a870dc3794876f46ac97abcbb857c66,
+        type: 3}
+      propertyPath: fullText
+      value: Maybe this week, I'll have my chance :)
+      objectReference: {fileID: 0}
     - target: {fileID: 1419265437138363016, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3295,37 +3326,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -231.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265436415440996, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: 'I just wish I get a proper project at some point to prove myself. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265436452231162, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: Hi there!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1891660175535461680, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: April, 2nd
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265438100374205, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: This week has been amazing!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265437138363023, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: Robin has been helping me get around a lot this week, she is great! I
-        couldn't ask for a better friend.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1419265437066608157, guid: 1a870dc3794876f46ac97abcbb857c66,
-        type: 3}
-      propertyPath: fullText
-      value: Maybe this week, I'll have my chance :)
       objectReference: {fileID: 0}
     - target: {fileID: 1419265437066608159, guid: 1a870dc3794876f46ac97abcbb857c66,
         type: 3}
@@ -4962,7 +4962,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 81caa9672c95e6d4cb747ec2dc799f1b, type: 3}
+      objectReference: {fileID: 2800000, guid: 966a86090222fbb4981bb0ad810a4d76, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4250ef044e6f2364a9b9610e413be308, type: 3}
 --- !u!1 &1085413051
@@ -7943,7 +7943,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 2800000, guid: 5dd06696f20a20741b1090e165858f17, type: 3}
+      objectReference: {fileID: 2800000, guid: 4e9e5dd48c8809a4ebff35e04c10a4a9, type: 3}
     - target: {fileID: 390249697424647336, guid: 4eba36728200826498a88f29d81607e1,
         type: 3}
       propertyPath: m_AnchoredPosition.x

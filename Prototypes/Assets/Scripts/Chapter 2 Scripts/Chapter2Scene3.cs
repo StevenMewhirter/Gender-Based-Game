@@ -603,7 +603,7 @@ public class Chapter2Scene3 : MonoBehaviour
         Jason[3].gameObject.SetActive(true);
 
         JasonRawIm = (RawImage)JasonImage.GetComponent<RawImage>();
-        JasonRawIm.texture = (Texture)JasonEmotions[3];
+        JasonRawIm.texture = (Texture)JasonEmotions[2];
 
         JasonClue = "Jason was angry when Robin asked if he had an argument with Katie";
     }
