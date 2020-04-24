@@ -62,7 +62,6 @@ public class Scene3Script : MonoBehaviour
 
         StartCoroutine(introPanel());
 
-        //Debug.Log("Start called in scene 3");
         for (int responseIndex = 0; responseIndex < buttons.Length; ++responseIndex)
         {
             buttons[responseIndex].gameObject.SetActive(false);
@@ -85,11 +84,6 @@ public class Scene3Script : MonoBehaviour
 
         Background.gameObject.SetActive(false);
 
-        /*
-		int[] arrayOfInts = new int[] { 22, 55, 66, 11, 0, 25 };
-		arrayOfInts[2];
-		functionsToCall[2];
-		*/
 
         if (OptionsScript.vibrateSetting == true)
         {
@@ -292,7 +286,6 @@ public class Scene3Script : MonoBehaviour
 
     void KSpeech4()
     {
-        //MC.gameObject.SetActive(true);
         //Katie will appear on screen and say "Can you not sexualize everything for once, Robin?" as the user has previously selected that option - SD
         buttons[10].gameObject.SetActive(true);
         Background.gameObject.SetActive(false);
@@ -338,14 +331,7 @@ public class Scene3Script : MonoBehaviour
 
     }
 
-    /*
-	int testFunction()
-	{
-		return 0;
-	}
 
-	void testFunction2(int i1, float f1){}
-	*/
 
     void RSpeech6()
     {
@@ -374,8 +360,6 @@ public class Scene3Script : MonoBehaviour
 
         Jason.texture = (Texture)JasonEmotions[0];
 
-        // Jason.gameObject.SetActive(true);
-        // Robin.gameObject.SetActive(false);
         animatorJason.SetBool("JasonNeutral", true);
         if (OptionsScript.vibrateSetting == true)
         {
@@ -486,10 +470,6 @@ public class Scene3Script : MonoBehaviour
         Jason = (RawImage)JasonImage.GetComponent<RawImage>();
         Jason.texture = (Texture)JasonEmotions[2];
 
-
-
-
-        //  Richard.gameObject.SetActive(false);
         animatorJason.SetBool("JasonNeutral", true);
     }
 }

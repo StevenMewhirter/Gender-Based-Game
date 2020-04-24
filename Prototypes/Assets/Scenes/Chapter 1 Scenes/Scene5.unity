@@ -1081,15 +1081,19 @@ MonoBehaviour:
   - {fileID: 36486294}
   - {fileID: 1208315059}
   - {fileID: 1043620879}
-  KTImage: {fileID: 922262539}
-  RobinsImage: {fileID: 1927456108}
+  KTImage: {fileID: 864107809}
+  RobinsImage: {fileID: 616729062}
   BgBox: {fileID: 1339505471}
-  KatieNeutral: {fileID: 2800000, guid: 190c0d5f520f97a47806d2ecf723a6d6, type: 3}
-  KatiesSad: {fileID: 2800000, guid: ae328df2e24e96744a15a0fde499df02, type: 3}
-  KatiesHappy: {fileID: 2800000, guid: ae48388751fb7034591057ff153d74b9, type: 3}
-  KatieAnger: {fileID: 2800000, guid: 5b1871f8f02700041bfa9d45c11d1582, type: 3}
-  RobinNeutral: {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
-  RobinsSad: {fileID: 2800000, guid: ba6ad086ae010df4aaf3c33427c203c8, type: 3}
+  KatieEmotion:
+  - {fileID: 2800000, guid: 190c0d5f520f97a47806d2ecf723a6d6, type: 3}
+  - {fileID: 2800000, guid: ae48388751fb7034591057ff153d74b9, type: 3}
+  - {fileID: 2800000, guid: ae328df2e24e96744a15a0fde499df02, type: 3}
+  - {fileID: 2800000, guid: 5b1871f8f02700041bfa9d45c11d1582, type: 3}
+  RobinEmotion:
+  - {fileID: 2800000, guid: 5b1809ec8f0e19f41b74137c5d7b299f, type: 3}
+  - {fileID: 2800000, guid: 4df406c23f93eec4fbf525c331fe3569, type: 3}
+  - {fileID: 2800000, guid: ba6ad086ae010df4aaf3c33427c203c8, type: 3}
+  - {fileID: 2800000, guid: f2f60be204ba3df4fa88d02c70f5a316, type: 3}
   MainChar: {fileID: 965767461}
   Robins: {fileID: 1615000688}
   RobinAnimator: {fileID: 1927456109}

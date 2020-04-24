@@ -18,9 +18,6 @@ public class Chapter2Scene3 : MonoBehaviour
     public Text ClueBox;
     public GameObject Transparent;
 
-    //public Button[] Thought;
-    //private UnityAction[] ThoughtFunctionToCall;
-
     public Button[] Robin;
     private UnityAction[] RobinFunctionToCall;
 
@@ -37,28 +34,20 @@ public class Chapter2Scene3 : MonoBehaviour
     private UnityAction[] ClueFunctionToCall;
 
     public RawImage RobinRawIm;
-    //public Texture RobinNeutral;
-    //public Texture RobinSad;
     public Texture[] RobinEmotions;
     public GameObject RobinImage;
 
     public RawImage AminaRawIm;
-    //public Texture AminaNeutral;
-    //public Texture AminaHappy;
     public Texture[] AminaEmotions;
     public GameObject AminaImage;
     public GameObject AminaHead;
 
     public RawImage JasonRawIm;
-    //public Texture JasonNeutral;
-    //public Texture JasonAngry;
     public Texture[] JasonEmotions;
     public GameObject JasonImage;
     public GameObject JasonHead;
 
     public RawImage RichardRawIm;
-    //public Texture RichardNeutral;
-    //public Texture RichardAngry;
     public Texture[] RichardEmotions;
     public GameObject RichardImage;
     public GameObject RichardHead;
@@ -93,10 +82,6 @@ public class Chapter2Scene3 : MonoBehaviour
             Choices[responseIndex].gameObject.SetActive(false);
         }
 
-        //for (int responseIndex = 0; responseIndex < Thought.Length; ++responseIndex)
-        //{
-        //    Thought[responseIndex].gameObject.SetActive(false);
-        //}
 
         for (int responseIndex = 0; responseIndex < Robin.Length; ++responseIndex)
         {
@@ -124,17 +109,12 @@ public class Chapter2Scene3 : MonoBehaviour
         }
 
 
-        //Robin[0].gameObject.SetActive(true);
-        //RobinRawIm.gameObject.SetActive(true);
-        //RobinImage.gameObject.SetActive(true);
-        //Background.gameObject.SetActive(true);
-
         StartCoroutine(waitForTransition());
 
 
         ChoicesFunctionToCall = new UnityAction[]
         {
-           //RSpeech4, RSpeech5, RSpeech6, RSpeech13, RSpeech14, RSpeech15, RSpeech21, RSpeech22, RSpeech23
+           
             RSpeech4, 
             RSpeech5,
             RSpeech6,
@@ -146,18 +126,10 @@ public class Chapter2Scene3 : MonoBehaviour
             RSpeech23
         };
 
-        //ThoughtFunctionToCall = new UnityAction[]
-        //{
-        //    ASpeech2, ASpeech3, ASpeech4, JSpeech3, JSpeech4, JSpeech5, RiSpeech2,
-        //    RiSpeech3, RiSpeech4
-        //};
+
 
         RobinFunctionToCall = new UnityAction[]
         {
-            //RSpeech2, RSpeech3, ASpeech1, ASpeech2, ASpeech3, ASpeech4, RSpeech8, RSpeech9, RSpeech10, JSpeech1, 
-            //JSpeech2, Choice2, JSpeech3, JSpeech4, JSpeech5, RSpeech17, RSpeech18, RSpeech19, 
-            //RiSpeech1, Choice3, RiSpeech2, RiSpeech3, RiSpeech4, RSpeech25
-
             RSpeech2,
             RSpeech3,
             ASpeech1,
@@ -187,7 +159,6 @@ public class Chapter2Scene3 : MonoBehaviour
 
         AminaFunctionToCall = new UnityAction[]
         {
-            //Choice1, RSpeech7, RSpeech7, RSpeech7
             Choice1,
             RSpeech7,
             RSpeech7,
@@ -196,7 +167,6 @@ public class Chapter2Scene3 : MonoBehaviour
 
         RichardFunctionToCall = new UnityAction[]
         {
-            // RSpeech20, RSpeech24, RSpeech24, RSpeech24
             RSpeech20,
             RSpeech24,
             RSpeech24,
@@ -205,7 +175,6 @@ public class Chapter2Scene3 : MonoBehaviour
 
         JasonFunctionToCall = new UnityAction[]
         {
-            //RSpeech11, RSpeech12, RSpeech16, RSpeech16, RSpeech16
             RSpeech11,
             RSpeech12,
             RSpeech16,
@@ -316,7 +285,6 @@ public class Chapter2Scene3 : MonoBehaviour
     {
         RobinRawIm.gameObject.SetActive(false);
         Robin[2].gameObject.SetActive(false);
-        //AminaRIAnimator.SetBool("AminaMove", true);
         AminaAnimator.SetBool("AminaMove", true);
         AminaRawIm.gameObject.SetActive(true);
         Amina[0].gameObject.SetActive(true);
@@ -890,7 +858,6 @@ public class Chapter2Scene3 : MonoBehaviour
     {
         yield return new WaitForSeconds(8f);
         transition.SetActive(false);
-        //ThoughtBubbles[0].gameObject.SetActive(true);
         RSpeech1(); 
     }
 }

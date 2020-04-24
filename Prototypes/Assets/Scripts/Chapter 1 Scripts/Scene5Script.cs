@@ -16,28 +16,13 @@ public class Scene5Script : MonoBehaviour
     public Button[] buttons;
     private UnityAction[] functionsToCall;
 
-    // public Button[] RobinsSpeech;
-    //  private UnityAction[] RobinsFunction;
-
-    // public Button[] KatieSpeech;
-    // private UnityAction[] KatieNormalFunction;
-
-    //  public Button[] Choice;
-    //  private UnityAction[] ChoiceFunctions;
-
-    //  public Button[] KatieChoice;
-    // private UnityAction[] KatieChoiceFunctions;
 
     public GameObject KTImage;
     public GameObject RobinsImage;
     public GameObject BgBox;
 
-    public Texture KatieNeutral;
-    public Texture KatiesSad;
-    public Texture KatiesHappy;
-    public Texture KatieAnger;
-    public Texture RobinNeutral;
-    public Texture RobinsSad;
+    public Texture[] KatieEmotion;
+    public Texture[] RobinEmotion;
 
     public RawImage MainChar;
     public RawImage Robins;
@@ -68,10 +53,7 @@ public class Scene5Script : MonoBehaviour
         Transition.onClick.AddListener(StartSpeech);
 
         //took this out to add the transition screen. it is being called exactly above this line. (E.A.)
-        //StartSpeech(); 
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinsSad;
 
         for (int responseIndex = 0; responseIndex < buttons.Length - 1; ++responseIndex)
         {
@@ -91,17 +73,16 @@ public class Scene5Script : MonoBehaviour
     {
         if (canClick) // added this because of the connection with the transition screen (E.A.)
         {
-            // MainChar.gameObject.SetActive(false);
 
-            // BgBox.gameObject.SetActive(false);
             transitionScreen.gameObject.SetActive(false); // added this because of the connection with the transition screen (E.A.)
 
             buttons[0].gameObject.SetActive(true);
             Robins.gameObject.SetActive(true);
 
-            //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-            //Robins.texture = (Texture)RobinsSad;
 
+            Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
+            Robins.texture = (Texture)RobinEmotion[2];
+            
             RobinAnimator.SetBool("RobinNeutral", true);
         }
     }
@@ -114,10 +95,9 @@ public class Scene5Script : MonoBehaviour
         BgBox.gameObject.SetActive(true);
         buttons[0].gameObject.SetActive(false);
         Robins.gameObject.SetActive(false);
-        //// RobinsAnimator.SetBool("RobinsNeutral", false);
 
-        //MainChar = (RawImage)KTImage.GetComponent<RawImage>();
-        //MainChar.texture = (Texture)KatieNeutral;
+        MainChar = (RawImage)KTImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[0];
 
         KatieAnimator.SetBool("KatieNeutral", true);
     }
@@ -127,12 +107,11 @@ public class Scene5Script : MonoBehaviour
         buttons[1].gameObject.SetActive(false);
         BgBox.gameObject.SetActive(false);
         buttons[2].gameObject.SetActive(true);
-        // RobinsSpeech.gameObject.SetActive(false);
 
         Robins.gameObject.SetActive(false);
 
-        //MainChar = (RawImage)KTImage.GetComponent<RawImage>();
-        //MainChar.texture = (Texture)KatiesSad;
+        MainChar = (RawImage)KTImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[2];
         KatieAnimator.SetBool("KatiesSad", true);
     }
 
@@ -143,8 +122,8 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(false);
         Robins.gameObject.SetActive(true);
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinNeutral;
+        MainChar = (RawImage)RobinsImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)RobinEmotion[0];
 
         RobinAnimator.SetBool("RobinNeutral", true);
     }
@@ -162,8 +141,8 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(true);
         Robins.gameObject.SetActive(false);
 
-        //MainChar = (RawImage)KTImage.GetComponent<RawImage>();
-        //MainChar.texture = (Texture)KatiesHappy;
+        MainChar = (RawImage)KTImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[1];
 
         KatieAnimator.SetBool("KatiesHappy", true);
 
@@ -176,8 +155,9 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(false);
         Robins.gameObject.SetActive(true);
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinNeutral;
+
+        Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
+        Robins.texture = (Texture)RobinEmotion[0];
 
         RobinAnimator.SetBool("RobinNeutral", true);
     }
@@ -189,8 +169,9 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(true);
         Robins.gameObject.SetActive(false);
 
-        //MainChar = (RawImage)KTImage.GetComponent<RawImage>();
-        //MainChar.texture = (Texture)KatieNeutral;
+
+        MainChar = (RawImage)KTImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[0];
 
         KatieAnimator.SetBool("KatieNeutral", true);
 
@@ -203,9 +184,9 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(false);
         Robins.gameObject.SetActive(true);
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinNeutral;
 
+        Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
+        Robins.texture = (Texture)RobinEmotion[0];
         RobinAnimator.SetBool("RobinNeutral", true);
 
 
@@ -223,8 +204,9 @@ public class Scene5Script : MonoBehaviour
         buttons[8].gameObject.SetActive(false);
         BgBox.gameObject.SetActive(true);
 
-        //MainChar = (RawImage)KTImage.GetComponent<RawImage>();
-        //MainChar.texture = (Texture)KatieNeutral;
+
+        MainChar = (RawImage)KTImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[0];
 
         KatieAnimator.SetBool("KatieNeutral", true);
 
@@ -236,14 +218,15 @@ public class Scene5Script : MonoBehaviour
     {
         BgBox.gameObject.SetActive(false);
         buttons[10].gameObject.SetActive(true);
-        //buttons[8].gameObject.SetActive(false);
+
         buttons[9].gameObject.SetActive(false);
         MainChar.gameObject.SetActive(true);
-        //  Choice3.gameObject.SetActive(false);
+
         Robins.gameObject.SetActive(false);
 
-        //MainChar = (RawImage)KTImage.GetComponent<RawImage>();
-        //MainChar.texture = (Texture)KatieAnger;
+
+        MainChar = (RawImage)RobinsImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[3];
 
         KatieAnimator.SetBool("KatieAnger", true);
 
@@ -257,8 +240,8 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(false);
         Robins.gameObject.SetActive(true);
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinNeutral;
+        Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
+        Robins.texture = (Texture)RobinEmotion[0];
 
         RobinAnimator.SetBool("RobinNeutral", true);
 
@@ -276,9 +259,9 @@ public class Scene5Script : MonoBehaviour
         buttons[12].gameObject.SetActive(true);
         MainChar.gameObject.SetActive(true);
 
-        //MainChar = (RawImage)KTImage.GetComponent<RawImage>();
-        //MainChar.texture = (Texture)KatieNeutral;
 
+        MainChar = (RawImage)KTImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[0];
         KatieAnimator.SetBool("KatieNeutral", true);
     }
 
@@ -286,7 +269,7 @@ public class Scene5Script : MonoBehaviour
     {
         BgBox.gameObject.SetActive(false);
         buttons[13].gameObject.SetActive(true);
-        //  buttons[11].gameObject.SetActive(false);
+        
         buttons[12].gameObject.SetActive(false);
         Robins.gameObject.SetActive(false);
     }
@@ -298,9 +281,8 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(false);
         Robins.gameObject.SetActive(true);
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinNeutral;
-
+        Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
+        Robins.texture = (Texture)RobinEmotion[0];
         RobinAnimator.SetBool("RobinNeutral", true);
     }
 
@@ -311,6 +293,8 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(true);
         Robins.gameObject.SetActive(false);
 
+        MainChar = (RawImage)KTImage.GetComponent<RawImage>();
+        MainChar.texture = (Texture)KatieEmotion[0];
         KatieAnimator.SetBool("KatieNeutral", true);
 
     }
@@ -322,8 +306,8 @@ public class Scene5Script : MonoBehaviour
         MainChar.gameObject.SetActive(false);
         Robins.gameObject.SetActive(true);
 
-        //Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
-        //Robins.texture = (Texture)RobinNeutral;
+        Robins = (RawImage)RobinsImage.GetComponent<RawImage>();
+        Robins.texture = (Texture)RobinEmotion[0];
 
         RobinAnimator.SetBool("RobinNeutral", true);
     }
